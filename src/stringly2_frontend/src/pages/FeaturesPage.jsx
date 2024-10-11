@@ -16,11 +16,10 @@ const FeaturesPage = () => {
             <section>
                 <div className='relative w-full'>
                     <img src="./features/heroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen md:h-auto' />
-                    <div className='absolute top-80 text-center left-4 md:top-[35%] lg:top-[35%] lg:left-[30%] p-4 text-white lg:w-[560px] lg:h-[254px]'>
+                    <div className='absolute top-80 text-center left-4 md:top-[35%] lg:top-[35%] lg:left-[33%] p-4 text-white lg:w-[560px] lg:h-[254px]'>
                         <h1 className='font-bold font-roboto leading-[48px] lg:leading-[67px] text-[40px] lg:text-[56px]'>Premium Features <h2 className='text-center bg-clip-text text-transparent' style={{ backgroundImage: 'linear-gradient(90deg, #0508D6 30.34%, #AF2C80 53.17%, #DC73B6 73.67%, #F1C7E2 85.17%)' }}>
                             Unveiled
                         </h2></h1>
-
                         <p className='mt-4 text-lg text-center font-roboto font-regular leading-[27px]'>
                             Explore the exceptional features that make Stringly the ultimate choice for discerning individuals.
                             Our platform combines luxury, privacy, and cutting-edge technology to enhance your dating and
@@ -198,7 +197,7 @@ const FeaturesPage = () => {
                         <img src="./features/Logo_webflow.png" alt="" />
                         <p>"Stringly transformed my dating life. The luxury and privacy made all the difference in finding genuine connections."</p>
                         <div className='flex items-center justify-center flex-col text-center'>
-                            <img src="./features/Profile.png" alt="" className='pb-4'/>
+                            <img src="./features/Profile.png" alt="" className='pb-4' />
                             <p>Emily Johnson</p>
                             <p>Marketing Director, LuxeCo</p>
                         </div>
@@ -209,8 +208,8 @@ const FeaturesPage = () => {
                 <div className='px-4 lg:p-0 flex items-center justify-center gap-10'>
                     <div className='w-[616px] hidden lg:block'>
                         <div>
-                        <p className='text-[48px] font-sf font-semibold'>Experience the Luxury of Meaningful Connections</p>
-                        <p className='font-jakarta font-regular leading-[27px] text-[18px] py-4'>Stringly offers a unique blend of privacy and luxury, ensuring that every connection is secure and exclusive. Enjoy access to a curated community of high-profile users who value meaningful interactions.</p>
+                            <p className='text-[48px] font-sf font-semibold'>Experience the Luxury of Meaningful Connections</p>
+                            <p className='font-jakarta font-regular leading-[27px] text-[18px] py-4'>Stringly offers a unique blend of privacy and luxury, ensuring that every connection is secure and exclusive. Enjoy access to a curated community of high-profile users who value meaningful interactions.</p>
                         </div>
                         <ul className='font-sf font-regular leading-[30px]'>
                             <li>Enhanced privacy for your personal and professional connections.</li>
@@ -223,7 +222,7 @@ const FeaturesPage = () => {
                         </div>
                     </div>
                     <div>
-                        <img src="./features/Placeholder Image.png" alt="" className='object-cover'/>
+                        <img src="./features/Placeholder Image.png" alt="" className='object-cover' />
                     </div>
                 </div>
             </section>
