@@ -284,75 +284,75 @@ const Landingpage = () => {
 
             {/* Section with Button and Image Gallery */}
             <div className="lili flex flex-col items-center mt-10  ">
-              <div className='py-12 '>
-              <h1 className="text-center w-full md:w-[768px] font-bold text-[24px] sm:text-[36px] leading-tight">
-                    Short Heading goes here
-                </h1>
-                <p className="text-center w-full md:w-[768px] mt-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
-              <div className='flex flex-col items-center'>
-    <div
-        className="childx flex justify-center gap-6 mt-8 py-8" 
-        style={{ maxWidth: '1312px', margin: '0 auto' }}
-    >
-        {/* Image 1 */}
-        <div
-            style={{
-                width: '416px',
-                height: '542px',
-                borderRadius: '10px 0 0 0',
-                overflow: 'hidden',
-            }}
-        >
-            <img
-                src="/hand.png"
-                alt="Image 1"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            />
-        </div>
+                <div className='py-12 '>
+                    <h1 className="text-center w-full md:w-[768px] font-bold text-[24px] sm:text-[36px] leading-tight">
+                        Short Heading goes here
+                    </h1>
+                    <p className="text-center w-full md:w-[768px] mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+                <div className='flex flex-col items-center'>
+                    <div
+                        className="childx flex justify-center gap-6 mt-8 py-8"
+                        style={{ maxWidth: '1312px', margin: '0 auto' }}
+                    >
+                        {/* Image 1 */}
+                        <div
+                            style={{
+                                width: '416px',
+                                height: '542px',
+                                borderRadius: '10px 0 0 0',
+                                overflow: 'hidden',
+                            }}
+                        >
+                            <img
+                                src="/poke.png"
+                                alt="Image 1"
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            />
+                        </div>
 
-        {/* Image 2 */}
-        <div
-            style={{
-                width: '416px',
-                height: '542px',
-                borderRadius: '10px 0 0 0',
-                overflow: 'hidden',
-            }}
-        >
-            <img
-                src="/forehand.png"
-                alt="Image 2"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            />
-        </div>
+                        {/* Image 2 */}
+                        <div
+                            style={{
+                                width: '416px',
+                                height: '542px',
+                                borderRadius: '10px 0 0 0',
+                                overflow: 'hidden',
+                            }}
+                        >
+                            <img
+                                src="/forehand.png"
+                                alt="Image 2"
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            />
+                        </div>
 
-        {/* Image 3 */}
-        <div
-            style={{
-                width: '416px',
-                height: '542px',
-                borderRadius: '10px 0 0 0',
-                overflow: 'hidden',
-            }}
-        >
-            <img
-                src="/last.png"
-                alt="Image 3"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            />
-        </div>
-    </div>
+                        {/* Image 3 */}
+                        <div
+                            style={{
+                                width: '416px',
+                                height: '542px',
+                                borderRadius: '10px 0 0 0',
+                                overflow: 'hidden',
+                            }}
+                        >
+                            <img
+                                src="/last.png"
+                                alt="Image 3"
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            />
+                        </div>
+                    </div>
 
-    {/* View All Button */}
-    <button 
-        className="bg-white text-black border border-black px-4 py-2 rounded w-[100px] hover:bg-gray-200 hover:text-black transition-all duration-300"
-    >
-        View All
-    </button>
-</div>
+                    {/* View All Button */}
+                    <button
+                        className="bg-white text-black border border-black px-4 py-2 rounded w-[100px] hover:bg-gray-200 hover:text-black transition-all duration-300"
+                    >
+                        View All
+                    </button>
+                </div>
 
 
 
@@ -368,7 +368,7 @@ const Landingpage = () => {
                         gap: '12px',
                     }}
                 >
-                  <h1 className="text-center w-full md:w-[600px] font-bold text-[54px] sm:text-[36px] leading-tight font-weight-[900px]">
+                    <h1 className="text-center w-full md:w-[600px] font-bold text-[54px] sm:text-[36px] leading-tight font-weight-[900px]">
 
                         Image Gallery
                     </h1>
@@ -377,16 +377,16 @@ const Landingpage = () => {
                     </p>
                 </div>
 
-             <div
-              styles={{
-                display:'flex',
-                alignItems:"center",
-                justifyContent:"center",
-              }}>
-             <CustomCarousel />
-             </div>
+                <div
+                    styles={{
+                        display: 'flex',
+                        alignItems: "center",
+                        justifyContent: "center",
+                    }}>
+                    <CustomCarousel />
+                </div>
 
-               
+
             </div>
         </div>
     );
