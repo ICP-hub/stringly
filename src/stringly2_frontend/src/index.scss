@@ -270,3 +270,39 @@
         opacity: 1;
     }
 }
+.lili .childx:hover{
+    animation: gigi 1s ease forwards;
+    transform:"translateY(500px)";
+    opacity : 1;
+    transition: 1s ease;
+    
+}
+
+@keyframes gigi {
+    from {
+        transform: translateY(400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+.slider img {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 2s ease-in-out; /* Increase this value for slower fades */
+    border-radius: 31.96px 0px 0px 0px;
+  }
+  
+  .slider img.active {
+    opacity: 1;
+  }
+ .jojo{
+    transform: translateX(1800);
+    overflow-x: hidden;
+ }
