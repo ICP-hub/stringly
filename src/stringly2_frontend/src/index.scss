@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +7,7 @@
 @font-face {
     font-family: 'SF Pro Display';
     src: url('/path/to/fonts/SFProDisplay-Regular.woff2') format('woff2'),
-         url('/path/to/fonts/SFProDisplay-Regular.woff') format('woff');
+        url('/path/to/fonts/SFProDisplay-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
@@ -16,7 +15,7 @@
 @font-face {
     font-family: 'SF Pro Display';
     src: url('/path/to/fonts/SFProDisplay-Bold.woff2') format('woff2'),
-         url('/path/to/fonts/SFProDisplay-Bold.woff') format('woff');
+        url('/path/to/fonts/SFProDisplay-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
@@ -169,6 +168,105 @@
 }
 
 .backdrop-blur-custom {
-    background: linear-gradient(to right, rgba(248, 168, 154, 0.2),  rgba(161, 203, 243, 0.2));
+    background: linear-gradient(to right, rgba(248, 168, 154, 0.2), rgba(161, 203, 243, 0.2));
     backdrop-filter: blur(1500px);
+}
+
+
+
+.animate {
+    animation: appear linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear {
+    from {
+        transform: translateY(600px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// @keyframes left-right {
+//     from {
+//         opacity: 0;
+//         transform: translateX(0%);
+//     }
+
+//     to {
+//         opacity: 1;
+//         transform: translateX(100%);
+//         /* Fully panned to the right */
+//     }
+// }
+
+
+// .left-right {
+//     animation: pan-left-right linear;
+//     margin-top: 50rem;
+//     animation-timeline: view();
+//     animation-range: entry 0% cover 40%;
+// }
+
+
+
+
+.children {
+    opacity: 0;
+    transform: translateX(500px);
+    transition: none;
+}
+
+.child-20 {
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: none;
+}
+
+.animate.hovered .children {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate.hovered .child-20 {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.animate.hovered .children {
+    animation: ImageSlideIn 1s forwards;
+}
+
+.animate.hovered .child-20 {
+    animation: ImageSlideIn2 1s forwards;
+}
+
+@keyframes ImageSlideIn {
+    from {
+        transform: translateX(-800px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes ImageSlideIn2 {
+    from {
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

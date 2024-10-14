@@ -20,8 +20,8 @@ const Navbar = () => {
                     <p className='hover:bg-zinc-800 px-3 py-1 rounded-lg'>
                         <Link to="/features">Features</Link>
                     </p>
-                    <p className='hover:bg-zinc-800 px-3 py-1 rounded-lg'>
-                        <Link to="/about">About Us</Link>
+                    <p>
+                        <Link to="/product">About Us</Link>
                     </p>
                     <div className='flex items-center gap-2 hover:bg-zinc-800 px-3 py-1 rounded-lg'>
                         <Link to="/contact">Resources</Link>
@@ -84,8 +84,8 @@ export const Menu = ({ isMenu, setIsmMenu }) => {
                 <p className='hover:bg-zinc-200 px-3 py-1 rounded-lg' onClick={handleLinkClick}>
                     <Link to="/features">Features</Link>
                 </p>
-                <p className='hover:bg-zinc-200 px-3 py-1 rounded-lg' onClick={handleLinkClick}>
-                    <Link to="/about">About Us</Link>
+                <p>
+                    <Link to="/product">About Us</Link>
                 </p>
                 <div className='flex items-center gap-2 hover:bg-zinc-200 px-3 py-1 rounded-lg' onClick={handleLinkClick}>
                     <Link to="/contact">Resources</Link>
