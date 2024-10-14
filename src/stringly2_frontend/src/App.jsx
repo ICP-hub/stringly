@@ -17,6 +17,7 @@ function App() {
         <Route path='/' element={<Landingpage/>}/>
         <Route path='/features' element={<FeaturesPage/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/resources' />
       </Routes>
       <Footer/>
     </div>
