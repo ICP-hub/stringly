@@ -12,7 +12,6 @@ function About() {
 			setHovered(newHovered);
 		}
 	};
-
 	return (
 		<>
 			<section>
