@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Landingpage from './pages/landingpage';
 import FeaturesPage from './pages/FeaturesPage';
+import About from './pages/About';
 // import { stringly2_backend } from 'declarations/stringly2_backend';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Landingpage/>}/>
         <Route path='/features' element={<FeaturesPage/>}/>
+        <Route path='/about' element={<About/>}/>
       </Routes>
       <Footer/>
     </div>

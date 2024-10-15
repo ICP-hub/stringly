@@ -25,7 +25,7 @@ const Footer = () => {
         <ul className='md:hidden leading-8 w-[100%] px-10 md:w-auto'>
           <li className='text-lg font-semi-bold pb-4'>About Us</li>
           <li>Contact Us</li>
-          <input type="text" placeholder='Yout Email' className='rounded-2xl text-black bg-white px-2 my-4 p-1 my-2 w-full' />
+          <input type="text" placeholder='Your Email' className='rounded-2xl text-black bg-white px-2 my-4 p-1 my-2 w-full' />
         </ul>
         <div className='flex items-start justify-between flex-wrap gap-8 mg:gap-12 px-16 py-4'>
           <ul className='leading-8'>
@@ -39,7 +39,7 @@ const Footer = () => {
             <p className='text-lg font-semi-bold pb-4'>Company</p>
             <li>Pricing</li>
             <li>Security</li>
-            <li>Privasi Policy</li>
+            <li>Privacy Policy</li>
             <li>Term of use</li>
             <li>Carrier</li>
           </ul>
