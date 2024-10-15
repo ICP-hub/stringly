@@ -16,7 +16,7 @@ function About() {
 		<>
 			<section>
 				<div className='relative w-full'>
-					<img src="./about/heroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen md:h-auto' />
+					<img src="./aboutHeroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen md:h-auto' />
 					<div className='flex items-center flex-col justify-center absolute top-80 text-center left-4 md:top-[35%] lg:top-[35%] lg:left-[30%] p-4 text-white lg:w-[560px] lg:h-[254px]'>
 						<h1 className='font-bold font-sf leading-[48px] lg:leading-[67px] text-[64px] lg:text-[56px]'>
 							Discover Our Story.</h1>
@@ -68,13 +68,13 @@ function About() {
 						</div>
 					</div>
 					<div className='lg:w-auto z-20 left-right children'>
-						<img src="./about/PageImage1.png" alt="" className='h-screen lg:h-auto object-cover' />
+						<img src="./aboutPageImage1.png" alt="" className='h-screen lg:h-auto object-cover' />
 					</div>
 				</div>
 				{/* second card */}
 				<div className={`ppp animate p-4 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`} onMouseEnter={() => handleHover(1)}>
 					<div className='z-20 children'>
-						<img src="./about/PageImage2.png" alt="" className='h-screen lg:h-auto object-cover' />
+						<img src="./aboutPageImage2.png" alt="" className='h-screen lg:h-auto object-cover' />
 					</div>
 					<div className='child-2 hidden lg:block w-[756px] w-[616px] ml-[100px] m-auto  '>
 						<div>
@@ -117,23 +117,23 @@ function About() {
 				<div class="p-4 md:p-2 flex items-center justify-center mb-16 animate">
 					<div class="mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 animate md:gap-8 md:w-[1285px]">
 						<div class="flex w-[174px] h-[231px] md:w-[407px] md:h-[540px] flex-col p-0">
-							<img src="./about/Default1.png" alt="Erika Fisher" class="w-full h-full object-cover" />
+							<img src="./aboutDefault1.png" alt="Erika Fisher" class="w-full h-full object-cover" />
 						</div>
 						<div class="flex w-[174px] h-[231px] md:w-[407px] md:h-[540px] flex-col p-0">
-							<img src="./about/Default2.png" alt="Erika Fisher" class="w-full h-full object-cover" />
+							<img src="./aboutDefault2.png" alt="Erika Fisher" class="w-full h-full object-cover" />
 						</div>
 						<div class="flex w-[174px] h-[231px] md:w-[407px] md:h-[540px] flex-col p-0">
-							<img src="./about/Default3.png" alt="Erika Fisher" class="w-full h-full object-cover" />
+							<img src="./aboutDefault3.png" alt="Erika Fisher" class="w-full h-full object-cover" />
 						</div>
 
 						<div class="flex w-[174px] h-[231px] md:w-[407px] md:h-[540px] flex-col p-0">
-							<img src="./about/Default4.png" alt="Erika Fisher" class="w-full h-full object-cover" />
+							<img src="./aboutDefault4.png" alt="Erika Fisher" class="w-full h-full object-cover" />
 						</div>
 						<div class="flex w-[174px] h-[231px] md:w-[407px] md:h-[540px] flex-col p-0">
-							<img src="./about/Default5.png" alt="Erika Fisher" class="w-full h-full object-cover" />
+							<img src="./aboutDefault5.png" alt="Erika Fisher" class="w-full h-full object-cover" />
 						</div>
 						<div class="flex w-[174px] h-[231px] md:w-[407px] md:h-[540px] flex-col p-0">
-							<img src="./about/Default6.png" alt="Erika Fisher" class="w-full h-full object-cover" />
+							<img src="./aboutDefault6.png" alt="Erika Fisher" class="w-full h-full object-cover" />
 						</div>
 					</div>
 				</div>
@@ -145,7 +145,7 @@ function About() {
 			</section> */}
 			<section>
 				<div className='relative w-full '>
-					<img src="./about/Component 2.png" alt="Premium Features" className='w-full h-screen sm:h-screen md:h-auto' />
+					<img src="./aboutComponent 2.png" alt="Premium Features" className='w-full h-screen sm:h-screen md:h-auto' />
 					<div className='flex items-center flex-col justify-center absolute top-80 text-center left-4 md:top-[35%] lg:top-[35%] lg:left-[30%] p-4 text-white lg:w-[560px] lg:h-[254px]'>
 						<h1 className='font-bold font-sf leading-[48px] lg:leading-[67px] text-[64px] lg:text-[56px]'>
 							Harnessing ICP for Ultimate User Security</h1>
@@ -176,10 +176,10 @@ function About() {
 						</p>
 						<div className="flex md:gap-8 flex-col md:flex-row">
 							<div className="relative w-full md:h-96">
-								<img src="./about/Placeholder-Image-1.png" alt="Journey Image 1" className="w-full object-cover" />
+								<img src="./aboutPlaceholder-Image-1.png" alt="Journey Image 1" className="w-full object-cover" />
 							</div>
 							<div className="relative w-full md:h-96">
-								<img src="./about/Placeholder-Image-2.png" alt="Journey Image 2" className="w-full object-cover" />
+								<img src="./aboutPlaceholder-Image-2.png" alt="Journey Image 2" className="w-full object-cover" />
 							</div>
 						</div>
 					</div>

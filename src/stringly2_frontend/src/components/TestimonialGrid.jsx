@@ -7,7 +7,7 @@ const TestimonialCard = ({ name, role, quote, imageSrc }) => (
       <img src={imageSrc} alt={name} className="w-[161px] h-[161px] rounded-full object-cover" />
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
         <div className="bg-white rounded-full p-1">
-          <img src="./about/Logo.svg" alt="Logo" className="w-6 h-6" />
+          <img src="./aboutLogo.svg" alt="Logo" className="w-6 h-6" />
         </div>
       </div>
     </div>
@@ -29,19 +29,19 @@ const TestimonialGrid = () => {
       name: "Emily Johnson",
       role: "Marketing Director",
       quote: "The level of privacy and luxury is unmatched!",
-      imageSrc: "./about/Ellipse1.png"
+      imageSrc: "./aboutEllipse1.png"
     },
     {
       name: "Michael Smith",
       role: "Software Engineer",
       quote: "I found my perfect match thanks to Stringly!",
-      imageSrc: "./about/Ellipse2.png"
+      imageSrc: "./aboutEllipse2.png"
     },
     {
       name: "Sarah Lee",
       role: "Product Manager",
       quote: "Stringly redefines what dating should feel like!",
-      imageSrc: "./about/Ellipse3.png"
+      imageSrc: "./aboutEllipse3.png"
     }
   ];
 
