@@ -4,29 +4,23 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import CustomCarousel from "../components/CustomCarousel";
 const CardSection = () => {
+
     useEffect(() => {
         const cards = document.querySelectorAll('.card');
-
-        // Use IntersectionObserver to detect when the cards come into view
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        // When the card is in view, apply the transition classes
                         entry.target.classList.remove('opacity-0', 'translate-y-8');
                         entry.target.classList.add('opacity-100', 'translate-y-0');
                     }
                 });
             },
-            { threshold: 0.3 } // Trigger when 30% of the card section is visible
+            { threshold: 0.3 }
         );
-
-        // Observe all cards
         cards.forEach((card) => {
             observer.observe(card);
         });
-
-        // Cleanup the observer on component unmount
         return () => {
             cards.forEach((card) => {
                 observer.unobserve(card);
@@ -37,16 +31,25 @@ const CardSection = () => {
 
 
 const Landingpage = () => {
+    const [hovered, setHovered] = useState([false]);
+
+    const handleHover = (index) => {
+        if (!hovered[index]) {
+            const newHovered = [...hovered];
+            newHovered[index] = true; 
+            setHovered(newHovered);
+        }
+    };
     return (
-        <div className="px-4 md:px-0">
+        <div className="">
             {/* Hero Section */}
-            <div className="relative sm:w-full md:w-full">
-                <img className="w-full h-auto" src="/heroimg.png" alt="Hero image" />
-                <div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[560px] bg-opacity-50 text-center">
-                    <p className="font-sfprodisplay text-[64px] font-semibold leading-[72px] text-center">
+            <div className="relative h-[852px] w-full md:w-full h-screen">
+                <img className="w-full h-[852px] md:h-auto object-cover h-full" src="/heroimg.png" alt="Hero image" />
+                <div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[364px] p-2 lg:w-[600px] bg-opacity-50 text-center">
+                    <p className="font-sf font-semibold w-full text-[38px] lg:text-[64px] leading-[46px] lg:leading-[72px] text-center">
                         Stringly <br /> String your Vibe
                     </p>
-                    <p className="font-sfprodisplay text-[20px] font-normal leading-[30px] text-center mt-2">
+                    <p className="font-sfprodisplay text-[14px] lg:text-[20px] font-normal leading-[21px] lg:leading-[30px] text-center mt-2">
                         Discover Stringly, the premium dating and networking app that blends
                         luxury with cutting-edge technology. Experience unmatched privacy and
                         security while forming meaningful connections.
@@ -63,17 +66,19 @@ const Landingpage = () => {
             </div>
 
             {/* Heading Section */}
-            <div className="flex flex-col items-center mt-10">
-                <h1 className="text-center w-full md:w-[768px] font-extrabold text-[24px] sm:text-[36px] leading-tight">
+            <div className="flex items-center justify-center">
+                <div className='w-[308px] lg:w-[768px]'>
+                <h1 className="text-center w-full leading-[40px] font-extrabold text-[24px] text-[34px] font-sf font-semibold leading-tight">
                     Discover Our Unique Features
                 </h1>
-                <p className="text-center w-full md:w-[768px] mt-2">
+                <p className="text-center w-full mt-2 font-jaktara text-[14px] leading-[21px]">
                     Experience unmatched privacy and secure connections today.
                 </p>
+                </div>
             </div>
 
             <section className='px-4'>
-                <div className='w-full flex items-center justify-between flex-col py-12 text-[18px]'>
+                <div className='lg:block w-full flex items-center justify-between flex-col py-8 text-[18px]'>
                     <div className='text-center gap-4 lg:w-[768px] flex items-center justify-between flex-col'>
                         <p className='text-[40px] font-sf font-semibold leading-[48px] md:hidden'>
                             Experience Security and Luxury
@@ -129,39 +134,33 @@ const Landingpage = () => {
 
 
             {/* Connecting Section */}
-            <div className="text-center mt-12">
-                <h2 className="text-3xl font-bold leading-tight" style={{ fontWeight: '900', height: '400' }}>Connecting You With Purpose</h2>
-                <p className="mt-2 text-white-600 leading-normal">
+            <div className="text-center mt-12 ">
+                <h2 className="text-3xl font-semibold font-sf leading-[38px]">Connecting You With Purpose</h2>
+                <p className="mt-2 text-[14px] font-regular leading-[24px]">
                     A unique blend of dating and networking experiences.
                 </p>
             </div>
 
             {/* Group for All Images */}
-            <div className="group flex flex-col items-center justify-center mt-8 gap-4">
+            <div className="w-[330px] mx-auto group flex flex-col items-center justify-center mt-8 gap-4">
 
                 {/* Top Image with Hover Effect (Profile Image) */}
-                <div className="relative w-[1308px] h-[300px] rounded-tl-[12px] rounded-tr-[12px] overflow-hidden">
+                <div className="relative w-full lg:w-[1308px] h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-black">
                     <img
                         src="/prof.png"
                         alt="Profile Image"
-                        className="w-full h-full object-cover"
+                        className="w-full md:w-full h-full object-cover opacity-[0.6] "
                     />
                     {/* Text Overlay for Top Image */}
                     <div className="absolute inset-0 flex items-center p-6 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500">
                         <div className="text-white">
                             <h2
-                                className="text-3xl font-semibold leading-tight"
-                                style={{
-                                    fontFamily: 'SF Pro Display',
-                                    fontSize: '26px',
-                                    fontWeight: 'bolder',  // Increase the weight
-                                    lineHeight: '36px'     // Increase the line height
-                                }}
+                                className="text-[32px] leading-[38px] font-semibold leading-tight font-roboto font-bold"
                             >
                                 Elevate Your Networking Experience
                             </h2>
 
-                            <p className="mt-2 text-white-600 leading-normal">Experience connections like never before with Stringly.</p>
+                            <p className="mt-2 text-white-600 font-roboto font-regular leading-[24px]">Experience connections like never before with Stringly.</p>
                             <button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:bg-pink-100"> {/* Adjusted length and radius */}
                                 Join
                             </button>
@@ -170,20 +169,20 @@ const Landingpage = () => {
                 </div>
 
                 {/* Flex Container for Left and Right Images */}
-                <div className="flex justify-between gap-4 mt-4 w-[1308px]">
+                <div className="w-full lg:flex justify-between gap-4 mt-4 lg:w-[1308px]">
 
                     {/* Left Image with Hover Effect (Hug Image) */}
-                    <div className="relative w-[440px] h-[340px] rounded-bl-[12px] overflow-hidden">
+                    <div className="relative mb-8 w-full lg:w-[440px] h-[340px] rounded-xl lg:rounded-bl-[12px] overflow-hidden bg-black">
                         <img
                             src="/hug.png"
                             alt="Hug Image"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover opacity-[0.6]"
                         />
                         {/* Text Overlay for Left Image */}
                         <div className="absolute inset-0 flex items-center p-6 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500">
                             <div className="text-white">
-                                <h2 className="text-2xl font-semibold" style={{ fontFamily: 'SF Pro Display', fontSize: '26px', fontWeight: '900' }}>Your Journey Begins Here</h2>
-                                <p className="text-lg mt-2">Experience connections like never before with Stringly.</p>
+                                <h2 className="text-[32px] leading-[38px] font-semibold font-roboto font-bold" >Your Journey Begins Here</h2>
+                                <p className="text-lg mt-2 font-roboto font-regular leading-[24px]">Experience connections like never before with Stringly.</p>
                                 <button className="bg-white text-black px-8 py-2 rounded-[8px] mt-4 hover:bg-pink-100 "> {/* Adjusted length and radius */}
                                     Join
                                 </button>
@@ -192,17 +191,17 @@ const Landingpage = () => {
                     </div>
 
                     {/* Right Image with Hover Effect (Kiss Image) */}
-                    <div className="relative w-[836px] h-[340px] rounded-br-[12px] overflow-hidden">
+                    <div className="relative w-full lg:w-[836px] h-[340px] rounded-xl overflow-hidden bg-black">
                         <img
                             src="/kiss.png"
                             alt="Kiss Image"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover opacity-[0.6]"
                         />
                         {/* Text Overlay for Right Image */}
                         <div className="absolute inset-0 flex items-center p-6 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500">
                             <div className="text-white">
-                                <h2 className="text-2xl font-semibold" style={{ fontFamily: 'SF Pro Display', fontSize: '26px', fontWeight: '900' }}>Unmatched Privacy and Security</h2>
-                                <p className="text-lg mt-2  fontSize: '26px' ">Experience connections like never before with Stringly.</p>
+                                <h2 className="text-[32px] leading-[38px] font-roboto font-bold">Unmatched Privacy and Security</h2>
+                                <p className="text-lg mt-2  fontSize: '26px'font-roboto font-regular leading-[24px] ">Experience connections like never before with Stringly.</p>
                                 <button className="bg-white text-black px-8 py-2 rounded-[8px] mt-4 hover:bg-pink-100 "> {/* Adjusted length and radius */}
                                     Join
                                 </button>
@@ -215,9 +214,9 @@ const Landingpage = () => {
 
 
             {/* Updated Section with Your Specifications */}
-            <div className="flex flex-col md:flex-row justify-between items-start mt-12">
+            <div className="flex px-4 lg:flex-row text-white lg:text-black relative justify-between items-start mt-12 h-[550px]">
                 {/* Text Section */}
-                <div className="flex flex-col" style={{
+                <div className="absolute top-0  left-0 lg:relative flex flex-col" style={{
                     width: '100%',
                     maxWidth: '556px',
                     gap: '16px',
@@ -231,7 +230,6 @@ const Landingpage = () => {
                         md: '48px',
                         fontWeight: 800,
                         lineHeight: '58px',
-                        color: '#000000'
                     }}>
                         Experience Unmatched<br />Privacy and Elegance
                     </h2>
@@ -241,12 +239,11 @@ const Landingpage = () => {
                         fontWeight: 400,
                         lineHeight: '22px',
                         textAlign: 'left',
-                        color: '#000000',
                         width: '100%',
                     }}>
                         At Stringly, we prioritize your privacy while providing a luxurious experience. Our platform is designed to ensure that every connection you make is both secure and sophisticated.
                     </p>
-                    <div className="flex justify-between mt-6 items-start" style={{ width: '566px', height: '64px', gap: '8px' }}>
+                    <div className="lg:flex justify-between mt-6 items-start lg:w-[556px] h-[64px] gap-8">
                         <div className="flex flex-col items-start">
                             <div className="flex items-center">
                                 <img src="./final.png" alt="privacy icon" className="mr-2" />
@@ -273,18 +270,18 @@ const Landingpage = () => {
                 </div>
 
                 {/* Image Section */}
-                <div className="mt-8 md:mt-0">
+                <div className=" md:mt-0 bg-black rounded-xl">
                     <img
                         src="/splash.png"
                         alt="Splash Image"
-                        className="w-full max-w-[750px] h-auto rounded-l-[10px]"
+                        className="w-[367px] lg:w-[750px] h-[550px] rounded-xl lg:rounded-l-[10px]"
                     />
                 </div>
             </div>
 
             {/* Section with Button and Image Gallery */}
-            <div className="lili flex flex-col items-center mt-10  ">
-                <div className='py-12 '>
+            <div className="flex flex-col items-center mt-10">
+                <div className="py-12">
                     <h1 className="text-center w-full md:w-[768px] font-bold text-[24px] sm:text-[36px] leading-tight">
                         Short Heading goes here
                     </h1>
@@ -292,11 +289,11 @@ const Landingpage = () => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                 </div>
-                <div className='flex flex-col items-center'>
-                    <div
-                        className="childx flex justify-center gap-6 mt-8 py-8"
-                        style={{ maxWidth: '1312px', margin: '0 auto' }}
-                    >
+                <div
+                    className={`flex flex-col items-center opacity-0 ${hovered[0] ? 'lili' : ''}`}
+                    onMouseEnter={() => handleHover(0)}
+                >
+                    <div className="childx lg:flex justify-center gap-6 mt-8 py-8" style={{ maxWidth: '1312px', margin: '0 auto' }}>
                         {/* Image 1 */}
                         <div
                             style={{
@@ -346,49 +343,41 @@ const Landingpage = () => {
                         </div>
                     </div>
 
-                    {/* View All Button */}
-                    <button
-                        className="bg-white text-black border border-black px-4 py-2 rounded w-[100px] hover:bg-gray-200 hover:text-black transition-all duration-300"
-                    >
+                    <button className="bg-white text-black border border-black px-4 py-2 rounded w-[100px] hover:bg-gray-200 hover:text-black transition-all duration-300">
                         View All
                     </button>
                 </div>
-
-
-
-
-
-
-                {/* Image Gallery Section */}
-                <div
-                    className="flex flex-col items-center mt-28"
-                    style={{
-                        width: '100%',
-                        maxWidth: '600px',
-                        gap: '12px',
-                    }}
-                >
-                    <h1 className="text-center w-full md:w-[600px] font-bold text-[54px] sm:text-[36px] leading-tight font-weight-[900px]">
-
-                        Image Gallery
-                    </h1>
-                    <p className="text-center w-full md:w-[600px] mt-2">
-                        Explore our gallery to experience more.
-                    </p>
-                </div>
-
-                <div
-                    styles={{
-                        display: 'flex',
-                        alignItems: "center",
-                        justifyContent: "center",
-                    }}>
-                    <CustomCarousel />
-                </div>
-
-
             </div>
-        </div>
+
+            {/* Image Gallery Section */}
+            <div
+                className="flex flex-col items-center mt-28"
+                style={{
+                    width: '100%',
+                    maxWidth: '600px',
+                    gap: '12px',
+                }}
+            >
+                <h1 className="font-sf text-center w-full lg:w-[600px] text-[34px] font-semibold lg:text-[54px] leading-[48px] font-bold">
+
+                    Image Gallery
+                </h1>
+                <p className="font-jakarta text-center w-full md:w-[600px] mt-2">
+                    Explore our gallery to experience more.
+                </p>
+            </div>
+
+            <div
+                styles={{
+                    display: 'flex',
+                    alignItems: "center",
+                    justifyContent: "center",
+                }}>
+                <CustomCarousel />
+            </div>
+
+
+        </div >
     );
 };
 

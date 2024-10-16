@@ -17,7 +17,7 @@ const FeaturesPage = () => {
             <section>
                 <div className='relative w-full'>
                     <img src="/FeaturesHeroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen md:h-auto' />
-                    <div className='absolute top-80 text-center left-4 md:top-[35%] lg:top-[35%] lg:left-[33%] p-4 text-white lg:w-[560px] lg:h-[254px]'>
+                    <div className='absolute top-40 text-center left-4 md:top-[35%] lg:top-[35%] lg:left-[33%] p-4 text-white lg:w-[560px] lg:h-[254px]'>
                         <h1 className='font-bold font-roboto leading-[48px] lg:leading-[67px] text-[40px] lg:text-[56px]'>Premium Features <h2 className='text-center bg-clip-text text-transparent' style={{ backgroundImage: 'linear-gradient(90deg, #0508D6 30.34%, #AF2C80 53.17%, #DC73B6 73.67%, #F1C7E2 85.17%)' }}>
                             Unveiled
                         </h2></h1>

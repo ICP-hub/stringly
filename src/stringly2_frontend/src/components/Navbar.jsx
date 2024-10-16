@@ -77,14 +77,14 @@ export const Menu = ({ isMenu, setIsmMenu }) => {
                     </button>
                 </div>
             </div>
-            <div className='flex flex-col items-start gap-6 px-8 py-4'>
+            <div className='flex flex-col items-start justify-start  gap-6 px-6 py-4'>
                 <p className='hover:bg-zinc-200 px-3 py-1 rounded-lg' onClick={handleLinkClick}>
                     <Link to="/">Home</Link>
                 </p>
                 <p className='hover:bg-zinc-200 px-3 py-1 rounded-lg' onClick={handleLinkClick}>
                     <Link to="/features">Features</Link>
                 </p>
-                <p>
+                <p className='hover:bg-zinc-200 px-3 py-1 rounded-lg'>
                     <Link to="/about">About Us</Link>
                 </p>
                 <div className='flex items-center gap-2 hover:bg-zinc-200 px-3 py-1 rounded-lg' onClick={handleLinkClick}>

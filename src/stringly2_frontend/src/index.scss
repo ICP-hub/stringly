@@ -44,34 +44,36 @@
     background-color: white;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in;
-  }
-  
-  .nav.slide-in {
+}
+
+.nav.slide-in {
     animation: slide-nav-in 1s forwards;
-  }
-  
-  .nav.slide-out {
+}
+
+.nav.slide-out {
     animation: slide-nav-out 1s backwards;
-  }
-  
-  @keyframes slide-nav-in {
+}
+
+@keyframes slide-nav-in {
     from {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
+
     to {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-  }
-  
-  @keyframes slide-nav-out {
+}
+
+@keyframes slide-nav-out {
     from {
-      transform: translateX(0);
+        transform: translateX(0);
     }
+
     to {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
-  }
-  
+}
+
 
 .card-image {
     transition: transform 0.4s ease;
@@ -192,29 +194,6 @@
     }
 }
 
-// @keyframes left-right {
-//     from {
-//         opacity: 0;
-//         transform: translateX(0%);
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateX(100%);
-//         /* Fully panned to the right */
-//     }
-// }
-
-
-// .left-right {
-//     animation: pan-left-right linear;
-//     margin-top: 50rem;
-//     animation-timeline: view();
-//     animation-range: entry 0% cover 40%;
-// }
-
-
-
 
 .children {
     opacity: 0;
@@ -270,12 +249,12 @@
         opacity: 1;
     }
 }
-.lili .childx:hover{
+
+.lili {
     animation: gigi 1s ease forwards;
-    transform:"translateY(500px)";
-    opacity : 1;
-    transition: 1s ease;
-    
+    transform: translateY(300px);
+    transition: 2s ease;
+    opacity: 1;
 }
 
 @keyframes gigi {
@@ -283,26 +262,27 @@
         transform: translateY(400px);
         opacity: 0;
     }
-
     to {
         transform: translateY(0);
         opacity: 1;
     }
-
 }
+
+
 .slider img {
     position: absolute;
     opacity: 0;
     width: 100%;
     height: 100%;
-    transition: opacity 2s ease-in-out; /* Increase this value for slower fades */
+    transition: opacity 2s ease-in-out;
     border-radius: 31.96px 0px 0px 0px;
-  }
-  
-  .slider img.active {
+}
+
+.slider img.active {
     opacity: 1;
-  }
- .jojo{
+}
+
+.jojo {
     transform: translateX(1800);
     overflow-x: hidden;
- }
+}
