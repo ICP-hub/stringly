@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Landingpage from './pages/landingpage';
@@ -11,6 +11,7 @@ function App() {
 
   return (
     <div>
+      <HashRouter>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Landingpage/>}/>
@@ -18,6 +19,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
       </Routes>
       <Footer/>
+      </HashRouter>
     </div>
   );
 }

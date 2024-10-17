@@ -16,7 +16,7 @@ const FeaturesPage = () => {
         <>
             <section>
                 <div className='relative w-full'>
-                    <img src="/FeaturesHeroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen md:h-auto' />
+                    <img src="./FeaturesHeroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen md:h-auto' />
                     <div className='absolute top-40 text-center left-4 md:top-[35%] lg:top-[35%] lg:left-[33%] p-4 text-white lg:w-[560px] lg:h-[254px]'>
                         <h1 className='font-bold font-roboto leading-[48px] lg:leading-[67px] text-[40px] lg:text-[56px]'>Premium Features <h2 className='text-center bg-clip-text text-transparent' style={{ backgroundImage: 'linear-gradient(90deg, #0508D6 30.34%, #AF2C80 53.17%, #DC73B6 73.67%, #F1C7E2 85.17%)' }}>
                             Unveiled
@@ -46,7 +46,7 @@ const FeaturesPage = () => {
                 <div className='flex items-center justify-evenly gap-4 py-4 lg:px-2 flex-wrap'>
                     <div class="card relative w-[363px] md:w-[408px] h-[377px] bg-black rounded-2xl text-white overflow-hidden opacity-[1]">
                         <img
-                            src="/FeaturesCard1.png"
+                            src="./FeaturesCard1.png"
                             alt="features"
                             class="card-image w-full h-full object-cover opacity-[50%] rounded-2xl transition-transform duration-400"
                         />
@@ -66,7 +66,7 @@ const FeaturesPage = () => {
                     </div>
                     <div class="card relative w-[363px] md:w-[408px] h-[377px] bg-black rounded-2xl text-white overflow-hidden opacity-[1]">
                         <img
-                            src="/FeaturesCard2.png"
+                            src="./FeaturesCard2.png"
                             alt="features"
                             class="card-image w-full h-full object-cover opacity-[50%] rounded-2xl transition-transform duration-400"
                         />
@@ -86,7 +86,7 @@ const FeaturesPage = () => {
                     </div>
                     <div class="card relative w-[363px] md:w-[408px] h-[377px] bg-black rounded-2xl text-white overflow-hidden opacity-[1]">
                         <img
-                            src="/FeaturesCard3.png"
+                            src="./FeaturesCard3.png"
                             alt="features"
                             class="card-image w-full h-full object-cover opacity-[50%] rounded-2xl transition-transform duration-400"
                         />
@@ -129,7 +129,7 @@ const FeaturesPage = () => {
                 {/* second card */}
                 <div className={`ppp p-4 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`} onMouseEnter={() => handleHover(1)}>
                     <div className='z-20'>
-                        <img src="/FeaturesRectangle 2.png" alt="" className='h-screen lg:h-auto object-cover' />
+                        <img src="./FeaturesRectangle 2.png" alt="" className='h-screen lg:h-auto object-cover' />
                     </div>
                     <div className='child-2 hidden lg:block w-[756px] w-[616px] ml-[100px] m-auto  '>
                         <div>
@@ -188,14 +188,14 @@ const FeaturesPage = () => {
                         </div>
                     </div>
                     <div className='z-20'>
-                        <img src="/FeaturesRectangle 3.png" alt="" className='h-screen lg:h-auto object-cover' />
+                        <img src="./FeaturesRectangle 3.png" alt="" className='h-screen lg:h-auto object-cover' />
                     </div>
                 </div>
             </section>
             <section className='backdrop-blur-custom'>
                 <div className='flex items-center justify-center text-center py-10'>
                     <div className='flex items-center justify-center flex-col text-center w-[568px] p-[18px] gap-[32px]'>
-                        <img src="/FeaturesLogo_webflow.png" alt="" />
+                        <img src="./FeaturesLogo_webflow.png" alt="" />
                         <p>"Stringly transformed my dating life. The luxury and privacy made all the difference in finding genuine connections."</p>
                         <div className='flex items-center justify-center flex-col text-center'>
                             <img src="./FeaturesProfile.png" alt="" className='pb-4' />
@@ -223,7 +223,7 @@ const FeaturesPage = () => {
                         </div>
                     </div>
                     <div>
-                        <img src="/FeaturesPlaceholder Image.png" alt="" className='object-cover' />
+                        <img src="./FeaturesPlaceholder Image.png" alt="" className='object-cover' />
                     </div>
                 </div>
             </section>
