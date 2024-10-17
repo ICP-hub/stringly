@@ -17,11 +17,10 @@ function About() {
 			<section>
 				<div className='relative w-full'>
 					<img src="./aboutHeroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen md:h-auto' />
-					<div className='flex items-center flex-col justify-center absolute top-80 text-center left-4 md:top-[35%] lg:top-[35%] lg:left-[30%] p-4 text-white lg:w-[560px] lg:h-[254px]'>
-						<h1 className='font-bold font-sf leading-[48px] lg:leading-[67px] text-[64px] lg:text-[56px]'>
+					<div className='w-[364px] flex items-center flex-col justify-center absolute top-60 text-center left-4 md:left-48 lg:top-[35%] lg:top-[35%] lg:left-[30%] lg:p-4 text-white lg:w-[560px] lg:h-[254px]'>
+						<h1 className='font-bold font-sf leading-[72px] lg:leading-[67px] text-[38px] lg:text-[56px]'>
 							Discover Our Story.</h1>
-
-						<p className='mt-4 text-[18px] text-center font-roboto font-regular leading-[27px]'>
+						<p className='text-[18px] text-center font-roboto font-regular leading-[27px]'>
 							Explore the vision behind Stringly and our commitment to redefining connections in a luxurious way.
 						</p>
 						<div class="flex space-x-4 my-10">
@@ -144,12 +143,12 @@ function About() {
 				</div>
 			</section> */}
 			<section>
-				<div className='relative w-full '>
-					<img src="./aboutComponent 2.png" alt="Premium Features" className='w-full h-screen sm:h-screen md:h-auto' />
-					<div className='flex items-center flex-col justify-center absolute top-80 text-center left-4 md:top-[35%] lg:top-[35%] lg:left-[30%] p-4 text-white lg:w-[560px] lg:h-[254px]'>
-						<h1 className='font-bold font-sf leading-[48px] lg:leading-[67px] text-[64px] lg:text-[56px]'>
+				<div className='relative w-full h-[656px] md:h-auto bg-black'>
+					<img src="./aboutComponent 2.png" alt="Premium Features" className='w-full relative object-cover h-full md:h-screen opacity-[0.7]' />
+					<div className='flex items-center gap-8 flex-col justify-center absolute top-40 lg:top-80 text-center left-4 md:top-[35%] lg:top-[35%] lg:left-[30%] p-4 text-white lg:w-[560px] lg:h-[254px]'>
+						<h1 className='font-semibold lg:font-bold font-sf leading-[38px] md:leading-[67px] text-[32px] md:text-[56px]'>
 							Harnessing ICP for Ultimate User Security</h1>
-						<p className='mt-4 text-[18px] text-center font-roboto font-regular leading-[27px]'>
+						<p className='text-[14px] md:text-[18px] text-center font-jakarta font-regular leading-[21px] lg:leading-[27px]'>
 							At Stringly, we utilize the Internet Computer Protocol (ICP) to provide a secure and private environment for our users. This cutting-edge technology ensures that your personal data remains confidential while you explore meaningful connections. With Stringly, you can enjoy peace of mind knowing that your privacy is our top priority.
 						</p>
 						<div class="flex space-x-4 my-10">
@@ -168,18 +167,18 @@ function About() {
 			</section>
 			<TestimonialGrid />
 			<section>
-				<div className="h-screen py-12 mb-12 px-6 flex flex-col box-contain">
-					<div className="h-screen mx-auto text-center">
+				<div className="h-full py-12 mb-12 px-6 flex flex-col box-contain">
+					<div className="h-full mx-auto text-center">
 						<h1 className="text-[48px] font-sf font-bold text-black mb-4">Our Journey</h1>
 						<p className="text-gray-600 text-[18px] font-jakarta mb-10">
 							Explore the milestones and culture that define Stringly.
 						</p>
-						<div className="flex md:gap-8 flex-col md:flex-row">
-							<div className="relative w-full md:h-96">
-								<img src="./aboutPlaceholder-Image-1.png" alt="Journey Image 1" className="w-full object-cover" />
+						<div className="h-full flex lg:gap-8 flex-col lg:flex-row">
+							<div className="relative w-full pb-8 lg:pb-0">
+								<img src="./aboutPlaceholder-Image-1.png" alt="Journey Image 1" className="w-full h-screen object-cover" />
 							</div>
-							<div className="relative w-full md:h-96">
-								<img src="./aboutPlaceholder-Image-2.png" alt="Journey Image 2" className="w-full object-cover" />
+							<div className="relative w-full">
+								<img src="./aboutPlaceholder-Image-2.png" alt="Journey Image 2" className="w-full h-screen object-cover" />
 							</div>
 						</div>
 					</div>

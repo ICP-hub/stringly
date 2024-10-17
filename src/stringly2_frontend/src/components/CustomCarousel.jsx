@@ -1,154 +1,111 @@
-import React, { useState } from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carousel styles
+import { useState, useEffect } from "react";
+import { IconButton } from "@material-tailwind/react";
 
-const CustomCarousel = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+function CarouselCustomArrows() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const totalSlides = 3; // Update this if you add more images
+  const images = [
+    "./carousel1.png",
+    "./carousel2.png",
+    "./carousel3.png",
+  ];
 
-  const handleIndicatorClick = (index) => {
-    setSelectedIndex(index);
+  // Automatically change slide every second
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % totalSlides);
+    }, 3000); // Change image every second
+
+    return () => clearInterval(interval); // Cleanup the interval
+  }, [totalSlides]);
+
+
+  const handlePrev = () => {
+    setActiveIndex((prevIndex) => (prevIndex === 0 ? totalSlides - 1 : prevIndex - 1));
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % totalSlides);
   };
 
   return (
-    <div
-      style={{
-        marginBottom: '40px', // Space between carousel and footer or other content
-        position: 'relative',
-        transform: 'translateX(20px)', // Slight shift to the right
-        scale: '0.95', // Reduce the overall size slightly
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'column', // Arrange items vertically
-        width: '1306px', // Set a fixed width
-      }}
-    >
-      {/* Carousel Section */}
-      <Carousel
-        style={{
-          width: '100%', // Carousel takes full width of parent container
-        }}
-        selectedItem={selectedIndex} // Sync the selected slide with the custom indicators
-        infiniteLoop
-        autoPlay
-        centerMode // Enable centering
-        centerSlidePercentage={80} // 80% width for centered slide
-        interval={1800} // Slide interval
-        transitionTime={500} // Transition duration
-        stopOnHover={false} // Keep auto-playing
-        showArrows={true} // Show navigation arrows
-        showStatus={false} // Hide slide count
-        showIndicators={false} // Ensure default indicators are hidden
-        onChange={(index) => setSelectedIndex(index)} // Sync selected index
+    <div className="my-10 relative px-8  lg:w-[1200px] h-[250px] md:h-[470px] lg:h-[819px] overflow-hidden">
+      <div className="relative w-full overflow-hidden bg-black rounded-xl">
+        <div
+          className="flex transition-transform duration-1000 ease-in-out"
+          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+        >
+          {images.map((imgSrc, index) => (
+            <img
+              key={index}
+              src={imgSrc}
+              alt={`Slide ${index + 1}`}
+              className="w-full lg:h-[719px] object-cover rounded-xl opacity-[0.7]"
+            />
+          ))}
+        </div>
+      </div>
+
+
+      {/* Previous and Next Buttons */}
+      <IconButton
+        variant="text"
+        color="white"
+        size="lg"
+        onClick={handlePrev}
+        className="!absolute top-2/4 left-4 -translate-y-2/4"
       >
-        {/* Slide 1 */}
-        <div
-          className="jojo flex justify-center"
-          style={{
-            width: '100%', // 100% width ensures the slides take full width of container
-            height: '619.1px',
-            display: 'flex', // Flexbox for centering content
-            justifyContent: 'center', // Center horizontally
-            alignItems: 'center', // Center vertically
-            backgroundColor: 'black', // Black background for slide
-            borderRadius: '31.96px',
-            padding: '20px', // Add padding to prevent overlap
-          }}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2}
+          stroke="currentColor"
+          className="h-6 w-6"
         >
-          <img
-            className="slider"
-            src="./Gallery.png"
-            alt="Gallery"
-            style={{
-              width: '100%', // Responsive image width
-              height: '100%',
-              borderRadius: '31.96px',
-              objectFit: 'cover', // Ensure image covers the container
-            }}
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
           />
-        </div>
+        </svg>
+      </IconButton>
 
-        {/* Slide 2 */}
-        <div
-          className="flex justify-center"
-          style={{
-            width: '100%',
-            height: '619.1px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: 'black', // Black background for slide
-            borderRadius: '31.96px',
-            padding: '20px',
-          }}
-        >
-          <img
-            src="./Gallery.png"
-            alt="Gallery 2"
-            style={{
-              width: '100%',
-              height: '100%',
-              borderRadius: '31.96px',
-              objectFit: 'cover',
-            }}
-          />
-        </div>
-
-        {/* Slide 3 */}
-        <div
-          className="flex justify-center"
-          style={{
-            width: '100%',
-            height: '619.1px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: 'black', // Black background for slide
-            borderRadius: '31.96px',
-            padding: '20px',
-          }}
-        >
-          <img
-            src="./Gallery.png"
-            alt="Gallery 3"
-            style={{
-              width: '100%',
-              height: '100%',
-              borderRadius: '31.96px',
-              objectFit: 'cover',
-            }}
-          />
-        </div>
-      </Carousel>
-
-      {/* Custom Indicator Section */}
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          marginTop: '20px', // Space between carousel and indicators
-        }}
+      <IconButton
+        variant="text"
+        color="white"
+        size="lg"
+        onClick={handleNext}
+        className="!absolute top-2/4 !right-4 -translate-y-2/4"
       >
-        {[0, 1, 2].map((index) => (
-          <div
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2}
+          stroke="currentColor"
+          className="h-6 w-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+          />
+        </svg>
+      </IconButton>
+
+      {/* Dot Indicators */}
+      <div className="absolute bottom-[10px] lg:bottom-[40px] gap-6 left-1/2 transform -translate-x-1/2 flex space-x-2 " >
+        {images.map((_, index) => (
+          <span
             key={index}
-            onClick={() => handleIndicatorClick(index)}
-            style={{
-              display: 'inline-block',
-              cursor: 'pointer',
-              margin: '0 10px',
-              opacity: selectedIndex === index ? 1 : 0.5, // Adjust opacity for the active indicator
-              transition: 'opacity 0.3s',
-              width: '31.96px', // Width of the circular indicator
-              height: '31.96px', // Height of the circular indicator
-              backgroundColor: selectedIndex === index ? 'black' : 'gray', // Change color for selected/non-selected state
-              borderRadius: '50%', // Make the indicator circular
-            }}
+            className={`block lg:h-8 h-4 lg:w-8 w-4 rounded-full ${activeIndex === index ? "bg-black" : "bg-gray-400"
+              } `}
           />
         ))}
       </div>
     </div>
   );
-};
+}
 
-export default CustomCarousel;
+export default CarouselCustomArrows;

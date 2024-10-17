@@ -1,33 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { FaChevronRight } from "react-icons/fa";
-import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import CustomCarousel from "../components/CustomCarousel";
-const CardSection = () => {
-
-    useEffect(() => {
-        const cards = document.querySelectorAll('.card');
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.remove('opacity-0', 'translate-y-8');
-                        entry.target.classList.add('opacity-100', 'translate-y-0');
-                    }
-                });
-            },
-            { threshold: 0.3 }
-        );
-        cards.forEach((card) => {
-            observer.observe(card);
-        });
-        return () => {
-            cards.forEach((card) => {
-                observer.unobserve(card);
-            });
-        };
-    }, []);
-}
+import CarouselCustomArrows from '../components/CustomCarousel';
 
 
 const Landingpage = () => {
@@ -36,17 +10,17 @@ const Landingpage = () => {
     const handleHover = (index) => {
         if (!hovered[index]) {
             const newHovered = [...hovered];
-            newHovered[index] = true; 
+            newHovered[index] = true;
             setHovered(newHovered);
         }
     };
     return (
         <div className="">
             {/* Hero Section */}
-            <div className="relative h-[852px] w-full md:w-full h-screen">
-                <img className="w-full h-[852px] md:h-auto object-cover h-full" src="/heroimg.png" alt="Hero image" />
-                <div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[364px] p-2 lg:w-[600px] bg-opacity-50 text-center">
-                    <p className="font-sf font-semibold w-full text-[38px] lg:text-[64px] leading-[46px] lg:leading-[72px] text-center">
+            <div className="relative h-[852px] w-full md:w-full h-screen bg-black">
+                <img className="w-full h-[852px] object-cover h-full opacity-[0.7]" src="/heroimg.png" alt="Hero image" />
+                <div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[364px] p-2 md:w-[600px] bg-opacity-50 text-center">
+                    <p className="font-sf font-semibold w-full text-[38px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
                         Stringly <br /> String your Vibe
                     </p>
                     <p className="font-sfprodisplay text-[14px] lg:text-[20px] font-normal leading-[21px] lg:leading-[30px] text-center mt-2">
@@ -66,23 +40,16 @@ const Landingpage = () => {
             </div>
 
             {/* Heading Section */}
-            <div className="flex items-center justify-center">
-                <div className='w-[308px] lg:w-[768px]'>
-                <h1 className="text-center w-full leading-[40px] font-extrabold text-[24px] text-[34px] font-sf font-semibold leading-tight">
-                    Discover Our Unique Features
-                </h1>
-                <p className="text-center w-full mt-2 font-jaktara text-[14px] leading-[21px]">
-                    Experience unmatched privacy and secure connections today.
-                </p>
-                </div>
-            </div>
 
             <section className='px-4'>
-                <div className='lg:block w-full flex items-center justify-between flex-col py-8 text-[18px]'>
+                <div className=' w-full flex items-center justify-between flex-col py-8 text-[18px]'>
                     <div className='text-center gap-4 lg:w-[768px] flex items-center justify-between flex-col'>
-                        <p className='text-[40px] font-sf font-semibold leading-[48px] md:hidden'>
-                            Experience Security and Luxury
+                        <p className='text-[40px] font-sf font-semibold leading-[48px] '>
+                        Discover Our Unique Features
                         </p>
+                        <p className="text-center w-full mt-2 font-jaktara text-[14px] leading-[21px]">
+                        Experience unmatched privacy and secure connections today.
+                    </p>
                     </div>
                 </div>
                 <div className='flex items-center justify-evenly gap-4 py-4 lg:px-2 flex-wrap'>
@@ -214,15 +181,14 @@ const Landingpage = () => {
 
 
             {/* Updated Section with Your Specifications */}
-            <div className="flex px-4 lg:flex-row text-white lg:text-black relative justify-between items-start mt-12 h-[550px]">
+            <div className="flex px-4 border-2 lg:flex-row  relative justify-between items-start mt-12 h-[550px]">
                 {/* Text Section */}
-                <div className="absolute top-0  left-0 lg:relative flex flex-col" style={{
+                <div className="absolute top-0 text-white lg:text-black left-0 lg:relative flex flex-col" style={{
                     width: '100%',
                     maxWidth: '556px',
                     gap: '16px',
                     paddingLeft: '7%',
-                    paddingTop: '10px',
-                }}>
+                    paddingTop: '10px',}}>
                     <h2 style={{
                         fontFamily: 'SF Pro Display',
                         fontSize: '32px',
@@ -268,13 +234,13 @@ const Landingpage = () => {
                         <button className="bg-black text-white px-4 py-2 rounded">Sign Up</button>
                     </div>
                 </div>
-
+                
                 {/* Image Section */}
                 <div className=" md:mt-0 bg-black rounded-xl">
                     <img
                         src="/splash.png"
                         alt="Splash Image"
-                        className="w-[367px] lg:w-[750px] h-[550px] rounded-xl lg:rounded-l-[10px]"
+                        className="w-full opacity-[.7] lg:w-[750px] h-[550px] rounded-xl object-cover lg:rounded-l-[10px]"
                     />
                 </div>
             </div>
@@ -293,53 +259,67 @@ const Landingpage = () => {
                     className={`flex flex-col items-center opacity-0 ${hovered[0] ? 'lili' : ''}`}
                     onMouseEnter={() => handleHover(0)}
                 >
-                    <div className="childx lg:flex justify-center gap-6 mt-8 py-8" style={{ maxWidth: '1312px', margin: '0 auto' }}>
+                    <div className="childx flex flex-col lg:flex-row items-center justify-center gap-8 mt-8 py-8" style={{ maxWidth: '1412px', margin: '0 auto' }}>
                         {/* Image 1 */}
-                        <div
-                            style={{
-                                width: '416px',
-                                height: '542px',
-                                borderRadius: '10px 0 0 0',
-                                overflow: 'hidden',
-                            }}
-                        >
-                            <img
-                                src="/poke.png"
-                                alt="Image 1"
-                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                            />
+                        <div className="w-[334px] md:w-[416px] shadow-lg">
+                            <img src="/forever.png" alt="" />
+                            <div className="w-[] p-4">
+                                <p className='font-jakarta font-bold text-[14px] leading-[16px] '>Category</p>
+                                <p className="text-[24px] font-jakarta font-bold leading-[28px] py-2">Blog title heading will go here</p>
+                                <p className='text-[16px] font-sf font-regular leading-[20px]'>Lorem ipsum dolor sit amet, consectetur <br />
+                                    Suspendisse varius enim in eros.</p>
+                            </div>
+                            <div className="flex items-center gap-2 p-2 py-4">
+                                <img src="./FeaturesProfile.png" alt="" />
+                                <div>
+                                    <p>Full name</p>
+                                    <div className="flex">
+                                        <p>11 Jan 2022</p>
+                                        <p>5 min read</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Image 2 */}
-                        <div
-                            style={{
-                                width: '416px',
-                                height: '542px',
-                                borderRadius: '10px 0 0 0',
-                                overflow: 'hidden',
-                            }}
-                        >
-                            <img
-                                src="/forehand.png"
-                                alt="Image 2"
-                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                            />
+                        <div className="w-[334px] md:w-[416px] shadow-lg">
+                            <img src="/couples.png" alt="" />
+                            <div className="w-[] p-4">
+                                <p className='font-jakarta font-bold text-[14px] leading-[16px] '>Category</p>
+                                <p className="text-[24px] font-jakarta font-bold leading-[28px] py-2">Blog title heading will go here</p>
+                                <p className='text-[16px] font-sf font-regular leading-[20px]'>Lorem ipsum dolor sit amet, consectetur <br />
+                                    Suspendisse varius enim in eros.</p>
+                            </div>
+                            <div className="flex items-center gap-2 p-2 py-4">
+                                <img src="./FeaturesProfile.png" alt="" />
+                                <div>
+                                    <p>Full name</p>
+                                    <div className="flex">
+                                        <p>11 Jan 2022</p>
+                                        <p>5 min read</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
                         {/* Image 3 */}
-                        <div
-                            style={{
-                                width: '416px',
-                                height: '542px',
-                                borderRadius: '10px 0 0 0',
-                                overflow: 'hidden',
-                            }}
-                        >
-                            <img
-                                src="/last.png"
-                                alt="Image 3"
-                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                            />
+                        <div className="w-[334px] md:w-[416px] shadow-lg">
+                            <img src="/coupleshand.png" alt="" />
+                            <div className="w-[] p-4">
+                                <p className='font-jakarta font-bold text-[14px] leading-[16px] '>Category</p>
+                                <p className="text-[24px] font-jakarta font-bold leading-[28px] py-2">Blog title heading will go here</p>
+                                <p className='text-[16px] font-sf font-regular leading-[20px]'>Lorem ipsum dolor sit amet, consectetur <br />
+                                    Suspendisse varius enim in eros.</p>
+                            </div>
+                            <div className="flex items-center gap-2 p-2 py-4">
+                                <img src="./FeaturesProfile.png" alt="" />
+                                <div>
+                                    <p>Full name</p>
+                                    <div className="flex">
+                                        <p>11 Jan 2022</p>
+                                        <p>5 min read</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -348,10 +328,9 @@ const Landingpage = () => {
                     </button>
                 </div>
             </div>
-
             {/* Image Gallery Section */}
             <div
-                className="flex flex-col items-center mt-28"
+                className="flex flex-col items-center justify-center m-auto mt-28"
                 style={{
                     width: '100%',
                     maxWidth: '600px',
@@ -359,10 +338,9 @@ const Landingpage = () => {
                 }}
             >
                 <h1 className="font-sf text-center w-full lg:w-[600px] text-[34px] font-semibold lg:text-[54px] leading-[48px] font-bold">
-
                     Image Gallery
                 </h1>
-                <p className="font-jakarta text-center w-full md:w-[600px] mt-2">
+                <p className="font-jakarta text-center w-full md:w-[600px] mt-2 font-[24px]">
                     Explore our gallery to experience more.
                 </p>
             </div>
@@ -373,7 +351,9 @@ const Landingpage = () => {
                     alignItems: "center",
                     justifyContent: "center",
                 }}>
-                <CustomCarousel />
+                <div className='flex items-center justify-center'>
+                    <CarouselCustomArrows />
+                </div>
             </div>
 
 

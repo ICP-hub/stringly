@@ -175,7 +175,6 @@
 }
 
 
-
 .animate {
     animation: appear linear forwards;
     animation-timeline: view();
@@ -262,6 +261,7 @@
         transform: translateY(400px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -285,4 +285,68 @@
 .jojo {
     transform: translateX(1800);
     overflow-x: hidden;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .ppp {
+        display: flex;
+        position: relative;
+    }
+
+    .ppp.hovered .child {
+        margin: 20px;
+        display: flex;
+        position: absolute;
+        z-index: 100;
+        flex-direction: column;
+        width: 300px;
+        animation: slideIn 1s forwards;
+        color: white;
+    }
+
+    img {
+        opacity: .7;
+        border-radius: 10px;
+
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(-400px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .ppp.hovered .child-2 {
+        animation: slideIn2 1s forwards;
+        margin: 20px;
+        display: flex;
+        position: absolute;
+        z-index: 100;
+        flex-direction: column;
+        width: 300px;
+        color: white;
+    }
+
+
+    @keyframes slideIn2 {
+        from {
+            transform: translateX(-400px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
 }
