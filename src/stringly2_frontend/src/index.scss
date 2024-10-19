@@ -115,66 +115,6 @@
 
 
 
-.ppp.hovered .child {
-    animation: slideIn 1s forwards;
-}
-
-.ppp.hovered .child-2 {
-    animation: slideIn2 1s forwards;
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateX(400px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn2 {
-    from {
-        transform: translateX(-400px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.child {
-    opacity: 0;
-    transform: translateX(500px);
-    transition: none;
-}
-
-.child-2 {
-    opacity: 0;
-    transform: translateX(-500px);
-    transition: none;
-}
-
-.ppp.hovered .child {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.ppp.hovered .child-2 {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.backdrop-blur-custom {
-    background: linear-gradient(to right, rgba(248, 168, 154, 0.2), rgba(161, 203, 243, 0.2));
-    backdrop-filter: blur(1500px);
-}
-
-
 .animate {
     animation: appear linear forwards;
     animation-timeline: view();
@@ -291,6 +231,66 @@
 
 
 
+.ppp.hovered .child {
+    animation: slideIn 1s forwards;
+}
+
+.ppp.hovered .child-2 {
+    animation: slideIn2 1s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn2 {
+    from {
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.child {
+    opacity: 0;
+    transform: translateX(500px);
+    transition: none;
+}
+
+.child-2 {
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: none;
+}
+
+.ppp.hovered .child {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.ppp.hovered .child-2 {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.backdrop-blur-custom {
+    background: linear-gradient(to right, rgba(248, 168, 154, 0.2), rgba(161, 203, 243, 0.2));
+    backdrop-filter: blur(1500px);
+}
+
+
 @media (max-width: 1024px) {
     .ppp {
         display: flex;
@@ -307,16 +307,25 @@
         animation: slideIn 1s forwards;
         color: white;
     }
+    .ppp.hovered .child-2 {
+        margin: 20px;
+        display: flex;
+        position: absolute;
+        z-index: 100;
+        flex-direction: column;
+        width: 300px;
+        animation: slideIn 1s forwards;
+        color: white;
+    }
 
     img {
         opacity: .7;
         border-radius: 10px;
-
     }
 
     @keyframes slideIn {
         from {
-            transform: translateX(-400px);
+            transform: translateX(-800px);
             opacity: 0;
         }
 
