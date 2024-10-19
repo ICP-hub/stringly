@@ -15,10 +15,10 @@ const Landingpage = () => {
         }
     };
     return (
-        <div className="">
+        <div className='flex flex-col items-center justify-center'>
             {/* Hero Section */}
-            <div className="relative h-[852px] w-full md:w-full h-screen bg-black">
-                <img className="w-full h-[852px] object-cover h-full opacity-[0.7]" src="/heroimg.png" alt="Hero image" />
+            <div className="relative h-[852px] w-full md:w-full bg-black">
+                <img className="w-full h-[852px] object-cover opacity-[0.7]" src="/heroimg.png" alt="Hero image" />
                 <div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[364px] p-2 md:w-[600px] bg-opacity-50 text-center">
                     <p className="font-sf font-semibold w-full text-[38px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
                         Stringly <br /> String your Vibe

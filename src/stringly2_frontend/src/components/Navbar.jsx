@@ -8,10 +8,10 @@ const Navbar = () => {
     const [isMenu, setIsmMenu] = useState(false);
 
     return (
-        <div className="w-full relative bg-transparent fixed top-0 flex flex-col z-50">
+        <div className="w-full xl:w-[1227px] relative bg-transparent fixed top-0 flex flex-col z-50">
             <div className='flex absolute top-0 left-0 right-0 text-white items-center bg-transparent justify-between px-8 py-4'>
                 <div>
-                    <p className='text-2xl font-semibold text-[#DC73B6]'>Logo</p>
+                    <p className='text-2xl font-semibold text-[#DC73B6]'>Stringly</p>
                 </div>
                 <div className='hidden md:flex items-center justify-between gap-8'>
                     <p className='hover:bg-zinc-800 px-3 py-1 rounded-lg'>
@@ -24,8 +24,9 @@ const Navbar = () => {
                         <Link to="/about">About Us</Link>
                     </p>
                     <div className='flex items-center gap-2 hover:bg-zinc-800 px-3 py-1 rounded-lg'>
-                        <Link to="/contact">Resources</Link>
-                        <IoIosArrowDown />
+                        {/* <Link to="/contact">Resources</Link>
+                        <IoIosArrowDown /> */}
+                        <p className='flex items-center justify-between gap-2'>Resources <IoIosArrowDown /></p>
                     </div>
                 </div>
                 <div className='flex items-center gap-4'>
@@ -35,7 +36,7 @@ const Navbar = () => {
 
                     <div className='flex md:hidden'>
                         <button className='text-xl' onClick={() => setIsmMenu(true)}>
-                            {!isMenu && <IoIosMenu/>}
+                            {!isMenu && <IoIosMenu />}
                         </button>
                     </div>
                 </div>
@@ -88,8 +89,9 @@ export const Menu = ({ isMenu, setIsmMenu }) => {
                     <Link to="/about">About Us</Link>
                 </p>
                 <div className='flex items-center gap-2 hover:bg-zinc-200 px-3 py-1 rounded-lg' onClick={handleLinkClick}>
-                    <Link to="/contact">Resources</Link>
-                    <IoIosArrowDown />
+                    {/* <Link to="/contact">Resources</Link>
+                    <IoIosArrowDown /> */}
+                    <p className='flex items-center justify-between gap-2'>Resources <IoIosArrowDown /></p>
                 </div>
             </div>
         </div>

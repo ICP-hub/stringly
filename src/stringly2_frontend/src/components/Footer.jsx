@@ -9,7 +9,7 @@ import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className='md:flex items-start justify-between bg-black text-white'>
+    <div className='w-screen lg:w-[1440px] md:flex items-start justify-between bg-black text-white'>
       <div>
         <div className='flex md:flex-col md:gap-4 items-center justify-between md:items-start p-10'>
           <p>LOGO</p>

@@ -13,11 +13,11 @@ const FeaturesPage = () => {
         }
     };
     return (
-        <>
+        <div className='flex flex-col items-center justify-center'>
             <section>
                 <div className='relative w-full bg-black'>
-                    <img src="./FeaturesHeroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen md:h-auto' />
-                    <div className='absolute top-80 text-center left-4 md:top-[35%] lg:top-[35%] lg:left-[33%] p-4 text-white lg:w-[560px] lg:h-[254px]'>
+                    <img src="./FeaturesHeroImg.png" alt="Premium Features" className='w-screen lg:w-full h-screen object-cover  lg:h-auto' />
+                    <div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[364px] p-2 md:w-[600px] bg-opacity-50 text-center">
                         <h1 className='font-bold font-roboto leading-[48px] lg:leading-[67px] text-[40px] lg:text-[56px]'>Premium Features <h2 className='text-center bg-clip-text text-transparent' style={{ backgroundImage: 'linear-gradient(90deg, #0508D6 30.34%, #AF2C80 53.17%, #DC73B6 73.67%, #F1C7E2 85.17%)' }}>
                             Unveiled
                         </h2></h1>
@@ -30,7 +30,7 @@ const FeaturesPage = () => {
                 </div>
             </section>
             <section className='px-4'>
-                <div className='w-full flex items-center justify-between flex-col py-12 text-[18px]'>
+                <div className=' flex items-center justify-between flex-col py-12 text-[18px]'>
                     <div className='text-center gap-4 lg:w-[768px] flex items-center justify-between flex-col'>
                         <p className='hidden md:block text-[40px] font-sf font-semibold leading-[48px] font-semibold'>
                             Experience Unmatched Security and Luxury in Every Connection You Make.
@@ -222,13 +222,13 @@ const FeaturesPage = () => {
                             <button className='flex items-center gap-4'>Discover <FaChevronRight /></button>
                         </div>
                     </div>
-                    <div>
-                        <img src="./FeaturesPlaceholder Image.png" alt="" className='object-cover' />
+                    <div className='bg-black rounded-xl'>
+                        <img src="./FeaturesPlaceholder Image.png" alt="" className='object-cover opacity-[0.7]' />
                     </div>
                 </div>
             </section>
             <JoinPage />
-        </>
+        </div>
 
     )
 }

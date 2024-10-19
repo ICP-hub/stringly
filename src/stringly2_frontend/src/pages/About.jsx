@@ -15,9 +15,9 @@ function About() {
 	return (
 		<>
 			<section>
-				<div className='relative w-full'>
-					<img src="./aboutHeroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen md:h-auto' />
-					<div className='w-[364px] flex items-center flex-col justify-center absolute top-60 text-center left-4 md:left-48 lg:top-[35%] lg:top-[35%] lg:left-[30%] lg:p-4 text-white lg:w-[560px] lg:h-[254px]'>
+				<div className='relative w-full bg-black'>
+					<img src="./aboutHeroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen lg:h-auto opacity-[0.7]' />
+					<div className='w-[364px] flex items-center flex-col justify-center absolute top-60 md:top-80 text-center left-4 md:left-48 lg:top-[35%] lg:top-[35%] lg:left-[30%] lg:p-4 text-white lg:w-[560px] lg:h-[254px]'>
 						<h1 className='font-bold font-sf leading-[72px] lg:leading-[67px] text-[38px] lg:text-[56px]'>
 							Discover Our Story.</h1>
 						<p className='text-[18px] text-center font-roboto font-regular leading-[27px]'>
@@ -66,14 +66,14 @@ function About() {
 							</div>
 						</div>
 					</div>
-					<div className='lg:w-auto z-20 left-right children'>
-						<img src="./aboutPageImage1.png" alt="" className='h-screen lg:h-auto object-cover' />
+					<div className='lg:w-auto z-20 left-right children bg-black'>
+						<img src="./aboutPageImage1.png" alt="" className='h-screen lg:h-auto object-cover opacity-[0.7]' />
 					</div>
 				</div>
 				{/* second card */}
 				<div className={`ppp animate p-4 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`} onMouseEnter={() => handleHover(1)}>
-					<div className='z-20 children'>
-						<img src="./aboutPageImage2.png" alt="" className='h-screen lg:h-auto object-cover' />
+					<div className='z-20 children bg-black'>
+						<img src="./aboutPageImage2.png" alt="" className='h-screen lg:h-auto object-cover opacity-[0.8]' />
 					</div>
 					<div className='child-2 hidden lg:block w-[756px] w-[616px] ml-[100px] m-auto  '>
 						<div>
@@ -114,24 +114,24 @@ function About() {
 					<p className='text-gray-600 text-[18px] font-bold font-roboto mb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 				</div>
 				<div class="p-4 md:p-2 flex items-center justify-center mb-16 animate">
-					<div class="mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 animate md:gap-8 md:w-[1285px]">
-						<div class="flex w-[174px] h-[231px] md:w-[407px] md:h-[540px] flex-col p-0">
+					<div class="mx-auto grid grid-cols-2 lg:grid-cols-3 gap-4 animate lg:gap-8 lg:w-[1285px]">
+						<div class="flex w-[174px] h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
 							<img src="./aboutDefault1.png" alt="Erika Fisher" class="w-full h-full object-cover" />
 						</div>
-						<div class="flex w-[174px] h-[231px] md:w-[407px] md:h-[540px] flex-col p-0">
+						<div class="flex w-[174px] h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
 							<img src="./aboutDefault2.png" alt="Erika Fisher" class="w-full h-full object-cover" />
 						</div>
-						<div class="flex w-[174px] h-[231px] md:w-[407px] md:h-[540px] flex-col p-0">
+						<div class="flex w-[174px] h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
 							<img src="./aboutDefault3.png" alt="Erika Fisher" class="w-full h-full object-cover" />
 						</div>
 
-						<div class="flex w-[174px] h-[231px] md:w-[407px] md:h-[540px] flex-col p-0">
+						<div class="flex w-[174px] h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
 							<img src="./aboutDefault4.png" alt="Erika Fisher" class="w-full h-full object-cover" />
 						</div>
-						<div class="flex w-[174px] h-[231px] md:w-[407px] md:h-[540px] flex-col p-0">
+						<div class="flex w-[174px] h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
 							<img src="./aboutDefault5.png" alt="Erika Fisher" class="w-full h-full object-cover" />
 						</div>
-						<div class="flex w-[174px] h-[231px] md:w-[407px] md:h-[540px] flex-col p-0">
+						<div class="flex w-[174px] h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
 							<img src="./aboutDefault6.png" alt="Erika Fisher" class="w-full h-full object-cover" />
 						</div>
 					</div>
@@ -143,9 +143,9 @@ function About() {
 				</div>
 			</section> */}
 			<section>
-				<div className='relative w-full h-[656px] md:h-auto bg-black'>
-					<img src="./aboutComponent 2.png" alt="Premium Features" className='w-full relative object-cover h-full md:h-screen opacity-[0.7]' />
-					<div className='flex items-center gap-8 flex-col justify-center absolute top-40 lg:top-80 text-center left-4 md:top-[35%] lg:top-[35%] lg:left-[30%] p-4 text-white lg:w-[560px] lg:h-[254px]'>
+				<div className='relative w-full h-[656px] md:h-auto bg-black mx-4'>
+					<img src="./aboutComponent 2.png" alt="Premium Features" className='w-full lg:w-screen relative object-cover h-full md:h-screen opacity-[0.7]' />
+					<div className='hidden lg:flex items-center gap-8 flex-col justify-center absolute top-40 lg:top-80 text-center left-4 md:top-[35%] lg:top-[35%] lg:left-[30%] p-4 text-white lg:w-[560px] lg:h-[254px]'>
 						<h1 className='font-semibold lg:font-bold font-sf leading-[38px] md:leading-[67px] text-[32px] md:text-[56px]'>
 							Harnessing ICP for Ultimate User Security</h1>
 						<p className='text-[14px] md:text-[18px] text-center font-jakarta font-regular leading-[21px] lg:leading-[27px]'>
@@ -165,7 +165,9 @@ function About() {
 					</div>
 				</div>
 			</section>
+			<div className='hidden lg:block'>
 			<TestimonialGrid />
+			</div>
 			<section>
 				<div className="h-full py-12 mb-12 px-6 flex flex-col box-contain">
 					<div className="h-full mx-auto text-center">
@@ -173,12 +175,12 @@ function About() {
 						<p className="text-gray-600 text-[18px] font-jakarta mb-10">
 							Explore the milestones and culture that define Stringly.
 						</p>
-						<div className="h-full flex lg:gap-8 flex-col lg:flex-row">
-							<div className="relative w-full pb-8 lg:pb-0">
-								<img src="./aboutPlaceholder-Image-1.png" alt="Journey Image 1" className="w-full h-screen object-cover" />
+						<div className="h-full flex lg:gap-8 flex-col gap-8 lg:flex-row">
+							<div className="relative w-full pb-8 lg:pb-0 bg-black">
+								<img src="./aboutPlaceholder-Image-1.png" alt="Journey Image 1" className="w-full h-screen lg:h-auto object-cover opacity-[0.7]" />
 							</div>
-							<div className="relative w-full">
-								<img src="./aboutPlaceholder-Image-2.png" alt="Journey Image 2" className="w-full h-screen object-cover" />
+							<div className="relative w-full bg-black">
+								<img src="./aboutPlaceholder-Image-2.png" alt="Journey Image 2" className="w-full h-screen lg:h-auto object-cover opacity-[0.7]" />
 							</div>
 						</div>
 					</div>
