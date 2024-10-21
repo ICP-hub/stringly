@@ -181,10 +181,9 @@ const Landingpage = () => {
 
 
             {/* Updated Section with Your Specifications */}
-            <div className="flex px-4 border-2 lg:flex-row  relative justify-between items-start mt-12 h-[550px]">
+            <div className="flex px-4 lg:flex-row relative justify-center gap-6 items-start mt-12 h-[550px]">
                 {/* Text Section */}
-                <div className="absolute top-0 text-white lg:text-black left-0 lg:relative flex flex-col" style={{
-                    width: '100%',
+                <div className="absolute border-box md:w-[500px] lg:w-full top-[10%] lg:top-0 text-white z-10 lg:text-black md:left-[10%] lg:left-0 lg:relative flex flex-col" style={{
                     maxWidth: '556px',
                     gap: '16px',
                     paddingLeft: '7%',
@@ -230,7 +229,7 @@ const Landingpage = () => {
 
 
                     <div className="flex gap-4 mt-8 flex-wrap">
-                        <button className="border border-black text-black px-4 py-2 rounded">Learn More</button>
+                        <button className="border lg:border-black lg:text-black px-4 py-2 rounded">Learn More</button>
                         <button className="bg-black text-white px-4 py-2 rounded">Sign Up</button>
                     </div>
                 </div>

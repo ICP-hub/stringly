@@ -8,7 +8,7 @@ const Navbar = () => {
     const [isMenu, setIsmMenu] = useState(false);
 
     return (
-        <div className="w-full xl:w-[1227px] relative bg-transparent fixed top-0 flex flex-col z-50">
+        <div className="w-full max-w-screen-xl mx-auto bg-transparent fixed top-0 flex flex-col z-50 px-4">
             <div className='flex absolute top-0 left-0 right-0 text-white items-center bg-transparent justify-between px-8 py-4'>
                 <div>
                     <p className='text-2xl font-semibold text-[#DC73B6]'>Stringly</p>

@@ -13,10 +13,10 @@ const FeaturesPage = () => {
         }
     };
     return (
-        <div className='flex flex-col items-center justify-center'>
-            <section>
-                <div className='relative w-full bg-black'>
-                    <img src="./FeaturesHeroImg.png" alt="Premium Features" className='w-screen lg:w-full h-screen object-cover  lg:h-auto' />
+        <div className='flex flex-col items-center justify-center '>
+            <section className='relative lg:h-[852px] w-full md:w-full bg-black'>
+                {/* <div > */}
+                    <img src="/FeaturesHeroImg.png" alt="Premium Features" className='w-screen lg:w-full h-screen object-cover  lg:h-auto' />
                     <div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[364px] p-2 md:w-[600px] bg-opacity-50 text-center">
                         <h1 className='font-bold font-roboto leading-[48px] lg:leading-[67px] text-[40px] lg:text-[56px]'>Premium Features <h2 className='text-center bg-clip-text text-transparent' style={{ backgroundImage: 'linear-gradient(90deg, #0508D6 30.34%, #AF2C80 53.17%, #DC73B6 73.67%, #F1C7E2 85.17%)' }}>
                             Unveiled
@@ -27,7 +27,7 @@ const FeaturesPage = () => {
                             networking experience.
                         </p>
                     </div>
-                </div>
+                {/* </div> */}
             </section>
             <section className='w-[356px] lg:w-full'>
                 <div className='flex items-center justify-between flex-col py-12 text-[18px]'>
