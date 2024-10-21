@@ -16,17 +16,17 @@ const FeaturesPage = () => {
         <div className='flex flex-col items-center justify-center '>
             <section className='relative lg:h-[852px] w-full md:w-full bg-black'>
                 {/* <div > */}
-                    <img src="/FeaturesHeroImg.png" alt="Premium Features" className='w-screen lg:w-full h-screen object-cover  lg:h-auto' />
-                    <div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[364px] p-2 md:w-[600px] bg-opacity-50 text-center">
-                        <h1 className='font-bold font-roboto leading-[48px] lg:leading-[67px] text-[40px] lg:text-[56px]'>Premium Features <h2 className='text-center bg-clip-text text-transparent' style={{ backgroundImage: 'linear-gradient(90deg, #0508D6 30.34%, #AF2C80 53.17%, #DC73B6 73.67%, #F1C7E2 85.17%)' }}>
-                            Unveiled
-                        </h2></h1>
-                        <p className='mt-4 text-lg text-center font-roboto font-regular leading-[27px]'>
-                            Explore the exceptional features that make Stringly the ultimate choice for discerning individuals.
-                            Our platform combines luxury, privacy, and cutting-edge technology to enhance your dating and
-                            networking experience.
-                        </p>
-                    </div>
+                <img src="/FeaturesHeroImg.png" alt="Premium Features" className='w-screen lg:w-full h-screen object-cover  lg:h-auto' />
+                <div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[364px] p-2 md:w-[600px] bg-opacity-50 text-center">
+                    <h1 className='font-bold font-roboto leading-[48px] lg:leading-[67px] text-[40px] lg:text-[56px]'>Premium Features <h2 className='text-center bg-clip-text text-transparent' style={{ backgroundImage: 'linear-gradient(90deg, #0508D6 30.34%, #AF2C80 53.17%, #DC73B6 73.67%, #F1C7E2 85.17%)' }}>
+                        Unveiled
+                    </h2></h1>
+                    <p className='mt-4 text-lg text-center font-roboto font-regular leading-[27px]'>
+                        Explore the exceptional features that make Stringly the ultimate choice for discerning individuals.
+                        Our platform combines luxury, privacy, and cutting-edge technology to enhance your dating and
+                        networking experience.
+                    </p>
+                </div>
                 {/* </div> */}
             </section>
             <section className='w-[356px] lg:w-full'>
@@ -192,19 +192,22 @@ const FeaturesPage = () => {
                     </div>
                 </div>
             </section>
-            <section className='backdrop-blur-custom w-[356px] md:w-full lg:w-[1440px]'>
+            <section className='backdrop-blur-custom w-full max-w-screen-xl mx-auto px-4 md:px-8'>
                 <div className='flex items-center justify-center text-center py-10'>
-                    <div className='flex items-center justify-center flex-col text-center w-[568px] lg:w-screen p-[18px] gap-[32px]'>
-                        <img src="./FeaturesLogo_webflow.png" alt="" />
-                        <p>"Stringly transformed my dating life. The luxury and privacy made all the difference in finding genuine connections."</p>
+                    <div className='flex items-center justify-center flex-col text-center w-full max-w-md lg:max-w-screen-lg p-4 gap-8'>
+                        <img src="./FeaturesLogo_webflow.png" alt="Stringly Logo" className='w-full max-w-[300px] mx-auto' />
+                        <p className='text-lg md:text-xl px-4'>
+                            "Stringly transformed my dating life. The luxury and privacy made all the difference in finding genuine connections."
+                        </p>
                         <div className='flex items-center justify-center flex-col text-center'>
-                            <img src="./FeaturesProfile.png" alt="" className='pb-4' />
-                            <p>Emily Johnson</p>
-                            <p>Marketing Director, LuxeCo</p>
+                            <img src="./FeaturesProfile.png" alt="Emily Johnson" className='pb-4 w-[120px] h-[120px] object-cover rounded-full' />
+                            <p className='font-semibold'>Emily Johnson</p>
+                            <p className='text-sm text-gray-600'>Marketing Director, LuxeCo</p>
                         </div>
                     </div>
                 </div>
             </section>
+
             <section>
                 <div className='px-4 lg:p-0 flex items-center justify-center gap-10'>
                     <div className='w-[616px] hidden lg:block'>
