@@ -31,20 +31,20 @@ function About() {
 						</div>
 					</div>
 			</section>
-			<section className='w-auto'>
+			<section className='w-auto about'>
 				{/* first card */}
 				<div
-					className={`ppp animate p-4 my-6 mt-16 py-8 lg:p-0 lg:flex relative items-center justify-between pt-24 ${hovered[0] ? 'hovered' : ''}`}
+					className={`ppp h-screen animate p-4 my-6 mt-16 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[0] ? 'hovered' : ''}`}
 					onMouseEnter={() => handleHover(0)}
 				>
-					<div className={`child hidden h-full lg:block w-[616px] ml-[100px] m-auto opacity-0`}>
-						<p className='font-sf font-bold text-[40px] leading-[48px] py-8 w-screen lg:w-auto mt-20 lg:mt-0'>
+					<div className={`child h-full lg:h-auto hidden lg:block w-[616px] ml-[100px] m-auto opacity-0`}>
+						<p className='font-sf font-bold text-[40px] leading-[48px] py-8 w-full lg:w-auto mt-10 lg:mt-0'>
 							Our Journey: Crafting Meaningful Connections Through Luxury
 						</p>
 						<p className='text-[18px] font-jakarta font-regular leading-[27px]'>
 							At Stringly, we believe in transforming the way people connect. Our mission is to blend luxury with technology, creating a unique platform for both dating and networking.
 						</p>
-						<div className='flex items-start justify-evenly'>
+						<div className='flex items-start justify-evenly '>
 							<div className='flex flex-col w-[296px]'>
 								<p className='text-[20px] font-jakarta my-4 font-bold leading-[28px]'>
 									Our Inspiration
@@ -63,12 +63,12 @@ function About() {
 							</div>
 						</div>
 					</div>
-					<div className='lg:w-auto h-[657px] lg:h-auto z-20 left-right children bg-black'>
-						<img src="./aboutPageImage1.png" alt="PageImage1" className='h-screen lg:h-auto object-cover opacity-[0.7]' />
+					<div className='lg:w-auto h-screen lg:h-auto z-20 left-right children bg-black'>
+						<img src="./aboutPageImage1.png" alt="PageImage1" className='h-full lg:h-auto object-cover opacity-[0.7]' />
 					</div>
 				</div>
 				{/* second card */}
-				<div className={`ppp animate p-4 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`} onMouseEnter={() => handleHover(1)}>
+				<div className={`ppp animate  p-4 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`} onMouseEnter={() => handleHover(1)}>
 					<div className='z-20 children bg-black'>
 						<img src="./aboutPageImage2.png" alt="" className='h-screen lg:h-auto object-cover opacity-[0.8]' />
 					</div>
@@ -81,21 +81,21 @@ function About() {
 								At Stringly, we prioritize innovation and user privacy in every aspect of our platform. Our mission is to empower users to forge meaningful connections in a secure environment.
 							</p>
 						</div>
-						<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+						<div class="grid grid-cols-1 md:grid-cols-2 text-white gap-8 mb-10">
 							<div>
 								<h2 class="text-6xl font-bold text-blue-900 mb-2">100%</h2>
-								<p class="text-lg font-jakarta text-[16px] text-gray-700">Innovation drives us to create exceptional user experiences.</p>
+								<p class="text-lg font-jakarta text-[16px] lg:text-gray-700">Innovation drives us to create exceptional user experiences.</p>
 							</div>
 							<div>
 								<h2 class="text-6xl font-bold text-blue-900 mb-2">100%</h2>
-								<p class="text-lg font-jakarta text-[16px] text-gray-700">Privacy ensures your connections are secure and confidential.</p>
+								<p class="text-lg font-jakarta text-[16px] lg:text-gray-700">Privacy ensures your connections are secure and confidential.</p>
 							</div>
 						</div>
-						<div class="flex space-x-4">
-							<button class="px-8 py-4 border-2 border-black text-black text-lg rounded-xl hover:bg-black hover:text-white transition-colors">
+						<div class="flex space-x-4 text-white">
+							<button class="px-2 lg:px-8 py-4 border-2 lg:border-black lg:text-black text-lg rounded-xl hover:bg-black hover:text-white transition-colors">
 								Learn More
 							</button>
-							<button class="px-8 py-4 text-black text-xl flex items-center space-x-2 hover:underline">
+							<button class="px-8 py-4 lg:text-black text-xl flex items-center space-x-2 hover:underline">
 								<span>Join Us</span>
 								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />

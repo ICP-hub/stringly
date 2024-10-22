@@ -113,77 +113,8 @@
     transition: .5s ease;
 }
 
+//about page css
 
-
-.animate {
-    animation: appear linear forwards;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-}
-
-@keyframes appear {
-    from {
-        transform: translateY(600px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-
-
-
-.child-20 {
-    opacity: 0;
-    transform: translateX(-500px);
-    transition: none;
-}
-
-.animate.hovered .children {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.animate.hovered .child-20 {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-
-.animate.hovered .children {
-    animation: ImageSlideIn 1s forwards;
-}
-
-.animate.hovered .child-20 {
-    animation: ImageSlideIn2 1s forwards;
-}
-
-@keyframes ImageSlideIn {
-    from {
-        transform: translateX(-800px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes ImageSlideIn2 {
-    from {
-        transform: translateX(-400px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
 
 .lili {
     animation: gigi 1s ease forwards;
@@ -287,6 +218,71 @@
 }
 
 @media (min-width: 1024px) {
+    
+.animate {
+    animation: appear linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear {
+    from {
+        transform: translateY(600px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.child-20 {
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: none;
+}
+
+.animate.hovered .children {
+    opacity: 1;
+    transform: translateX(0);
+    animation: ImageSlideIn 1s forwards;
+
+}
+
+.animate.hovered .child-20 {
+    opacity: 1;
+    transform: translateX(0);
+    animation: ImageSlideIn2 1s forwards;
+
+}
+
+
+
+@keyframes ImageSlideIn {
+    from {
+        transform: translateX(-800px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes ImageSlideIn2 {
+    from {
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
     .children {
         opacity: 0;
         transform: translateX(0);
@@ -299,6 +295,15 @@
     }
 }
 
+
+//about page css
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 4rem
+}
 @media (max-width: 1024px) {
     .ppp {
         display: flex;
