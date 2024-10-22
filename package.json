@@ -14,5 +14,8 @@
     "type": "module",
     "workspaces": [
         "src/stringly2_frontend"
-    ]
+    ],
+    "dependencies": {
+        "@material-tailwind/react": "^2.1.10"
+    }
 }
