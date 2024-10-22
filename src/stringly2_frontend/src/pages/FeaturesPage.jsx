@@ -13,7 +13,7 @@ const FeaturesPage = () => {
         }
     };
     return (
-        <div className='flex flex-col items-center justify-center '>
+        <div className='w-full max-w-[1920px] mx-auto flex flex-col items-center justify-center '>
             <section className='relative lg:h-[852px] w-full md:w-full bg-black'>
                 {/* <div > */}
                 <img src="/FeaturesHeroImg.png" alt="Premium Features" className='w-screen lg:w-full h-screen object-cover  lg:h-auto' />
@@ -29,7 +29,7 @@ const FeaturesPage = () => {
                 </div>
                 {/* </div> */}
             </section>
-            <section className='w-[356px] lg:w-full'>
+            <section className='w-[356px] lg:w-full 2xl:mt-40'>
                 <div className='flex items-center justify-between flex-col py-12 text-[18px]'>
                     <div className='text-center gap-4 w-[308px] md:w-[650px] lg:w-[768px] flex items-center justify-between flex-col'>
                         <p className='hidden md:block text-[40px] font-sf font-semibold leading-[48px] font-semibold'>

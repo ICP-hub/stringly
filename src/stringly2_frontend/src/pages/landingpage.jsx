@@ -15,7 +15,7 @@ const Landingpage = () => {
         }
     };
     return (
-        <div className='flex flex-col items-center justify-center'>
+        <div className='w-full max-w-[1920px] mx-auto flex flex-col items-center justify-center'>
             {/* Hero Section */}
             <div className="relative h-[852px] w-full md:w-full bg-black">
                 <img className="w-full h-[852px] object-cover opacity-[0.7]" src="/heroimg.png" alt="Hero image" />
