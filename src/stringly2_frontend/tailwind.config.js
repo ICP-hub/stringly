@@ -6,10 +6,11 @@ export default {
   ],
   theme: {
     screens: {
-      'sm': '480px',  // Custom mobile breakpoint (for small screens)
-      'md': '768px',  // Custom tablet breakpoint
-      'lg': '1440px', // Custom laptop breakpoint (desktop)
-      'xl': '1280px', // Custom large desktop breakpoint
+      sm: '480px',  // Custom mobile breakpoint (for small screens)
+      md: '768px',  // Custom tablet breakpoint
+      lg: '1280px', // Custom large desktop breakpoint
+      xl: '1440px', // Custom laptop breakpoint (desktop)
+
     },
     fontFamily: {
       'jakarta': ['"Plus Jakarta Sans"', 'sans-serif'],

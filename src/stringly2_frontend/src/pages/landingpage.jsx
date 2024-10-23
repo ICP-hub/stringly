@@ -15,7 +15,7 @@ const Landingpage = () => {
         }
     };
     return (
-        <div className=' w-full mx-auto flex flex-col items-center justify-center'>
+        <div className='w-full mx-auto flex flex-col items-center justify-center'>
             {/* Hero Section */}
             <div className="relative h-[852px] lg:h-auto w-full md:w-full bg-black">
                 <img className="w-full h-[852px] lg:h-auto object-cover opacity-[0.7]" src="/heroimg.png" alt="Hero image" />
@@ -41,7 +41,7 @@ const Landingpage = () => {
 
             {/* Heading Section */}
 
-            <section className='px-4'>
+            <section className='max-w-[360px]-sm-md  md:w-[480px] lg:w-auto 2xl:mt-40'>
                 <div className=' w-full flex items-center justify-between flex-col py-8 text-[18px]'>
                     <div className='text-center gap-4 lg:w-[768px] flex items-center justify-between flex-col'>
                         <p className='text-[40px] font-sf font-semibold leading-[48px] '>
@@ -52,7 +52,7 @@ const Landingpage = () => {
                     </p>
                     </div>
                 </div>
-                <div className='flex items-center justify-evenly gap-4 py-4 lg:px-2 flex-wrap'>
+                <div className='flex items-center gap-4 justify-evenly py-4 lg:px-2 flex-wrap'>
                     {[
                         {
                             imgSrc: './yolo.png',
@@ -72,7 +72,7 @@ const Landingpage = () => {
                     ].map((card, index) => (
                         <div
                             key={index}
-                            className="card relative w-[300px] md:w-[408px] h-[377px] bg-black rounded-2xl text-white overflow-hidden transition-transform duration-400 group"
+                            className="card relative max-w-[360px]-sm md:w-[408px] h-[377px] bg-black rounded-2xl text-white overflow-hidden transition-transform duration-400 group"
                         >
                             <img
                                 src={card.imgSrc}
@@ -102,17 +102,17 @@ const Landingpage = () => {
 
             {/* Connecting Section */}
             <div className="text-center mt-12 ">
-                <h2 className="text-3xl font-semibold font-sf leading-[38px]">Connecting You With Purpose</h2>
-                <p className="mt-2 text-[14px] font-regular leading-[24px]">
+                <h2 className="lg:text-[48px] sm:text-3xl font-semibold font-sf leading-[38px]">Connecting You With Purpose</h2>
+                <p className="mt-2 text-[14px] text-[20px] font-regular leading-[24px]">
                     A unique blend of dating and networking experiences.
                 </p>
             </div>
 
             {/* Group for All Images */}
-            <div className="min-w-[300px]-md mx-auto group flex flex-col items-center justify-center mt-8 gap-4 px-4">
+            <div className="max-w-[360px]-sm-md lg:w-[90%] mx-auto group flex flex-col items-center justify-center mt-8 gap-4 px-4">
 
                 {/* Top Image with Hover Effect (Profile Image) */}
-                <div className="relative w-full lg:w-[1308px] h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-black">
+                <div className="relative w-full lg:w-full h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-black">
                     <img
                         src="/prof.png"
                         alt="Profile Image"
@@ -136,7 +136,7 @@ const Landingpage = () => {
                 </div>
 
                 {/* Flex Container for Left and Right Images */}
-                <div className="w-full lg:flex justify-between gap-4 mt-4 lg:w-[1308px]">
+                <div className="w-full lg:flex justify-between gap-4 mt-4 lg:w-full">
 
                     {/* Left Image with Hover Effect (Hug Image) */}
                     <div className="relative mb-8 w-full lg:w-[440px] h-[340px] rounded-xl lg:rounded-bl-[12px] overflow-hidden bg-black">
@@ -158,7 +158,7 @@ const Landingpage = () => {
                     </div>
 
                     {/* Right Image with Hover Effect (Kiss Image) */}
-                    <div className="relative w-full lg:w-[836px] h-[340px] rounded-xl overflow-hidden bg-black">
+                    <div className="relative w-full lg:w-full h-[340px] rounded-xl overflow-hidden bg-black">
                         <img
                             src="/kiss.png"
                             alt="Kiss Image"
@@ -183,21 +183,15 @@ const Landingpage = () => {
             {/* Updated Section with Your Specifications */}
             <div className="flex px-4 lg:flex-row relative justify-center gap-6 items-start mt-12 h-[550px]">
                 {/* Text Section */}
-                <div className="absolute md:w-[500px] pl-7 lg:pl-0 lg:w-full md:top-[10%] lg:top-0 text-white z-10 lg:text-black md:left-[10%] lg:left-0 lg:relative flex flex-col" style={{
+                <div className="absolute md:w-[500px] pl-7 lg:pl-0 lg:w-full top-[10%] lg:top-0 text-white z-10 lg:text-black md:left-[10%] lg:left-0 lg:relative flex flex-col" style={{
                     maxWidth: '556px',
                     gap: '16px',
                     paddingTop: '10px',}}>
                     <h2 style={{
-                        fontSize: '32px',
-                        fontWeight: 800,
-                    }} className='font-sf md:leading-[48px] leading-[32px] min-w-[300px]-lg'>
-                        Experience Unmatched<br />Privacy and Elegance
+                    }} className='font-sf text-[30px]  font-semibold lg:text-[48px] md:leading-[48px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
+                        Experience Unmatched Privacy and Elegance
                     </h2>
-                    <p className="font-sf text-[18px] mt-4 min-w-[300px]-lg leading-normal" style={{
-                        fontSize: '18px',
-                        fontWeight: 400,
-                        lineHeight: '22px',
-                        textAlign: 'left',
+                    <p className="font-sf text-sm lg:text-lg mt-4 lg:leading-[22px] font-regular min-w-[300px]-lg " style={{
                         width: '90%',
                     }}>
                         At Stringly, we prioritize your privacy while providing a luxurious experience. Our platform is designed to ensure that every connection you make is both secure and sophisticated.
@@ -216,13 +210,13 @@ const Landingpage = () => {
                                 <img src="./fra.png" alt="connection icon" className="mr-2" />
 
                             </div>
-                            <p className="text-sm">Connect with like-minded individuals securely.</p>
+                            <p className="text-sm">Connect with like-minded <br /> individuals securely.</p>
                         </div>
                     </div>
 
 
 
-                    <div className="flex gap-4 mt-8 flex-wrap">
+                    <div className="flex gap-4 mt-14  flex-wrap">
                         <button className="border lg:border-black lg:text-black px-4 py-2 rounded">Learn More</button>
                         <button className="bg-black text-white px-4 py-2 rounded">Sign Up</button>
                     </div>
@@ -239,12 +233,12 @@ const Landingpage = () => {
             </div>
 
             {/* Section with Button and Image Gallery */}
-            <div className="flex flex-col items-center mt-10">
+            <div className="flex flex-col items-center justify-center  mt-10">
                 <div className="py-12">
-                    <h1 className="text-center w-full md:w-[768px] font-bold text-[24px] sm:text-[36px] leading-tight">
+                    <h1 className="font-sf text-center w-full md:w-[768px] font-semibold sm:text-[36px] lg:text-[48px] leading-tight">
                         Short Heading goes here
                     </h1>
-                    <p className="text-center w-full md:w-[768px] mt-2">
+                    <p className="text-center w-full text-lg md:w-[768px] mt-2">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                 </div>
@@ -252,10 +246,12 @@ const Landingpage = () => {
                     className={`flex flex-col items-center opacity-0 ${hovered[0] ? 'lili' : ''}`}
                     onMouseEnter={() => handleHover(0)}
                 >
-                    <div className="childx flex flex-col lg:flex-row items-center justify-center gap-8 mt-8 py-8" style={{ maxWidth: '1412px', margin: '0 auto' }}>
+                    <div className="lg:w-auto flex flex-col lg:flex-row items-center justify-center gap-8 mt-8 py-8" style={{ maxWidth: '1412px', margin: '0 auto' }}>
                         {/* Image 1 */}
-                        <div className="w-[300px] md:w-[416px] shadow-lg">
-                            <img src="/forever.png" alt="" />
+                        <div className="md:w-[396px] shadow-lg mx-8">
+                        <div className='bg-black rounded-lg'>
+                            <img src="/forever.png" alt="" className='opacity-[0.7]'/>
+                            </div>
                             <div className="w-[] p-4">
                                 <p className='font-jakarta font-bold text-[14px] leading-[16px] '>Category</p>
                                 <p className="text-[24px] font-jakarta font-bold leading-[28px] py-2">Blog title heading will go here</p>
@@ -275,8 +271,10 @@ const Landingpage = () => {
                         </div>
 
                         {/* Image 2 */}
-                        <div className="w-[300px] md:w-[416px] shadow-lg">
-                            <img src="/couples.png" alt="" />
+                        <div className=" shadow-lg mx-8">
+                        <div className='bg-black rounded-lg'>
+                            <img src="/couples.png" alt="" className='opacity-[0.7]'/>
+                            </div>
                             <div className="w-[] p-4">
                                 <p className='font-jakarta font-bold text-[14px] leading-[16px] '>Category</p>
                                 <p className="text-[24px] font-jakarta font-bold leading-[28px] py-2">Blog title heading will go here</p>
@@ -295,8 +293,10 @@ const Landingpage = () => {
                             </div>
                         </div>
                         {/* Image 3 */}
-                        <div className="w-[300px] md:w-[416px] shadow-lg">
-                            <img src="/coupleshand.png" alt="" />
+                        <div className=" shadow-lg mx-8">
+                            <div className='bg-black rounded-lg'>
+                            <img src="/coupleshand.png" alt="" className='opacity-[0.7]'/>
+                            </div>
                             <div className="w-[] p-4">
                                 <p className='font-jakarta font-bold text-[14px] leading-[16px] '>Category</p>
                                 <p className="text-[24px] font-jakarta font-bold leading-[28px] py-2">Blog title heading will go here</p>

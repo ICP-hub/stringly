@@ -13,10 +13,11 @@ function About() {
 		}
 	};
 	return (
-		<div className=''>
+		<div className='flex items-center justify-center flex-col'>
 			<section className=' w-full max-w-[1920px] mx-auto relative w-full bg-black'>
 				<img src="./aboutHeroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen lg:h-auto opacity-[0.7]' />
-				<div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] p-2 md:w-[600px] bg-opacity-50 text-center">						<h1 className='font-bold font-sf leading-[72px] lg:leading-[67px] text-[38px] lg:text-[56px]'>
+				<div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] p-2 md:w-[600px] bg-opacity-50 text-center">						
+				<h1 className='font-bold font-sf leading-[42px] lg:leading-[72px] text-[38px] lg:text-[56px]'>
 					Discover Our Story.</h1>
 					<p className='text-[18px] text-center font-roboto font-regular leading-[27px]'>
 						Explore the vision behind Stringly and our commitment to redefining connections in a luxurious way.
@@ -31,39 +32,39 @@ function About() {
 					</div>
 				</div>
 			</section>
-			<section className='lg:w-full mx-auto'>
+			<section className='md:w-[650px] lg:w-auto px-2 lg:w-[1440px] '>
 				{/* First Card */}
 				<div
-					className={`ppp !h-[656.66px] animate p-2 lg:p-4 my-2 py-8 lg:p-0 lg:flex items-center justify-center ${hovered[0] ? 'hovered' : ''}`}
+					className={`ppp !h-[656.66px] animate p-2 lg:p-4 my-2 py-8 lg:p-0 lg:flex items-center justify-start gap-8 ${hovered[0] ? 'hovered' : ''}`}
 					onMouseEnter={() => handleHover(0)}
 				>
-					<div className={`!w-[270px] lg:!w-[640px] child hidden lg:block lg:w-[616px] lg:h-auto ml-[100px] m-auto opacity-0`}>
-						<p className='font-sf font-bold text-[28px] lg:text-[40px] leading-[35px] lg:leading-[48px] py-8 w-full lg:w-auto mt-10 lg:mt-0'>
+					<div className={` lg:!w-[540px] child hidden lg:block lg:w-[616px] lg:h-auto ml-[100px] m-auto opacity-0`}>
+						<p className='font-sf font-semibold text-[32px] lg:text-[44px] leading-[35px] lg:leading-[55px] py-8 w-full lg:w-auto mt-10 lg:mt-0'>
 							Our Journey: Crafting Meaningful Connections Through Luxury
 						</p>
-						<p className='text-[14px] lg:text-[18px] font-jakarta font-regular leading-[27px]'>
+						<p className='text-[16px] font-jakarta font-regular leading-[19px]'>
 							At Stringly, we believe in transforming the way people connect. Our mission is to blend luxury with technology, creating a unique platform for both dating and networking.
 						</p>
 						<div className='flex items-start justify-evenly'>
 							<div className='flex flex-col w-[296px]'>
-								<p className='text-[18px] font-jakarta my-4 font-bold leading-[28px]'>
+								<p className='text-[20px] font-jakarta my-4 font-bold leading-[28px]'>
 									Our Inspiration
 								</p>
-								<p className='font-roboto font-sf my-4 text-[14px] leading-[24px]'>
+								<p className=' font-sf my-4 text-[16px] leading-[25px]'>
 									Driven by a passion for meaningful connections and user empowerment, we innovate continuously.
 								</p>
 							</div>
 							<div className='w-[296px]'>
-								<p className='text-[18px] my-4 font-jakarta font-bold leading-[28px]'>
+								<p className='text-[20px] font-jakarta my-4 font-bold leading-[28px]'>
 									Founding Team
 								</p>
-								<p className='my-4 mx-4 font-sf text-[14px]'>
+								<p className='font-sf my-4 text-[16px] leading-[25px]'>
 									Our diverse team combines expertise in technology, design, and relationship-building for your benefit.
 								</p>
 							</div>
 						</div>
 					</div>
-					<div className='w-full lg:w-auto !h-[656.66px] my-auto lg:h-auto z-20 left-right children bg-black'>
+					<div className='rounded-xl w-full lg:w-auto !h-[656.66px] my-auto lg:h-auto z-20 left-right children bg-black'>
 						<img src="./aboutPageImage1.png" alt="PageImage1" className='h-full w-full lg:h-auto object-cover opacity-[0.7]' />
 					</div>
 				</div>
@@ -73,27 +74,27 @@ function About() {
 					className={`mt-20 lg:mt-10 ppp !h-[656.66px] animate p-2 lg:p-4 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`}
 					onMouseEnter={() => handleHover(1)}
 				>
-					<div className='w-full lg:w-auto !h-[656.66px] m-auto children bg-black'>
+					<div className='rounded-xl w-full lg:w-auto !h-[656.66px] m-auto children bg-black'>
 						<img src="./aboutPageImage2.png" alt="PageImage2" className='h-full w-full lg:h-auto object-cover opacity-[0.8]' />
 					</div>
 					<div className='!w-[270px] lg:!w-[640px] child-2 hidden lg:block m-auto'>
 						<div>
-							<p className='font-sf font-bold text-[32px] lg:text-[40px] leading-[32px] lg:leading-[48px]'>
+							<p className='font-sf font-semibold text-[32px] lg:leading-[48px]'>
 								Our Commitment to Innovation and Privacy
 							</p>
-							<p className='font-jakarta font-regular text-[14px] lg:text-[18px] leading-[27px] py-8'>
+							<p className='font-jakarta font-regular text-[16px] leading-[19px] py-4 lg:py-8'>
 								At Stringly, we prioritize innovation and user privacy in every aspect of our platform. Our mission is to empower users to forge meaningful connections in a secure environment.
 							</p>
 						</div>
 						<div className="grid h-[200px] grid-cols-1 md:grid-cols-2 text-white lg:gap-8 lg:mb-10">
 							<div>
-								<h2 className="text-4xl lg:text-6xl font-bold text-blue-900 mb-2">100%</h2>
+								<h2 className="lg:text-[48px] font-roboto font-bold text-blue-900 mb-2">100%</h2>
 								<p className="text-lg font-jakarta text-[16px] lg:text-gray-700">
 									Innovation drives us to create exceptional user experiences.
 								</p>
 							</div>
 							<div>
-								<h2 className="text-4xl lg:text-6xl font-bold text-blue-900 mb-2">100%</h2>
+								<h2 className="lg:text-[48px] font-roboto font-bold text-blue-900 mb-2">100%</h2>
 								<p className="text-lg font-jakarta text-[16px] lg:text-gray-700">
 									Privacy ensures your connections are secure and confidential.
 								</p>
@@ -113,8 +114,8 @@ function About() {
 
 			<main className='flex flex-col items-center'>
 				<div className="max-w-6xl mx-auto text-center animate" >
-					<h1 className='text-[48px] font-bold font-roboto text-black mt-16 mb-4'>Our Team</h1>
-					<p className='text-gray-600 text-[18px] font-bold font-roboto mb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<h1 className='text-[32px] lg:text-[48px] font-bold lg:leading-[57px] font-roboto text-black mt-16 mb-4'>Our Team</h1>
+					<p className='text-gray-600 font-regular text-[18px] font-bold font-roboto mb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 				</div>
 				<div className="p-4 md:p-2 flex items-center justify-center mb-16 animate">
 					<div className="mx-auto grid grid-cols-2 lg:grid-cols-3 gap-4 animate lg:gap-8 lg:w-[1285px]">
@@ -174,10 +175,10 @@ function About() {
 							Explore the milestones and culture that define Stringly.
 						</p>
 						<div className="h-full flex lg:gap-8 flex-col gap-8 lg:flex-row">
-							<div className="relative w-full pb-8 lg:pb-0 bg-black">
+							<div className="relative w-full pb-8 lg:pb-0 bg-black rounded-xl">
 								<img src="./aboutPlaceholder-Image-1.png" alt="Journey Image 1" className="w-full h-screen lg:h-auto object-cover opacity-[0.7]" />
 							</div>
-							<div className="relative w-full bg-black">
+							<div className="relative w-full bg-black rounded-xl">
 								<img src="./aboutPlaceholder-Image-2.png" alt="Journey Image 2" className="w-full h-screen lg:h-auto object-cover opacity-[0.7]" />
 							</div>
 						</div>
