@@ -222,7 +222,8 @@
 .animate {
     animation: appear linear forwards;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 20%;
+    box-sizing: content-box;
 }
 
 @keyframes appear {
@@ -255,7 +256,6 @@
     opacity: 1;
     transform: translateX(0);
     animation: ImageSlideIn2 1s forwards;
-
 }
 
 
@@ -265,7 +265,6 @@
         transform: translateX(-800px);
         opacity: 0;
     }
-
     to {
         transform: translateX(0);
         opacity: 1;
@@ -288,47 +287,31 @@
         transform: translateX(0);
         transition: none;
     }
-    .child {
-        opacity: 0;
-        transform: translateX(0);
-        transition: none;
-    }
 }
 
-
-//about page css
-.about{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    gap: 4rem
-}
+//features page css
 @media (max-width: 1024px) {
     .ppp {
         display: flex;
         position: relative;
     }
+    .child {
+        opacity: 0;
+        transform: translateX(0);
+        transition: none;
+    }
 
     .ppp.hovered .child {
-        margin: 20px;
+        margin-inline: 15px;
         display: flex;
         position: absolute;
         z-index: 100;
         flex-direction: column;
-        width: 300px;
+        width: 90%;
         animation: slideIn 1s forwards;
         color: white;
-    }
-    .ppp.hovered .child-2 {
-        margin: 20px;
-        display: flex;
-        position: absolute;
-        z-index: 100;
-        flex-direction: column;
-        width: 300px;
-        animation: slideIn 1s forwards;
-        color: white;
+        box-sizing: border-box;
+
     }
 
     img {
@@ -349,20 +332,20 @@
     }
 
     .ppp.hovered .child-2 {
-        animation: slideIn2 1s forwards;
-        margin: 20px;
+        box-sizing: border-box;
+        margin-inline: 15px;
         display: flex;
         position: absolute;
         z-index: 100;
         flex-direction: column;
-        width: 300px;
+        width: 90% !important;
+        animation: slideIn 1s forwards;
         color: white;
     }
 
-
     @keyframes slideIn2 {
         from {
-            transform: translateX(-400px);
+            transform: translateX(-200px);
             opacity: 0;
         }
 

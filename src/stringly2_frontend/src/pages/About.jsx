@@ -13,122 +13,128 @@ function About() {
 		}
 	};
 	return (
-		<>
-			<section className='w-full max-w-[1920px] mx-auto relative w-full bg-black'>
-					<img src="./aboutHeroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen lg:h-auto opacity-[0.7]' />
-					<div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[364px] p-2 md:w-[600px] bg-opacity-50 text-center">						<h1 className='font-bold font-sf leading-[72px] lg:leading-[67px] text-[38px] lg:text-[56px]'>
-							Discover Our Story.</h1>
-						<p className='text-[18px] text-center font-roboto font-regular leading-[27px]'>
-							Explore the vision behind Stringly and our commitment to redefining connections in a luxurious way.
-						</p>
-						<div class="flex space-x-4 my-10 justify-center items-center">
-							<button class="px-10 py-4 bg-white text-black font-sf text-[16px] rounded-xl hover:bg-gray-100">
-								Join Us
-							</button>
-							<button class="px-10 py-4 border-2 border-white text-white font-sf text-[16px] rounded-xl hover:bg-white hover:text-black">
-								Learn More
-							</button>
-						</div>
+		<div className=''>
+			<section className=' w-full max-w-[1920px] mx-auto relative w-full bg-black'>
+				<img src="./aboutHeroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen lg:h-auto opacity-[0.7]' />
+				<div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] p-2 md:w-[600px] bg-opacity-50 text-center">						<h1 className='font-bold font-sf leading-[72px] lg:leading-[67px] text-[38px] lg:text-[56px]'>
+					Discover Our Story.</h1>
+					<p className='text-[18px] text-center font-roboto font-regular leading-[27px]'>
+						Explore the vision behind Stringly and our commitment to redefining connections in a luxurious way.
+					</p>
+					<div class="flex space-x-4 my-10 justify-center items-center">
+						<button class="px-8 py-2 bg-white text-black font-sf text-[16px] rounded-xl hover:bg-gray-100">
+							Join Us
+						</button>
+						<button class="px-8 py-2 border-2 border-white text-white font-sf text-[16px] rounded-xl hover:bg-white hover:text-black">
+							Learn More
+						</button>
 					</div>
+				</div>
 			</section>
-			<section className='w-auto about'>
-				{/* first card */}
+			<section className='lg:w-full mx-auto'>
+				{/* First Card */}
 				<div
-					className={`ppp h-screen animate p-4 my-6 mt-16 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[0] ? 'hovered' : ''}`}
+					className={`ppp !h-[656.66px] animate p-2 lg:p-4 my-2 py-8 lg:p-0 lg:flex items-center justify-center ${hovered[0] ? 'hovered' : ''}`}
 					onMouseEnter={() => handleHover(0)}
 				>
-					<div className={`child h-full lg:h-auto hidden lg:block w-[616px] ml-[100px] m-auto opacity-0`}>
-						<p className='font-sf font-bold text-[40px] leading-[48px] py-8 w-full lg:w-auto mt-10 lg:mt-0'>
+					<div className={`!w-[270px] lg:!w-[640px] child hidden lg:block lg:w-[616px] lg:h-auto ml-[100px] m-auto opacity-0`}>
+						<p className='font-sf font-bold text-[28px] lg:text-[40px] leading-[35px] lg:leading-[48px] py-8 w-full lg:w-auto mt-10 lg:mt-0'>
 							Our Journey: Crafting Meaningful Connections Through Luxury
 						</p>
-						<p className='text-[18px] font-jakarta font-regular leading-[27px]'>
+						<p className='text-[14px] lg:text-[18px] font-jakarta font-regular leading-[27px]'>
 							At Stringly, we believe in transforming the way people connect. Our mission is to blend luxury with technology, creating a unique platform for both dating and networking.
 						</p>
-						<div className='flex items-start justify-evenly '>
+						<div className='flex items-start justify-evenly'>
 							<div className='flex flex-col w-[296px]'>
-								<p className='text-[20px] font-jakarta my-4 font-bold leading-[28px]'>
+								<p className='text-[18px] font-jakarta my-4 font-bold leading-[28px]'>
 									Our Inspiration
 								</p>
-								<p className='font-roboto font-sf my-4 text-[16px] leading-[24px]'>
+								<p className='font-roboto font-sf my-4 text-[14px] leading-[24px]'>
 									Driven by a passion for meaningful connections and user empowerment, we innovate continuously.
 								</p>
 							</div>
 							<div className='w-[296px]'>
-								<p className='text-[20px] my-4 font-jakarta font-bold leading-[28px] my-4'>
+								<p className='text-[18px] my-4 font-jakarta font-bold leading-[28px]'>
 									Founding Team
 								</p>
-								<p className='my-4 mx-4 font-sf text-[16px]'>
+								<p className='my-4 mx-4 font-sf text-[14px]'>
 									Our diverse team combines expertise in technology, design, and relationship-building for your benefit.
 								</p>
 							</div>
 						</div>
 					</div>
-					<div className='lg:w-auto h-screen lg:h-auto z-20 left-right children bg-black'>
-						<img src="./aboutPageImage1.png" alt="PageImage1" className='h-full lg:h-auto object-cover opacity-[0.7]' />
+					<div className='w-full lg:w-auto !h-[656.66px] my-auto lg:h-auto z-20 left-right children bg-black'>
+						<img src="./aboutPageImage1.png" alt="PageImage1" className='h-full w-full lg:h-auto object-cover opacity-[0.7]' />
 					</div>
 				</div>
-				{/* second card */}
-				<div className={`ppp animate  p-4 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`} onMouseEnter={() => handleHover(1)}>
-					<div className='z-20 children bg-black'>
-						<img src="./aboutPageImage2.png" alt="" className='h-screen lg:h-auto object-cover opacity-[0.8]' />
+
+				{/* Second Card */}
+				<div
+					className={`mt-20 lg:mt-10 ppp !h-[656.66px] animate p-2 lg:p-4 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`}
+					onMouseEnter={() => handleHover(1)}
+				>
+					<div className='w-full lg:w-auto !h-[656.66px] m-auto children bg-black'>
+						<img src="./aboutPageImage2.png" alt="PageImage2" className='h-full w-full lg:h-auto object-cover opacity-[0.8]' />
 					</div>
-					<div className='child-2 hidden lg:block w-[756px] w-[616px] ml-[100px] m-auto  '>
+					<div className='!w-[270px] lg:!w-[640px] child-2 hidden lg:block m-auto'>
 						<div>
-							<p className='font-sf font-bold text-[40px] leading-[48px]'>
+							<p className='font-sf font-bold text-[32px] lg:text-[40px] leading-[32px] lg:leading-[48px]'>
 								Our Commitment to Innovation and Privacy
 							</p>
-							<p className='font-jakarta font-regular text-[18px] leading-[27px] py-8'>
+							<p className='font-jakarta font-regular text-[14px] lg:text-[18px] leading-[27px] py-8'>
 								At Stringly, we prioritize innovation and user privacy in every aspect of our platform. Our mission is to empower users to forge meaningful connections in a secure environment.
 							</p>
 						</div>
-						<div class="grid grid-cols-1 md:grid-cols-2 text-white gap-8 mb-10">
+						<div className="grid h-[200px] grid-cols-1 md:grid-cols-2 text-white lg:gap-8 lg:mb-10">
 							<div>
-								<h2 class="text-6xl font-bold text-blue-900 mb-2">100%</h2>
-								<p class="text-lg font-jakarta text-[16px] lg:text-gray-700">Innovation drives us to create exceptional user experiences.</p>
+								<h2 className="text-4xl lg:text-6xl font-bold text-blue-900 mb-2">100%</h2>
+								<p className="text-lg font-jakarta text-[16px] lg:text-gray-700">
+									Innovation drives us to create exceptional user experiences.
+								</p>
 							</div>
 							<div>
-								<h2 class="text-6xl font-bold text-blue-900 mb-2">100%</h2>
-								<p class="text-lg font-jakarta text-[16px] lg:text-gray-700">Privacy ensures your connections are secure and confidential.</p>
+								<h2 className="text-4xl lg:text-6xl font-bold text-blue-900 mb-2">100%</h2>
+								<p className="text-lg font-jakarta text-[16px] lg:text-gray-700">
+									Privacy ensures your connections are secure and confidential.
+								</p>
 							</div>
 						</div>
-						<div class="flex space-x-4 text-white">
-							<button class="px-2 lg:px-8 py-4 border-2 lg:border-black lg:text-black text-lg rounded-xl hover:bg-black hover:text-white transition-colors">
+						<div className="mt-12 flex space-x-4 text-white">
+							<button className="px-2 lg:px-8 py-4 border-2 lg:border-black lg:text-black text-lg rounded-xl hover:bg-black hover:text-white transition-colors">
 								Learn More
 							</button>
-							<button class="px-8 py-4 lg:text-black text-xl flex items-center space-x-2 hover:underline">
+							<button className="px-8 py-4 lg:text-black text-xl flex items-center space-x-2 hover:underline">
 								<span>Join Us</span>
-								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
-								</svg>
 							</button>
 						</div>
 					</div>
 				</div>
 			</section>
-			<main>
+
+			<main className='flex flex-col items-center'>
 				<div className="max-w-6xl mx-auto text-center animate" >
 					<h1 className='text-[48px] font-bold font-roboto text-black mt-16 mb-4'>Our Team</h1>
 					<p className='text-gray-600 text-[18px] font-bold font-roboto mb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 				</div>
 				<div className="p-4 md:p-2 flex items-center justify-center mb-16 animate">
 					<div className="mx-auto grid grid-cols-2 lg:grid-cols-3 gap-4 animate lg:gap-8 lg:w-[1285px]">
-						<div className="flex w-[174px] h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
+						<div className="flex sm:w-[120px] md:w-[174px] sm:h-[180px] md:h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
 							<img src="./aboutDefault1.png" alt="Erika Fisher" className="w-full h-full object-cover" />
 						</div>
-						<div className="flex w-[174px] h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
+						<div className="flex sm:w-[120px] md:w-[174px] sm:h-[180px] md:h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
 							<img src="./aboutDefault2.png" alt="Erika Fisher" className="w-full h-full object-cover" />
 						</div>
-						<div className="flex w-[174px] h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
+						<div className="flex sm:w-[120px] md:w-[174px] sm:h-[180px] md:h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
 							<img src="./aboutDefault3.png" alt="Erika Fisher" className="w-full h-full object-cover" />
 						</div>
 
-						<div className="flex w-[174px] h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
+						<div className="flex sm:w-[120px] md:w-[174px] sm:h-[180px] md:h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
 							<img src="./aboutDefault4.png" alt="Erika Fisher" className="w-full h-full object-cover" />
 						</div>
-						<div className="flex w-[174px] h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
+						<div className="flex sm:w-[120px] md:w-[174px] sm:h-[180px] md:h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
 							<img src="./aboutDefault5.png" alt="Erika Fisher" className="w-full h-full object-cover" />
 						</div>
-						<div className="flex w-[174px] h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
+						<div className="flex sm:w-[120px] md:w-[174px] sm:h-[180px] md:h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
 							<img src="./aboutDefault6.png" alt="Erika Fisher" className="w-full h-full object-cover" />
 						</div>
 					</div>
@@ -179,7 +185,7 @@ function About() {
 				</div>
 			</section>
 			<JoinPage />
-		</>
+		</div>
 	)
 }
 

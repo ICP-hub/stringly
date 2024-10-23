@@ -29,7 +29,7 @@ function CarouselCustomArrows() {
   };
 
   return (
-    <div className="my-10 relative px-8  lg:w-[1200px] h-[250px] md:h-[470px] lg:h-[819px] overflow-hidden">
+    <div className="my-10 relative px-8  lg:w-[1200px] h-auto overflow-hidden">
       <div className="relative w-full overflow-hidden bg-black rounded-xl">
         <div
           className="flex transition-transform duration-1000 ease-in-out"
@@ -95,7 +95,7 @@ function CarouselCustomArrows() {
       </IconButton>
 
       {/* Dot Indicators */}
-      <div className="absolute bottom-[10px] lg:bottom-[40px] gap-6 left-1/2 transform -translate-x-1/2 flex space-x-2 " >
+      <div className="absolute bottom-[10px] lg:bottom-[40px] left-1/2 transform -translate-x-1/2 flex space-x-2 " >
         {images.map((_, index) => (
           <span
             key={index}

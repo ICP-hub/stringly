@@ -15,11 +15,11 @@ const Landingpage = () => {
         }
     };
     return (
-        <div className='w-full max-w-[1920px] mx-auto flex flex-col items-center justify-center'>
+        <div className=' w-full mx-auto flex flex-col items-center justify-center'>
             {/* Hero Section */}
             <div className="relative h-[852px] lg:h-auto w-full md:w-full bg-black">
                 <img className="w-full h-[852px] lg:h-auto object-cover opacity-[0.7]" src="/heroimg.png" alt="Hero image" />
-                <div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[364px] p-2 md:w-[600px] bg-opacity-50 text-center">
+                <div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[310px] md:w-[364px] p-2 lg:w-[600px] bg-opacity-50 text-center">
                     <p className="font-sf font-semibold w-full text-[38px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
                         Stringly <br /> String your Vibe
                     </p>
@@ -72,7 +72,7 @@ const Landingpage = () => {
                     ].map((card, index) => (
                         <div
                             key={index}
-                            className="card relative w-[363px] md:w-[408px] h-[377px] bg-black rounded-2xl text-white overflow-hidden transition-transform duration-400 group"
+                            className="card relative w-[300px] md:w-[408px] h-[377px] bg-black rounded-2xl text-white overflow-hidden transition-transform duration-400 group"
                         >
                             <img
                                 src={card.imgSrc}
@@ -109,7 +109,7 @@ const Landingpage = () => {
             </div>
 
             {/* Group for All Images */}
-            <div className="w-[330px] mx-auto group flex flex-col items-center justify-center mt-8 gap-4">
+            <div className="min-w-[300px]-md mx-auto group flex flex-col items-center justify-center mt-8 gap-4 px-4">
 
                 {/* Top Image with Hover Effect (Profile Image) */}
                 <div className="relative w-full lg:w-[1308px] h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-black">
@@ -183,28 +183,22 @@ const Landingpage = () => {
             {/* Updated Section with Your Specifications */}
             <div className="flex px-4 lg:flex-row relative justify-center gap-6 items-start mt-12 h-[550px]">
                 {/* Text Section */}
-                <div className="absolute border-box md:w-[500px] lg:w-full top-[10%] lg:top-0 text-white z-10 lg:text-black md:left-[10%] lg:left-0 lg:relative flex flex-col" style={{
+                <div className="absolute md:w-[500px] pl-7 lg:pl-0 lg:w-full md:top-[10%] lg:top-0 text-white z-10 lg:text-black md:left-[10%] lg:left-0 lg:relative flex flex-col" style={{
                     maxWidth: '556px',
                     gap: '16px',
-                    paddingLeft: '7%',
                     paddingTop: '10px',}}>
                     <h2 style={{
-                        fontFamily: 'SF Pro Display',
                         fontSize: '32px',
-                        sm: '36px',
-                        md: '48px',
                         fontWeight: 800,
-                        lineHeight: '58px',
-                    }}>
+                    }} className='font-sf md:leading-[48px] leading-[32px] min-w-[300px]-lg'>
                         Experience Unmatched<br />Privacy and Elegance
                     </h2>
-                    <p className="text-[18px] mt-4 leading-normal" style={{
-                        fontFamily: 'SF Pro Display',
+                    <p className="font-sf text-[18px] mt-4 min-w-[300px]-lg leading-normal" style={{
                         fontSize: '18px',
                         fontWeight: 400,
                         lineHeight: '22px',
                         textAlign: 'left',
-                        width: '100%',
+                        width: '90%',
                     }}>
                         At Stringly, we prioritize your privacy while providing a luxurious experience. Our platform is designed to ensure that every connection you make is both secure and sophisticated.
                     </p>
@@ -260,7 +254,7 @@ const Landingpage = () => {
                 >
                     <div className="childx flex flex-col lg:flex-row items-center justify-center gap-8 mt-8 py-8" style={{ maxWidth: '1412px', margin: '0 auto' }}>
                         {/* Image 1 */}
-                        <div className="w-[334px] md:w-[416px] shadow-lg">
+                        <div className="w-[300px] md:w-[416px] shadow-lg">
                             <img src="/forever.png" alt="" />
                             <div className="w-[] p-4">
                                 <p className='font-jakarta font-bold text-[14px] leading-[16px] '>Category</p>
@@ -281,7 +275,7 @@ const Landingpage = () => {
                         </div>
 
                         {/* Image 2 */}
-                        <div className="w-[334px] md:w-[416px] shadow-lg">
+                        <div className="w-[300px] md:w-[416px] shadow-lg">
                             <img src="/couples.png" alt="" />
                             <div className="w-[] p-4">
                                 <p className='font-jakarta font-bold text-[14px] leading-[16px] '>Category</p>
@@ -301,7 +295,7 @@ const Landingpage = () => {
                             </div>
                         </div>
                         {/* Image 3 */}
-                        <div className="w-[334px] md:w-[416px] shadow-lg">
+                        <div className="w-[300px] md:w-[416px] shadow-lg">
                             <img src="/coupleshand.png" alt="" />
                             <div className="w-[] p-4">
                                 <p className='font-jakarta font-bold text-[14px] leading-[16px] '>Category</p>
