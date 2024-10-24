@@ -29,7 +29,7 @@ function CarouselCustomArrows() {
   };
 
   return (
-    <div className="my-10 relative px-8  lg:w-[1200px] h-auto overflow-hidden">
+    <div className="my-10 relative px-8  lg:w-[80%] xl:w-[80%] h-auto overflow-hidden">
       <div className="relative w-full overflow-hidden bg-black rounded-xl">
         <div
           className="flex transition-transform duration-1000 ease-in-out"
@@ -40,7 +40,7 @@ function CarouselCustomArrows() {
               key={index}
               src={imgSrc}
               alt={`Slide ${index + 1}`}
-              className="w-full lg:h-[719px] object-cover rounded-xl opacity-[0.7]"
+              className="w-full lg:h-auto  object-cover rounded-xl opacity-[0.7]"
             />
           ))}
         </div>

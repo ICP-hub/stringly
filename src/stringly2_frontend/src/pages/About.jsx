@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import JoinPage from '../components/JoinPage';
 import TestimonialGrid from '../components/TestimonialGrid';
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+
 
 function About() {
 	const [hovered, setHovered] = useState([false, false, false]);
@@ -38,7 +40,7 @@ function About() {
 					className={`ppp !h-[656.66px] animate p-2 lg:p-4 my-2 py-8 lg:p-0 lg:flex items-center justify-start gap-8 ${hovered[0] ? 'hovered' : ''}`}
 					onMouseEnter={() => handleHover(0)}
 				>
-					<div className={` lg:!w-[540px] child hidden lg:block lg:w-[616px] lg:h-auto ml-[100px] m-auto opacity-0`}>
+					<div className={` lg:!w-[440px] child hidden lg:block lg:w-[616px] lg:h-auto ml-[100px] m-auto opacity-0`}>
 						<p className='font-sf font-semibold text-[32px] lg:text-[44px] leading-[35px] lg:leading-[55px] py-8 w-full lg:w-auto mt-10 lg:mt-0'>
 							Our Journey: Crafting Meaningful Connections Through Luxury
 						</p>
@@ -74,37 +76,44 @@ function About() {
 					className={`mt-20 lg:mt-10 ppp !h-[656.66px] animate p-2 lg:p-4 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`}
 					onMouseEnter={() => handleHover(1)}
 				>
-					<div className='rounded-xl w-full lg:w-auto !h-[656.66px] m-auto children bg-black'>
+					<div className='rounded-xl w-full lg:w-auto !h-[656.66px] children bg-black'>
 						<img src="./aboutPageImage2.png" alt="PageImage2" className='h-full w-full lg:h-auto object-cover opacity-[0.8]' />
 					</div>
-					<div className='!w-[270px] lg:!w-[640px] child-2 hidden lg:block m-auto'>
+					<div className=' lg:!w-[440px] child-2 hidden lg:block m-auto'>
 						<div>
-							<p className='font-sf font-semibold text-[32px] lg:leading-[48px]'>
+							<p className='font-sf font-semibold text-[32px] md:text-[44px]  md:leading-[48px]'>
 								Our Commitment to Innovation and Privacy
 							</p>
 							<p className='font-jakarta font-regular text-[16px] leading-[19px] py-4 lg:py-8'>
 								At Stringly, we prioritize innovation and user privacy in every aspect of our platform. Our mission is to empower users to forge meaningful connections in a secure environment.
 							</p>
 						</div>
-						<div className="grid h-[200px] grid-cols-1 md:grid-cols-2 text-white lg:gap-8 lg:mb-10">
-							<div>
-								<h2 className="lg:text-[48px] font-roboto font-bold text-blue-900 mb-2">100%</h2>
-								<p className="text-lg font-jakarta text-[16px] lg:text-gray-700">
+						<div className="grid h-[200px] grid-cols-2 text-white lg:gap-8 lg:mb-10">
+							<ul className='w-[150px]'>
+								<li>
+								<h2 className="text-[48px] font-roboto font-bold text-white lg:text-blue-900 mb-2">100%</h2>
+								</li>
+								<li><p className="text-lg font-jakarta text-[16px] lg:text-gray-500">
 									Innovation drives us to create exceptional user experiences.
-								</p>
-							</div>
-							<div>
-								<h2 className="lg:text-[48px] font-roboto font-bold text-blue-900 mb-2">100%</h2>
-								<p className="text-lg font-jakarta text-[16px] lg:text-gray-700">
+								</p></li>
+							</ul>
+							<ul className='w-[150px]'>
+								<li>
+								<h2 className="text-[48px] font-roboto font-bold text-white lg:text-blue-900 mb-2">100%</h2>
+
+								</li>
+								<li>
+								<p className="text-lg font-jakarta text-[16px] lg:text-gray-500">
 									Privacy ensures your connections are secure and confidential.
 								</p>
-							</div>
+								</li>
+							</ul>
 						</div>
 						<div className="mt-12 flex space-x-4 text-white">
-							<button className="px-2 lg:px-8 py-4 border-2 lg:border-black lg:text-black text-lg rounded-xl hover:bg-black hover:text-white transition-colors">
+							<button className="px-2 lg:px-4 py-2 border-2 lg:border-black lg:text-black text-lg rounded-xl hover:bg-black hover:text-white transition-colors">
 								Learn More
 							</button>
-							<button className="px-8 py-4 lg:text-black text-xl flex items-center space-x-2 hover:underline">
+							<button className="px-8 py-2 lg:text-black text-lg flex items-center space-x-2 hover:underline">
 								<span>Join Us</span>
 							</button>
 						</div>
@@ -141,24 +150,23 @@ function About() {
 					</div>
 				</div>
 			</main>
-			<section>
-				<div className='relative w-full h-[656px] md:h-auto bg-black'>
-					<img src="./aboutComponent 2.png" alt="Premium Features" className='w-full lg:w-screen relative object-cover h-full md:h-screen opacity-[0.7]' />
-					<div className='hidden lg:flex items-center gap-8 flex-col justify-center absolute top-40 lg:top-80 text-center left-4 md:top-[35%] lg:top-[35%] lg:left-[30%] p-4 text-white lg:w-[560px] lg:h-[254px]'>
-						<h1 className='font-semibold lg:font-bold font-sf leading-[38px] md:leading-[67px] text-[32px] md:text-[56px]'>
+			{/* card 3 */}
+			<section >
+				<div className='relative w-full lg:h-[1000px] bg-black'>
+					<img src="./aboutComponent 2.png" alt="Premium Features" className='w-screen relative object-cover h-full opacity-[0.7]' />
+					<div className='hidden md:flex items-center flex-col gap-4 justify-center absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] p-2 md:w-[600px] bg-opacity-50 text-center'>
+						<h1 className='font-sf font-semibold text-[32px] leading-[38px] md:leading-[57px] md:text-[48px]'>
 							Harnessing ICP for Ultimate User Security</h1>
-						<p className='text-[14px] md:text-[18px] text-center font-jakarta font-regular leading-[21px] lg:leading-[27px]'>
+						<p className='text-[14px] text-center leading-[21px] font-jakarta font-regular  md:text-[18px] md:leading-[27px]'>
 							At Stringly, we utilize the Internet Computer Protocol (ICP) to provide a secure and private environment for our users. This cutting-edge technology ensures that your personal data remains confidential while you explore meaningful connections. With Stringly, you can enjoy peace of mind knowing that your privacy is our top priority.
 						</p>
 						<div className="flex space-x-4 my-10">
-							<button className="px-8 py-4 border-2 border-white text-white text-lg rounded-xl hover:bg-black hover:text-white transition-colors">
+							<button className="px-6 py-2 border-2 border-white text-white text-lg rounded-xl hover:bg-black hover:text-white transition-colors">
 								Learn More
 							</button>
-							<button className="px-8 py-4 text-white text-xl flex items-center space-x-2 hover:underline">
+							<button className="px-8 py-4 text-white text-lg flex  items-center space-x-2 hover:underline">
 								<span>Sign Up</span>
-								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
-								</svg>
+								<MdOutlineKeyboardArrowRight/>
 							</button>
 						</div>
 					</div>

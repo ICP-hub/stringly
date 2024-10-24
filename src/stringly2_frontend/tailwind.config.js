@@ -8,8 +8,8 @@ export default {
     screens: {
       sm: '480px',  // Custom mobile breakpoint (for small screens)
       md: '768px',  // Custom tablet breakpoint
-      lg: '1280px', // Custom large desktop breakpoint
-      xl: '1440px', // Custom laptop breakpoint (desktop)
+      lg: '1280px', // Custom laptop breakpoint (desktop)
+      xl: '1440px', // Custom large desktop breakpoint  
 
     },
     fontFamily: {
