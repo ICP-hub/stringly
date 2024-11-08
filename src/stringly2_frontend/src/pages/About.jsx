@@ -24,14 +24,14 @@ function About() {
 					<p className='text-[18px] text-center font-roboto font-regular leading-[27px]'>
 						Explore the vision behind Stringly and our commitment to redefining connections in a luxurious way.
 					</p>
-					<div class="flex space-x-4 my-10 justify-center items-center">
-						<button class="px-8 py-2 bg-white text-black font-sf text-[16px] rounded-xl hover:bg-gray-100">
-							Join Us
-						</button>
-						<button class="px-8 py-2 border-2 border-white text-white font-sf text-[16px] rounded-xl hover:bg-white hover:text-black">
-							Learn More
-						</button>
-					</div>
+					<div className="mt-10 space-x-6">
+                        <button className="bg-white text-[16px] font-sf text-black px-6 py-3 w-32 rounded-xl">
+                            Join Us
+                        </button>
+                        <button className="bg-transparent text-[16px] font-sf border border-white w-32 text-white px-2 py-3 rounded-xl">
+                            Learn More
+                        </button>
+                    </div>
 				</div>
 			</section>
 			<section className='md:w-[650px] lg:w-auto px-2 lg:w-[1440px] '>

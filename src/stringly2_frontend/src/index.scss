@@ -34,7 +34,16 @@
     scroll-behavior: smooth;
 }
 
-//Navbar slideing
+//Navbar slideing  
+.navbar {
+    transition: background-color 0.4s ease-out; 
+}
+  .navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+
+  }
+
+  
 .nav {
     position: fixed;
     top: 0;
@@ -430,7 +439,7 @@
 .backdrop-blur-custom {  
     // width: 100vw; /* Full width */  
     max-height: 800px; /* Fixed height */  
-    background: linear-gradient(to right, rgba(248, 168, 154, 0.2), rgba(161, 203, 243, 0.2));  
+    background: linear-gradient(to right, rgba(187, 47, 22, 0.2), rgba(78, 144, 205, 0.2));  
     backdrop-filter: blur(1500px);  
     z-index: 0;
     display: flex; /* Optional if you want to center content within */  
