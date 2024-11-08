@@ -161,7 +161,7 @@ const FeaturesPage = () => {
                 </div>
             </section>
 
-            <section className='w-full mx-auto px-4 md:px-8 lg:w-full'>
+            <section className='w-full mx-auto px-4 md:px-8 lg:w-full bg-gradient-full'>
                 <div className='flex items-center justify-center text-center py-10'>
                     <div className='flex items-center justify-center flex-col text-center w-full max-w-md lg:w-[768px] p-4 gap-8'>
                         <img src="/FeaturesLogo_webflow.png" alt="Stringly Logo" className='w-full max-w-[200px] mx-auto' />
@@ -177,7 +177,7 @@ const FeaturesPage = () => {
                 </div>
             </section>
                 <div
-                    className={`ppp lg:p-4 lg:flex relative items-center justify-between px-4 ${hovered[4] ? 'hovered' : ''}`}
+                    className={`ppp lg:p-4 lg:flex relative items-center justify-between px-4  ${hovered[4] ? 'hovered' : ''}`}
                     onMouseEnter={() => handleHover(4)}
                 >
                     <div className={`child hidden lg:block lg:w-[556px]  m-auto opacity-0] pr-4`}>

@@ -457,3 +457,21 @@
     z-index: 1; /* Keeps content above the gradient */  
 }  
 
+.bg-gradient-top {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)), url("../public/bg-gradient.png");
+    background-size: cover;
+    background-position: top;
+}
+
+.bg-gradient-bottom {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)), url("../public/bg-gradient.png");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.bg-gradient-full {
+    background-image: url("../public/bg-gradient.png");
+    background-size: cover;
+    background-position: center;
+}
+

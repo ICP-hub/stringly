@@ -18,20 +18,20 @@ function About() {
 		<div className='flex items-center justify-center flex-col'>
 			<section className=' w-full max-w-[1540px] mx-auto relative w-full bg-black'>
 				<img src="./aboutHeroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen lg:h-auto opacity-[0.7]' />
-				<div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] p-2 md:w-[600px] bg-opacity-50 text-center">						
-				<h1 className='font-bold font-sf leading-[42px] lg:leading-[72px] text-[38px] lg:text-[56px]'>
-					Discover Our Story.</h1>
+				<div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] p-2 md:w-[600px] bg-opacity-50 text-center">
+					<h1 className='font-bold font-sf leading-[42px] lg:leading-[72px] text-[38px] lg:text-[56px]'>
+						Discover Our Story.</h1>
 					<p className='text-[18px] text-center font-roboto font-regular leading-[27px]'>
 						Explore the vision behind Stringly and our commitment to redefining connections in a luxurious way.
 					</p>
 					<div className="mt-10 space-x-6">
-                        <button className="bg-white text-[16px] font-sf text-black px-6 py-3 w-32 rounded-xl">
-                            Join Us
-                        </button>
-                        <button className="bg-transparent text-[16px] font-sf border border-white w-32 text-white px-2 py-3 rounded-xl">
-                            Learn More
-                        </button>
-                    </div>
+						<button className="bg-white text-[16px] font-sf text-black px-6 py-3 w-32 rounded-xl">
+							Join Us
+						</button>
+						<button className="bg-transparent text-[16px] font-sf border border-white w-32 text-white px-2 py-3 rounded-xl">
+							Learn More
+						</button>
+					</div>
 				</div>
 			</section>
 			<section className='md:w-[650px] lg:w-auto px-2 lg:w-[1440px] '>
@@ -91,7 +91,7 @@ function About() {
 						<div className="grid h-[200px] grid-cols-2 text-white lg:gap-8 lg:mb-10">
 							<ul className='w-[150px]'>
 								<li>
-								<h2 className="text-[48px] font-roboto font-bold text-white lg:text-blue-900 mb-2">100%</h2>
+									<h2 className="text-[48px] font-roboto font-bold text-white lg:text-blue-900 mb-2">100%</h2>
 								</li>
 								<li><p className="text-lg font-jakarta text-[16px] lg:text-gray-500">
 									Innovation drives us to create exceptional user experiences.
@@ -99,13 +99,13 @@ function About() {
 							</ul>
 							<ul className='w-[150px]'>
 								<li>
-								<h2 className="text-[48px] font-roboto font-bold text-white lg:text-blue-900 mb-2">100%</h2>
+									<h2 className="text-[48px] font-roboto font-bold text-white lg:text-blue-900 mb-2">100%</h2>
 
 								</li>
 								<li>
-								<p className="text-lg font-jakarta text-[16px] lg:text-gray-500">
-									Privacy ensures your connections are secure and confidential.
-								</p>
+									<p className="text-lg font-jakarta text-[16px] lg:text-gray-500">
+										Privacy ensures your connections are secure and confidential.
+									</p>
 								</li>
 							</ul>
 						</div>
@@ -121,7 +121,7 @@ function About() {
 				</div>
 			</section>
 
-			<main className='flex flex-col items-center'>
+			{/* <main className='flex flex-col items-center bg-gradient-full bg-gradient-full border-2 border-red-200'>
 				<div className="max-w-6xl mx-auto text-center animate" >
 					<h1 className='text-[32px] lg:text-[48px] font-bold lg:leading-[57px] font-roboto text-black mt-16 mb-4'>Our Team</h1>
 					<p className='text-gray-600 font-regular text-[18px] font-bold font-roboto mb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -149,7 +149,31 @@ function About() {
 						</div>
 					</div>
 				</div>
-			</main>
+			</main> */}
+			<section className='bg-gradient-full w-full'>
+				<main className="flex flex-col items-center">
+					<div className="max-w-6xl mx-auto text-center animate">
+						<h1 className="text-[32px] lg:text-[48px] font-bold lg:leading-[57px] font-roboto text-black mt-16 mb-4">Our Team</h1>
+						<p className="text-gray-600 font-regular text-[18px] font-bold font-roboto mb-10">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						</p>
+					</div>
+					<div className="p-4 md:p-2 flex items-center justify-center mb-16 animate">
+						<div className="mx-auto grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 lg:w-[1285px]">
+							{[1, 2, 3, 4, 5, 6].map((num) => (
+								<div key={num} className="flex sm:w-[120px] md:w-[174px] sm:h-[180px] md:h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
+									<img
+										src={`./aboutDefault${num}.png`}
+										alt={`Team Member ${num}`}
+										className="w-full h-full object-cover"
+									/>
+								</div>
+							))}
+						</div>
+					</div>
+				</main>
+			</section>
+
 			{/* card 3 */}
 			<section >
 				<div className='relative w-full lg:h-[1000px] bg-black'>
@@ -166,7 +190,7 @@ function About() {
 							</button>
 							<button className="px-8 py-4 text-white text-lg flex  items-center space-x-2 hover:underline">
 								<span>Sign Up</span>
-								<MdOutlineKeyboardArrowRight/>
+								<MdOutlineKeyboardArrowRight />
 							</button>
 						</div>
 					</div>

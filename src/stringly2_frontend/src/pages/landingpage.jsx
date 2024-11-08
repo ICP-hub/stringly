@@ -257,7 +257,7 @@ const Landingpage = () => {
             </div>
 
             {/* Section with Button and Image Gallery */}
-            <section className='flex flex-col w-full lg:pl-20 lg:flex-row items-center justify-between gap-8 py-20'>
+            <section className='flex flex-col w-full lg:pl-20 lg:flex-row items-center justify-between gap-8 py-20 bg-gradient-full'>
                 <div className='flex items-center flex-col text-center'>
                     <p className='font-roboto text-[14px] leading-[21px] md:text-[18px] font-regular md:leading-[27px]'>Work at Stringly</p>
                     <div className='md:py-10 py-5'>
@@ -267,11 +267,11 @@ const Landingpage = () => {
                     <button className='hidden md:block border border-black py-2 px-6 rounded-lg'>Join</button>
                 </div>
                 <div className={`lg:flex items-center space-y-5 md:gap-4 opacity-0 ${hovered[0] ? 'lili' : ''}`} onMouseEnter={() => handleHover(0)}>
-                    <div className='bg-black  w-[340px] h-[370px] lg:h-[453px] lg:w-[259px]'>
-                        <img src="/forever.png" alt="" className='opacity-[0.7] rounded-none object-cover h-full w-full' />
+                    <div className='bg-black  w-[340px] h-[370px] lg:h-[453px] lg:w-[259px] rounded-lg'>
+                        <img src="/forever.png" alt="" className='opacity-[0.7] rounded-lg object-cover h-full w-full' />
                     </div>
-                    <div className='bg-black rounded-lg w-[340px] h-[370px] lg:h-[522px] lg:w-[298px]'>
-                        <img src="/couples.png" alt="" className='opacity-[0.7] object-cover h-full w-full' />
+                    <div className='bg-black rounded-lg w-[340px] h-[370px] lg:h-[522px] lg:w-[298px] rounded-lg'>
+                        <img src="/couples.png" alt="" className='opacity-[0.7] object-cover h-full w-full rounded-lg' />
                     </div>
                     <div className='bg-black rounded-lg w-[340px] h-[370px] lg:h-[453px] lg:w-[259px]'>
                         <img src="/coupleshand.png" alt="" className='opacity-[0.7] object-cover h-full w-full' />
