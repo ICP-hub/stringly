@@ -31,7 +31,7 @@ const FeaturesPage = () => {
                 </div>
             </section>
 
-            <section className='max-w-[360px]-sm-md  md:w-[480px] lg:w-auto 2xl:mt-40'>
+            <section className='max-w-[340px]-sm md:w-[388px] lg:w-auto 2xl:mt-40'>
                 <div className='flex items-center justify-between flex-col py-12 text-[18px]'>
                     <div className='text-center gap-4 w-[308px] md:w-[650px] lg:w-[768px] flex items-center justify-between flex-col'>
                         <p className='hidden md:block text-[40px] font-sf font-semibold leading-[48px]'>

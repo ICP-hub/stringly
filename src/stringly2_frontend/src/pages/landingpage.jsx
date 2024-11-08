@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { FaChevronRight } from "react-icons/fa";
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { MdOutlinePrivacyTip, MdPrivacyTip } from "react-icons/md";
+
 import CarouselCustom from '../components/CarouselCoustom';
 
 const Landingpage = () => {
@@ -51,7 +53,7 @@ const Landingpage = () => {
 
             {/* Heading Section */}
 
-            <section className='max-w-[360px]-sm-md  md:w-[480px] lg:w-auto 2xl:mt-40'>
+            <section className='max-w-[340px]-sm md:w-[388px] lg:w-auto 2xl:mt-40'>
                 <div className=' w-full flex items-center justify-between flex-col py-8 text-[18px]'>
                     <div className='text-center gap-4 lg:w-[768px] flex items-center justify-between flex-col'>
                         <p className='text-[40px] font-sf font-semibold leading-[48px] '>
@@ -82,7 +84,7 @@ const Landingpage = () => {
                     ].map((card, index) => (
                         <div
                             key={index}
-                            className="card relative max-w-[360px]-sm md:w-[408px] h-[378px] bg-black rounded-2xl text-white overflow-hidden transition-transform duration-400 group"
+                            className="card relative max-w-[340px]-sm md:w-[388px] h-[378px] bg-black rounded-2xl text-white overflow-hidden transition-transform duration-400 group"
                         >
                             <img
                                 src={card.imgSrc}
@@ -122,83 +124,83 @@ const Landingpage = () => {
             </div>
 
             {/* Group for All Images */}
-            <div className="max-w-[360px]-sm-md lg:w-[90%] mx-auto flex flex-col items-center justify-center mt-8 gap-4 px-4">  
+            <div className="max-w-[360px]-sm-md lg:w-[90%] mx-auto flex flex-col items-center justify-center mt-8 gap-4 px-4">
 
-            {/* Top Image with Hover Effect (Profile Image) */}  
-            <div className={`relative w-full lg:w-full h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-black`}>  
-                <img  
-                    src="/prof.png"  
-                    alt="Profile Image"  
-                    className="w-full md:w-full h-full object-cover opacity-[0.6]"  
-                />  
-                <div   
-                    className={`absolute inset-0 flex md:w-[500px] items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${hovered2[0] ? 'hovered' : ''}`}   
-                    onMouseEnter={() => handleHover2(0)}  
-                    onMouseLeave={() => setHovered2([false, false, false])} // Reset on mouse leave  
-                >  
-                    <div className="text-white child">  
-                        <h2 className="text-[32px] leading-[38px] font-semibold leading-tight font-roboto font-bold">  
-                            Elevate Your Networking <br /> Experience  
-                        </h2>  
-                        <p className="mt-2 text-white-600 font-roboto font-regular leading-[24px]">  
-                            Experience connections like never before with Stringly.  
-                        </p>  
-                        <button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:bg-pink-100">  
-                            Join  
-                        </button>  
-                    </div>  
-                </div>  
-            </div>  
-
-            {/* Flex Container for Left, Middle, and Right Images */}  
-            <div className={`w-full lg:flex justify-between gap-4 mt-4 lg:w-full`}>  
-
-                {/* Left Image with Hover Effect (Hug Image) */}  
-                <div className={`relative mb-8 w-full lg:w-[640px] h-[340px] rounded-xl lg:rounded-bl-[12px] overflow-hidden bg-black`}>  
-                    <img  
-                        src="/hug.png"  
-                        alt="Hug Image"  
-                        className="w-full h-full object-cover opacity-[0.6]"  
-                    />  
-                    <div   
-                        className={`absolute inset-0 flex items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${hovered2[1] ? 'hovered' : ''}`}   
-                        onMouseEnter={() => handleHover2(1)}  
+                {/* Top Image with Hover Effect (Profile Image) */}
+                <div className={`relative w-full lg:w-full h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-black`}>
+                    <img
+                        src="/prof.png"
+                        alt="Profile Image"
+                        className="w-full md:w-full h-full object-cover opacity-[0.6]"
+                    />
+                    <div
+                        className={`absolute inset-0 flex md:w-[600px] items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${hovered2[0] ? 'hovered' : ''}`}
+                        onMouseEnter={() => handleHover2(0)}
                         onMouseLeave={() => setHovered2([false, false, false])} // Reset on mouse leave  
-                    >  
-                        <div className="text-white child">  
-                            <h2 className="text-[32px] leading-[38px] font-semibold font-roboto font-bold">Your Journey Begins Here</h2>  
-                            <p className="text-lg mt-2 font-roboto font-regular leading-[24px]">Experience connections like never before with Stringly.</p>  
-                            <button className="bg-white text-black px-8 py-2 rounded-[8px] mt-4 hover:bg-pink-100">  
-                                Join  
-                            </button>  
-                        </div>  
-                    </div>  
-                </div>  
+                    >
+                        <div className="text-white child">
+                            <h2 className="text-[32px] leading-[38px] font-semibold leading-tight font-roboto font-bold">
+                                Elevate Your Networking <br /> Experience
+                            </h2>
+                            <p className="mt-2 text-white-600 font-roboto font-regular leading-[24px]">
+                                Experience connections like never before with Stringly.
+                            </p>
+                            <button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:bg-pink-100">
+                                Join
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-                {/* Middle Image with Hover Effect (Kiss Image) */}  
-                <div className={`relative w-full lg:w-full h-[340px] rounded-xl overflow-hidden bg-black`}>  
-                    <img  
-                        src="/kiss.png"  
-                        alt="Kiss Image"  
-                        className="w-full h-full object-cover opacity-[0.9]"  
-                    />  
-                    <div   
-                        className={`absolute inset-0 flex md:w-[700px] items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${hovered2[2] ? 'hovered' : ''}`}   
-                        onMouseEnter={() => handleHover2(2)}  
-                        onMouseLeave={() => setHovered2([false, false, false])} // Reset on mouse leave  
-                    >  
-                        <div className="text-white child">  
-                            <h2 className="text-[32px] leading-[38px] font-roboto font-bold">Unmatched Privacy <br /> and Security</h2>  
-                            <p className="text-lg mt-2 font-roboto font-regular leading-[24px]">Experience connections like never before with Stringly.</p>  
-                            <button className="bg-white text-black px-8 py-2 rounded-[8px] mt-4 hover:bg-pink-100">  
-                                Join  
-                            </button>  
-                        </div>  
-                    </div>  
-                </div>  
+                {/* Flex Container for Left, Middle, and Right Images */}
+                <div className={`w-full lg:flex justify-between gap-4 mt-4 lg:w-full`}>
 
-            </div>  
-        </div> 
+                    {/* Left Image with Hover Effect (Hug Image) */}
+                    <div className={`relative mb-8 w-full lg:w-[640px] h-[340px] rounded-xl lg:rounded-bl-[12px] overflow-hidden bg-black`}>
+                        <img
+                            src="/hug.png"
+                            alt="Hug Image"
+                            className="w-full h-full object-cover opacity-[0.6]"
+                        />
+                        <div
+                            className={`absolute inset-0 flex items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${hovered2[1] ? 'hovered' : ''}`}
+                            onMouseEnter={() => handleHover2(1)}
+                            onMouseLeave={() => setHovered2([false, false, false])} // Reset on mouse leave  
+                        >
+                            <div className="text-white child">
+                                <h2 className="text-[32px] leading-[38px] font-semibold font-roboto font-bold">Your Journey Begins Here</h2>
+                                <p className="text-lg mt-2 font-roboto font-regular leading-[24px]">Experience connections like never before with Stringly.</p>
+                                <button className="bg-white text-black px-8 py-2 rounded-[8px] mt-4 hover:bg-pink-100">
+                                    Join
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Middle Image with Hover Effect (Kiss Image) */}
+                    <div className={`relative w-full lg:w-full h-[340px] rounded-xl overflow-hidden bg-black`}>
+                        <img
+                            src="/kiss.png"
+                            alt="Kiss Image"
+                            className="w-full h-full object-cover opacity-[0.9]"
+                        />
+                        <div
+                            className={`absolute inset-0 flex md:w-[700px] items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${hovered2[2] ? 'hovered' : ''}`}
+                            onMouseEnter={() => handleHover2(2)}
+                            onMouseLeave={() => setHovered2([false, false, false])} // Reset on mouse leave  
+                        >
+                            <div className="text-white child">
+                                <h2 className="text-[32px] leading-[38px] font-roboto font-bold">Unmatched Privacy <br /> and Security</h2>
+                                <p className="text-lg mt-2 font-roboto font-regular leading-[24px]">Experience connections like never before with Stringly.</p>
+                                <button className="bg-white text-black px-8 py-2 rounded-[8px] mt-4 hover:bg-pink-100">
+                                    Join
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
 
             {/* Updated Section with Your Specifications */}
@@ -220,9 +222,9 @@ const Landingpage = () => {
                     </p>
                     <div className="lg:flex justify-between mt-6 items-start lg:w-[556px] h-[64px] gap-8">
                         <div className="flex flex-col items-start">
-                            <div className="flex items-center">
+                            <div className="flex items-center gap-2">
+                                <span><MdPrivacyTip size={25} style={{color:"navy"}}/></span>
                                 <img src="./final.png" alt="privacy icon" className="mr-2" />
-
                             </div>
                             <p className="text-sm">Your privacy is our top priority.</p>
                         </div>
@@ -264,7 +266,7 @@ const Landingpage = () => {
                     </div>
                     <button className='hidden md:block border border-black py-2 px-6 rounded-lg'>Join</button>
                 </div>
-                <div className='lg:flex items-center space-y-5 md:gap-4'>
+                <div className={`lg:flex items-center space-y-5 md:gap-4 opacity-0 ${hovered[0] ? 'lili' : ''}`} onMouseEnter={() => handleHover(0)}>
                     <div className='bg-black  w-[340px] h-[370px] lg:h-[453px] lg:w-[259px]'>
                         <img src="/forever.png" alt="" className='opacity-[0.7] rounded-none object-cover h-full w-full' />
                     </div>
