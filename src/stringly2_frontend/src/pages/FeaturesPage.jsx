@@ -48,7 +48,7 @@ const FeaturesPage = () => {
 
                 <div className='flex max-w-[360px]-sm px-4 items-center justify-evenly gap-10 py-4 lg:px-2 flex-wrap'>
                     {['FeaturesCard1.png', 'FeaturesCard2.png', 'FeaturesCard3.png'].map((image, index) => (
-                        <div key={index} className="card1 relative w-full lg:w-[408px] h-[377px] bg-black rounded-2xl text-white overflow-hidden opacity-[1]">
+                        <div key={index} className="card1 relative w-full lg:w-[378px] h-[357px] bg-black rounded-2xl text-white overflow-hidden opacity-[1]">
                             <img
                                 src={`./${image}`}
                                 alt="features"

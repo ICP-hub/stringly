@@ -35,7 +35,7 @@ const Landingpage = () => {
                     <p className="font-sf font-semibold w-full text-[38px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
                         Stringly <br /> String your Vibe
                     </p>
-                    <p className="font-sfProDispaly text-[14px] lg:text-[18px] text-light leading-[21px] lg:leading-[30px] text-center mt-2">
+                    <p className="font-sfProDispaly text-[14px] lg:text-[18px] text-light leading-[21px] lg:leading-[30px] text-start mt-2">
                         Discover Stringly, the premium dating and networking app that blends
                         luxury with cutting-edge technology. Experience unmatched privacy and
                         security while forming meaningful connections.
@@ -84,7 +84,7 @@ const Landingpage = () => {
                     ].map((card, index) => (
                         <div
                             key={index}
-                            className="card relative max-w-[340px]-sm md:w-[388px] h-[378px] bg-black rounded-2xl text-white overflow-hidden transition-transform duration-400 group"
+                            className="card relative max-w-[340px]-sm md:w-[378px] h-[358px] bg-black rounded-2xl text-white overflow-hidden transition-transform duration-400 group"
                         >
                             <img
                                 src={card.imgSrc}
