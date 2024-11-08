@@ -16,7 +16,7 @@ function About() {
 	};
 	return (
 		<div className='flex items-center justify-center flex-col'>
-			<section className=' w-full max-w-[1920px] mx-auto relative w-full bg-black'>
+			<section className=' w-full max-w-[1540px] mx-auto relative w-full bg-black'>
 				<img src="./aboutHeroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen lg:h-auto opacity-[0.7]' />
 				<div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] p-2 md:w-[600px] bg-opacity-50 text-center">						
 				<h1 className='font-bold font-sf leading-[42px] lg:leading-[72px] text-[38px] lg:text-[56px]'>

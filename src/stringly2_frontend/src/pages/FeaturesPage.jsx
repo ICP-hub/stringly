@@ -13,8 +13,8 @@ const FeaturesPage = () => {
         }
     };
     return (
-        <div className='w-full max-w-[1920px] mx-auto flex flex-col items-center justify-center '>
-            <section className=' w-full max-w-[1920px] mx-auto relative w-full bg-black'>
+        <div className='w-full max-w-[1540px] mx-auto flex flex-col items-center justify-center '>
+            <section className=' w-full max-w-[1540px] mx-auto relative w-full bg-black'>
                 <img src="/FeaturesHeroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen lg:h-auto opacity-[0.7]' />
                 <div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[600px] bg-opacity-50 text-center">
                     <h1 className='font-bold font-roboto leading-[48px] lg:leading-[67px] text-[40px] lg:text-[56px]'>
@@ -23,7 +23,7 @@ const FeaturesPage = () => {
                             Unveiled
                         </h2>
                     </h1>
-                    <p className='mt-4 text-lg text-center font-roboto font-regular leading-[27px]'>
+                    <p className='mt-4 text-lg text-center font-roboto font-light leading-[27px]'>
                         Explore the exceptional features that make Stringly the ultimate choice for discerning individuals.
                         Our platform combines luxury, privacy, and cutting-edge technology to enhance your dating and
                         networking experience.
@@ -46,26 +46,26 @@ const FeaturesPage = () => {
                     </div>
                 </div>
 
-                <div className='flex max-w-[360px]-sm px-4 items-center justify-evenly gap-4 py-4 lg:px-2 flex-wrap'>
+                <div className='flex max-w-[360px]-sm px-4 items-center justify-evenly gap-10 py-4 lg:px-2 flex-wrap'>
                     {['FeaturesCard1.png', 'FeaturesCard2.png', 'FeaturesCard3.png'].map((image, index) => (
-                        <div key={index} className="card relative w-full lg:w-[408px] h-[377px] bg-black rounded-2xl text-white overflow-hidden opacity-[1]">
+                        <div key={index} className="card1 relative w-full lg:w-[408px] h-[377px] bg-black rounded-2xl text-white overflow-hidden opacity-[1]">
                             <img
                                 src={`./${image}`}
                                 alt="features"
-                                className="card-image w-full h-full object-cover opacity-[50%] rounded-2xl transition-transform duration-400"
+                                className="card-image1 w-full h-full object-cover opacity-[50%] rounded-2xl transition-transform duration-400"
                             />
-                            <div className="card-content absolute md:w-[326px] top-[229px] left-[15px] md:left-[41px]">
+                            <div className="card-content1 absolute md:w-[326px] top-[229px] left-[15px] md:left-[41px]">
                                 <p className="text-[21px] md:text-[24px] font-jakarta font-bold leading-[28px] pb-[10px]">
                                     Tailored Matches Designed for Your Unique Preferences and Lifestyle.
                                 </p>
-                                <p className="card-description opacity-0 transition-opacity duration-500">
+                                <p className="card-description1 opacity-0 transition-opacity duration-500">
                                     Our Premium Matchmaking service connects you with individuals who truly align with your values.
                                 </p>
-                                <button className="card-button flex items-center gap-2 absolute border-2 rounded-lg px-4 py-2 my-2">
+                                <button className="card-button1 flex items-center gap-2 absolute border-2 rounded-lg px-4 py-2 my-2">
                                     Sign Up
                                 </button>
                             </div>
-                            <p className='learnMore absolute bottom-6 left-12 text-[18px] flex items-center gap-2'>
+                            <p className='learnMore1 absolute bottom-6 left-12 text-[18px] flex items-center gap-2'>
                                 Learn More <FaChevronRight />
                             </p>
                         </div>
@@ -161,7 +161,7 @@ const FeaturesPage = () => {
                 </div>
             </section>
 
-            <section className='backdrop-blur-custom w-full mx-auto px-4 md:px-8 lg:w-full'>
+            <section className='w-full mx-auto px-4 md:px-8 lg:w-full'>
                 <div className='flex items-center justify-center text-center py-10'>
                     <div className='flex items-center justify-center flex-col text-center w-full max-w-md lg:w-[768px] p-4 gap-8'>
                         <img src="/FeaturesLogo_webflow.png" alt="Stringly Logo" className='w-full max-w-[200px] mx-auto' />
@@ -169,7 +169,7 @@ const FeaturesPage = () => {
                             "Stringly transformed my dating life. The luxury and privacy made all the difference in finding genuine connections."
                         </p>
                         <div className='flex items-center justify-center flex-col text-center'>
-                            <img src="/FeaturesProfile.png" alt="Emily Johnson" className='pb-4 w-[120px] h-[120px] object-cover rounded-full' />
+                            <img src="/Ellipse 4.svg" alt="Emily Johnson" className='pb-4 w-full h-full rounded-full' />
                             <p className='font-semibold'>Emily Johnson</p>
                             <p className='text-sm text-gray-600'>Marketing Director, LuxeCo</p>
                         </div>

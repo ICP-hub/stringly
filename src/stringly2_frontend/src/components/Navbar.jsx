@@ -14,16 +14,16 @@
 //                     <p className='text-2xl font-semibold text-[#DC73B6]'>Stringly</p>
 //                 </div>
 //                 <div className='hidden md:flex items-center justify-between gap-8'>
-//                     <p className='hover:bg-zinc-800 px-3 py-1 rounded-lg'>
+//                     <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
 //                         <Link to="/">Home</Link>
 //                     </p>
-//                     <p className='hover:bg-zinc-800 px-3 py-1 rounded-lg'>
+//                     <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
 //                         <Link to="/features">Features</Link>
 //                     </p>
 //                     <p>
 //                         <Link to="/about">About Us</Link>
 //                     </p>
-//                     <div className='flex items-center gap-2 hover:bg-zinc-800 px-3 py-1 rounded-lg'>
+//                     <div className='flex items-center gap-2 hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
 //                         {/* <Link to="/contact">Resources</Link>
 //                         <IoIosArrowDown /> */}
 //                         <p className='flex items-center justify-between gap-2'>Resources <IoIosArrowDown /></p>
@@ -108,22 +108,22 @@ const Navbar = () => {
     const [isMenu, setIsmMenu] = useState(false);
 
     return (
-        <div className="w-full max-w-[1920px] mx-auto flex flex-col bg-transparent fixed top-0 z-50 px-4">
+        <div className="w-full max-w-[1540px] mx-auto flex flex-col bg-transparent fixed top-0 z-50 px-4">
             <div className='flex w-full text-white items-center justify-between px-4 py-4 md:px-8 md:py-4'>
                 <div>
                     <p className='text-2xl font-semibold text-[#DC73B6]'>Stringly</p>
                 </div>
-                <div className='hidden md:flex items-center justify-between gap-8'>
-                    <p className='hover:bg-zinc-800 px-3 py-1 rounded-lg'>
+                <div className='hidden font-sfProDisplay md:flex items-center justify-between gap-8'>
+                    <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
                         <Link to="/">Home</Link>
                     </p>
-                    <p className='hover:bg-zinc-800 px-3 py-1 rounded-lg'>
+                    <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
                         <Link to="/features">Features</Link>
                     </p>
-                    <p>
+                    <p  className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
                         <Link to="/about">About Us</Link>
                     </p>
-                    <div className='flex items-center gap-2 hover:bg-zinc-800 px-3 py-1 rounded-lg'>
+                    <div className='flex items-center gap-2 hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
                         <p className='flex items-center justify-between gap-2'>Resources <IoIosArrowDown /></p>
                     </div>
                 </div>
