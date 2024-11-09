@@ -54,14 +54,14 @@ const FeaturesPage = () => {
                                 alt="features"
                                 className="card-image1 w-full h-full object-cover opacity-[50%] rounded-2xl transition-transform duration-400"
                             />
-                            <div className="card-content1 absolute md:w-[326px] top-[229px] left-[15px] md:left-[41px]">
+                            <div className="card-content1 absolute md:w-[326px] top-[219px] left-[15px] md:left-[41px]">
                                 <p className="text-[21px] md:text-[24px] font-jakarta font-bold leading-[28px] pb-[10px]">
                                     Tailored Matches Designed for Your Unique Preferences and Lifestyle.
                                 </p>
                                 <p className="card-description1 opacity-0 transition-opacity duration-500">
                                     Our Premium Matchmaking service connects you with individuals who truly align with your values.
                                 </p>
-                                <button className="card-button1 flex items-center gap-2 absolute border-2 rounded-lg px-4 py-2 my-2">
+                                <button className="card-button1 flex items-center gap-2 absolute border-2 rounded-xl px-6 py-2 my-2">
                                     Sign Up
                                 </button>
                             </div>

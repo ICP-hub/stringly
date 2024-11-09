@@ -185,7 +185,7 @@ function About() {
 							At Stringly, we utilize the Internet Computer Protocol (ICP) to provide a secure and private environment for our users. This cutting-edge technology ensures that your personal data remains confidential while you explore meaningful connections. With Stringly, you can enjoy peace of mind knowing that your privacy is our top priority.
 						</p>
 						<div className="flex space-x-4 my-10">
-							<button className="px-6 py-2 border-2 border-white text-white text-lg rounded-xl hover:bg-black hover:text-white transition-colors">
+							<button className="px-6 py-1.5 border-2 border-white text-white text-lg rounded-xl hover:bg-black hover:text-white transition-colors">
 								Learn More
 							</button>
 							<button className="px-8 py-4 text-white text-lg flex  items-center space-x-2 hover:underline">

@@ -35,7 +35,7 @@ const Landingpage = () => {
                     <p className="font-sf font-semibold w-full text-[38px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
                         Stringly <br /> String your Vibe
                     </p>
-                    <p className="font-sfProDispaly text-[14px] lg:text-[18px] text-light leading-[21px] lg:leading-[30px] text-start mt-2">
+                    <p className="font-sfProDispaly text-[14px] lg:text-[18px] text-light leading-[21px] lg:leading-[30px] text-center mt-2">
                         Discover Stringly, the premium dating and networking app that blends
                         luxury with cutting-edge technology. Experience unmatched privacy and
                         security while forming meaningful connections.
@@ -91,7 +91,7 @@ const Landingpage = () => {
                                 alt="features"
                                 className="card-image w-full h-full object-cover opacity-50 rounded-2xl transition-opacity duration-400"
                             />
-                            <div className="card-content absolute md:w-[340px] top-[200px] left-[15px] md:left-[41px]"> {/* Adjusted top value */}
+                            <div className="card-content absolute w-[90%] top-[186px] left-[15px] md:left-[25px]"> {/* Adjusted top value */}
                                 <p className="text-[21px] md:text-[24px] font-jakarta font-bold leading-[28px] pb-[10px]">
                                     {card.title}
                                 </p>
@@ -156,7 +156,7 @@ const Landingpage = () => {
                 <div className={`w-full lg:flex justify-between gap-4 mt-4 lg:w-full`}>
 
                     {/* Left Image with Hover Effect (Hug Image) */}
-                    <div className={`relative mb-8 w-full lg:w-[640px] h-[340px] rounded-xl lg:rounded-bl-[12px] overflow-hidden bg-black`}>
+                    <div className={`relative mb-8 w-full lg:w-[680px] h-[340px] rounded-xl lg:rounded-bl-[12px] overflow-hidden bg-black`}>
                         <img
                             src="/hug.png"
                             alt="Hug Image"
@@ -223,7 +223,7 @@ const Landingpage = () => {
                     <div className="lg:flex justify-between mt-6 items-start lg:w-[556px] h-[64px] gap-8">
                         <div className="flex flex-col items-start">
                             <div className="flex items-center gap-2">
-                                <span><MdPrivacyTip size={25} style={{color:"navy"}}/></span>
+                                <span><MdPrivacyTip size={25} style={{ color: "navy" }} /></span>
                                 <img src="./final.png" alt="privacy icon" className="mr-2" />
                             </div>
                             <p className="text-sm">Your privacy is our top priority.</p>
@@ -234,15 +234,16 @@ const Landingpage = () => {
                                 <img src="./fra.png" alt="connection icon" className="mr-2" />
 
                             </div>
-                            <p className="text-sm">Connect with like-minded <br /> individuals securely.</p>
+                            <p className="text-sm">Connect with like-minded individuals <br /> securely.</p>
                         </div>
                     </div>
-
-
-
-                    <div className="flex gap-4 mt-14  flex-wrap">
-                        <button className="border lg:border-black lg:text-black px-4 py-2 rounded">Learn More</button>
-                        <button className="bg-black text-white px-4 py-2 rounded">Sign Up</button>
+                    <div className="mt-10 space-x-6">
+                        <button className="bg-white text-[14px] font-sf border border-black text-black px-6 py-3 w-32 rounded-xl">
+                            Learn More
+                        </button>
+                        <button className="text-[16px] font-sf bg-black text-white w-32 text-white px-2 py-3 rounded-xl">
+                            Sign Up
+                        </button>
                     </div>
                 </div>
 
