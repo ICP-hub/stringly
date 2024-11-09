@@ -31,7 +31,7 @@ const FeaturesPage = () => {
                 </div>
             </section>
 
-            <section className='max-w-[340px]-sm md:w-[388px] lg:w-auto 2xl:mt-40'>
+            <section className='max-w-[340px]-sm md:w-[388px] lg:w-auto xl:w-full 2xl:mt-40'>
                 <div className='flex items-center justify-between flex-col py-12 text-[18px]'>
                     <div className='text-center gap-4 w-[308px] md:w-[650px] lg:w-[768px] flex items-center justify-between flex-col'>
                         <p className='hidden md:block text-[40px] font-sf font-semibold leading-[48px]'>
@@ -58,7 +58,7 @@ const FeaturesPage = () => {
                                 <p className="text-[21px] md:text-[24px] font-jakarta font-bold leading-[28px] pb-[10px]">
                                     Tailored Matches Designed for Your Unique Preferences and Lifestyle.
                                 </p>
-                                <p className="card-description1 opacity-0 transition-opacity duration-500">
+                                <p className="card-description1 opacity-0 font-light transition-opacity duration-500">
                                     Our Premium Matchmaking service connects you with individuals who truly align with your values.
                                 </p>
                                 <button className="card-button1 flex items-center gap-2 absolute border-2 rounded-xl px-6 py-2 my-2">
@@ -72,7 +72,7 @@ const FeaturesPage = () => {
                     ))}
                 </div>
             </section>
-            <section className='w-[90%]  md:w-[650px] lg:w-auto min-px-2-md'>
+            <section className='w-[90%]  md:w-[650px] lg:w-auto min-px-2-md xl:w-full'>
                 {/* First card */}
                 <div
                     className={`ppp lg:p-4 py-8 lg:p-0 lg:flex relative items-center justify-between pt-24 ${hovered[0] ? 'hovered' : ''}`}
@@ -127,7 +127,7 @@ const FeaturesPage = () => {
 
                 {/* Third card */}
                 <div className={`ppp lg:p-4 lg:py-8 lg:p-0 lg:flex items-center justify-between ${hovered[2] ? 'hovered' : ''}`} onMouseEnter={() => handleHover(2)}>
-                    <div className='child hidden lg:block lg:w-[556px]  m-auto opacity-0'>
+                    <div className='child hidden lg:block lg:w-[556px] m-auto opacity-0'>
                         <div className='mb-8'>
                             <p className='font-roboto font-bold text-[30px] md:text-[44px] leading-[36px] md:leading-[55px]'>
                                 Long heading is what you see here in this feature section

@@ -21,20 +21,20 @@ function About() {
 				<div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] p-2 md:w-[600px] bg-opacity-50 text-center">
 					<h1 className='font-bold font-sf leading-[42px] lg:leading-[72px] text-[38px] lg:text-[56px]'>
 						Discover Our Story.</h1>
-					<p className='text-[18px] text-center font-roboto font-regular leading-[27px]'>
+					<p className='text-[18px] text-center font-roboto font-light leading-[27px]'>
 						Explore the vision behind Stringly and our commitment to redefining connections in a luxurious way.
 					</p>
 					<div className="mt-10 space-x-6">
-						<button className="bg-white text-[16px] font-sf text-black px-6 py-3 w-32 rounded-xl">
+						<button className="bg-white text-[16px]font-light font-sf text-black px-6 py-3 w-32 rounded-xl">
 							Join Us
 						</button>
-						<button className="bg-transparent text-[16px] font-sf border border-white w-32 text-white px-2 py-3 rounded-xl">
+						<button className="bg-transparent text-[16px] font-light font-sf border border-white w-32 text-white px-2 py-3 rounded-xl">
 							Learn More
 						</button>
 					</div>
 				</div>
 			</section>
-			<section className='md:w-[650px] lg:w-auto px-2 lg:w-[1440px] '>
+			<section className='md:w-[650px] lg:w-auto px-2 lg:w-[1440px] xl:w-full '>
 				{/* First Card */}
 				<div
 					className={`ppp !h-[656.66px] animate p-2 lg:p-4 my-2 py-8 lg:p-0 lg:flex items-center justify-start gap-8 ${hovered[0] ? 'hovered' : ''}`}

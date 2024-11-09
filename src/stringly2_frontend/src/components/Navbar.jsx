@@ -26,7 +26,7 @@ const Navbar = () => {
                 <div>
                     <p className='text-2xl font-semibold text-[#DC73B6]'>Stringly</p>
                 </div>
-                <div className='hidden font-sfProDisplay md:flex items-center justify-between gap-8'>
+                <div className='hidden font-sfProDisplay md:flex items-center font-light justify-between gap-8'>
                     <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
                         <Link to="/">Home</Link>
                     </p>
@@ -88,7 +88,7 @@ export const Menu = ({ isMenu, setIsmMenu }) => {
                     </button>
                 </div>
             </div>
-            <div className='flex flex-col items-start justify-start gap-6 px-6 py-4'>
+            <div className='flex flex-col items-start font-light justify-start gap-6 px-6 py-4'>
                 <p className='hover:bg-zinc-200 px-3 py-1 rounded-lg' onClick={handleLinkClick}>
                     <Link to="/">Home</Link>
                 </p>

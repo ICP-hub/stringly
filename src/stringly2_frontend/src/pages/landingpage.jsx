@@ -35,7 +35,7 @@ const Landingpage = () => {
                     <p className="font-sf font-semibold w-full text-[38px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
                         Stringly <br /> String your Vibe
                     </p>
-                    <p className="font-sfProDispaly text-[14px] lg:text-[18px] text-light leading-[21px] lg:leading-[30px] text-center mt-2">
+                    <p className="font-sfProDispaly text-[14px] lg:text-[18px] font-light leading-[21px] lg:leading-[30px] text-center mt-2">
                         Discover Stringly, the premium dating and networking app that blends
                         luxury with cutting-edge technology. Experience unmatched privacy and
                         security while forming meaningful connections.
@@ -53,7 +53,7 @@ const Landingpage = () => {
 
             {/* Heading Section */}
 
-            <section className='max-w-[340px]-sm md:w-[388px] lg:w-auto 2xl:mt-40'>
+            <section className='max-w-[340px]-sm md:w-[388px] lg:w-auto xl:w-full 2xl:mt-40'>
                 <div className=' w-full flex items-center justify-between flex-col py-8 text-[18px]'>
                     <div className='text-center gap-4 lg:w-[768px] flex items-center justify-between flex-col'>
                         <p className='text-[40px] font-sf font-semibold leading-[48px] '>
@@ -103,8 +103,8 @@ const Landingpage = () => {
                                         Learn More
                                     </button>
                                     <div className='learnMore absolute bottom-6 left-2 text-[16px] flex items-center'>
-                                        <span className="default-text flex items-center gap-2">Explore   <FaChevronRight size={12} /></span>
-                                        <span className="hover-text flex items-center gap-2">Join   <FaChevronRight size={12} /></span>
+                                        <span className="default-text flex font-light items-center gap-2">Explore   <FaChevronRight size={12} /></span>
+                                        <span className="hover-text flex font-light items-center gap-2">Join   <FaChevronRight size={12} /></span>
                                     </div>
                                 </div>
                             </div>
@@ -124,7 +124,7 @@ const Landingpage = () => {
             </div>
 
             {/* Group for All Images */}
-            <div className="max-w-[360px]-sm-md lg:w-[90%] mx-auto flex flex-col items-center justify-center mt-8 gap-4 px-4">
+            <div className="max-w-[360px]-sm-md lg:w-[90%] xl:w-full mx-auto flex flex-col items-center justify-center mt-8 gap-4 px-4">
 
                 {/* Top Image with Hover Effect (Profile Image) */}
                 <div className={`relative w-full lg:w-full h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-black`}>
@@ -142,7 +142,7 @@ const Landingpage = () => {
                             <h2 className="text-[32px] leading-[38px] font-semibold leading-tight font-roboto font-bold">
                                 Elevate Your Networking <br /> Experience
                             </h2>
-                            <p className="mt-2 text-white-600 font-roboto font-regular leading-[24px]">
+                            <p className="mt-2 text-white-600 font-roboto font-light leading-[24px]">
                                 Experience connections like never before with Stringly.
                             </p>
                             <button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:bg-pink-100">
@@ -169,7 +169,7 @@ const Landingpage = () => {
                         >
                             <div className="text-white child">
                                 <h2 className="text-[32px] leading-[38px] font-semibold font-roboto font-bold">Your Journey Begins Here</h2>
-                                <p className="text-lg mt-2 font-roboto font-regular leading-[24px]">Experience connections like never before with Stringly.</p>
+                                <p className="text-lg mt-2 font-roboto font-light leading-[24px]">Experience connections like never before with Stringly.</p>
                                 <button className="bg-white text-black px-8 py-2 rounded-[8px] mt-4 hover:bg-pink-100">
                                     Join
                                 </button>
@@ -191,7 +191,7 @@ const Landingpage = () => {
                         >
                             <div className="text-white child">
                                 <h2 className="text-[32px] leading-[38px] font-roboto font-bold">Unmatched Privacy <br /> and Security</h2>
-                                <p className="text-lg mt-2 font-roboto font-regular leading-[24px]">Experience connections like never before with Stringly.</p>
+                                <p className="text-lg mt-2 font-roboto font-light leading-[24px]">Experience connections like never before with Stringly.</p>
                                 <button className="bg-white text-black px-8 py-2 rounded-[8px] mt-4 hover:bg-pink-100">
                                     Join
                                 </button>

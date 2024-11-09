@@ -87,16 +87,16 @@ const Footer = () => {
 
         <div className='flex items-start justify-between flex-wrap gap-8 lg:gap-12 px-16 py-4'>
           {/* Pages Links */}
-          <ul className='leading-8 font-regular'>
+          <ul className='leading-8 font-extralight'>
             <li className='text-lg !font-semibold pb-4'>Pages</li>
-            <li>Whitepaper</li>
+            <li >Whitepaper</li>
             <li>Pricing</li>
             <li>Blog</li>
             <li>Demo</li>
           </ul>
 
           {/* Company Links */}
-          <ul className='leading-8 font-regular'>
+          <ul className='leading-8 font-extralight'>
             <p className='text-lg !font-semibold pb-4'>Company</p>
             <li>Pricing</li>
             <li>Security</li>
@@ -108,7 +108,7 @@ const Footer = () => {
           {/* About Us Section (Visible on lg and larger screens) */}
           <ul className='leading-8 w-[100%] hidden lg:block lg:w-auto'>
             <li className='text-lg font-semibold pb-4'>About Us</li>
-            <li className='font-regular'>Contact Us</li>
+            <li className='font-extralight'>Contact Us</li>
             <input type="text" placeholder='Your Email' className='rounded-2xl text-black bg-white px-2 my-4 p-1 w-[300px]' />
           </ul>
         </div>
