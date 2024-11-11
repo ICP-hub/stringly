@@ -28,13 +28,13 @@ const Navbar = () => {
                 </div>
                 <div className='hidden font-sfProDisplay md:flex items-center font-light justify-between gap-8'>
                     <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
-                        <Link to="/">Home</Link>
+                        <Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link>
                     </p>
                     <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
-                        <Link to="/features">Features</Link>
+                        <Link to="/features" onClick={() => window.scrollTo(0, 0)}>Features</Link>
                     </p>
                     <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
-                        <Link to="/about">About Us</Link>
+                        <Link to="/about" onClick={() => window.scrollTo(0, 0)}>About Us</Link>
                     </p>
                     <div className='flex items-center gap-2 hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
                         <p className='flex items-center justify-between gap-2'>Resources <IoIosArrowDown /></p>
@@ -72,6 +72,8 @@ export const Menu = ({ isMenu, setIsmMenu }) => {
     };
 
     const handleLinkClick = () => {
+        // Scroll to top of the page
+        window.scrollTo(0, 0);
         closeMenu();
     };
 
@@ -105,4 +107,3 @@ export const Menu = ({ isMenu, setIsmMenu }) => {
         </div>
     );
 };
-

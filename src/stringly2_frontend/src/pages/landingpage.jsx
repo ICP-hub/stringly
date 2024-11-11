@@ -64,12 +64,12 @@ const Landingpage = () => {
                         </p>
                     </div>
                 </div>
-                <div className='flex items-center gap-10 justify-evenly py-4 lg:px-2 flex-wrap'>
+                <div className='px-4 flex items-center gap-10 justify-evenly py-4 lg:px-2 flex-wrap'>
                     {[
                         {
                             imgSrc: './yolo.png',
                             title: 'Secure Connections',
-                            description: 'Connect with confidence through our encrypted platform ensuring your privacy and safety.',
+                            description: 'Connect with confidence through our encrypted platform ensuring your privacy.',
                         },
                         {
                             imgSrc: './elo.png',
@@ -84,21 +84,23 @@ const Landingpage = () => {
                     ].map((card, index) => (
                         <div
                             key={index}
-                            className="card relative max-w-[340px]-sm md:w-[378px] h-[358px] bg-black rounded-2xl text-white overflow-hidden transition-transform duration-400 group"
+                            className="card relative max-w-[340px]-sm md:w-full lg:w-[378px] h-[358px] bg-black rounded-2xl text-white overflow-hidden transition-transform duration-400 group"
                         >
                             <img
                                 src={card.imgSrc}
                                 alt="features"
                                 className="card-image w-full h-full object-cover opacity-50 rounded-2xl transition-opacity duration-400"
                             />
-                            <div className="card-content absolute w-[90%] top-[186px] left-[15px] md:left-[25px]"> {/* Adjusted top value */}
+                            <div className="card-content absolute w-[95%] top-[176px] left-[10px] md:left-[15px]"> {/* Adjusted top value */}
+                                <div className='max-h-[120px] w-full'>
                                 <p className="text-[21px] md:text-[24px] font-jakarta font-bold leading-[28px] pb-[10px]">
                                     {card.title}
                                 </p>
                                 <p className="card-description transition-opacity duration-500 mb-4">
                                     {card.description}
                                 </p>
-                                <div className=''>
+                                </div>
+                                <div className='flex items-center'>
                                     <button className="card-button flex items-center gap-2 border rounded-xl px-5 py-2.5 opacity-0 translate-x-[-20px] transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
                                         Learn More
                                     </button>

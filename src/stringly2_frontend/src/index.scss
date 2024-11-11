@@ -97,7 +97,7 @@
 }
 
 .card:hover .card-content {
-    bottom: 10px;
+    bottom: 15px;
 }
 
 .card-description {
@@ -137,6 +137,7 @@
 
 .learnMore .hover-text {
     opacity: 0;
+    padding-bottom: 10px;
 }
 
 .card:hover .learnMore .default-text {
@@ -146,8 +147,6 @@
 .card:hover .learnMore .hover-text {
     opacity: 1;
 }
-
-
 
 
 .card-image1 {
@@ -334,6 +333,10 @@
     animation: ImageSlideIn2 1s forwards;
 }
 
+.learnMore .hover-text {
+    opacity: 0;
+}
+
 
 
 @keyframes ImageSlideIn {
@@ -428,6 +431,9 @@
             transform: translateX(0);
             opacity: 1;
         }
+    }
+    .card:hover .card-content {
+        bottom: 15px;
     }
 }
 
