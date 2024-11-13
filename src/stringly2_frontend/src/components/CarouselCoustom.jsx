@@ -15,7 +15,7 @@ function CarouselCustom() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % totalSlides);
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [totalSlides]);
@@ -37,7 +37,7 @@ function CarouselCustom() {
           <img
             src={images[leftIndex]}
             alt={`Slide ${leftIndex + 1}`}
-            className="h-full w-full object-cover opacity-50 scale-90 transition-all duration-700 rounded-xl"
+            className="h-full w-full object-cover opacity-50 scale-90 transition-all duration-900 rounded-xl"
           />
         </div>
 
@@ -46,7 +46,7 @@ function CarouselCustom() {
           <img
             src={images[centerIndex]}
             alt={`Slide ${centerIndex + 1}`}
-            className="h-full w-full object-cover scale-100 transition-all duration-700 rounded-xl"
+            className="h-full w-full object-cover scale-100 transition-all duration-900 rounded-xl"
           />
         </div>
 
@@ -55,7 +55,7 @@ function CarouselCustom() {
           <img
             src={images[rightIndex]}
             alt={`Slide ${rightIndex + 1}`}
-            className="h-full w-full object-cover opacity-50 scale-90 transition-all duration-700 rounded-xl"
+            className="h-full w-full object-cover opacity-50 scale-90 transition-all duration-900 rounded-xl"
           />
         </div>
       </div>
