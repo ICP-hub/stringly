@@ -161,7 +161,7 @@ function About() {
 					<div className="p-4 md:p-2 flex items-center justify-center mb-16 animate">
 						<div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
 							{[1, 2, 3, 4, 5, 6].map((num) => (
-								<div key={num} className="flex sm:w-[120px] md:w-[174px] sm:h-[180px] md:h-[231px] md:w-[300px] md:h-[360px] lg:w-[330px] lg:h-[480px] xl:w-[397px] xl:h-[520px] flex-col p-0">
+								<div key={num} className="flex sm:w-[100px] md:w-[154px] sm:h-[160px] md:h-[211px] md:w-[280px] md:h-[340px] lg:w-[310px] lg:h-[460px] xl:w-[377px] xl:h-[500px] flex-col p-0">
 									<img
 										src={`./aboutDefault${num}.png`}
 										alt={`Team Member ${num}`}
