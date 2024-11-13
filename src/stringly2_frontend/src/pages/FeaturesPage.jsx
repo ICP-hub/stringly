@@ -75,7 +75,7 @@ const FeaturesPage = () => {
             <section className='w-full md:w-[650px] lg:w-auto min-px-2-md xl:w-full'>
                 {/* First card */}
                 <div
-                    className={`ppp py-8 px-4 lg:p-0 lg:flex relative items-center justify-between !pt-24 ${hovered[0] ? 'hovered' : ''}`}
+                    className={`ppp py-8 px-4 lg:p-0 lg:flex relative items-center justify-between !pt-24 rounded-xl ${hovered[0] ? 'hovered' : ''}`}
                     onMouseEnter={() => handleHover(0)}
                 >
                     <div className={`child hidden box-border lg:block w-[616px] px-12`}>
@@ -87,14 +87,14 @@ const FeaturesPage = () => {
                         </p>
                     </div>
                     <div className=' z-20 lg:w-[50%] bg-black rounded-xl'>
-                        <img src="/FeaturesRectangle 1.png" alt="" className='h-screen lg:w-full lg:h-[550px] object-cover opacity-[0.6]' />
+                        <img src="/FeaturesRectangle 1.png" alt="" className='h-screen rounded-xl lg:w-full lg:h-[550px] object-cover opacity-[0.6]' />
                     </div>
                 </div>
 
                 {/* Second card */}
                 <div className={`ppp px-4 lg:w-full m-auto py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`} onMouseEnter={() => handleHover(1)}>
                     <div className='z-20 lg:w-[50%] bg-black rounded-xl'>
-                        <img src="/FeaturesRectangle 2.png" alt="" className='h-screen lg:w-full lg:h-[550px] object-cover opacity-[0.6]' />
+                        <img src="/FeaturesRectangle 2.png" alt="" className='h-screen lg:w-full lg:h-[550px] rounded-xl object-cover opacity-[0.6]' />
                     </div>
                     <div className='child-2 hidden box-border lg:pr-12 lg:block w-[616px]  '>
                         <div>

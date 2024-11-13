@@ -6,10 +6,17 @@ import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className='w-full lg:flex items-start justify-between bg-black text-white'>
+    <div className='w-full lg:flex items-start justify-between bg-black text-white py-6'>
       <div>
-        <div className='w-full mx-auto flex lg:flex-col lg:gap-4 items-center justify-between lg:items-start p-10'>
-          <p>Stringly</p>
+        <div className='w-full mx-auto flex lg:flex-col lg:gap-4 items-center justify-between lg:items-start px-10'>
+          <p
+            className="text-[18px] leading-[72px] font-sf font-semibold text-[#DC73B6] bg-clip-text text-transparent"
+            style={{
+              backgroundImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%)'
+            }}
+          >
+            Stringly
+          </p>
           <div className='flex gap-4 text-xl'>
             <FaXTwitter />
             <FaThreads />
@@ -29,7 +36,7 @@ const Footer = () => {
         <div className='flex items-start justify-between flex-wrap gap-8 lg:gap-12 px-16 py-4'>
           {/* Pages Links */}
           <ul className='leading-8 font-extralight'>
-            <li className='text-lg !font-semibold pb-4'>Pages</li>
+            <li className='text-sm !font-semibold pb-4'>Pages</li>
             <li >Whitepaper</li>
             <li>Pricing</li>
             <li>Blog</li>
@@ -38,7 +45,7 @@ const Footer = () => {
 
           {/* Company Links */}
           <ul className='leading-8 font-extralight'>
-            <p className='text-lg !font-semibold pb-4'>Company</p>
+            <p className='text-sm !font-semibold pb-4'>Company</p>
             <li>Pricing</li>
             <li>Security</li>
             <li>Privacy Policy</li>
@@ -48,7 +55,7 @@ const Footer = () => {
 
           {/* About Us Section (Visible on lg and larger screens) */}
           <ul className='leading-8 w-[100%] hidden lg:block lg:w-auto'>
-            <li className='text-lg font-semibold pb-4'>About Us</li>
+            <li className='text-sm font-semibold pb-4'>About Us</li>
             <li className='font-extralight'>Contact Us</li>
             <input type="text" placeholder='Your Email' className='rounded-2xl text-black bg-white px-2 my-4 p-1 w-[300px]' />
           </ul>

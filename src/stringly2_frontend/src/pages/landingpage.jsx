@@ -226,7 +226,7 @@ const Landingpage = () => {
                             <p className="text-[16px] font-regular font-sf leading-[20px]">Your privacy is our top priority.</p>
                         </div>
 
-                        <div className="flex flex-col items-start">
+                        <div className="flex flex-col items-start lg:pt-8">
                             <div className="flex items-center gap-4 pb-2 m-0">
                                 <img src="./Union.svg" alt="privacy icon" className=" h-15 w-15" />
                                 <p className='text-[32px] font-semibold text-[#D454A6]'>Connection</p>
@@ -255,7 +255,7 @@ const Landingpage = () => {
             </div>
 
             {/* Section with Button and Image Gallery */}
-            <section className='flex flex-col w-full lg:pl-20 lg:flex-row items-center justify-between gap-8 py-20 bg-gradient-full'>
+            {/* <section className='flex flex-col w-full lg:pl-20 lg:flex-row items-center justify-between gap-8 py-20 bg-gradient-full'>
                 <div className='flex items-center flex-col text-center'>
                     <p className='font-roboto text-[14px] leading-[21px] md:text-[18px] font-regular md:leading-[27px]'>Work at Stringly</p>
                     <div className='md:py-10 py-5'>
@@ -277,7 +277,7 @@ const Landingpage = () => {
                 </div>
                 <button className='black md:hidden border border-black py-2 px-6 rounded-lg'>Join</button>
 
-            </section>
+            </section> */}
             <div
                 className="flex flex-col items-center justify-center m-auto mt-28"
                 style={{
