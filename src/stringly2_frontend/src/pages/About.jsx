@@ -34,14 +34,14 @@ function About() {
 					</div>
 				</div>
 			</section>
-			<section className='md:w-[650px] lg:w-auto px-2 lg:w-[1440px] xl:w-full '>
+			<section className='md:w-[650px] lg:w-auto px-2 lg:p-0 lg:w-[1440px] xl:w-full '>
 				{/* First Card */}
 				<div
-					className={`ppp !h-[656.66px] animate p-2 lg:p-4 my-2 py-8 lg:p-0 lg:flex items-center justify-start gap-8 ${hovered[0] ? 'hovered' : ''}`}
+					className={`ppp lg:h-auto animate mt-20 p-2 py-8 lg:p-0 lg:flex items-center justify-between gap-8 ${hovered[0] ? 'hovered' : ''}`}
 					onMouseEnter={() => handleHover(0)}
 				>
-					<div className={` lg:!w-[440px] child hidden lg:block lg:w-[616px] lg:h-auto ml-[100px] m-auto opacity-0`}>
-						<p className='font-sf font-semibold text-[32px] lg:text-[44px] leading-[35px] lg:leading-[55px] py-8 w-full lg:w-auto mt-10 lg:mt-0'>
+					<div className={`child lg:px-12 hidden lg:block lg:w-[616px] h-full opacity-0`}>
+						<p className='font-sf font-semibold text-[32px] leading-[35px] lg:leading-[38px] py-8 w-full lg:w-auto mt-10 lg:mt-0'>
 							Our Journey: Crafting Meaningful Connections Through Luxury
 						</p>
 						<p className='text-[16px] font-jakarta font-regular leading-[19px]'>
@@ -66,30 +66,30 @@ function About() {
 							</div>
 						</div>
 					</div>
-					<div className='rounded-xl w-full lg:w-auto !h-[656.66px] my-auto lg:h-auto z-20 left-right children bg-black'>
+					<div className='rounded-xl w-full lg:w-auto !h-[656.66px] lg:!h-auto z-20 left-right children bg-black'>
 						<img src="./aboutPageImage1.png" alt="PageImage1" className='h-full w-full lg:h-auto object-cover opacity-[0.7]' />
 					</div>
 				</div>
 
 				{/* Second Card */}
 				<div
-					className={`mt-20 lg:mt-10 ppp !h-[656.66px] animate p-2 lg:p-4 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`}
+					className={`mt-20 lg:mt-0 ppp !h-[656.66px] lg:!h-auto animate p-2 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`}
 					onMouseEnter={() => handleHover(1)}
 				>
-					<div className='rounded-xl w-full lg:w-auto !h-[656.66px] children bg-black'>
+					<div className='rounded-xl w-full lg:w-auto !h-[656.66px] lg:!h-auto children bg-black'>
 						<img src="./aboutPageImage2.png" alt="PageImage2" className='h-full w-full lg:h-auto object-cover opacity-[0.8]' />
 					</div>
-					<div className=' lg:!w-[440px] child-2 hidden lg:block m-auto'>
+					<div className='lg:w-[696px] child-2 hidden lg:block lg:px-12'>
 						<div>
 							<p className='font-sf font-semibold text-[32px] md:text-[44px]  md:leading-[48px]'>
 								Our Commitment to Innovation and Privacy
 							</p>
-							<p className='font-jakarta font-regular text-[16px] leading-[19px] py-4 lg:py-8'>
+							<p className='font-jakarta font-regular text-[16px] leading-[19px] py-4'>
 								At Stringly, we prioritize innovation and user privacy in every aspect of our platform. Our mission is to empower users to forge meaningful connections in a secure environment.
 							</p>
 						</div>
-						<div className="grid h-[200px] grid-cols-2 text-white lg:gap-8 lg:mb-10">
-							<ul className='w-[150px]'>
+						<div className="grid h-[200px] grid-cols-2 text-white">
+							<ul className='w-[150px] lg:w-full'>
 								<li>
 									<h2 className="text-[48px] font-roboto font-bold text-white lg:text-blue-900 mb-2">100%</h2>
 								</li>
@@ -97,7 +97,7 @@ function About() {
 									Innovation drives us to create exceptional user experiences.
 								</p></li>
 							</ul>
-							<ul className='w-[150px]'>
+							<ul className='w-[150px] lg:w-full'>
 								<li>
 									<h2 className="text-[48px] font-roboto font-bold text-white lg:text-blue-900 mb-2">100%</h2>
 
@@ -109,7 +109,7 @@ function About() {
 								</li>
 							</ul>
 						</div>
-						<div className="mt-12 flex space-x-4 text-white">
+						<div className=" flex items-start space-x-4 text-white">
 							<button className="px-2 lg:px-4 py-2 border-2 lg:border-black lg:text-black text-lg rounded-xl hover:bg-black hover:text-white transition-colors">
 								Learn More
 							</button>
@@ -159,9 +159,9 @@ function About() {
 						</p>
 					</div>
 					<div className="p-4 md:p-2 flex items-center justify-center mb-16 animate">
-						<div className="mx-auto grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 lg:w-[1285px]">
+						<div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
 							{[1, 2, 3, 4, 5, 6].map((num) => (
-								<div key={num} className="flex sm:w-[120px] md:w-[174px] sm:h-[180px] md:h-[231px] md:w-[300px] md:h-[360px] lg:w-[407px] lg:h-[540px] flex-col p-0">
+								<div key={num} className="flex sm:w-[120px] md:w-[174px] sm:h-[180px] md:h-[231px] md:w-[300px] md:h-[360px] lg:w-[330px] lg:h-[480px] xl:w-[397px] xl:h-[520px] flex-col p-0">
 									<img
 										src={`./aboutDefault${num}.png`}
 										alt={`Team Member ${num}`}
@@ -175,7 +175,7 @@ function About() {
 			</section>
 
 			{/* card 3 */}
-			<section >
+			<section className='px-4 lg:px-8'>
 				<div className='relative w-full lg:h-[1000px] bg-black'>
 					<img src="./aboutComponent 2.png" alt="Premium Features" className='w-screen relative object-cover h-full opacity-[0.7]' />
 					<div className='hidden md:flex items-center flex-col gap-4 justify-center absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] p-2 md:w-[600px] bg-opacity-50 text-center'>
@@ -207,10 +207,10 @@ function About() {
 							Explore the milestones and culture that define Stringly.
 						</p>
 						<div className="h-full flex lg:gap-8 flex-col gap-8 lg:flex-row">
-							<div className="relative w-full pb-8 lg:pb-0 bg-black rounded-xl">
+							<div className="relative w-full pb-8 lg:pb-0 bg-black">
 								<img src="./aboutPlaceholder-Image-1.png" alt="Journey Image 1" className="w-full h-screen lg:h-auto object-cover opacity-[0.7]" />
 							</div>
-							<div className="relative w-full bg-black rounded-xl">
+							<div className="relative w-full bg-black">
 								<img src="./aboutPlaceholder-Image-2.png" alt="Journey Image 2" className="w-full h-screen lg:h-auto object-cover opacity-[0.7]" />
 							</div>
 						</div>

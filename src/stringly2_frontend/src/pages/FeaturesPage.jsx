@@ -46,60 +46,60 @@ const FeaturesPage = () => {
                     </div>
                 </div>
 
-                <div className='flex max-w-[360px]-sm px-4 items-center justify-evenly gap-10 py-4 lg:px-2 flex-wrap'>
+                <div className='px-4 flex items-center gap-4 justify-evenly py-4 lg:px-2 flex-wrap'>
                     {['FeaturesCard1.png', 'FeaturesCard2.png', 'FeaturesCard3.png'].map((image, index) => (
-                        <div key={index} className="card1 relative w-full lg:w-[378px] h-[357px] bg-black rounded-2xl text-white overflow-hidden opacity-[1]">
+                        <div key={index} className="card1 relative w-full md:w-[400px] lg:w-[378px] h-[357px] xl:w-[430px] xl:h-[400px] bg-black rounded-2xl text-white overflow-hidden">
                             <img
                                 src={`./${image}`}
                                 alt="features"
                                 className="card-image1 w-full h-full object-cover opacity-[50%] rounded-2xl transition-transform duration-400"
                             />
-                            <div className="card-content1 absolute md:w-[326px] top-[219px] left-[15px] md:left-[41px]">
+                            <div className="card-content1 absolute md:w-[326px] top-[219px] left-[15px] md:left-[25px] lg:left-[41px]">
                                 <p className="text-[21px] md:text-[24px] font-jakarta font-bold leading-[28px] pb-[10px]">
                                     Tailored Matches Designed for Your Unique Preferences and Lifestyle.
                                 </p>
                                 <p className="card-description1 opacity-0 font-light transition-opacity duration-500">
                                     Our Premium Matchmaking service connects you with individuals who truly align with your values.
                                 </p>
-                                <button className="card-button1 flex items-center gap-2 absolute border-2 rounded-xl px-6 py-2 my-2">
-                                    Sign Up
-                                </button>
+                                <p className="learnMore1 absolute bottom-6 left-4 text-[18px] flex items-center gap-2">
+                                    Learn More <FaChevronRight />
+                                </p>
                             </div>
-                            <p className='learnMore1 absolute bottom-6 left-12 text-[18px] flex items-center gap-2'>
-                                Learn More <FaChevronRight />
-                            </p>
+                            <button className="card1-button1 flex items-center gap-2 absolute border bottom-4 rounded-xl px-8 py-2 my-2">
+                                Sign Up
+                            </button>
                         </div>
                     ))}
                 </div>
             </section>
-            <section className='w-[90%]  md:w-[650px] lg:w-auto min-px-2-md xl:w-full'>
+            <section className='w-full md:w-[650px] lg:w-auto min-px-2-md xl:w-full'>
                 {/* First card */}
                 <div
-                    className={`ppp lg:p-4 py-8 lg:p-0 lg:flex relative items-center justify-between pt-24 ${hovered[0] ? 'hovered' : ''}`}
+                    className={`ppp py-8 px-4 lg:p-0 lg:flex relative items-center justify-between !pt-24 ${hovered[0] ? 'hovered' : ''}`}
                     onMouseEnter={() => handleHover(0)}
                 >
-                    <div className={`child hidden box-border lg:block w-[616px]`}>
-                        <p className='font-sf font-semibold text-[30px] leading-[36px] md:text-[44px] md:leading-[57px] py-8'>
+                    <div className={`child hidden box-border lg:block w-[616px] px-12`}>
+                        <p className='font-sf font-semibold text-[30px] leading-[36px] md:text-[44px] md:leading-[57px]'>
                             Experience Unmatched Privacy with Stringly's Secure Connections Powered by ICP
                         </p>
                         <p className='text-[14px] font-jakarta font-regular leading-[19px] md:text-[22px] md:leading-[30px]'>
                             Our Premium Matchmaking service uses advanced algorithms to connect you with like-minded individuals. By analyzing your preferences and goals, we ensure that every match is meaningful and aligned with your aspirations.
                         </p>
                     </div>
-                    <div className=' z-20 bg-black rounded-xl'>
-                        <img src="/FeaturesRectangle 1.png" alt="" className='h-screen lg:h-auto object-cover opacity-[0.6]' />
+                    <div className=' z-20 lg:w-[50%] bg-black rounded-xl'>
+                        <img src="/FeaturesRectangle 1.png" alt="" className='h-screen lg:w-full lg:h-[550px] object-cover opacity-[0.6]' />
                     </div>
                 </div>
 
                 {/* Second card */}
-                <div className={`ppp  lg:w-full m-auto lg:p-4 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`} onMouseEnter={() => handleHover(1)}>
-                    <div className='z-20 bg-black rounded-xl'>
-                        <img src="/FeaturesRectangle 2.png" alt="" className='h-screen lg:w-[600px] lg:h-auto object-cover opacity-[0.6]' />
+                <div className={`ppp px-4 lg:w-full m-auto py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`} onMouseEnter={() => handleHover(1)}>
+                    <div className='z-20 lg:w-[50%] bg-black rounded-xl'>
+                        <img src="/FeaturesRectangle 2.png" alt="" className='h-screen lg:w-full lg:h-[550px] object-cover opacity-[0.6]' />
                     </div>
-                    <div className='child-2 hidden box-border lg:block w-[616px]  '>
+                    <div className='child-2 hidden box-border lg:pr-12 lg:block w-[616px]  '>
                         <div>
                             <p className='font-sf font-semibold text-[30px] leading-[40px] md:text-[44px] md:leading-[55px]'>
-                            Experience Premium Matchmaking                            </p>
+                                Experience Premium Matchmaking                            </p>
                             <p className='font-sf font-regular text-[14px] md:text-[22px] md:leading-[30px] py-8'>
                                 Our Premium Matchmaking service uses advanced algorithms to connect you with like-minded individuals. By analyzing your preferences and goals, we ensure that every match is meaningful and aligned with your aspirations.
                             </p>
@@ -125,9 +125,13 @@ const FeaturesPage = () => {
                     </div>
                 </div>
 
+
+            </section>
+
+            <section className='w-full mx-auto px-4 md:px-8 lg:p-0 lg:w-full bg-gradient-full'>
                 {/* Third card */}
-                <div className={`ppp lg:p-4 lg:py-8 lg:p-0 lg:flex items-center justify-between ${hovered[2] ? 'hovered' : ''}`} onMouseEnter={() => handleHover(2)}>
-                    <div className='child hidden lg:block lg:w-[556px] m-auto opacity-0'>
+                <div className={`ppp py-8 px-4 lg:p-0 lg:flex items-center justify-between ${hovered[2] ? 'hovered' : ''}`} onMouseEnter={() => handleHover(2)}>
+                    <div className='child hidden lg:block lg:w-[616px] lg:px-12 opacity-0'>
                         <div className='mb-8'>
                             <p className='font-roboto font-bold text-[30px] md:text-[44px] leading-[36px] md:leading-[55px]'>
                                 Long heading is what you see here in this feature section
@@ -155,32 +159,28 @@ const FeaturesPage = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className='z-20 bg-black rounded-xl'>
-                        <img src="/FeaturesRectangle 3.png" alt="" className='h-screen lg:h-auto object-cover' />
+                    <div className='z-20 bg-black lg:w-[50%] rounded-xl'>
+                        <img src="/FeaturesRectangle 3.png" alt="" className='h-screen lg:w-full lg:h-full object-cover' />
                     </div>
                 </div>
-            </section>
-
-            <section className='w-full mx-auto px-4 md:px-8 lg:w-full bg-gradient-full'>
-                <div className='flex items-center justify-center text-center py-10'>
-                    <div className='flex items-center justify-center flex-col text-center w-full max-w-md lg:w-[768px] p-4 gap-8'>
-                        <img src="/FeaturesLogo_webflow.png" alt="Stringly Logo" className='w-full max-w-[200px] mx-auto' />
+                <div className='flex items-center justify-center text-center py-40'>
+                    <div className='flex items-center justify-center flex-col text-center w-full lg:w-[768px] p-4 gap-8'>
+                        <img src="/FeaturesLogo_webflow.png" alt="Stringly Logo" className='w-full max-w-[130px] mx-auto' />
                         <p className='text-[24px] font-jakarta font-bold md:text-xl px-4'>
                             "Stringly transformed my dating life. The luxury and privacy made all the difference in finding genuine connections."
                         </p>
                         <div className='flex items-center justify-center flex-col text-center'>
-                            <img src="/Ellipse 4.svg" alt="Emily Johnson" className='pb-4 w-full h-full rounded-full' />
+                            <img src="/Ellipse 4.svg" alt="Emily Johnson" className='pb-4 w-[50%] h-[50%] rounded-full' />
                             <p className='font-semibold'>Emily Johnson</p>
-                            <p className='text-sm text-gray-600'>Marketing Director, LuxeCo</p>
+                            <p className='text-sm text-gray-600 font-semibold font-jakarta'>Marketing Director, LuxeCo</p>
                         </div>
                     </div>
                 </div>
-            </section>
                 <div
-                    className={`ppp lg:p-4 lg:flex relative items-center justify-between px-4  ${hovered[4] ? 'hovered' : ''}`}
+                    className={`ppp lg:px-16 lg:flex relative items-center justify-between px-4  ${hovered[4] ? 'hovered' : ''}`}
                     onMouseEnter={() => handleHover(4)}
                 >
-                    <div className={`child hidden lg:block lg:w-[556px]  m-auto opacity-0] pr-4`}>
+                    <div className={`child hidden lg:block lg:w-[616px]  m-auto opacity-0] pr-4`}>
                         <p className='font-sf font-semibold text-[32px] md:text-[48px] leading-[38px] md:leading-[57px] lg:py-8'>
                             Experience the Luxury of Meaningful Connections
                         </p>
@@ -203,6 +203,7 @@ const FeaturesPage = () => {
                         <img src="/FeaturesPlaceholder Image.png" alt="" className='h-screen lg:h-auto object-cover' />
                     </div>
                 </div>
+            </section>
 
             <JoinPage />
         </div>

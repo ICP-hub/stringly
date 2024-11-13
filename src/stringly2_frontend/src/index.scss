@@ -97,7 +97,7 @@
 }
 
 .card:hover .card-content {
-    bottom: 15px;
+    bottom: 3px;
 }
 
 .card-description {
@@ -128,7 +128,7 @@
 
 /* Adding specific transitions for text change */
 .learnMore span {
-    transition: opacity 1s ease;
+    transition: opacity .5s ease;
 }
 
 .learnMore .default-text {
@@ -162,7 +162,7 @@
 }
 
 .card1:hover .card-content1 {
-    top: 100px;
+    top: 130px;
 }
 
 .card-description1 {
@@ -173,13 +173,14 @@
     opacity: 1;
 }
 
-.card-button1 {
-    transform: translateX(-200%);
-    transition: transform 0.5s ease;
+.card1-button1 {
+    position: absolute;
+    transform: translateX(-150%);
+    transition: transform 1s ease;
 }
 
-.card1:hover .card-button1 {
-    transform: translateX(0);
+.card1:hover .card1-button1 {
+    transform: translateX(30%);
 }
 
 .card1:hover .learnMore1 {
@@ -479,4 +480,3 @@
     background-size: cover;
     background-position: center;
 }
-

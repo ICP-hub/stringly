@@ -13,9 +13,9 @@ const Navbar = () => {
             const imgHeight = 900;
             setScrolled(window.scrollY > imgHeight);
         };
-    
+
         window.addEventListener('scroll', handleScroll);
-        
+
         // Cleanup the event listener on component unmount
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -24,7 +24,15 @@ const Navbar = () => {
         <div className={`w-full max-w-[1540px] mx-auto flex flex-col bg-transparent fixed top-0 z-50 px-4 text-black navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
             <div className='flex w-full text-white items-center justify-between px-4 py-4 md:px-8 md:py-4'>
                 <div>
-                    <p className='text-2xl font-semibold text-[#DC73B6]'>Stringly</p>
+                    <p
+                        className="text-[30px] leading-[72px] font-sf font-semibold text-[#DC73B6] bg-clip-text text-transparent"
+                        style={{
+                            backgroundImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%)'
+                        }}
+                    >
+                        Stringly
+                    </p>
+
                 </div>
                 <div className='hidden font-sfProDisplay md:flex items-center font-light justify-between gap-8'>
                     <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
@@ -42,7 +50,7 @@ const Navbar = () => {
                 </div>
                 <div className='flex items-center gap-4'>
                     <div>
-                        <button className={`px-4 py-2 rounded-xl ${isMenu ? 'hidden' : 'hidden md:flex'} bg-white text-black`}>Join</button>
+                        <button className={`px-10 py-2 rounded-xl ${isMenu ? 'hidden' : 'hidden md:flex'} bg-white text-black`}>Join</button>
                     </div>
                     <div className='flex md:hidden'>
                         <button className='text-xl' onClick={() => setIsmMenu(true)}>
