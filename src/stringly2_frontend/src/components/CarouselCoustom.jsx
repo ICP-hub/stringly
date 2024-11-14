@@ -6,9 +6,6 @@ function CarouselCustom() {
     "./carousel1.png",
     "./carousel2.png",
     "./carousel3.png",
-    "./carousel1.png",
-    "./carousel2.png",
-    "./carousel3.png",
   ];
   const totalSlides = images.length;
 

@@ -72,10 +72,10 @@ const FeaturesPage = () => {
                     ))}
                 </div>
             </section>
-            <section className='w-full md:px-12 flex items-center justify-center flex-col lg:w-[650px] lg:w-auto min-px-2-md xl:w-full'>
+            <section className='w-full md:w-[650px] lg:w-auto min-px-2-md xl:w-full'>
                 {/* First card */}
                 <div
-                    className={`ppp px-2 lg:w-full m-auto py-8 lg:p-0 lg:flex items-center justify-between z-10 ${hovered[0] ? 'hovered' : ''}`}
+                    className={`ppp py-8 px-2 lg:p-0 lg:flex relative items-center justify-between !pt-24 rounded-xl z-10 ${hovered[0] ? 'hovered' : ''}`}
                     onMouseEnter={() => handleHover(0)}
                 >
                     <div className={`child hidden box-border lg:block w-[616px] lg:px-12`}>
@@ -128,9 +128,9 @@ const FeaturesPage = () => {
 
             </section>
 
-            <section className='w-full flex flex-col items-center justify-center md:px-8 lg:p-0 lg:w-full bg-gradient-full'>
+            <section className='w-full  md:px-8 lg:p-0 lg:w-full  bg-gradient-full flex items-center flex-col'>
                 {/* Third card */}
-                <div className={`ppp px-2 md:px-5 lg:w-full m-auto py-8 lg:p-0 lg:flex items-center z-10 justify-between ${hovered[2] ? 'hovered' : ''}`} onMouseEnter={() => handleHover(2)}>
+                <div className={`ppp py-8 px-2 md:w-[656px] lg:p-0 lg:w-full lg:flex items-center justify-between z-10 ${hovered[2] ? 'hovered' : ''}`} onMouseEnter={() => handleHover(2)}>
                     <div className='child hidden lg:block lg:w-[616px] lg:px-12 opacity-0'>
                         <div className='mb-8'>
                             <p className='font-roboto font-bold text-[28px] md:text-[44px] leading-[36px] md:leading-[55px]'>
@@ -160,7 +160,7 @@ const FeaturesPage = () => {
                         </div>
                     </div>
                     <div className='z-20 bg-black lg:w-[50%] rounded-xl'>
-                    <img src="/FeaturesRectangle 2.png" alt="" className="h-screen lg:w-full lg:h-[550px] rounded-xl object-cover opacity-60" />
+                        <img src="/FeaturesRectangle 3.png" alt="" className='h-screen lg:w-full lg:h-full object-cover rounded-xl' />
                     </div>
                 </div>
                 <div className='flex items-center justify-center text-center py-40'>
@@ -177,7 +177,7 @@ const FeaturesPage = () => {
                     </div>
                 </div>
                 <div
-                    className={`ppp lg:px-16 z-10 lg:flex relative items-center justify-between px-2  ${hovered[4] ? 'hovered' : ''}`}
+                    className={`ppp lg:px-16 lg:flex relative items-center justify-between px-4 z-10  ${hovered[4] ? 'hovered' : ''}`}
                     onMouseEnter={() => handleHover(4)}
                 >
                     <div className={`child hidden lg:block lg:w-[616px]  m-auto opacity-0] pr-4`}>

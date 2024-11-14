@@ -5,23 +5,20 @@ import { MdPrivacyTip } from "react-icons/md";
 import CarouselCoustom from '../components/CarouselCoustom';
 
 const Landingpage = () => {
-    const [hovered, setHovered] = useState([false]);
+    const [hovered, setHovered] = useState('');
 
-    const handleHover = (index) => {
-        if (!hovered[index]) {
-            const newHovered = [...hovered];
-            newHovered[index] = true;
-            setHovered(newHovered);
-        }
+    const handleHover = (section) => {
+        setHovered(section);
     };
+
 
     const [hovered2, setHovered2] = useState([false, false, false, false]);
 
     const handleHover2 = (index) => {
-        if (!hovered2[index]) {  // Use hovered2 here
+        if (!hovered2[index]) {
             const newHovered = [...hovered2];
             newHovered[index] = true;
-            setHovered2(newHovered);  // Set hovered2 instead of hovered
+            setHovered2(newHovered);
         }
     };
 
@@ -106,7 +103,6 @@ const Landingpage = () => {
                                         {/* <span className="hover-text flex font-light items-center gap-2">Join   <FaChevronRight size={12} /></span> */}
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     ))}
@@ -300,11 +296,12 @@ const Landingpage = () => {
                     <CarouselCoustom />
                 </div>
                 <section
-                    className={`bg-gradient-full relative ${hovered2[4] ? 'hovered opacity-60' : ''} lg:opacity-60`}
-                    onMouseEnter={() => handleHover2(4)}
+                    className={`bg-gradient-full relative ${hovered === 'section1' ? 'hovered opacity-60' : ''} lg:opacity-60`}
+                    onMouseEnter={() => handleHover('section1')}
+                    onMouseLeave={() => handleHover('')}
                 >
                     <div
-                        className={`absolute flex flex-col items-center justify-center w-full top-[20%] md:left-[25%] lg:left-[25%] md:w-[450px] lg:w-[700px] p-10 lg:p-20 bg-white text-black border-2 rounded-lg ${hovered2[4] ? 'scale-up' : 'scale-0 opacity-0'}`}
+                        className={`absolute flex flex-col items-center justify-center w-full top-[20%] md:left-[25%] lg:left-[25%] md:w-[450px] lg:w-[700px] p-10 lg:p-20 bg-white text-black border-2 rounded-lg ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'}`}
                         style={{
                             borderImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%) 1',
                             transformOrigin: 'center',
@@ -319,8 +316,9 @@ const Landingpage = () => {
                         <button className="px-6 py-2 rounded-xl border mt-10 border-black">Join us</button>
                     </div>
 
-                    <div className="flex justify-center items-center w-full min-h-screen hidden lg:block">
+                    <div className="flex justify-center items-center w-full min-h-full hidden lg:block">
                         <div className="grid grid-cols-2 lg:grid-cols-6 gap-2 w-full lg:p-20">
+                            {/* Images */}
                             <img
                                 src="./landing/Rectangle 3889.png"
                                 alt="Image 1"
