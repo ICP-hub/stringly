@@ -36,14 +36,15 @@
 
 //Navbar slideing  
 .navbar {
-    transition: background-color 0.4s ease-out; 
+    transition: background-color 0.4s ease-out;
 }
-  .navbar-scrolled {
+
+.navbar-scrolled {
     background-color: rgba(0, 0, 0, 0.8);
 
-  }
+}
 
-  
+
 .nav {
     position: fixed;
     top: 0;
@@ -294,74 +295,76 @@
 
 
 @media (min-width: 1024px) {
-    
-.animate {
-    animation: appear linear forwards;
-    animation-timeline: view();
-    animation-range: entry 0% cover 20%;
-    box-sizing: content-box;
-}
 
-@keyframes appear {
-    from {
-        transform: translateY(600px);
-        opacity: 0;
+    .animate {
+        animation: appear linear forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 20%;
+        box-sizing: content-box;
     }
 
-    to {
-        transform: translateY(0);
+    @keyframes appear {
+        from {
+            transform: translateY(600px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+
+    .child-20 {
+        opacity: 0;
+        transform: translateX(-500px);
+        transition: none;
+    }
+
+    .animate.hovered .children {
         opacity: 1;
-    }
-}
-
-
-.child-20 {
-    opacity: 0;
-    transform: translateX(-500px);
-    transition: none;
-}
-
-.animate.hovered .children {
-    opacity: 1;
-    transform: translateX(0);
-    animation: ImageSlideIn 1s forwards;
-
-}
-
-.animate.hovered .child-20 {
-    opacity: 1;
-    transform: translateX(0);
-    animation: ImageSlideIn2 1s forwards;
-}
-
-.learnMore .hover-text {
-    opacity: 0;
-}
-
-
-
-@keyframes ImageSlideIn {
-    from {
-        transform: translateX(-800px);
-        opacity: 0;
-    }
-    to {
         transform: translateX(0);
-        opacity: 1;
-    }
-}
+        animation: ImageSlideIn 1s forwards;
 
-@keyframes ImageSlideIn2 {
-    from {
-        transform: translateX(-400px);
+    }
+
+    .animate.hovered .child-20 {
+        opacity: 1;
+        transform: translateX(0);
+        animation: ImageSlideIn2 1s forwards;
+    }
+
+    .learnMore .hover-text {
         opacity: 0;
     }
 
-    to {
-        transform: translateX(0);
-        opacity: 1;
+
+
+    @keyframes ImageSlideIn {
+        from {
+            transform: translateX(-800px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
-}
+
+    @keyframes ImageSlideIn2 {
+        from {
+            transform: translateX(-400px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
     .children {
         opacity: 0;
         transform: translateX(0);
@@ -375,6 +378,7 @@
         display: flex;
         position: relative;
     }
+
     .child {
         opacity: 0;
         transform: translateX(0);
@@ -433,6 +437,7 @@
             opacity: 1;
         }
     }
+
     .card:hover .card-content {
         bottom: 15px;
     }
@@ -442,26 +447,29 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.53%, rgba(0, 0, 0, 0) 100%);
 }
 
-.app-container {  
-    position: relative;  
-    height: 100vh; /* Full height of viewport */  
-}  
+.app-container {
+    position: relative;
+    height: 100vh;
+    /* Full height of viewport */
+}
 
-.gradient-background {  
-    position: fixed;  
-    top: 0;  
-    left: 0;  
-    width: 100%;  
-    height: 100%;  
-    background: linear-gradient(to right, rgba(255, 238, 238, 0.8), rgba(238, 255, 255, 0.8));  
-    z-index: -1; /* Ensures it stays behind other content */  
-}  
+.gradient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 238, 238, 0.8), rgba(238, 255, 255, 0.8));
+    z-index: -1;
+    /* Ensures it stays behind other content */
+}
 
-.content {  
-    position: relative;  
-    color: #333;  
-    z-index: 1; /* Keeps content above the gradient */  
-}  
+.content {
+    position: relative;
+    color: #333;
+    z-index: 1;
+    /* Keeps content above the gradient */
+}
 
 .bg-gradient-top {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)), url("../public/bg-gradient.png");
@@ -479,4 +487,30 @@
     background-image: url("../public/bg-gradient.png");
     background-size: cover;
     background-position: center;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.scale-up {
+    animation: scaleUp 0.7s ease-out forwards;
+    transform-origin: center;
+}
+
+
+.aaa {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-image: linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%) 1;
+    transform-origin: center;
 }

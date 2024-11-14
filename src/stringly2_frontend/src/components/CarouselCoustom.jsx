@@ -31,7 +31,7 @@ function CarouselCustom() {
 
   return (
     <div className="relative flex items-center justify-center my-10 py-8">
-      <div className="flex gap-4 w-full h-[100px] md:h-[250px] lg:h-[400px] items-center justify-center">
+      <div className="flex gap-4 w-full h-[200px] md:h-[250px] lg:h-[400px] items-center justify-center">
         {/* Left (smaller) container */}
         <div className="w-1/3 sm:w-1/4 lg:w-1/3 h-full overflow-hidden">
           <img
@@ -66,8 +66,8 @@ function CarouselCustom() {
           <span
             key={index}
             onClick={() => setActiveIndex(index)} // Allow manual control by clicking on dots
-            className={`block h-3 w-4 rounded-full ${
-              activeIndex === index ? "bg-black h-4" : "bg-gray-400"
+            className={`block h-2 w-2 lg:h-4 lg:w-4 rounded-full ${
+              activeIndex === index ? "bg-black w-5 lg:w-8" : "bg-gray-400"
             }`}
           />
         ))}

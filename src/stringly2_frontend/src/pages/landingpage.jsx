@@ -15,7 +15,7 @@ const Landingpage = () => {
         }
     };
 
-    const [hovered2, setHovered2] = useState([false, false, false]);
+    const [hovered2, setHovered2] = useState([false, false, false, false]);
 
     const handleHover2 = (index) => {
         if (!hovered2[index]) {  // Use hovered2 here
@@ -200,27 +200,27 @@ const Landingpage = () => {
             </div>
 
 
-            {/* Updated Section with Your Specifications */}
-            <div className="flex lg:flex-row relative justify-center gap-20 items-start mt-12 h-[550px]">
+            {/* Specifications */}
+            <div className="flex lg:flex-row relative justify-center lg:px-0 gap-20 items-starl mx-2 lg:mx-0  mt-12 h-[550px]">
                 {/* Text Section */}
-                <div className="lg:ml-20 absolute md:w-[500px] pl-7 lg:pl-0 lg:w-full top-[10%] lg:top-0 text-white z-10 lg:text-black md:left-[10%] lg:left-0 lg:relative flex flex-col" style={{
+                <div className="w-full lg:ml-20 absolute md:w-[500px] pl-7 lg:pl-0 lg:w-full top-[10%] lg:top-0 text-white z-10 lg:text-black md:left-[8%] lg:left-0 lg:relative flex flex-col" style={{
                     maxWidth: '556px',
                     gap: '16px',
                     paddingTop: '10px',
                 }}>
                     <h2 style={{
-                    }} className='font-sf text-[30px]  font-semibold lg:text-[48px] md:leading-[48px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
+                    }} className='font-sf text-[28px] lg:text-[30px] font-semibold lg:text-[48px] md:leading-[48px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
                         Experience Unmatched Privacy and Elegance
                     </h2>
-                    <p className="font-sf text-sm lg:text-lg mt-4 lg:leading-[22px] font-regular min-w-[300px]-lg " style={{
+                    <p className="font-sf text-sm lg:text-lg lg:mt-4 lg:leading-[22px] font-light min-w-[300px]-lg " style={{
                         width: '90%',
                     }}>
                         At Stringly, we prioritize your privacy while providing a luxurious experience. Our platform is designed to ensure that every connection you make is both secure and sophisticated.
                     </p>
-                    <div className="lg:flex justify-between mt-6 items-center lg:w-[556px] h-[64px] gap-8">
+                    <div className="lg:flex justify-between lg:mt-6 items-center lg:w-[556px] h-[64px] gap-8">
                         <div className="flex flex-col items-start">
-                            <div className="flex items-center pb-2 m-0">
-                                <img src="./privacy.gif" alt="privacy icon" className=" h-20 w-auto" />
+                            <div className="flex items-center gap-4 pb-2 m-0">
+                                <img src="./privacy.gif" alt="privacy icon" className="text-[#1E1F6D] h-10 w-auto" />
                                 <p className='text-[32px] font-semibold text-[#1E1F6D]'>Privacy</p>
                             </div>
                             <p className="text-[16px] font-regular font-sf leading-[20px]">Your privacy is our top priority.</p>
@@ -228,13 +228,13 @@ const Landingpage = () => {
 
                         <div className="flex flex-col items-start lg:pt-8">
                             <div className="flex items-center gap-4 pb-2 m-0">
-                                <img src="./Union.svg" alt="privacy icon" className=" h-15 w-15" />
+                                <img src="./landing/connect.svg" alt="privacy icon" className=" h-10 w-10" />
                                 <p className='text-[32px] font-semibold text-[#D454A6]'>Connection</p>
                             </div>
                             <p className="text-[16px] font-regular font-sf leading-[20px]">Connect with like-minded individuals <br /> securely.</p>
                         </div>
                     </div>
-                    <div className="mt-10 space-x-6">
+                    <div className="mt-24 lg:mt-10">
                         {/* <button className="bg-white text-[14px] font-sf border border-black text-black px-6 py-3 w-32 rounded-xl">
                             Learn More
                         </button> */}
@@ -245,11 +245,11 @@ const Landingpage = () => {
                 </div>
 
                 {/* Image Section */}
-                <div className=" md:mt-0 bg-black rounded-tl-xl rounded-bl-xl">
+                <div className=" md:mt-0 bg-black rounded-xl lg:rounded-tl-xl h-full lg:rounded-bl-xl">
                     <img
                         src="/splash.png"
                         alt="Splash Image"
-                        className="w-full opacity-[.7] lg:w-[750px] h-[550px] lg:h-[620px] rounded-tl-x rounded-br-xl object-cover lg:rounded-l-[10px]"
+                        className="w-full opacity-[.7] lg:w-[750px] h-[550px] lg:h-[620px] rounded-xl lg:rounded-tl-x lg:rounded-br-xl object-cover lg:rounded-l-[10px]"
                     />
                 </div>
             </div>
@@ -294,10 +294,73 @@ const Landingpage = () => {
                 </p>
             </div>
 
-            <div className="p-0">
-                <CarouselCoustom />
-            </div>
+            <section>
 
+                <div className="p-0">
+                    <CarouselCoustom />
+                </div>
+                <section
+                    className={`bg-gradient-full relative ${hovered2[4] ? 'hovered opacity-60' : ''} lg:opacity-60`}
+                    onMouseEnter={() => handleHover2(4)}
+                >
+                    <div
+                        className={`absolute flex flex-col items-center justify-center w-full top-[20%] md:left-[25%] lg:left-[25%] md:w-[450px] lg:w-[700px] p-10 lg:p-20 bg-white text-black border-2 rounded-lg ${hovered2[4] ? 'scale-up' : 'scale-0 opacity-0'}`}
+                        style={{
+                            borderImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%) 1',
+                            transformOrigin: 'center',
+                            zIndex: 20,
+                        }}
+                    >
+                        <p>Bring your spark</p>
+                        <p className="font-semibold text-[35px] leading-[44px] lg:text-[48px] lg:leading-[58px] text-center font-sf">
+                            Let’s build Stingly together.
+                        </p>
+                        <p className="font-roboto text-[18px] leading-[27px]">Contribute to the vibes!</p>
+                        <button className="px-6 py-2 rounded-xl border mt-10 border-black">Join us</button>
+                    </div>
+
+                    <div className="flex justify-center items-center w-full min-h-screen hidden lg:block">
+                        <div className="grid grid-cols-2 lg:grid-cols-6 gap-2 w-full lg:p-20">
+                            <img
+                                src="./landing/Rectangle 3889.png"
+                                alt="Image 1"
+                                className="col-span-1 row-span-1 lg:row-span-2 w-[100px] lg:w-full h-[100px] lg:h-[40%] my-auto object-cover"
+                            />
+                            <img
+                                src="./landing/Rectangle 3888.png"
+                                alt="Image 2"
+                                className="lg:col-span-2 lg:row-span-1 w-[200px] lg:w-full h-full object-cover"
+                            />
+                            <img
+                                src="./landing/Rectangle 3892.png"
+                                alt="Image 3"
+                                className="col-span-1 row-span-1 w-full h-full object-cover"
+                            />
+                            <img
+                                src="./landing/Rectangle 3893.png"
+                                alt="Image 4"
+                                className="col-span-2 row-span-3 w-auto h-auto lg:w-[350px] lg:h-[340px] object-cover"
+                            />
+                            <img
+                                src="./landing/Rectangle 3890.png"
+                                alt="Image 5"
+                                className="col-span-1 row-span-2 w-full h-auto object-cover"
+                            />
+                            <img
+                                src="./landing/Rectangle 3891.png"
+                                alt="Image 6"
+                                className="col-span-2 row-span-1 w-full h-full object-cover"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="flex items-center justify-center py-10 px-0 lg:hidden">
+                        <img src="./landing/Property 1=Default.png" alt="" />
+                    </div>
+                </section>
+
+
+            </section>
 
         </div >
     );

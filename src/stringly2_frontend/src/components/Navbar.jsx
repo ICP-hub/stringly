@@ -21,7 +21,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={`w-full max-w-[1540px] mx-auto flex flex-col bg-transparent fixed top-0 z-50 px-4 text-black navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
+        <div className={`w-full max-w-[1540px] mx-auto flex flex-col bg-transparent fixed top-0 z-50 px-4 text-black navbar !z-00 ${scrolled ? 'navbar-scrolled' : ''}`}>
             <div className='flex w-full text-white items-center justify-between px-4 py-4 md:px-8 md:py-4'>
                 <div>
                     <p
@@ -86,9 +86,16 @@ export const Menu = ({ isMenu, setIsmMenu }) => {
     };
 
     return (
-        <div className={`nav fixed top-0 left-0 w-full h-full bg-white ${isMenu && !closing ? "slide-in" : closing ? "slide-out" : "hidden"}`}>
+        <div className={`nav fixed top-0 left-0 w-full h-full bg-white !z-1000 ${isMenu && !closing ? "slide-in" : closing ? "slide-out" : "hidden"}`}>
             <div className="flex justify-between w-full px-8 py-4">
-                <p className='text-2xl font-semibold text-[#DC73B6]'>Logo</p>
+                <p
+                    className="text-[18px] leading-[72px] font-sf font-semibold text-[#DC73B6] bg-clip-text text-transparent"
+                    style={{
+                        backgroundImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%)'
+                    }}
+                >
+                    Stringly
+                </p>
                 <div className='flex items-center gap-4'>
                     <div>
                         <button className={`px-4 py-1 rounded-xl bg-black text-white`}>Join</button>

@@ -34,10 +34,10 @@ function About() {
 					</div>
 				</div>
 			</section>
-			<section className='md:w-[650px] lg:w-auto px-2 lg:p-0 lg:w-[1440px] xl:w-full '>
+			<section className='md:w-[650px] lg:w-auto lg:w-[1440px] xl:w-full '>
 				{/* First Card */}
 				<div
-					className={`ppp lg:h-auto animate mt-20 p-2 py-8 lg:p-0 lg:flex items-center justify-between gap-8 ${hovered[0] ? 'hovered' : ''}`}
+					className={`ppp lg:h-auto animate mt-20 p-2 py-8 lg:p-0 lg:flex items-center justify-between z-10 gap-8 ${hovered[0] ? 'hovered' : ''}`}
 					onMouseEnter={() => handleHover(0)}
 				>
 					<div className={`child lg:px-12 hidden lg:block lg:w-[616px] h-full opacity-0`}>
@@ -73,7 +73,7 @@ function About() {
 
 				{/* Second Card */}
 				<div
-					className={`mt-20 lg:mt-0 ppp !h-[656.66px] lg:!h-auto animate p-2 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`}
+					className={`mt-20 lg:mt-0 ppp !h-[656.66px] lg:!h-auto animate p-2 z-10 py-8 lg:p-0 lg:flex items-center justify-between ${hovered[1] ? 'hovered' : ''}`}
 					onMouseEnter={() => handleHover(1)}
 				>
 					<div className='rounded-xl w-full lg:w-auto !h-[656.66px] lg:!h-auto children bg-black'>
@@ -208,10 +208,10 @@ function About() {
 						</p>
 						<div className="h-full flex lg:gap-8 flex-col gap-8 lg:flex-row">
 							<div className="relative w-full pb-8 lg:pb-0 bg-black">
-								<img src="./aboutPlaceholder-Image-1.png" alt="Journey Image 1" className="w-full h-screen lg:h-auto object-cover opacity-[0.7]" />
+								<img src="./aboutPlaceholder-Image-1.png" alt="Journey Image 1" className="w-full h-screen lg:h-auto object-cover rounded-none opacity-[0.7]" />
 							</div>
 							<div className="relative w-full bg-black">
-								<img src="./aboutPlaceholder-Image-2.png" alt="Journey Image 2" className="w-full h-screen lg:h-auto object-cover opacity-[0.7]" />
+								<img src="./aboutPlaceholder-Image-2.png" alt="Journey Image 2" className="w-full h-screen lg:h-auto object-cover rounded-none opacity-[0.7]" />
 							</div>
 						</div>
 					</div>
