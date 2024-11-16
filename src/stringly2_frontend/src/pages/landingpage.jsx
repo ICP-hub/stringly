@@ -197,15 +197,14 @@ const Landingpage = () => {
 
 
             {/* Specifications */}
-            <div className="flex lg:flex-row relative justify-center lg:px-0 gap-20 items-starl mx-2 lg:mx-0  mt-12 h-[550px]">
+            <div className="flex h-[616px] lg:h-full lg:flex-row relative justify-center lg:px-0 gap-20 items-start mx-2 lg:mx-0  mt-12">
                 {/* Text Section */}
-                <div className="w-full lg:ml-20 absolute md:w-[500px] pl-7 lg:pl-0 lg:w-full top-[10%] lg:top-0 text-white z-10 lg:text-black md:left-[8%] lg:left-0 lg:relative flex flex-col" style={{
-                    maxWidth: '556px',
+                <div className="w-[95%] p-5 md:p-10 lg:ml-10 rounded-xl bg-white !text-black lg:bg-none  mt-10  absolute lg:pl-0 lg:w-[500px] xl:w-[616px] top-[38%] lg:top-0 text-white z-10 lg:text-black md:left-[2%] lg:left-0 h-[320px] lg:h-full lg:relative flex flex-col" style={{
                     gap: '16px',
                     paddingTop: '10px',
                 }}>
                     <h2 style={{
-                    }} className='font-sf text-[28px] lg:text-[30px] font-semibold lg:text-[48px] md:leading-[48px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
+                    }} className='font-sf text-[22px] lg:text-[30px] font-semibold lg:text-[48px] md:leading-[48px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
                         Experience Unmatched Privacy and Elegance
                     </h2>
                     <p className="font-sf text-sm lg:text-lg lg:mt-4 lg:leading-[22px] font-light min-w-[300px]-lg " style={{
@@ -213,39 +212,39 @@ const Landingpage = () => {
                     }}>
                         At Stringly, we prioritize your privacy while providing a luxurious experience. Our platform is designed to ensure that every connection you make is both secure and sophisticated.
                     </p>
-                    <div className="lg:flex justify-between lg:mt-6 items-center lg:w-[556px] h-[64px] gap-8">
+                    <div className="flex justify-between gap-4 lg:mt-6 items-center lg:w-[556px] h-[64px] lg:gap-8 ">
                         <div className="flex flex-col items-start">
-                            <div className="flex items-center gap-4 pb-2 m-0">
-                                <img src="./privacy.gif" alt="privacy icon" className="text-[#1E1F6D] h-10 w-auto" />
-                                <p className='text-[32px] font-semibold text-[#1E1F6D]'>Privacy</p>
+                            <div className="flex items-center gap-2 pb-2 m-0">
+                                <img src="./landing/privacy .gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
+                                <p className='text-md lg:text-[32px] font-semibold text-[#1E1F6D]'>Privacy</p>
                             </div>
-                            <p className="text-[16px] font-regular font-sf leading-[20px]">Your privacy is our top priority.</p>
+                            <p className="text-sm lg:text-[16px] font-regular font-sf leading-[20px]">Your privacy is our top priority.</p>
                         </div>
 
-                        <div className="flex flex-col items-start lg:pt-8">
-                            <div className="flex items-center gap-4 pb-2 m-0">
-                                <img src="./landing/connect.svg" alt="privacy icon" className=" h-10 w-10" />
-                                <p className='text-[32px] font-semibold text-[#D454A6]'>Connection</p>
+                        <div className="flex flex-col items-start lg:pt-4">
+                            <div className="flex items-center gap-2 m-0">
+                                <img src="./landing/connect.gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
+                                <p className='text-md lg:text-[32px] font-semibold text-[#D454A6]'>Connection</p>
                             </div>
-                            <p className="text-[16px] font-regular font-sf leading-[20px]">Connect with like-minded individuals <br /> securely.</p>
+                            <p className="text-sm lg:text-[16px] font-regular font-sf leading-[20px]">Connect with like-minded individuals <br /> securely.</p>
                         </div>
                     </div>
                     <div className="mt-24 lg:mt-10">
                         {/* <button className="bg-white text-[14px] font-sf border border-black text-black px-6 py-3 w-32 rounded-xl">
                             Learn More
                         </button> */}
-                        <button className="text-[16px] font-sf bg-black text-white w-32 text-white px-2 py-3 rounded-xl">
+                        <button className="hidden lg:block text-[16px] font-sf bg-black text-white w-32 text-white px-2 py-3 rounded-xl">
                             Sign Up
                         </button>
                     </div>
                 </div>
 
                 {/* Image Section */}
-                <div className=" md:mt-0 bg-black rounded-xl lg:rounded-tl-xl h-full lg:rounded-bl-xl">
+                <div className="md:mt-0 bg-black rounded-xl lg:rounded-none lg:rounded-tl-xl h-full lg:w-full lg:h-[670px] lg:rounded-bl-xl">
                     <img
                         src="/splash.png"
                         alt="Splash Image"
-                        className="w-full opacity-[.7] lg:w-[750px] h-[550px] lg:h-[620px] rounded-xl lg:rounded-tl-x lg:rounded-br-xl object-cover lg:rounded-l-[10px]"
+                        className="w-full opacity-[.7] h-full h-full border-red-600 lg:object-cover lg:rounded-l-[10px]"
                     />
                 </div>
             </div>

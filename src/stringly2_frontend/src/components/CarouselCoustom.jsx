@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 function CarouselCustom() {
   const [activeIndex, setActiveIndex] = useState(0);
   const images = [
-    "./carousel1.png",
-    "./carousel2.png",
-    "./carousel3.png",
+    "./landing/carousel1.jpg",
+    "./landing/carousel2.jpg",
+    "./landing/carousel2.jpg",
   ];
   const totalSlides = images.length;
 
@@ -28,22 +28,22 @@ function CarouselCustom() {
 
   return (
     <div className="relative flex items-center justify-center my-10 py-8">
-      <div className="flex gap-4 w-full h-[200px] md:h-[250px] lg:h-[400px] items-center justify-center">
+      <div className="flex gap-4 w-full h-[200px] md:h-[350px] lg:h-[500px] items-center justify-center">
         {/* Left (smaller) container */}
         <div className="w-1/3 sm:w-1/4 lg:w-1/3 h-full overflow-hidden">
           <img
             src={images[leftIndex]}
             alt={`Slide ${leftIndex + 1}`}
-            className="h-full w-full object-cover opacity-50 scale-90 transition-all duration-900 rounded-xl"
+            className="h-full w-full md:object-cover opacity-50 scale-90 transition-all duration-900 rounded-xl"
           />
         </div>
 
         {/* Center (larger) container */}
-        <div className="w-[70%] sm:w-[70%] lg:w-[100%] h-full overflow-hidden">
+        <div className="w-[90%] sm:w-[90%] lg:w-[100%] h-full overflow-hidden">
           <img
             src={images[centerIndex]}
             alt={`Slide ${centerIndex + 1}`}
-            className="h-full w-full object-cover scale-100 transition-all duration-900 rounded-xl"
+            className="h-full w-full md:object-cover scale-100 transition-all duration-900 rounded-xl"
           />
         </div>
 
@@ -52,7 +52,7 @@ function CarouselCustom() {
           <img
             src={images[rightIndex]}
             alt={`Slide ${rightIndex + 1}`}
-            className="h-full w-full object-cover opacity-50 scale-90 transition-all duration-900 rounded-xl"
+            className="h-full w-full md:object-cover opacity-50 scale-90 transition-all duration-900 rounded-xl"
           />
         </div>
       </div>
