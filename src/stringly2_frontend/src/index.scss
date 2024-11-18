@@ -443,6 +443,28 @@
     }
 }
 
+.mySwiper {
+    width: 100%;
+    max-width: 1530px !important;
+    height: auto;
+    margin: 0;
+    padding: 0%;
+  }
+  
+  .mySwiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .mySwiper .swiper-slide img {
+    width: 900px !important; /* Full width for images */
+    height: full;
+    object-fit: cover;
+    border-radius: 20px; /* Optional: Rounded corners */
+  }
+
 .custom-gradient-bg {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.53%, rgba(0, 0, 0, 0) 100%);
 }
@@ -514,3 +536,5 @@
     border-image: linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%) 1;
     transform-origin: center;
 }
+
+  

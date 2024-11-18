@@ -291,7 +291,7 @@ const Landingpage = () => {
 
             <section>
 
-                <div className="p-0">
+                <div className="p-0 w-full">
                     <CarouselCoustom />
                 </div>
                 <section
