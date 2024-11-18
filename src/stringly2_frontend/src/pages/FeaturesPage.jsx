@@ -14,9 +14,9 @@ const FeaturesPage = () => {
     };
     return (
         <div className='w-full max-w-[1540px] mx-auto flex flex-col items-center justify-center '>
-            <section className=' w-full max-w-[1540px] mx-auto relative w-full bg-black'>
-                <img src="/FeaturesHeroImg.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen lg:h-auto opacity-[0.7]' />
-                <div className="absolute text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[600px] bg-opacity-50 text-center">
+            <section className=' w-full max-w-[1540px] mx-auto relative w-full'>
+                <img src="/bg-gradient.png" alt="Premium Features" className='w-full h-screen object-cover sm:h-screen lg:h-[800px] opacity-[0.7]' />
+                <div className="absolute text-black left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[600px] bg-opacity-50 text-center">
                     <h1 className='font-bold font-roboto leading-[48px] lg:leading-[67px] text-[40px] lg:text-[56px]'>
                         Premium Features
                         <h2 className='text-center bg-clip-text text-transparent' style={{ backgroundImage: 'linear-gradient(90deg, #0508D6 30.34%, #AF2C80 53.17%, #DC73B6 73.67%, #F1C7E2 85.17%)' }}>
@@ -25,7 +25,7 @@ const FeaturesPage = () => {
                     </h1>
                     <p className='mt-4 text-lg text-center font-roboto font-light leading-[27px]'>
                         Explore the exceptional features that make Stringly the ultimate choice for discerning individuals.
-                        Our platform combines luxury, privacy, and cutting-edge technology to enhance your dating and
+                        Our platform combines luxury, privacy, and Internet Computer Protocol to enhance your dating and
                         networking experience.
                     </p>
                 </div>
@@ -193,7 +193,7 @@ const FeaturesPage = () => {
                             <li>A luxurious experience tailored to your dating needs.</li>
                         </ul>
                         <div className='py-10 flex gap-8'>
-                            <button className='px-8 py-2 border-2 border-white'>Join</button>
+                            <button className='px-6 py-2 rounded-lg border border-black'>Join</button>
                             <button className='flex items-center gap-4'>
                                 Discover <FaChevronRight />
                             </button>

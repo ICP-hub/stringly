@@ -174,7 +174,7 @@ export default function App() {
         centeredSlides={true}
         slidesPerView={2} // Number of slides visible
         loop={true}
-        spaceBetween={10} // Space between slides
+        spaceBetween={30} // Space between slides
         autoplay={{
           delay: 2000, // Auto-slide delay
           disableOnInteraction: false,
@@ -190,19 +190,19 @@ export default function App() {
         //   slideShadows: true, // Enable shadows
         // }}
         modules={[Pagination, Autoplay]}
-        className=" w-screen"
+        className="mySwiper lg:w-screen"
       >
         <SwiperSlide>
-          <img src="/carousel1.png" alt="Slide 1" className='rounded-lg'/>
+          <img src="/landing/carousel1.jpg" alt="Slide 1" className='rounded-4xl object-cover .swiper-slide'/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/carousel2.png" alt="Slide 2" className='rounded-lg' />
+          <img src="/landing/carousel2.jpg" alt="Slide 2" className='rounded-4xl object-cover .swiper-slide' />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/carousel3.png" alt="Slide 3" className='rounded-lg'/>
+          <img src="/carousel3.png" alt="Slide 3" className='rounded-4xl object-cover .swiper-slide'/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/carousel1.png" alt="Slide 4" className='rounded-lg'/>
+          <img src="/carousel1.png" alt="Slide 4" className='rounded-4xl object-cover .swiper-slide'/>
         </SwiperSlide>
       </Swiper>
     </div>

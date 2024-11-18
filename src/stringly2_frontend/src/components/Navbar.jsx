@@ -10,7 +10,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const imgHeight = 900;
+            const imgHeight = 1;
             setScrolled(window.scrollY > imgHeight);
         };
 

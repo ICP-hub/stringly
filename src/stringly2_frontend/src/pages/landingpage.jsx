@@ -25,7 +25,7 @@ const Landingpage = () => {
     return (
         <div className='w-full mx-auto flex flex-col items-center justify-center'>
             {/* Hero Section */}
-            <div className="relative h-[852px] lg:h-auto w-full md:w-full bg-black">
+            <div className="relative h-[852px] lg:h-auto w-full md:w-full bg-black rounded-xl">
                 <img className="w-full h-[852px] lg:h-auto object-cover" src="/heroimg.png" alt="Hero image" />
                 <div className="absolute text-white left-1/2 top-1/2 lg:top-[65%] transform -translate-x-1/2 -translate-y-1/2 w-[310px] md:w-[364px] p-2 lg:w-[550px] bg-opacity-50 text-center">
                     <p className="font-sf font-semibold w-full text-[38px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
@@ -33,7 +33,7 @@ const Landingpage = () => {
                     </p>
                     <p className="font-sfProDispaly text-[14px] lg:text-[18px] font-light leading-[21px] lg:leading-[30px] text-center mt-2">
                         Discover Stringly, the premium dating and networking app that blends
-                        luxury with cutting-edge technology. Experience unmatched privacy and
+                        luxury with Internet Computer Protocol. Experience unmatched privacy and
                         security while forming meaningful connections.
                     </p>
                     <div className="mt-10 space-x-6">
@@ -120,7 +120,7 @@ const Landingpage = () => {
             </div>
 
             {/* Group for All Images */}
-            <div className="max-w-[360px]-sm-md lg:w-[90%] xl:w-full mx-auto flex flex-col items-center justify-center mt-8 gap-4 px-4">
+            <div className="max-w-[360px]-sm-md lg:w-[90%] xl:w-full mx-auto flex flex-col items-center justify-center mt-8 gap-4 px-4 lg:px-0">
 
                 {/* Top Image with Hover Effect (Profile Image) */}
                 <div className={`relative w-full lg:w-full h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-black`}>

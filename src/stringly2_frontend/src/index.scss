@@ -443,9 +443,34 @@
     }
 }
 
+// .mySwiper {
+//     width: 100%;
+//     max-width: 1530px !important;
+//     height: auto;
+//     margin: 0;
+//     padding: 0%;
+//   }
+  
+//   .mySwiper .swiper-slide {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     transition: transform 0.5s ease-in-out;
+//   }
+  
+//   .mySwiper .swiper-slide img {
+//     width: 900px !important; /* Full width for images */
+//     height: 500px;
+//     object-fit: cover;
+//     border-radius: 20px; /* Optional: Rounded corners */
+//   }
+
+/* Mobile Devices (Small screens, max-width 480px) */
+
+/* Default (Large screens, desktops, and laptops) */
 .mySwiper {
     width: 100%;
-    max-width: 1530px !important;
+    max-width: 1530px;
     height: auto;
     margin: 0;
     padding: 0%;
@@ -459,11 +484,38 @@
   }
   
   .mySwiper .swiper-slide img {
-    width: 900px !important; /* Full width for images */
-    height: full;
-    object-fit: cover;
-    border-radius: 20px; /* Optional: Rounded corners */
+    width: 100%; /* Default image width */
+    height: 400px;          /* Default image height */
+    border-radius: 20px;    /* Rounded corners */
   }
+  
+  /* Tablets (Medium screens, 481px to 1024px) */
+  @media (max-width: 1024px) {
+    .mySwiper {
+      max-width: 100%; /* Use full width on smaller screens */
+    }
+  
+    .mySwiper .swiper-slide img {
+      width: 500px !important; /* Adjust image size */
+      height: 400px;
+    }
+  }
+  
+  /* Mobile Devices (Small screens, max-width 480px) */
+  @media (max-width: 480px) {
+    .mySwiper {
+      max-width: 100%; /* Use full width */
+      padding: 0;      /* Remove padding for smaller screens */
+    }
+  
+    .mySwiper .swiper-slide img {
+      width: 100px;     /* Full width for mobile */
+      height: auto;    /* Maintain aspect ratio */
+      object-fit: cover;
+    }
+  }
+  
+  
 
 .custom-gradient-bg {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.53%, rgba(0, 0, 0, 0) 100%);
