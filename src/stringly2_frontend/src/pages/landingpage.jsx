@@ -12,7 +12,7 @@ const Landingpage = () => {
     };
 
 
-    const [hovered2, setHovered2] = useState([false, false, false, false]);
+    const [hovered2, setHovered2] = useState([false]);
 
     const handleHover2 = (index) => {
         if (!hovered2[index]) {
@@ -25,11 +25,12 @@ const Landingpage = () => {
     return (
         <div className='w-full mx-auto flex flex-col items-center justify-center'>
             {/* Hero Section */}
-            <div className="relative h-[852px] lg:h-auto w-full md:w-full bg-black rounded-xl">
-                <img className="w-full h-[852px] lg:h-auto object-cover" src="/heroimg.png" alt="Hero image" />
+            <div className="relative h-[852px] lg:h-auto w-full md:w-full bg-black">
+                <img className="w-full h-[852px] lg:h-auto object-cover rounded-none" src="/heroimg.png" alt="Hero image" />
                 <div className="absolute text-white left-1/2 top-1/2 lg:top-[65%] transform -translate-x-1/2 -translate-y-1/2 w-[310px] md:w-[364px] p-2 lg:w-[550px] bg-opacity-50 text-center">
                     <p className="font-sf font-semibold w-full text-[38px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
-                        <p className='md:text-[76px] text-center bg-clip-text text-transparent md:font-bold p-2' style={{ backgroundImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%)' }}>Stringly</p>  String your Vibe
+                        {/* <p className='md:text-[76px] text-center bg-clip-text text-transparent md:font-bold p-2' style={{ backgroundImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%)' }}>Stringly</p> */}
+                        String your Vibe
                     </p>
                     <p className="font-sfProDispaly text-[14px] lg:text-[18px] font-light leading-[21px] lg:leading-[30px] text-center mt-2">
                         Discover Stringly, the premium dating and networking app that blends
@@ -45,8 +46,7 @@ const Landingpage = () => {
             </div>
 
             {/* Heading Section */}
-
-            <section className='max-w-[340px]-sm md:w-[388px] lg:w-auto xl:w-full 2xl:mt-40'>
+            {/* <section className='max-w-[340px]-sm md:w-[388px] lg:w-auto xl:w-full 2xl:mt-40'>
                 <div className=' w-full flex items-center justify-between flex-col py-8 text-[18px]'>
                     <div className='text-center gap-4 lg:w-[768px] flex items-center justify-between flex-col'>
                         <p className='text-[40px] font-sf font-semibold leading-[48px] '>
@@ -100,14 +100,18 @@ const Landingpage = () => {
                                     </button>
                                     <div className="learnMore absolute bottom-1 left-0 flex items-center gap-2 text-[16px]">
                                         <span className="default-text px-4 flex font-light items-center gap-2">Explore   <FaChevronRight size={12} /></span>
-                                        {/* <span className="hover-text flex font-light items-center gap-2">Join   <FaChevronRight size={12} /></span> */}
+                                        <span className="hover-text flex font-light items-center gap-2">Join   <FaChevronRight size={12} /></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
-            </section>
+            </section> */}
+
+            <div className="py-10 w-full">
+                <CarouselCoustom />
+            </div>
 
 
 
@@ -123,9 +127,9 @@ const Landingpage = () => {
             <div className="max-w-[360px]-sm-md lg:w-[90%] xl:w-full mx-auto flex flex-col items-center justify-center mt-8 gap-4 px-4 lg:px-0">
 
                 {/* Top Image with Hover Effect (Profile Image) */}
-                <div className={`relative w-full lg:w-full h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-black`}>
+                <div className={`relative w-full lg:w-full h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-gray-900`}>
                     <img
-                        src="./landing/frame1.jfif"
+                        src="./landing/Rectangle 3.png"
                         alt="Profile Image"
                         className="w-full md:w-full h-full object-cover opacity-[0.6]"
                     />
@@ -158,8 +162,8 @@ const Landingpage = () => {
                             className="w-full h-full object-cover opacity-[0.6]"
                         />
                         <div
-                            className={`absolute inset-0 flex items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${hovered2[1] ? 'hovered' : ''}`}
-                            onMouseEnter={() => handleHover2(1)}
+                            className={`absolute inset-0 flex items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${hovered2[0] ? 'hovered' : ''}`}
+                            onMouseEnter={() => handleHover2(0)}
                         >
                             <div className="text-white child">
                                 <h2 className="text-[32px] leading-[38px] font-semibold font-roboto font-bold">Your Journey Begins Here</h2>
@@ -179,8 +183,8 @@ const Landingpage = () => {
                             className="w-full h-full object-cover opacity-[0.9]"
                         />
                         <div
-                            className={`absolute inset-0 flex md:w-[700px] items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${hovered2[2] ? 'hovered' : ''}`}
-                            onMouseEnter={() => handleHover2(2)}
+                            className={`absolute inset-0 flex md:w-[700px] items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${hovered2[0] ? 'hovered' : ''}`}
+                            onMouseEnter={() => handleHover2(0)}
                         >
                             <div className="text-white child">
                                 <h2 className="text-[32px] leading-[38px] font-roboto font-bold">Unmatched Privacy <br /> and Security</h2>
@@ -288,28 +292,18 @@ const Landingpage = () => {
                     Explore our gallery to experience more.
                 </p>
             </div>
-
+            
             <section>
-
-                <div className="p-0 w-full">
-                    <CarouselCoustom />
-                </div>
                 <section
-                    className={`bg-gradient-full relative ${hovered === 'section1' ? 'hovered opacity-60' : ''} lg:opacity-60`}
+                    className={`bg-gradient-full relative lg:pl-20 ${hovered === 'section1' ? 'hovered opacity-90' : ''} lg:opacity-90`}
                     onMouseEnter={() => handleHover('section1')}
-                    onMouseLeave={() => handleHover('')}
+                // onMouseLeave={() => handleHover('')}
                 >
-                    <div
-                        className={`absolute flex flex-col items-center justify-center w-full top-[20%] md:left-[25%] lg:left-[25%] md:w-[450px] lg:w-[700px] p-10 lg:p-20 bg-white text-black border-2 rounded-lg ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'}`}
-                        style={{
-                            borderImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%) 1',
-                            transformOrigin: 'center',
-                            zIndex: 20,
-                        }}
+                    <div className={`bbb  m-2 flex flex-col items-center justify-center w-[96%] top-[20%] left-[0%] md:left-[0%] lg:left-[25%] md:w-[450px] lg:w-[700px] p-10 lg:p-20 bg-white text-black border-2 rounded-lg ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'}`}
                     >
                         <p>Bring your spark</p>
                         <p className="font-semibold text-[35px] leading-[44px] lg:text-[48px] lg:leading-[58px] text-center font-sf">
-                            Let’s build Stingly together.
+                            Let's build Stingly together.
                         </p>
                         <p className="font-roboto text-[18px] leading-[27px]">Contribute to the vibes!</p>
                         <button className="px-6 py-2 rounded-xl border mt-10 border-black">Join us</button>
@@ -350,13 +344,10 @@ const Landingpage = () => {
                             />
                         </div>
                     </div>
-
                     <div className="flex items-center justify-center py-10 px-0 lg:hidden">
                         <img src="./landing/Property 1=Default.png" alt="" />
                     </div>
                 </section>
-
-
             </section>
 
         </div >

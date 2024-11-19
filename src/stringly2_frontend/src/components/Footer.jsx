@@ -9,14 +9,8 @@ const Footer = () => {
     <div className='w-full lg:flex items-start justify-between bg-black text-white py-6'>
       <div>
         <div className='w-full mx-auto flex lg:flex-col lg:gap-4 items-center justify-between lg:items-start px-10'>
-          <p
-            className="text-[18px] leading-[72px] font-sf font-semibold text-[#DC73B6] bg-clip-text text-transparent"
-            style={{
-              backgroundImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%)'
-            }}
-          >
-            Stringly
-          </p>
+          <img src="./landing/stringly-logo.png" alt="" className='w-25 h-7' />
+
           <div className='flex gap-4 text-xl'>
             <FaXTwitter />
             <FaThreads />

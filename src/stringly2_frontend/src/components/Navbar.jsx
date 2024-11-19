@@ -24,17 +24,10 @@ const Navbar = () => {
         <div className={`w-full max-w-[1540px] mx-auto flex flex-col bg-transparent fixed top-0 z-50 px-4 text-black navbar !z-00 ${scrolled ? 'navbar-scrolled' : ''}`}>
             <div className='flex w-full text-white items-center justify-between px-4 py-4 md:px-8 md:py-4'>
                 <div>
-                    <p
-                        className="text-[30px] leading-[72px] font-sf font-semibold text-[#DC73B6] bg-clip-text text-transparent"
-                        style={{
-                            backgroundImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%)'
-                        }}
-                    >
-                        Stringly
-                    </p>
+                    <img src="./landing/stringly-logo.png" alt="" className='w-23 h-9'/>
 
                 </div>
-                <div className='hidden font-sfProDisplay md:flex items-center font-light justify-between gap-8'>
+                {/* <div className='hidden font-sfProDisplay md:flex items-center font-light justify-between gap-8'>
                     <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
                         <Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link>
                     </p>
@@ -47,7 +40,7 @@ const Navbar = () => {
                     <div className='flex items-center gap-2 hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
                         <p className='flex items-center justify-between gap-2'>Resources <IoIosArrowDown /></p>
                     </div>
-                </div>
+                </div> */}
                 <div className='flex items-center gap-4'>
                     <div>
                         <button className={`px-10 py-2 rounded-xl ${isMenu ? 'hidden' : 'hidden md:flex'} bg-white text-black`}>Join</button>
@@ -106,7 +99,7 @@ export const Menu = ({ isMenu, setIsmMenu }) => {
                 </div>
             </div>
             <div className='flex flex-col items-start font-light justify-start gap-6 px-6 py-4'>
-                <p className='hover:bg-zinc-200 px-3 py-1 rounded-lg' onClick={handleLinkClick}>
+                {/* <p className='hover:bg-zinc-200 px-3 py-1 rounded-lg' onClick={handleLinkClick}>
                     <Link to="/">Home</Link>
                 </p>
                 <p className='hover:bg-zinc-200 px-3 py-1 rounded-lg' onClick={handleLinkClick}>
@@ -117,7 +110,7 @@ export const Menu = ({ isMenu, setIsmMenu }) => {
                 </p>
                 <div className='flex items-center gap-2 hover:bg-zinc-200 px-3 py-1 rounded-lg' onClick={handleLinkClick}>
                     <p className='flex items-center justify-between gap-2'>Resources <IoIosArrowDown /></p>
-                </div>
+                </div> */}
             </div>
         </div>
     );
