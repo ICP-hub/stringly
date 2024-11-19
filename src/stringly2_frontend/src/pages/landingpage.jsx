@@ -25,7 +25,7 @@ const Landingpage = () => {
     return (
         <div className='w-full mx-auto flex flex-col items-center justify-center'>
             {/* Hero Section */}
-            <div className="relative h-[852px] lg:h-auto w-full md:w-full bg-black">
+            <div className="relative h-[852px] lg:h-auto w-full md:w-full rounded-xl bg-black">
                 <img className="w-full h-[852px] lg:h-auto object-cover rounded-none" src="/heroimg.png" alt="Hero image" />
                 <div className="absolute text-white left-1/2 top-1/2 lg:top-[65%] transform -translate-x-1/2 -translate-y-1/2 w-[310px] md:w-[364px] p-2 lg:w-[550px] bg-opacity-50 text-center">
                     <p className="font-sf font-semibold w-full text-[38px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
