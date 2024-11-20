@@ -23,20 +23,23 @@ export default function App() {
           clickable: true,
         }}
         modules={[Pagination, Autoplay]}
-        className="mySwiper lg:w-screen h-[300px] lg:h-[550px]"
+        className="mySwiper lg:w-screen  rounded-4xl sm:h-[300px] lg:h-[550px]"
       >
         <SwiperSlide>
-          <img src="/landing/carousel1.jpg" alt="Slide 1" className='rounded-4xl object-cover .swiper-slide'/>
+          <img src="/landing/carousel1.jpg" alt="Slide 1" className='rounded-4xl object-cover .swiper-slide' />
         </SwiperSlide>
         <SwiperSlide>
           <img src="/landing/carousel2.jpg" alt="Slide 2" className='rounded-4xl object-cover .swiper-slide' />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/landing/carousel3.jpg" alt="Slide 3" className='rounded-4xl object-cover .swiper-slide'/>
+          <img src="/landing/carousel3.jpg" alt="Slide 3" className='rounded-4xl object-cover .swiper-slide' />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/landing/carousel2.jpg" alt="Slide 4" className='rounded-4xl object-cover .swiper-slide'/>
+        <video autoPlay muted loop className='rounded-xl object-cover w-auto h-[72%]'>
+            <source src="/landing/switch_1.mp4" type="video/mp4" />
+          </video>
         </SwiperSlide>
+
       </Swiper>
     </div>
   );

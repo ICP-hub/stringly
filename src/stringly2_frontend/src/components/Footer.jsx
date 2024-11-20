@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaThreads } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaMedium } from "react-icons/fa6";
+import { RiMediumLine } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
@@ -15,7 +15,7 @@ const Footer = () => {
             <FaXTwitter />
             <FaThreads />
             <FaInstagram />
-            <FaMedium />
+            <RiMediumLine />
           </div>
         </div>
       </div>
