@@ -510,8 +510,8 @@
 
 .video-sliding {
     box-sizing: content-box !important;
-    object-fit: contain;
-    height:max-content;
+    height: auto;
+    border-radius: 10px;
 }
 
 

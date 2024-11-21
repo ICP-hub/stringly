@@ -62,10 +62,9 @@ export default function App() {
           />
         </SwiperSlide>
         <SwiperSlide>
-          <div className="video-sliding swiper-slide rounded-3xl h-full md:h-[90%] lg:h-[70%]">
-            <video autoPlay muted loop>
+          <div className="video-sliding relative swiper-slide rounded-3xl h-full md:h-[90%] lg:h-[72%]">
+            <video autoPlay muted loop className="absolute rounded-3xl top-0 left-0 right-0 bottom-0 w-full h-full object-cover">
               <source src="/landing/switch_1.mp4" type="video/mp4"
-                className="absolute top-0 left-0 w-full h-full object-cover"
               />
             </video>
           </div>
