@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaThreads } from "react-icons/fa6";
+import { TbBrandTelegram } from "react-icons/tb";
 import { FaXTwitter } from "react-icons/fa6";
 import { RiMediumLine } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
@@ -13,7 +13,7 @@ const Footer = () => {
 
           <div className='flex gap-4 text-xl'>
             <FaXTwitter />
-            <FaThreads />
+            <TbBrandTelegram />
             <FaInstagram />
             <RiMediumLine />
           </div>

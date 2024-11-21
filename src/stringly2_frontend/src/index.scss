@@ -471,6 +471,7 @@
 /* Tablets (Medium screens, 481px to 1024px) */
 @media (max-width: 1024px) {
     .mySwiper {
+        height: 500px;
         max-width: 100%;
         /* Use full width on smaller screens */
     }
@@ -478,13 +479,17 @@
     .mySwiper .swiper-slide img {
         width: 500px !important;
         /* Adjust image size */
-        height: 400px;
+        height: 450px;
+        object-fit: cover;
+        box-sizing: content-box;
+
     }
 }
 
 /* Mobile Devices (Small screens, max-width 480px) */
 @media (max-width: 480px) {
     .mySwiper {
+        height: 310px;
         max-width: 100%;
         /* Use full width */
         padding: 0;
@@ -492,14 +497,22 @@
     }
 
     .mySwiper .swiper-slide img {
-        width: 100px;
+        height: 210px;
+        width: auto !important;
+        border-radius: 10px;
+        object-fit: cover ;
+
         /* Full width for mobile */
-        height: auto;
+        height: full;
         /* Maintain aspect ratio */
-        object-fit: cover;
     }
 }
 
+.video-sliding {
+    box-sizing: content-box !important;
+    object-fit: contain;
+    height:max-content;
+}
 
 
 .custom-gradient-bg {
@@ -636,5 +649,68 @@
   .swiper-pagination-clickable .swiper-pagination-bullet:hover {
     background-color: #000;
     opacity: 1;
+  }
+  .animated-border-box, .animated-border-box-glow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff !important;
+    color: #000;
+    max-height: 50px;
+    max-width: 120px;
+    height: 100%;
+    bottom: 20px;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+  }
+  
+  .animated-border-box-glow {
+    overflow: hidden;
+    // filter: blur(40px);
+  }
+  
+  .animated-border-box:before, .animated-border-box-glow:before {
+    content: '';
+    z-index: -2;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    position: absolute;
+    width: 99999px;
+    height: 99999px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: conic-gradient(#D83694, #0039C7, #f7eff3 10%);
+    animation: rotate 8s linear infinite;
+    filter: drop-shadow(0px 0px 15px rgba(0, 57, 199, 0.5)); /* Gradient shadow */
+  }
+  
+  .animated-border-box:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 5px;
+    top: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background: #fff;
+    border-radius: 7px;
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: translate(-50%, -50%) rotate(1turn);
+    }
+  }
+  
+  .animated-border-box:hover:before {
+    background-image: conic-gradient(#D83694, #0039C7, #D83694);
+    transition: background-image 3s ease, filter 3s ease; /* Smooth transition */
+    filter: drop-shadow(0px 0px 20px rgba(216, 54, 148, 0.7)); /* Enhance shadow on hover */
   }
   

@@ -197,6 +197,10 @@ const Landingpage = () => {
                     </div>
 
                 </div>
+                <div className='hidden md:flex items-center gap-3'>
+                    <p className='uppercase font-bold font-sf text-3xl m-10 tracking-widest'>Build on</p>
+                    <img src="./landing/internet-identity.png" alt="" />
+                </div>
             </div>
 
 
@@ -292,21 +296,23 @@ const Landingpage = () => {
                     Explore our gallery to experience more.
                 </p>
             </div>
-            
+
             <section>
                 <section
                     className={`bg-gradient-full relative lg:pl-20 ${hovered === 'section1' ? 'hovered opacity-90' : ''} lg:opacity-90`}
                     onMouseEnter={() => handleHover('section1')}
                 // onMouseLeave={() => handleHover('')}
                 >
-                    <div className={`bbb  m-2 flex flex-col items-center justify-center w-[96%] top-[20%] left-[0%] md:left-[0%] lg:left-[25%] md:w-[450px] lg:w-[700px] p-10 lg:p-20 bg-white text-black border-2 rounded-lg ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'}`}
+                    <div className={`bbb h-[350px] m-2 flex flex-col items-center justify-center w-[96%] md:top-[20%] left-[0%] md:left-[0%] lg:left-[25%] md:w-[450px] lg:w-[700px] p-10 lg:p-20 bg-white text-black border-2 rounded-lg ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'}`}
                     >
                         <p>Bring your spark</p>
                         <p className="font-semibold text-[35px] leading-[44px] lg:text-[48px] lg:leading-[58px] text-center font-sf">
                             Let's build Stingly together.
                         </p>
                         <p className="font-roboto text-[18px] leading-[27px]">Contribute to the vibes!</p>
-                        <button className="px-6 py-2 rounded-xl border mt-10 border-black">Join us</button>
+                        <div class="animated-border-box">
+                            join
+                        </div>
                     </div>
 
                     <div className="flex justify-center items-center w-full min-h-full hidden lg:block">
