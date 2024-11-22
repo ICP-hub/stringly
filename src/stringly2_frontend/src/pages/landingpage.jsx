@@ -25,7 +25,7 @@ const Landingpage = () => {
     return (
         <div className='w-full mx-auto flex flex-col items-center justify-center'>
             {/* Hero Section */}
-            <div className="relative h-[852px] lg:h-auto w-full md:w-full rounded-xl bg-black">
+            <div className="relative h-[852px] lg:h-auto w-full md:w-full rounded-none bg-black">
                 <img className="w-full h-[852px] lg:h-auto object-cover rounded-none" src="/heroimg.png" alt="Hero image" />
                 <div className="absolute text-white left-1/2 top-1/2 lg:top-[65%] transform -translate-x-1/2 -translate-y-1/2 w-[310px] md:w-[364px] p-2 lg:w-[550px] bg-opacity-50 text-center">
                     <p className="font-sf font-semibold w-full text-[38px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
@@ -303,17 +303,31 @@ const Landingpage = () => {
                     onMouseEnter={() => handleHover('section1')}
                 // onMouseLeave={() => handleHover('')}
                 >
-                    <div className={`bbb h-[350px] m-2 flex flex-col items-center justify-center w-[96%] md:top-[20%] left-[0%] md:left-[0%] lg:left-[25%] md:w-[450px] lg:w-[700px] p-10 lg:p-20 bg-white text-black border-2 rounded-lg ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'}`}
+                    {/* <div className={`bbb h-[350px] m-2 flex flex-col items-center justify-center w-[96%] top-[20%] left-[0%] md:left-[0%] lg:left-[25%] md:w-[450px] lg:w-[700px] p-10 lg:p-20 bg-white text-black border-2 rounded-lg ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'}`}
                     >
                         <p>Bring your spark</p>
                         <p className="font-semibold text-[35px] leading-[44px] lg:text-[48px] lg:leading-[58px] text-center font-sf">
                             Let's build Stingly together.
                         </p>
                         <p className="font-roboto text-[18px] leading-[27px]">Contribute to the vibes!</p>
-                        <div class="animated-border-box">
+                        <button className="rounded-xl border border-black-700 px-10 py-2 text-black">
                             join
-                        </div>
+                        </button>
+                    </div> */}
+                    <div
+                        className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[20%] left-[0%] md:left-[0%] lg:left-[25%] md:w-[450px] lg:w-[700px] h-[350px] p-10 lg:p-20 bg-white text-black border-2 rounded-lg ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
+                            }`}
+                    >
+                        <p>Bring your spark</p>
+                        <p className="font-semibold text-[35px] leading-[44px] lg:text-[48px] lg:leading-[58px] text-center font-sf">
+                            Let's build Stingly together.
+                        </p>
+                        <p className="font-roboto text-[18px] leading-[27px]">Contribute to the vibes!</p>
+                        <button className="rounded-xl border-2 border-black mt-5 px-10 py-2 text-black">
+                            Join
+                        </button>
                     </div>
+
 
                     <div className="flex justify-center items-center w-full min-h-full hidden lg:block">
                         <div className="grid grid-cols-2 lg:grid-cols-6 gap-2 w-full lg:p-20">

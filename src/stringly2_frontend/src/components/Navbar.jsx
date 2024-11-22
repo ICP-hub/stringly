@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className={`w-full max-w-[1540px] mx-auto flex flex-col bg-transparent fixed top-0 z-50 px-4 text-black navbar !z-00 ${scrolled ? 'navbar-scrolled' : ''}`}>
             <div className='flex w-full text-white items-center justify-between px-4 py-4 md:px-8 md:py-4'>
                 <div>
-                    <img src="./landing/stringly-logo.png" alt="" className='w-23 h-9'/>
+                    <img src="./landing/stringly-logo.png" alt="" className='w-23 h-9' />
 
                 </div>
                 {/* <div className='hidden font-sfProDisplay md:flex items-center font-light justify-between gap-8'>
@@ -46,9 +46,12 @@ const Navbar = () => {
                         <button className={`px-10 py-2 rounded-xl ${isMenu ? 'hidden' : 'hidden md:flex'} bg-white text-black`}>Join</button>
                     </div>
                     <div className='flex md:hidden'>
-                        <button className='text-xl' onClick={() => setIsmMenu(true)}>
+                        {/* <button className='text-xl' onClick={() => setIsmMenu(true)}>
                             {!isMenu && <IoIosMenu />}
-                        </button>
+                        </button> */}
+                        <div>
+                            <button className={`px-4 py-1 rounded-xl text-black bg-white`}>Join</button>
+                        </div>
                     </div>
                 </div>
             </div>

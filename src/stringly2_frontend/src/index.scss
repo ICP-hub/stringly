@@ -295,6 +295,19 @@
 
 
 @media (min-width: 1024px) {
+    .mySwiper {
+        height: 500px;
+        max-width: 100%;
+        /* Use full width on smaller screens */
+    }
+
+    .mySwiper .swiper-slide img {
+        width: 760px !important;
+        /* Adjust image size */
+        height: 450px;
+        object-fit: cover;
+        box-sizing: content-box;
+    }
 
     .animate {
         animation: appear linear forwards;
@@ -470,24 +483,141 @@
 
 /* Tablets (Medium screens, 481px to 1024px) */
 @media (max-width: 1024px) {
-    .mySwiper {
-        height: 500px;
-        max-width: 100%;
-        /* Use full width on smaller screens */
-    }
 
-    .mySwiper .swiper-slide img {
-        width: 500px !important;
-        /* Adjust image size */
-        height: 450px;
-        object-fit: cover;
-        box-sizing: content-box;
-
+    .animated-border-box,
+    .animated-border-box-glow {
+        max-height: 300px;
+        max-width: 650px;
+        height: 100%;
+        background-color: #000;
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+        z-index: 100 !important;
+        margin-inline: auto;
+        border-radius: 10px;
     }
 }
 
 /* Mobile Devices (Small screens, max-width 480px) */
 @media (max-width: 480px) {
+
+    .animated-border-box,
+    .animated-border-box-glow {
+        max-height: 300px;
+        max-width: 650px;
+        height: 100%;
+        background-color: #000;
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+        z-index: 100 !important;
+        margin-inline: auto;
+        border-radius: 10px;
+    }
+
+    /* Glow effect for the border box */
+    .animated-border-box-glow {
+        overflow: hidden;
+        filter: blur(20px);
+        transition: background-image 0.5s ease-out;
+    }
+
+    /* Before pseudo-element for rotating conic gradient */
+    .animated-border-box:before,
+    .animated-border-box-glow:before {
+        content: '';
+        z-index: -2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+        width: 99999px;
+        height: 99999px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-image: conic-gradient(#d83694, #0039c7, #f7eff3 25%);
+        animation: rotate 5s linear infinite;
+        transition: background-image 0.5s ease-out, animation 0.5s ease-out;
+    }
+
+    /* After pseudo-element for the container's background */
+    .animated-border-box:after {
+        content: '';
+        position: absolute;
+        z-index: -10;
+        left: 5px;
+        top: 5px;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        background: #000 !important;
+        /* Ensures white background */
+        border-radius: 7px;
+    }
+
+    /* Keyframes for rotation animation */
+    @keyframes rotate {
+        100% {
+            transform: translate(-50%, -50%) rotate(1turn);
+        }
+    }
+
+    .animated-border-box:hover:before {
+        animation: none;
+        background-image: conic-gradient(#d83694, #0039c7, #c04783 100%);
+        transition: all 2s ease-in;
+    }
+
+    .animated-border-box-glow:hover {
+        background-image: conic-gradient(#d83694, #0039c7, #d4237c 100%);
+        transition: all 2s ease-in;
+    }
+
+    /* Ensure proper mobile swiper settings */
+    .mySwiper {
+        height: 310px;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .mySwiper .swiper-slide img {
+        height: 210px;
+        width: auto !important;
+        border-radius: 10px;
+        object-fit: cover;
+        height: full;
+    }
+
+    .ppp.hovered .child,
+    .ppp.hovered .child-2 {
+        margin: 0 15px;
+        display: flex;
+        position: absolute;
+        z-index: 100;
+        flex-direction: column;
+        width: 90%;
+        animation: slideIn 1s forwards;
+        color: white;
+        box-sizing: border-box;
+    }
+
+    img {
+        opacity: 0.7;
+        border-radius: 10px;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(0);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(100px);
+            opacity: 1;
+        }
+    }
+
     .mySwiper {
         height: 310px;
         max-width: 100%;
@@ -500,19 +630,46 @@
         height: 210px;
         width: auto !important;
         border-radius: 10px;
-        object-fit: cover ;
+        object-fit: cover;
 
         /* Full width for mobile */
         height: full;
         /* Maintain aspect ratio */
     }
+
+    .ppp.hovered .child,
+    .ppp.hovered .child-2 {
+        margin: 0 15px;
+        /* Replacing margin-inline for better compatibility */
+        display: flex;
+        position: absolute;
+        z-index: 100;
+        flex-direction: column;
+        width: 90%;
+        animation: slideIn 1s forwards;
+        color: white;
+        box-sizing: border-box;
+    }
+
+    img {
+        opacity: 0.7;
+        border-radius: 10px;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(0);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(100px);
+            opacity: 1;
+        }
+    }
 }
 
-.video-sliding {
-    box-sizing: content-box !important;
-    height: auto;
-    border-radius: 10px;
-}
+
 
 
 .custom-gradient-bg {
@@ -587,33 +744,43 @@
     transform-origin: center;
 }
 
-.bbb {
-    position: absolute;
-    padding: 20px;
-    z-index: 1;
-    border-radius: 0px;
-    border: 5px solid transparent;
-    background-color: white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    -webkit-mask-image: linear-gradient(white, white);
-    mask-image: linear-gradient(white, white);
-    border-image: linear-gradient(90deg, #D83694, #0039C7, #D83694) 1;
-    animation: flow 3s linear infinite;
-}
 
-.bbb:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(216, 54, 148, 0.5), 0 0 30px rgba(0, 57, 199, 0.5);
-}
 
-@keyframes flow {
-    0% {
-        border-image-source: linear-gradient(90deg, #D83694, #0039C7, #D83694);
-    }
-    100% {
-        border-image-source: linear-gradient(90deg, #0039C7, #D83694, #0039C7);
-    }
-}
+
+
+
+// .bbb {
+//     position: absolute;
+//     padding: 20px;
+//     z-index: 1;
+//     border-radius: 0px;
+//     border: 5px solid transparent;
+//     background-color: white;
+//     transition: transform 0.3s ease, box-shadow 0.3s ease;
+//     -webkit-mask-image: linear-gradient(white, white);
+//     mask-image: linear-gradient(white, white);
+//     border-image: linear-gradient(90deg, #D83694, #0039C7, #D83694) 1;
+//     animation: flow 3s linear infinite;
+// }
+
+// .bbb:hover {
+//     transform: scale(1.05);
+//     box-shadow: 0 0 15px rgba(216, 54, 148, 0.5), 0 0 30px rgba(0, 57, 199, 0.5);
+// }
+
+// @keyframes flow {
+//     0% {
+//         border-image-source: linear-gradient(90deg, #D83694, #0039C7, #D83694);
+//     }
+
+//     100% {
+//         border-image-source: linear-gradient(90deg, #0039C7, #D83694, #0039C7);
+//     }
+// }
+
+
+
+
 
 
 
@@ -625,92 +792,149 @@
     right: 0;
     text-align: center;
     z-index: 10;
-  }
-  
-  .swiper-pagination-bullet {
-    background-color: #000; 
-    width: 12px; 
+}
+
+.swiper-pagination-bullet {
+    background-color: #000;
+    width: 12px;
     height: 12px;
     margin: 0 10px;
     border-radius: 50%;
     opacity: 0.6;
     transition: opacity 0.3s, transform 0.3s;
-  }
-  
-  .swiper-pagination-bullet-active {
+}
+
+.swiper-pagination-bullet-active {
     background-color: #000;
     opacity: 1;
     transform: scale(1.3);
     border-radius: 45%;
     width: 16px;
 
-  }
-  
-  .swiper-pagination-clickable .swiper-pagination-bullet:hover {
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet:hover {
     background-color: #000;
     opacity: 1;
-  }
-  .animated-border-box, .animated-border-box-glow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff !important;
-    color: #000;
-    max-height: 50px;
-    max-width: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Container box setup */
+.animated-border-box,
+.animated-border-box-glow {
+    max-height: 400px;
+    max-width: 650px;
     height: 100%;
-    bottom: 20px;
     width: 100%;
     position: absolute;
     overflow: hidden;
     z-index: 0;
     border-radius: 10px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
-  }
-  
-  .animated-border-box-glow {
+}
+
+/* Glow effect for the border box */
+.animated-border-box-glow {
     overflow: hidden;
-    // filter: blur(40px);
-  }
-  
-  .animated-border-box:before, .animated-border-box-glow:before {
+    filter: blur(20px);
+    /* Glow effect */
+    transition: background-image 0.5s ease-out;
+    /* Smooth background transition */
+}
+
+/* Before pseudo-element for rotating conic gradient */
+.animated-border-box:before,
+.animated-border-box-glow:before {
     content: '';
     z-index: -2;
-    text-align: center;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(0deg);
-    position: absolute;
+    /* Center and rotate */
     width: 99999px;
+    /* Ensures full coverage of the container */
     height: 99999px;
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-image: conic-gradient(#D83694, #0039C7, #f7eff3 10%);
-    animation: rotate 8s linear infinite;
-    filter: drop-shadow(0px 0px 15px rgba(0, 57, 199, 0.5)); /* Gradient shadow */
-  }
-  
-  .animated-border-box:after {
+    background-image: conic-gradient(#d83694,
+            /* Transparent start */
+            #0039c7,
+            /* Blue color */
+            #f7eff3 25%
+            /* Transparent end, creates a slice effect */
+        );
+    animation: rotate 5s linear infinite;
+    /* Rotate the gradient */
+    transition: background-image 0.5s ease-out, animation 0.5s ease-out;
+    /* Smooth transition */
+}
+
+/* After pseudo-element for the container's background */
+.animated-border-box:after {
     content: '';
     position: absolute;
     z-index: -1;
     left: 5px;
+    /* Border width */
     top: 5px;
+    /* Border width */
     width: calc(100% - 10px);
+    /* Adjust width for border spacing */
     height: calc(100% - 10px);
-    background: #fff;
+    /* Adjust height for border spacing */
+    background: white !important;
     border-radius: 7px;
-  }
-  
-  @keyframes rotate {
+    /* Box border radius */
+}
+
+/* Keyframes for rotation animation */
+@keyframes rotate {
     100% {
-      transform: translate(-50%, -50%) rotate(1turn);
+        transform: translate(-50%, -50%) rotate(1turn);
+        /* Full rotation */
     }
-  }
-  
-  .animated-border-box:hover:before {
-    background-image: conic-gradient(#D83694, #0039C7, #D83694);
-    transition: background-image 3s ease, filter 3s ease; /* Smooth transition */
-    filter: drop-shadow(0px 0px 20px rgba(216, 54, 148, 0.7)); /* Enhance shadow on hover */
-  }
-  
+}
+
+/* Container for centering the animated box */
+.center-box {
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1D1E22;
+    /* Dark background */
+}
+
+/* Hover effect for stopping animation and changing background gradient */
+.animated-border-box:hover:before {
+    animation: none;
+    /* Stop the rotation animation */
+    background-image: conic-gradient(#d83694,
+            /* Transparent start */
+            #0039c7,
+            /* Blue color */
+            #c04783 100%);
+    /* Apply new gradient when hovered */
+    transition: all 2s ease-in;
+}
+
+.animated-border-box-glow:hover {
+    background-image: conic-gradient(#d83694,
+            /* Transparent start */
+            #0039c7,
+            /* Blue color */
+            #d4237c 100%);
+    /* New gradient for glow on hover */
+    transition: all 2s ease-in;
+
+}

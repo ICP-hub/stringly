@@ -38,7 +38,7 @@ export default function App() {
           clickable: true,
         }}
         modules={[Pagination, Autoplay]}
-        className="mySwiper lg:w-screen lg:h-[550px]"
+        className="mySwiper lg:w-screen h-auto lg:h-[550px]"
       >
         <SwiperSlide>
           <img
@@ -62,13 +62,22 @@ export default function App() {
           />
         </SwiperSlide>
         <SwiperSlide>
-          <div className="video-sliding relative swiper-slide rounded-3xl h-full md:h-[90%] lg:h-[72%]">
-            <video autoPlay muted loop className="absolute rounded-3xl top-0 left-0 right-0 bottom-0 w-full h-full object-cover">
-              <source src="/landing/switch_1.mp4" type="video/mp4"
+          {/* <div className="lg:h-screen rounded-xl"> */}
+            <video
+              autoPlay
+              muted
+              loop
+              className="absolute top-0 left-0 w-full h-full !rounded-xl"
+            >
+              <source
+              className='rounded-3xl'
+                src="/landing/switch_1.mp4"
+                type="video/mp4"
               />
             </video>
-          </div>
+          {/* </div> */}
         </SwiperSlide>
+
       </Swiper>
     </div>
   );
