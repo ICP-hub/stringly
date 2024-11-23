@@ -8,9 +8,8 @@ const Footer = () => {
   return (
     <div className='w-full lg:flex items-start justify-between bg-black text-white py-6'>
       <div>
-        <div className='w-full mx-auto flex lg:flex-col lg:gap-4 items-center justify-between lg:items-start px-10'>
-          <img src="./landing/stringly-logo.png" alt="" className='w-25 h-7' />
-
+        <div className='w-full mx-auto flex lg:flex-col pt-10 lg:gap-4 items-center justify-between lg:items-start px-10 lg:px-20'>
+          <img src="./landing/stringly-logo.png" alt="" className='w-25 h-7 mb-5' />
           <div className='flex gap-4 text-xl'>
             <FaXTwitter />
             <TbBrandTelegram />

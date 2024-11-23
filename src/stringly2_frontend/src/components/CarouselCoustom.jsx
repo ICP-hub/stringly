@@ -70,14 +70,13 @@ export default function App() {
               className="absolute top-0 left-0 w-full h-full !rounded-xl"
             >
               <source
-              className='rounded-3xl'
+              className='rounded-3xl rounded-xl'
                 src="/landing/switch_1.mp4"
                 type="video/mp4"
               />
             </video>
           {/* </div> */}
         </SwiperSlide>
-
       </Swiper>
     </div>
   );

@@ -6,6 +6,8 @@ import CarouselCoustom from '../components/CarouselCoustom';
 
 const Landingpage = () => {
     const [hovered, setHovered] = useState('');
+    const [isMobile, setIsMobile] = useState(false);
+
 
     const handleHover = (section) => {
         setHovered(section);
@@ -21,6 +23,19 @@ const Landingpage = () => {
             setHovered2(newHovered);
         }
     };
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
         <div className='w-full mx-auto flex flex-col items-center justify-center'>
@@ -134,10 +149,10 @@ const Landingpage = () => {
                         className="w-full md:w-full h-full object-cover opacity-[0.6]"
                     />
                     <div
-                        className={`absolute inset-0 flex md:w-[600px] items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${hovered2[0] ? 'hovered' : ''}`}
+                        className={`absolute inset-0 flex md:w-[600px] items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ${isMobile ? "ppp1" : "ppp"} ${hovered2[0] ? 'hovered' : ''}`}
                         onMouseEnter={() => handleHover2(0)}
                     >
-                        <div className="text-white child">
+                        <div className={`text-white ${isMobile ? "child-ppp1" : "child"}`}>
                             <h2 className="text-[32px] leading-[38px] font-semibold leading-tight font-roboto font-bold">
                                 Elevate Your Networking <br /> Experience
                             </h2>
@@ -324,7 +339,7 @@ const Landingpage = () => {
                         </p>
                         <p className="font-roboto text-[18px] leading-[27px]">Contribute to the vibes!</p>
                         <button className="rounded-xl border-2 border-black mt-5 px-10 py-2 text-black">
-                            Join
+                            Join Us
                         </button>
                     </div>
 

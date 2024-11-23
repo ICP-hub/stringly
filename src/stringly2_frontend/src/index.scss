@@ -546,10 +546,10 @@
         content: '';
         position: absolute;
         z-index: -10;
-        left: 5px;
-        top: 5px;
-        width: calc(100% - 10px);
-        height: calc(100% - 10px);
+        left: 10px;
+        top: 10px;
+        width: calc(100% - 15px);
+        height: calc(100% - 15px);
         background: #000 !important;
         /* Ensures white background */
         border-radius: 7px;
@@ -588,24 +588,6 @@
         height: full;
     }
 
-    .ppp.hovered .child,
-    .ppp.hovered .child-2 {
-        margin: 0 15px;
-        display: flex;
-        position: absolute;
-        z-index: 100;
-        flex-direction: column;
-        width: 90%;
-        animation: slideIn 1s forwards;
-        color: white;
-        box-sizing: border-box;
-    }
-
-    img {
-        opacity: 0.7;
-        border-radius: 10px;
-    }
-
     @keyframes slideIn {
         from {
             transform: translateX(0);
@@ -637,36 +619,78 @@
         /* Maintain aspect ratio */
     }
 
-    .ppp.hovered .child,
-    .ppp.hovered .child-2 {
-        margin: 0 15px;
-        /* Replacing margin-inline for better compatibility */
+    .ppp1 {
+        display: flex;
+        position: relative;
+        align-items: center;
+    }
+
+    .child-ppp1 {
+        opacity: 0;
+        position: absolute;
+        transform: translateX(0);
+        transition: none;
+        height: 100%;
+        border: 2px solid red;
+    }
+
+    .child-ppp1.hovered .child-ppp1 {
+        margin-inline: 15px;
         display: flex;
         position: absolute;
         z-index: 100;
-        flex-direction: column;
-        width: 90%;
+        // flex-direction: column;
+        align-items: start;
+        width: 50%;
         animation: slideIn 1s forwards;
         color: white;
         box-sizing: border-box;
     }
 
     img {
-        opacity: 0.7;
+        opacity: .7;
         border-radius: 10px;
     }
 
     @keyframes slideIn {
         from {
-            transform: translateX(0);
+            transform: translateX(-800px);
             opacity: 0;
         }
 
         to {
-            transform: translateX(100px);
+            transform: translateX(0);
             opacity: 1;
         }
     }
+
+    .ppp.hovered .child-2 {
+        box-sizing: border-box;
+        margin-inline: 15px;
+        display: flex;
+        position: absolute;
+        z-index: 100;
+        flex-direction: column;
+        width: 90% !important;
+        animation: slideIn 1s forwards;
+        color: white;
+    }
+
+    @keyframes slideIn2 {
+        from {
+            transform: translateX(-200px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    // .card:hover .card-content {
+    //     bottom: 15px;
+    // }
 }
 
 
@@ -883,13 +907,13 @@
     content: '';
     position: absolute;
     z-index: -1;
-    left: 5px;
+    left: 2px;
     /* Border width */
-    top: 5px;
+    top: 2px;
     /* Border width */
-    width: calc(100% - 10px);
+    width: calc(100% - 5px);
     /* Adjust width for border spacing */
-    height: calc(100% - 10px);
+    height: calc(100% - 5px);
     /* Adjust height for border spacing */
     background: white !important;
     border-radius: 7px;
