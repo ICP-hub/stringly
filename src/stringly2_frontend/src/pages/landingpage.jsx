@@ -60,6 +60,14 @@ const Landingpage = () => {
                 </div>
             </div>
 
+            {/* Connecting Section */}
+            <div className="text-center mt-16 ">
+                <h2 className="lg:text-[48px] sm:text-3xl font-semibold font-sf leading-[38px]">Discover Our Unique Features</h2>
+                <p className="mt-2 text-[14px] text-[20px] font-regular leading-[24px]">
+                    Experience unmatched privacy and secure connections today.
+                </p>
+            </div>
+
             {/* Heading Section */}
             {/* <section className='max-w-[340px]-sm md:w-[388px] lg:w-auto xl:w-full 2xl:mt-40'>
                 <div className=' w-full flex items-center justify-between flex-col py-8 text-[18px]'>
@@ -124,10 +132,9 @@ const Landingpage = () => {
                 </div>
             </section> */}
 
-            <div className="py-10 w-full">
+            <div className="md:mt-10 lg:mt-0 w-full">
                 <CarouselCoustom />
             </div>
-
 
 
             {/* Connecting Section */}
