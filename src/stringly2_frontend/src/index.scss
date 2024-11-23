@@ -296,16 +296,22 @@
 
 @media (min-width: 1024px) {
     .mySwiper {
-        height: 500px;
-        max-width: 100%;
+        height: 600px !important;
+        min-width: 100%;
+        width: 100%;
         /* Use full width on smaller screens */
     }
 
-    .mySwiper .swiper-slide img {
-        width: 760px !important;
-        /* Adjust image size */
+    .mySwiper .swiper-slide{
         height: 450px;
-        object-fit: cover;
+        box-sizing: border-box;
+    }
+
+    .mySwiper .swiper-slide img {
+        width: auto;
+        /* Adjust image size */
+        height: auto;
+        image-rendering: pixelated;
         box-sizing: content-box;
     }
 
@@ -383,6 +389,24 @@
         transform: translateX(0);
         transition: none;
     }
+
+    .carousel-image {
+        transition: transform 0.5s ease, filter 0.5s ease;
+        filter: blur(5px);
+        border-radius: 10px;
+        transform: scale(0.8);
+    }
+
+    .center-slide {
+        transform: scale(1);
+        filter: blur(0);
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .blur-slide {
+        opacity: 0.6;
+    }
 }
 
 //features page css
@@ -453,6 +477,21 @@
 
     .card:hover .card-content {
         bottom: 15px;
+    }
+
+    .carousel-image {
+        transition: transform 0.5s ease, filter 0.5s ease;
+        filter: blur(5px);
+        transform: scale(0.8);
+    }
+
+    .center-slide {
+        transform: scale(1);
+        filter: blur(0);
+    }
+
+    .blur-slide {
+        opacity: 0.6;
     }
 }
 
@@ -691,6 +730,21 @@
     // .card:hover .card-content {
     //     bottom: 15px;
     // }
+
+    .carousel-image {
+        transition: transform 0.5s ease, filter 0.5s ease;
+        filter: blur(5px);
+        transform: scale(0.8);
+    }
+
+    .center-slide {
+        transform: scale(1.1);
+        filter: blur(0);
+    }
+
+    .blur-slide {
+        opacity: 0.6;
+    }
 }
 
 
@@ -798,8 +852,6 @@
 //         border-image-source: linear-gradient(90deg, #0039C7, #D83694, #0039C7);
 //     }
 // }
-
-
 
 
 
