@@ -61,7 +61,7 @@ const Landingpage = () => {
             </div>
 
             {/* Connecting Section */}
-            <div className="text-center mt-16 ">
+            <div className="text-center mt-16 lg:mb-10">
                 <h2 className="lg:text-[48px] sm:text-3xl font-semibold font-sf leading-[38px]">Discover Our Unique Features</h2>
                 <p className="mt-2 text-[14px] text-[20px] font-regular leading-[24px]">
                     Experience unmatched privacy and secure connections today.

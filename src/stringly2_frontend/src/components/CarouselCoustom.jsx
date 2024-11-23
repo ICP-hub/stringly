@@ -114,7 +114,7 @@ export default function App() {
         centeredSlides={true}
         slidesPerView={2}
         loop={true}
-        spaceBetween={isMobile ? 10 : 10} // Adjust spacing
+        spaceBetween={isMobile ? 1 : 10} // Adjust spacing
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,

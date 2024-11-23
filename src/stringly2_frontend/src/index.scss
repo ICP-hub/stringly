@@ -296,7 +296,7 @@
 
 @media (min-width: 1024px) {
     .mySwiper {
-        height: 600px !important;
+        height: 510px !important;
         min-width: 100%;
         width: 100%;
         /* Use full width on smaller screens */
@@ -536,6 +536,38 @@
         margin-inline: auto;
         border-radius: 10px;
     }
+    .mySwiper {
+        height: 520px !important;
+        min-width: 100%;
+        width: 100%;
+        /* Use full width on smaller screens */
+    }
+
+    .mySwiper .swiper-slide{
+        height: 450px;
+        box-sizing: border-box;
+    }
+
+    .mySwiper .swiper-slide img {
+        width: auto;
+        height: auto;
+        image-rendering: pixelated;
+        box-sizing: content-box;
+    }
+    .carousel-image {
+        transition: transform 0.5s ease, filter 0.5s ease;
+        filter: blur(5px);
+        transform: scale(0.8);
+    }
+
+    .center-slide {
+        transform: scale(.9);
+        filter: blur(0);
+    }
+
+    .blur-slide {
+        opacity: 0.6;
+    }
 }
 
 /* Mobile Devices (Small screens, max-width 480px) */
@@ -614,7 +646,7 @@
 
     /* Ensure proper mobile swiper settings */
     .mySwiper {
-        height: 310px;
+        height: 350px;
         max-width: 100%;
         padding: 0;
     }
@@ -738,7 +770,7 @@
     }
 
     .center-slide {
-        transform: scale(1.1);
+        transform: scale(1);
         filter: blur(0);
     }
 
