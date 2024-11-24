@@ -40,9 +40,9 @@ const Landingpage = () => {
     return (
         <div className='w-full mx-auto flex flex-col items-center justify-center'>
             {/* Hero Section */}
-            <div className="relative h-[852px] lg:h-auto w-full md:w-full rounded-none bg-black">
-                <img className="w-full h-[852px] lg:h-auto object-cover rounded-none" src="/heroimg.png" alt="Hero image" />
-                <div className="absolute text-white left-1/2 top-1/2 lg:top-[65%] transform -translate-x-1/2 -translate-y-1/2 w-[310px] md:w-[364px] p-2 lg:w-[550px] bg-opacity-50 text-center">
+            <div className="relative h-[852px] lg:h-auto w-full md:w-full rounded-none bg-gradient-to-br from-black via-[#0d0d0d] to-[#1a1a1a]">
+            <img className="w-full h-[852px] lg:h-auto object-cover rounded-none opacity-70" src="/heroimg.png" alt="Hero image" />
+                <div className="absolute text-white left-1/2 top-1/2 lg:top-[62%] transform -translate-x-1/2 -translate-y-1/2 w-[310px] md:w-[364px] p-2 lg:w-[550px] bg-opacity-50 text-center">
                     <p className="font-sf font-semibold w-full text-[38px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
                         {/* <p className='md:text-[76px] text-center bg-clip-text text-transparent md:font-bold p-2' style={{ backgroundImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%)' }}>Stringly</p> */}
                         String your Vibe
@@ -62,8 +62,8 @@ const Landingpage = () => {
 
             {/* Connecting Section */}
             <div className="text-center mt-16 lg:mb-10">
-                <h2 className="lg:text-[48px] sm:text-3xl font-semibold font-sf leading-[38px]">Discover Our Unique Features</h2>
-                <p className="mt-2 text-[14px] text-[20px] font-regular leading-[24px]">
+                <h2 className="lg:text-[48px] sm:text-3xl font-semibold font-sf leading-[38px] mb-6">Discover Our Unique Features</h2>
+                <p className="mt-2 text-[18px] text-[20px] font-regular leading-[24px]">
                     Experience unmatched privacy and secure connections today.
                 </p>
             </div>
@@ -138,8 +138,8 @@ const Landingpage = () => {
 
 
             {/* Connecting Section */}
-            <div className="text-center mt-12 ">
-                <h2 className="lg:text-[48px] sm:text-3xl font-semibold font-sf leading-[38px]">Connecting You With Purpose</h2>
+            <div className="text-center mt-16 mb-10">
+                <h2 className="lg:text-[48px] sm:text-3xl font-semibold font-sf leading-[38px] pb-3">Connecting You With Purpose</h2>
                 <p className="mt-2 text-[14px] text-[20px] font-regular leading-[24px]">
                     A unique blend of dating and networking experiences.
                 </p>
@@ -149,7 +149,7 @@ const Landingpage = () => {
             <div className="max-w-[360px]-sm-md lg:w-[90%] xl:w-full mx-auto flex flex-col items-center justify-center mt-8 gap-4 px-4 lg:px-0">
 
                 {/* Top Image with Hover Effect (Profile Image) */}
-                <div className={`relative w-full lg:w-full h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-gray-500`}>
+                <div className={`relative w-full lg:w-full h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-gradient-to-br from-black via-[#000000] to-[#1a1a1a]`}>
                     <img
                         src="./landing/Firefly.png"
                         alt="Profile Image"
@@ -177,7 +177,7 @@ const Landingpage = () => {
                 <div className={`w-full lg:flex justify-between gap-4 mt-4 lg:w-full`}>
 
                     {/* Left Image with Hover Effect (Hug Image) */}
-                    <div className={`relative mb-8 w-full lg:w-[680px] h-[340px] rounded-xl lg:rounded-bl-[12px] overflow-hidden bg-black`}>
+                    <div className={`relative mb-8 w-full lg:w-[680px] h-[340px] rounded-xl lg:rounded-bl-[12px] overflow-hidden bg-gradient-to-br from-black via-[#000000] to-[#1a1a1a]`}>
                         <img
                             src="./landing/Rectangle 4.png"
                             alt="Hug Image"
@@ -198,7 +198,7 @@ const Landingpage = () => {
                     </div>
 
                     {/* Middle Image with Hover Effect (Kiss Image) */}
-                    <div className={`relative w-full lg:w-full h-[340px] rounded-xl overflow-hidden bg-black`}>
+                    <div className={`relative w-full lg:w-full h-[340px] rounded-xl overflow-hidden bg-gradient-to-br from-black via-[#000000] to-[#1a1a1a]`}>
                         <img
                             src="/kiss.png"
                             alt="Kiss Image"
@@ -226,58 +226,6 @@ const Landingpage = () => {
             </div>
 
 
-            {/* Specifications */}
-            <div className="flex h-[616px] lg:h-full lg:flex-row relative justify-center lg:px-0 gap-20 items-start mx-2 lg:mx-0  mt-12">
-                {/* Text Section */}
-                <div className="w-[95%] p-5 md:p-10 lg:ml-10 rounded-xl bg-white !text-black lg:bg-none  mt-10  absolute lg:pl-0 lg:w-[500px] xl:w-[616px] top-[38%] lg:top-0 text-white z-10 lg:text-black md:left-[2%] lg:left-0 h-[320px] lg:h-full lg:relative flex flex-col" style={{
-                    gap: '16px',
-                    paddingTop: '10px',
-                }}>
-                    <h2 style={{
-                    }} className='font-sf text-[22px] lg:text-[30px] font-semibold lg:text-[48px] md:leading-[48px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
-                        Experience Unmatched Privacy and Elegance
-                    </h2>
-                    <p className="font-sf text-sm lg:text-lg lg:mt-4 lg:leading-[22px] font-light min-w-[300px]-lg " style={{
-                        width: '90%',
-                    }}>
-                        At Stringly, we prioritize your privacy while providing a luxurious experience. Our platform is designed to ensure that every connection you make is both secure and sophisticated.
-                    </p>
-                    <div className="flex justify-between gap-4 lg:mt-6 items-center lg:w-[556px] h-[64px] lg:gap-8 ">
-                        <div className="flex flex-col items-start">
-                            <div className="flex items-center gap-2 pb-2 m-0">
-                                <img src="./landing/privacy .gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
-                                <p className='text-md lg:text-[32px] font-semibold text-[#1E1F6D]'>Privacy</p>
-                            </div>
-                            <p className="text-sm lg:text-[16px] font-regular font-sf leading-[20px]">Your privacy is our top priority.</p>
-                        </div>
-
-                        <div className="flex flex-col items-start lg:pt-4">
-                            <div className="flex items-center gap-2 m-0">
-                                <img src="./landing/connect.gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
-                                <p className='text-md lg:text-[32px] font-semibold text-[#D454A6]'>Connection</p>
-                            </div>
-                            <p className="text-sm lg:text-[16px] font-regular font-sf leading-[20px]">Connect with like-minded individuals <br /> securely.</p>
-                        </div>
-                    </div>
-                    <div className="mt-24 lg:mt-10">
-                        {/* <button className="bg-white text-[14px] font-sf border border-black text-black px-6 py-3 w-32 rounded-xl">
-                            Learn More
-                        </button> */}
-                        <button className="hidden lg:block text-[16px] font-sf bg-black text-white w-32 text-white px-2 py-3 rounded-xl">
-                            Sign Up
-                        </button>
-                    </div>
-                </div>
-
-                {/* Image Section */}
-                <div className="md:mt-0 bg-black rounded-xl lg:rounded-none lg:rounded-tl-xl h-full lg:w-full lg:h-[670px] lg:rounded-bl-xl">
-                    <img
-                        src="/splash.png"
-                        alt="Splash Image"
-                        className="w-full opacity-[.7] h-full h-full border-red-600 lg:object-cover lg:rounded-l-[10px]"
-                    />
-                </div>
-            </div>
 
             {/* Section with Button and Image Gallery */}
             {/* <section className='flex flex-col w-full lg:pl-20 lg:flex-row items-center justify-between gap-8 py-20 bg-gradient-full'>
@@ -303,23 +251,9 @@ const Landingpage = () => {
                 <button className='black md:hidden border border-black py-2 px-6 rounded-lg'>Join</button>
 
             </section> */}
-            <div
-                className="flex flex-col items-center justify-center m-auto mt-28"
-                style={{
-                    width: '100%',
-                    maxWidth: '600px',
-                    gap: '12px',
-                }}
-            >
-                <h1 className="font-sf text-center w-full lg:w-[600px] text-[34px] font-semibold lg:text-[54px] leading-[48px] font-bold">
-                    Image Gallery
-                </h1>
-                <p className="font-jakarta text-center w-full md:w-[600px] mt-2 font-[24px]">
-                    Explore our gallery to experience more.
-                </p>
-            </div>
 
             <section>
+
                 <section
                     className={`bg-gradient-full relative lg:pl-20 ${hovered === 'section1' ? 'hovered opacity-90' : ''} lg:opacity-90`}
                     onMouseEnter={() => handleHover('section1')}
@@ -336,8 +270,60 @@ const Landingpage = () => {
                             join
                         </button>
                     </div> */}
+                    {/* Specifications */}
+                    <div className="flex h-[616px] lg:h-full lg:flex-row relative justify-center lg:px-0 gap-20 items-start mx-2 lg:mx-0  mt-12">
+                        {/* Text Section */}
+                        <div className={`i${isMobile ? 'bg-white' : "bg-none" } w-[95%] p-5 md:p-10 lg:p-0 !text-black mt-10 absolute lg:pl-0 lg:w-[590px] xl:w-[616px] top-[38%] lg:top-0 text-white z-10 lg:text-black md:left-[2%] lg:left-0 h-[320px] lg:h-full lg:relative flex flex-col`} style={{
+                            gap: '16px',
+                            padding: '20px',
+                        }}>
+                            <h2 style={{
+                            }} className='font-sf text-[22px] lg:text-[30px] font-semibold lg:text-[48px] md:leading-[48px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
+                                Experience Unmatched Privacy and Elegance
+                            </h2>
+                            <p className="font-sf text-sm lg:text-lg lg:mt-4 lg:leading-[22px] font-light min-w-[300px]-lg " style={{
+                                width: '90%',
+                            }}>
+                                At Stringly, we prioritize your privacy while providing a luxurious experience. Our platform is designed to ensure that every connection you make is both secure and sophisticated.
+                            </p>
+                            <div className="flex justify-between gap-2 lg:mt-6 items-center lg:w-[556px] h-[64px] lg:gap-8 ">
+                                <div className="flex flex-col items-start">
+                                    <div className="flex items-center gap-2 pb-2 m-0">
+                                        <img src="./landing/privacy .gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
+                                        <p className='text-md lg:text-[32px] font-semibold text-[#1E1F6D]'>Privacy</p>
+                                    </div>
+                                    <p className="text-sm lg:text-[16px] font-regular font-sf leading-[20px]">Your privacy is our top priority.</p>
+                                </div>
+
+                                <div className="flex flex-col items-start lg:pt-4">
+                                    <div className="flex items-center gap-2 m-0">
+                                        <img src="./landing/connect.gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
+                                        <p className='text-md lg:text-[32px] font-semibold text-[#D454A6]'>Connection</p>
+                                    </div>
+                                    <p className="text-sm lg:text-[16px] font-regular font-sf leading-[20px]">Connect with like-minded <br /> individuals securely.</p>
+                                </div>
+                            </div>
+                            <div className="mt-24 lg:mt-10">
+                                {/* <button className="bg-white text-[14px] font-sf border border-black text-black px-6 py-3 w-32 rounded-xl">
+                            Learn More
+                        </button> */}
+                                <button className="hidden lg:block text-[16px] font-sf bg-black text-white w-32 text-white px-2 py-3 rounded-xl">
+                                    Sign Up
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Image Section */}
+                        <div className="md:mt-0 bg-black rounded-xl lg:rounded-none lg:rounded-tl-xl h-full lg:w-[80%] lg:h-[670px] lg:rounded-bl-xl">
+                            <img
+                                src="/splash.png"
+                                alt="Splash Image"
+                                className="w-full opacity-[.7] h-full h-full border-red-600 lg:rounded-l-[10px]"
+                            />
+                        </div>
+                    </div>
                     <div
-                        className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[20%] left-[0%] md:left-[0%] lg:left-[25%] md:w-[450px] lg:w-[700px] h-[350px] p-10 lg:p-20 bg-white text-black border-2 rounded-lg ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
+                        className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[790px] left-[0%] md:left-[0%] lg:left-[25%] md:w-[450px] lg:w-[700px] h-[350px] p-10 lg:p-20 bg-white text-black border-2 rounded-lg ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
                             }`}
                     >
                         <p>Bring your spark</p>
@@ -367,12 +353,12 @@ const Landingpage = () => {
                             <img
                                 src="./landing/Rectangle 3892.png"
                                 alt="Image 3"
-                                className="col-span-1 row-span-1 w-full h-full object-cover"
+                                className="col-span-1 row-span-1 w-full h-[100%] pt-[50px] object-cover"
                             />
                             <img
                                 src="./landing/Rectangle 3893.png"
                                 alt="Image 4"
-                                className="col-span-2 row-span-3 w-auto h-auto lg:w-[350px] lg:h-[340px] object-cover"
+                                className="col-span-2 row-span-3 w-auto h-auto lg:w-[350px] pt-[50px] lg:h-[340px] object-cover"
                             />
                             <img
                                 src="./landing/Rectangle 3890.png"
