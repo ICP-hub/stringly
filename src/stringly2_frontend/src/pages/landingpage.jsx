@@ -323,7 +323,7 @@ const Landingpage = () => {
                         </div>
                     </div>
                     <div
-                        className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[790px] left-[0%] md:left-[0%] lg:left-[25%] md:w-[450px] lg:w-[700px] h-[350px] p-10 lg:p-20 bg-white text-black border-2 rounded-lg ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
+                        className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[790px] left-[0%] md:left-[0%] lg:left-[25%] md:w-[450px] lg:w-[700px] h-[350px] p-10 lg:p-20 bg-white text-black border-2 ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
                             }`}
                     >
                         <p>Bring your spark</p>
@@ -331,7 +331,7 @@ const Landingpage = () => {
                             Let's build Stingly together.
                         </p>
                         <p className="font-roboto text-[18px] leading-[27px]">Contribute to the vibes!</p>
-                        <button className="rounded-xl border-2 border-black mt-5 px-10 py-2 text-black">
+                        <button className="rounded-xl border-2 border-black mt-5 px-5 py-2 text-black">
                             Join Us
                         </button>
                     </div>
