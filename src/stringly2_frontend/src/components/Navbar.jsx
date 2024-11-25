@@ -23,8 +23,8 @@ const Navbar = () => {
     return (
         <div className={`w-full max-w-[1540px] mx-auto flex flex-col bg-transparent fixed top-0 z-50 px-4 text-black navbar !z-00 ${scrolled ? 'navbar-scrolled' : ''}`}>
             <div className='flex w-full text-white items-center justify-between px-4 py-4 md:px-8 md:py-4'>
-                <div className="p-4 rounded">
-                    <img src="./landing/stringly-logo.png" alt="logo" className="w-auto h-9 bg-transparent" />
+                <div className="p-4 rounded ">
+                    <img src="./landing/COLOURED LOGO.png" alt="logo" className="w-auto h-9 bg-transparent" />
                 </div>
 
                 {/* <div className='hidden font-sfProDisplay md:flex items-center font-light justify-between gap-8'>

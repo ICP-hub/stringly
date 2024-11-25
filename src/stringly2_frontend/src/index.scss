@@ -532,7 +532,6 @@
         overflow: hidden;
         z-index: 100 !important;
         margin-inline: auto;
-        border-radius: 10px;
     }
 
     .mySwiper {
@@ -584,7 +583,6 @@
         overflow: hidden;
         z-index: 100 !important;
         margin-inline: auto;
-        border-radius: 10px;
     }
 
     /* Glow effect for the border box */
@@ -617,13 +615,12 @@
         content: '';
         position: absolute;
         z-index: -10;
-        left: 8px;
-        top: 8px;
-        width: calc(100% - 17px);
-        height: calc(100% - 17px);
+        left: 10px;
+        top: 10px;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
         background: #000 !important;
         /* Ensures white background */
-        border-radius: 7px;
     }
 
     /* Keyframes for rotation animation */
@@ -943,7 +940,6 @@
     position: absolute;
     overflow: hidden;
     z-index: 0;
-    border-radius: 10px;
 }
 
 /* Glow effect for the border box */
@@ -988,16 +984,15 @@
     content: '';
     position: absolute;
     z-index: -1;
-    left: 2px;
+    left: 1.7px;
     /* Border width */
-    top: 2px;
+    top: 1.7px;
     /* Border width */
-    width: calc(100% - 5px);
+    width: calc(100% - 3px);
     /* Adjust width for border spacing */
-    height: calc(100% - 5px);
+    height: calc(100% - 3.5px);
     /* Adjust height for border spacing */
     background: white !important;
-    border-radius: 7px;
     /* Box border radius */
 }
 
@@ -1041,5 +1036,4 @@
             #d4237c 100%);
     /* New gradient for glow on hover */
     transition: all 2s ease-in;
-
 }

@@ -40,7 +40,7 @@ const Landingpage = () => {
     return (
         <div className='w-full mx-auto flex flex-col items-center justify-center'>
             {/* Hero Section */}
-            <div className="relative h-[852px] lg:h-auto w-full md:w-full rounded-none bg-gradient-to-br from-black via-[#0d0d0d] to-[#1a1a1a]">
+            <div className="relative h-[852px] lg:h-auto w-full md:w-full rounded-none bg-gradient-to-br from-black via-[#0d0d0d] to-[#1a1a1a] box-shadow-[]">
             <img className="w-full h-[852px] lg:h-auto object-cover rounded-none opacity-70" src="/heroimg.png" alt="Hero image" />
                 <div className="absolute text-white left-1/2 top-1/2 lg:top-[62%] transform -translate-x-1/2 -translate-y-1/2 w-[310px] md:w-[364px] p-2 lg:w-[550px] bg-opacity-50 text-center">
                     <p className="font-sf font-semibold w-full text-[38px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">

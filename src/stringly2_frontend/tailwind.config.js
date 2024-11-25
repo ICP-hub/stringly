@@ -28,7 +28,11 @@ export default {
       'extrabold': 800,
       'black': 900,
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'dark-gradient': 'linear-gradient(to right, black, #1a1a1a, #333333, #4d4d4d, #666666)',
+      },
+    },
   },
   plugins: [],
 }
