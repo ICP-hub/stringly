@@ -132,7 +132,7 @@ const Landingpage = () => {
                 </div>
             </section> */}
 
-            <div className="md:mt-10 lg:mt-0 w-full">
+            <div className="mt-10 md:mt-10 lg:mt-0 w-full">
                 <CarouselCoustom />
             </div>
 
@@ -326,7 +326,7 @@ const Landingpage = () => {
                         className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[790px] left-[0%] md:left-[0%] lg:left-[25%] md:w-[450px] lg:w-[700px] h-[350px] p-10 lg:p-20 bg-white text-black border-2 ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
                             }`}
                     >
-                        <p>Bring your spark</p>
+                        <p>Bring your spark</p>    
                         <p className="font-semibold text-[35px] leading-[44px] lg:text-[48px] lg:leading-[58px] text-center font-sf">
                             Let's build Stingly together.
                         </p>
