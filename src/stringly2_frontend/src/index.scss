@@ -666,7 +666,14 @@
 
         position: absolute;
         inset: 0;
-        background: linear-gradient(to right, rgba(26, 26, 26, 0.653), rgba(41, 41, 41, 0.374));
+         // background: linear-gradient(to right, rgba(0, 0, 0, 0.601), rgba(26, 26, 26, 0.048));
+         background-image: url('landing/darkEffect@.svg');
+         /* Replace with your image path */
+         background-size: cover;
+         /* Ensures the image covers the entire area */
+         background-position: center;
+         /* Centers the image */
+         background-repeat: no-repeat;
         z-index: 99;
         /* Ensures it's behind the text */
         transition: opacity 0.5s ease-in-out;
@@ -1014,7 +1021,7 @@
 /* Glow effect for the border box */
 .animated-border-box-glow {
     overflow: hidden;
-    filter: blur(20px);
+    // filter: blur(20px);
     /* Glow effect */
     transition: background-image 0.5s ease-out;
     /* Smooth background transition */
@@ -1038,7 +1045,7 @@
             /* Transparent start */
             #0039c7,
             /* Blue color */
-            #f7eff3 25%
+            #f7eff3 20%
             /* Transparent end, creates a slice effect */
         );
     animation: rotate 5s linear infinite;

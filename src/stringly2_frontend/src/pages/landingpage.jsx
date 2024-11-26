@@ -279,7 +279,7 @@ const Landingpage = () => {
                     {/* Specifications */}
                     <div className="flex h-[616px] lg:h-full lg:flex-row relative justify-center px-0 gap-20 items-start md:mx-2 lg:mx-0  mt-12">
                         {/* Text Section */}
-                        <div className={`${isMobile ? 'bg-white rounded-xl' : "bg-none"} w-[88%] p-5 md:p-10 lg:p-0 !text-black mt-10 absolute lg:pl-0 lg:w-[590px] xl:w-[616px] top-[38%] lg:top-0 text-white z-10 lg:text-black md:left-[2%] lg:left-0 h-[320px] lg:h-full lg:relative flex flex-col`} style={{
+                        <div className={`${isMobile ? 'bg-white rounded-xl' : "bg-none"} w-[88%] p-5 md:p-10 lg:p-0 !text-black mt-10 absolute lg:pl-0 lg:w-[590px] xl:w-[616px] top-[38%] lg:top-0 text-white z-10 lg:text-black md:left-2/1 lg:left-0 h-[320px] lg:h-full lg:relative flex flex-col`} style={{
                             gap: '16px',
                             padding: '20px',
                         }}>
@@ -324,12 +324,12 @@ const Landingpage = () => {
                             <img
                                 src={`${isMobile ? '/landing/hugImg_mobile.png' : '/splash.png'}`}
                                 alt="Splash Image"
-                                className="w-full opacity-[.7] h-full h-full border-red-600 lg:rounded-l-[10px]"
+                                className="w-full md:w-screen opacity-[.7] h-full h-full border-red-600 lg:rounded-l-[10px]"
                             />
                         </div>
                     </div>
                     <div
-                        className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[60%] lg:top-[760px] left-[5%] md:left-[0%] lg:left-[24.5%] !w-[90%] lg:w-[750px] !h-[330px] lg:h-[350px]  lg:p-20 bg-white text-black border-2 ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
+                        className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[60%] lg:top-[760px] left-[5%] md:left-[8%] lg:left-[24.5%] !w-[90%] lg:w-[750px] !h-[330px] lg:h-[350px]  lg:p-20 bg-white text-black ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
                             }`}
                     >
                         <p>Bring your spark</p>
