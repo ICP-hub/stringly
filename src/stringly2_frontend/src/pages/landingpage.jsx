@@ -7,14 +7,20 @@ import CarouselCoustom from '../components/CarouselCoustom';
 const Landingpage = () => {
     const [hovered, setHovered] = useState('');
     const [isMobile, setIsMobile] = useState(false);
+    const [hovered1, setHovered1] = useState([false, false, false]);
+    const [hovered2, setHovered2] = useState([false]);
 
+    const handleHover1 = (index) => {
+        if (!hovered1[index]) {
+            const newHovered = [...hovered1];
+            newHovered[index] = true;
+            setHovered1(newHovered);
+        }
+    };
 
     const handleHover = (section) => {
         setHovered(section);
     };
-
-
-    const [hovered2, setHovered2] = useState([false]);
 
     const handleHover2 = (index) => {
         if (!hovered2[index]) {
@@ -41,8 +47,8 @@ const Landingpage = () => {
         <div className='w-full mx-auto flex flex-col items-center justify-center'>
             {/* Hero Section */}
             <div className="relative h-[852px] lg:h-auto w-full md:w-full md:w-full rounded-none bg-gradient-to-br from-black via-[#0d0d0d] to-[#1a1a1a] box-shadow-[]">
-            <img className="w-full md:w-full h-[852px] lg:h-auto md:object-cover rounded-none opacity-70" src={`${isMobile ? '/landing/heroImg_mobile.png' : '/heroimg.png'}`} alt="Hero image" />
-                <div className="absolute text-white left-1/2 top-1/2 lg:top-[62%] transform -translate-x-1/2 -translate-y-1/2 w-[362px] p-2 lg:w-[550px] bg-opacity-50 text-center">
+                <img className="w-full md:w-full h-[852px] lg:h-auto md:object-cover rounded-none opacity-70" src={`${isMobile ? '/landing/heroImg_mobile.png' : '/heroimg.png'}`} alt="Hero image" />
+                <div className="absolute text-white left-1/2 top-1/2 lg:top-[62%] transform -translate-x-1/2 -translate-y-1/2 max-w-[362px]-sm w-full p-2 lg:w-[550px] bg-opacity-50 text-center">
                     <p className="font-sf md:font-semibold w-full text-[32px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
                         {/* <p className='md:text-[76px] text-center bg-clip-text text-transparent md:font-bold p-2' style={{ backgroundImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%)' }}>Stringly</p> */}
                         String your Vibe
@@ -156,10 +162,11 @@ const Landingpage = () => {
                         className="w-full md:w-full h-full object-cover opacity-[0.6]"
                     />
                     <div
-                        className={`absolute inset-0 flex md:w-[600px] items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ${isMobile ? "ppp" : "ppp"} ${hovered2[0] ? 'hovered' : ''}`}
-                        onMouseEnter={() => handleHover2(0)}
+                        className={`absolute inset-0 flex md:w-[600px] items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${isMobile ? (hovered1[0] ? 'hovered' : '') : (hovered2[0] ? 'hovered' : '')
+                            }`}
+                        onMouseEnter={() => (isMobile ? handleHover1(0) :  handleHover2(0))}
                     >
-                        <div className={`text-white ${isMobile ? "child-ppp" : "child"}`}>
+                        <div className={`text-white child`}>
                             <h2 className="text-[32px] leading-[38px] font-semibold leading-tight font-roboto font-bold">
                                 Elevate Your Networking <br /> Experience
                             </h2>
@@ -184,8 +191,8 @@ const Landingpage = () => {
                             className="w-full h-full object-cover opacity-[0.6]"
                         />
                         <div
-                            className={`absolute inset-0 flex items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${hovered2[0] ? 'hovered' : ''}`}
-                            onMouseEnter={() => handleHover2(0)}
+                            className={`absolute inset-0 flex items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${isMobile ? (hovered1[1] ? 'hovered' : '') : (hovered2[0] ? 'hovered' : '')}`}
+                            onMouseEnter={() => (isMobile ? handleHover1(1) :  handleHover2(0))}
                         >
                             <div className="text-white child">
                                 <h2 className="text-[32px] leading-[38px] font-semibold font-roboto font-bold">Your Journey Begins Here</h2>
@@ -205,8 +212,8 @@ const Landingpage = () => {
                             className="w-full h-full object-cover opacity-[0.9]"
                         />
                         <div
-                            className={`absolute inset-0 flex md:w-[700px] items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${hovered2[0] ? 'hovered' : ''}`}
-                            onMouseEnter={() => handleHover2(0)}
+                            className={`absolute inset-0 flex md:w-[700px] items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${isMobile ? (hovered1[2] ? 'hovered' : '') : (hovered2[0] ? 'hovered' : '')}`}
+                            onMouseEnter={() => (isMobile ?  handleHover1(2) :  handleHover2(0))}
                         >
                             <div className="text-white child">
                                 <h2 className="text-[32px] leading-[38px] font-roboto font-bold">Unmatched Privacy <br /> and Security</h2>
@@ -272,7 +279,7 @@ const Landingpage = () => {
                     {/* Specifications */}
                     <div className="flex h-[616px] lg:h-full lg:flex-row relative justify-center px-0 gap-20 items-start md:mx-2 lg:mx-0  mt-12">
                         {/* Text Section */}
-                        <div className={`${isMobile ? 'bg-white rounded-xl' : "bg-none" } w-[82%] p-5 md:p-10 lg:p-0 !text-black mt-10 absolute lg:pl-0 lg:w-[590px] xl:w-[616px] top-[38%] lg:top-0 text-white z-10 lg:text-black md:left-[2%] lg:left-0 h-[320px] lg:h-full lg:relative flex flex-col`} style={{
+                        <div className={`${isMobile ? 'bg-white rounded-xl' : "bg-none"} w-[88%] p-5 md:p-10 lg:p-0 !text-black mt-10 absolute lg:pl-0 lg:w-[590px] xl:w-[616px] top-[38%] lg:top-0 text-white z-10 lg:text-black md:left-[2%] lg:left-0 h-[320px] lg:h-full lg:relative flex flex-col`} style={{
                             gap: '16px',
                             padding: '20px',
                         }}>
@@ -280,13 +287,13 @@ const Landingpage = () => {
                             }} className='font-sf text-[18px] lg:text-[30px] font-semibold lg:text-[48px] leading-[25px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
                                 Experience Unmatched Privacy and Elegance
                             </h2>
-                            <p className="font-sf text-[12px] lg:text-lg lg:mt-4 lg:leading-[22px] font-light min-w-[300px]-lg " style={{
+                            <p className="font-sf text-[12px] lg:text-lg pb-4 lg:pb-0 lg:mt-4 lg:leading-[22px] font-light min-w-[300px]-lg " style={{
                                 width: '90%',
                             }}>
                                 At Stringly, we prioritize your privacy while providing a luxurious experience. Our platform is designed to ensure that every connection you make is both secure and sophisticated.
                             </p>
                             <div className="flex justify-between gap-2 lg:mt-6 items-center lg:w-[556px] h-[64px] lg:gap-8 ">
-                                <div className="flex flex-col items-start">
+                                <div className="flex flex-col items-start w-[50%]">
                                     <div className="flex items-center gap-2 pb-2 m-0">
                                         <img src="./landing/privacy .gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
                                         <p className='text-md lg:text-[32px] font-semibold text-[#1E1F6D]'>Privacy</p>
@@ -322,10 +329,10 @@ const Landingpage = () => {
                         </div>
                     </div>
                     <div
-                        className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[890px] left-[5%] md:left-[0%] lg:left-[25%] !w-[90%] lg:w-[700px] h-[350px]  lg:p-20 bg-white text-black border-2 ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
+                        className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[60%] lg:top-[760px] left-[5%] md:left-[0%] lg:left-[24.5%] !w-[90%] lg:w-[750px] !h-[330px] lg:h-[350px]  lg:p-20 bg-white text-black border-2 ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
                             }`}
                     >
-                        <p>Bring your spark</p>    
+                        <p>Bring your spark</p>
                         <p className="font-semibold text-[35px] leading-[44px] lg:text-[48px] lg:leading-[58px] text-center font-sf pb-5 md:pb-0">
                             Let's build Stingly together.
                         </p>
@@ -336,9 +343,9 @@ const Landingpage = () => {
                     </div>
 
 
-                    <div className="flex justify-center items-center w-full min-h-full hidden lg:block">
-                        <div className="grid grid-cols-2 lg:grid-cols-6 gap-2 w-full lg:p-20">
-                            {/* Images */}
+                    <div className="flex justify-center items-center w-full min-h-full hidden my-10 lg:block">
+                        <img src="./landing/Lets work.png" alt="" />
+                        {/* <div className="grid grid-cols-2 lg:grid-cols-6 gap-2 w-full lg:p-20">
                             <img
                                 src="./landing/Rectangle 3889.png"
                                 alt="Image 1"
@@ -369,7 +376,7 @@ const Landingpage = () => {
                                 alt="Image 6"
                                 className="col-span-2 row-span-1 w-full h-full object-cover"
                             />
-                        </div>
+                        </div> */}
                     </div>
                     <div className="flex items-center justify-center py-10 px-0 lg:hidden">
                         <img src="./landing/Property 1=Default.png" alt="" />
