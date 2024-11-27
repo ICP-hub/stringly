@@ -90,6 +90,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import { Pagination, Autoplay } from "swiper/modules";
 
+
 export default function App() {
   const [isMobile, setIsMobile] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -106,6 +107,14 @@ export default function App() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const [videoSrc, setVideoSrc] = useState(
+    isMobile ? "/landing/switch_mobile.mp4" : "/landing/switch_1.mp4"
+  );
+
+  useEffect(() => {
+    setVideoSrc(isMobile ? "/landing/switch_mobile.mp4" : "/landing/switch_1.mp4");
+  }, [isMobile]);
 
   return (
     <div>
@@ -156,15 +165,23 @@ export default function App() {
         {/* Slide 3 */}
         <SwiperSlide>
           <video
+            key={isMobile ? "mobile" : "desktop"} 
             autoPlay
             muted
             loop
-            className={`carousel-image ${activeIndex === 2 ? "center-slide" : "blur-slide"
+            playsInline
+            className={`carousel-image rounded-2xl ${activeIndex === 2 ? "center-slide" : "blur-slide"
               }`}
+            poster="/path/to/fallback-image.jpg"
           >
-            <source src="/landing/switch_1.mp4" type="video/mp4" />
+            <source
+              src={isMobile ? "/landing/switch_mobile.mp4" : "/landing/switch_1.mp4"}
+              type="video/mp4"
+            />
           </video>
+
         </SwiperSlide>
+
         <SwiperSlide>
           <img
             src={isMobile ? "/landing/carousel2mobile.jpg" : "/landing/carousel2.jpg"}
