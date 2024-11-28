@@ -155,7 +155,7 @@ const Landingpage = () => {
             <div className="max-w-[360px]-sm-md lg:w-[90%] xl:w-full mx-auto flex flex-col items-center justify-center mt-8 gap-4 px-4 lg:px-0">
 
                 {/* Top Image with Hover Effect (Profile Image) */}
-                <div className={`relative w-full lg:w-full h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-black`}>
+                <div className={`relative w-full lg:w-full h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-gray-800`}>
                     <img
                         src="./landing/Firefly.png"
                         alt="Profile Image"
@@ -181,7 +181,7 @@ const Landingpage = () => {
                 </div>
 
                 {/* Flex Container for Left, Middle, and Right Images */}
-                <div className={`w-full lg:flex justify-between gap-4 mt-4 lg:w-full`}>
+                <div className={`w-full lg:flex justify-between gap-4  lg:w-full`}>
 
                     {/* Left Image with Hover Effect (Hug Image) */}
                     <div className={`relative mb-8 w-full lg:w-[680px] h-[340px] rounded-xl lg:rounded-bl-[12px] overflow-hidden bg-gradient-to-br from-black via-[#000000] to-[#1a1a1a]`}>
@@ -294,7 +294,7 @@ const Landingpage = () => {
                             </p>
                             <div className="flex justify-between gap-2 lg:mt-6 items-center lg:w-[556px] h-[64px] lg:gap-8 ">
                                 <div className="flex flex-col items-start w-[50%]">
-                                    <div className="flex items-center gap-2 m-0">
+                                    <div className="flex items-center gap-2 mb-3">
                                         <img src="./landing/privacy .gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
                                         <p className='text-md lg:text-[32px] font-sf font-semibold text-[#1E1F6D]'>Privacy</p>
                                     </div>
@@ -302,7 +302,7 @@ const Landingpage = () => {
                                 </div>
 
                                 <div className="flex flex-col items-start lg:pt-4">
-                                    <div className="flex items-center gap-2 m-0">
+                                    <div className="flex items-center gap-2 mb-3">
                                         <img src="./landing/connect.gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
                                         <p className='text-md lg:text-[32px] font-sf font-semibold text-[#D454A6]'>Connection</p>
                                     </div>
@@ -332,19 +332,19 @@ const Landingpage = () => {
                         className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[60%] lg:top-[760px] left-[5%] md:left-[8%] lg:left-[24.5%] !w-[90%] lg:w-[750px] !h-[330px] lg:h-[350px]  lg:p-20 bg-white text-black ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
                             }`}
                     >
-                        <p>Bring your spark</p>
-                        <p className="font-semibold text-[35px] leading-[44px] lg:text-[48px] lg:leading-[58px] text-center font-sf pb-5 md:pb-0">
+                        <p className='mb-5 font-sf font-regular'>Bring your spark</p>
+                        <p className="font-semibold text-[35px] leading-[44px] lg:text-[48px] lg:leading-[58px] text-center font-sf mb-5 pb-5 md:pb-0">
                             Let's build Stingly together.
                         </p>
-                        <p className="font-roboto text-[18px] leading-[27px]">Contribute to the vibes!</p>
-                        <button className="rounded-xl border border-black mt-5 px-5 py-2 text-black">
+                        <p className="font-roboto text-[16px] font-sf font-semibold leading-[27px]">Contribute to the vibes!</p>
+                        <button className="rounded-xl border border-black mt-10 px-5 py-2 text-black">
                             Join Us
                         </button>
                     </div>
 
 
-                    <div className="flex justify-center items-center w-full h-full hidden my-10 lg:block group">
-                        <img src="./landing/Lets work.png" alt="" className='group-hover:opacity-60'/>
+                    <div className={`flex justify-center items-center w-full h-full hidden my-10 lg:block ${hovered === 'section1' ? 'opacity-60' : 'opacity-1'}`}>
+                        <img src="./landing/Lets work.png" alt="" className=''/>
                         {/* <div className="grid grid-cols-2 lg:grid-cols-6 gap-2 w-full lg:p-20">
                             <img
                                 src="./landing/Rectangle 3889.png"

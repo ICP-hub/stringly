@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className='w-full lg:flex items-start justify-between bg-black text-white py-6'>
       <div>
-        <div className='w-full mx-auto flex lg:flex-col pt-10 lg:gap-4 items-center justify-between lg:items-start px-10 lg:px-16'>
+        <div className='w-full mx-auto flex lg:flex-col pt-10 lg:gap-4 items-center justify-between lg:items-start px-8 lg:px-20'>
           <img src="./landing/stringly-logo.png" alt="" className='w-25 h-7 mb-5' />
           <div className='flex gap-4 text-xl'>
             <FaXTwitter />
@@ -29,28 +29,28 @@ const Footer = () => {
         <div className='flex items-start justify-between flex-wrap gap-8 lg:gap-12 px-16 py-4'>
           {/* Pages Links */}
           <ul className='leading-8 font-extralight'>
-            <li className='text-sm !font-semibold pb-4'>Pages</li>
-            <li >Whitepaper</li>
-            <li>Pricing</li>
-            <li>Blog</li>
-            <li>Demo</li>
+            <li className='text-[18px] font-jaktara !font-regular pb-8'>Pages</li>
+            <li className='pb-4'>Whitepaper</li>
+            <li className='pb-4'>Pricing</li>
+            <li className='pb-4'>Blog</li>
+            <li className='pb-4'>Demo</li>
           </ul>
 
           {/* Company Links */}
           <ul className='leading-8 font-extralight'>
-            <p className='text-sm !font-semibold pb-4'>Company</p>
-            <li>Pricing</li>
-            <li>Security</li>
-            <li>Privacy Policy</li>
-            <li>Terms of Use</li>
-            <li>Careers</li>
+            <p className='text-[18px] font-jakarta !font-semibold pb-8'>Company</p>
+            <li className='pb-4'>Pricing</li>
+            <li className='pb-4'>Security</li>
+            <li className='pb-4'>Privacy Policy</li>
+            <li className='pb-4'>Terms of Use</li>
+            <li className='pb-4'>Careers</li>
           </ul>
 
           {/* About Us Section (Visible on lg and larger screens) */}
           <ul className='leading-8 w-[100%] hidden lg:block lg:w-auto'>
-            <li className='text-sm font-semibold pb-8'>About Us</li>
+            <li className='text-[18px] font-jakarta !font-semibold pb-14'>About Us</li>
             <li className='font-sm font-extralight'>Contact Us</li>
-            <input type="text" placeholder='Your email' className='rounded-3xl text-sm p-3 text-gray-400 bg-white my-2 w-[300px]' />
+            <input type="text" placeholder='Your email' className='rounded-3xl text-sm p-4 text-gray-400 bg-white my-3 w-[300px]' />
           </ul>
         </div>
       </div>

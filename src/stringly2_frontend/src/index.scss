@@ -428,11 +428,14 @@
         transform: scale(1);
         filter: blur(0);
         height: auto;
-        border-radius: 10px;
+        border-radius: 40px;
     }
 
     .blur-slide {
-        opacity: 1;
+        background-color: #E7E7E7CC !important;
+        z-index: 99;
+        border-radius: 50px;
+        opacity: 0.2;
     }
 
     .ppp.hovered .child-2 {
@@ -480,8 +483,8 @@
         position: absolute;
         height: 100%;
         inset: 0;
-        // background: linear-gradient(to right, rgba(0, 0, 0, 0.601), rgba(26, 26, 26, 0.048));
-        background-image: url('landing/darkEffect@.svg');
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.842), rgba(10, 10, 10, 0.048));
+        // background-image: url('landing/darkEffect@.svg');
         /* Replace with your image path */
         background-size: cover;
         /* Ensures the image covers the entire area */
@@ -489,10 +492,10 @@
         /* Centers the image */
         background-repeat: no-repeat;
         /* Prevents tiling */
-        z-index: 99;
+        z-index: 0;
         /* Ensures it's above the background but below content */
         transition: opacity 0.5s ease-in-out;
-        color: #fff !important;
+        color: white !important;
         opacity: 1;
     }
 
