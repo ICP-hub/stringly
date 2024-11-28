@@ -21,10 +21,10 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={`w-full max-w-[1540px] mx-auto flex flex-col bg-transparent fixed top-0 z-50 md:px-4 text-black navbar !z-00 ${scrolled ? 'navbar-scrolled' : ''}`}>
+        <div className={`w-full max-w-[1540px] mx-auto flex flex-col bg-transparent fixed top-0 z-50 md:px-4 text-black navbar !z-00  ${scrolled ? 'navbar-scrolled' : ''}`}>
             <div className='flex w-full text-white items-center justify-between px-2 py-4 md:px-8 md:py-3'>
-                <div className="px-4 md:p-4 rounded ">
-                    <img src="./landing/COLOURED LOGO.png" alt="logo" className="w-18 md:w-auto h-7 md:h-9 bg-transparent" />
+                <div className="px-4 md:p-2 rounded  ">
+                    <img src="./landing/COLOURED LOGO.png" alt="logo" className="w-18 md:w-auto h-7 md:h-8" />
                 </div>
 
                 {/* <div className='hidden font-sfProDisplay md:flex items-center font-light justify-between gap-8'>

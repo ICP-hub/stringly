@@ -46,8 +46,8 @@ const Landingpage = () => {
     return (
         <div className='w-full mx-auto flex flex-col items-center justify-center'>
             {/* Hero Section */}
-            <div className="relative h-[852px] lg:h-auto w-full md:w-full md:w-full rounded-none bg-gradient-to-br from-black via-[#0d0d0d] to-[#1a1a1a] box-shadow-[]">
-                <img className="w-full md:w-full h-[852px] lg:h-auto md:object-cover rounded-none opacity-70" src={`${isMobile ? '/landing/heroImg_mobile.png' : '/heroimg.png'}`} alt="Hero image" />
+            <div className="relative h-[852px] lg:h-auto w-full md:w-full md:w-full rounded-none bg-dark-gradient">
+                <img className="w-full md:w-full h-[852px] lg:h-auto md:object-cover rounded-none opacity-70 " src={`${isMobile ? '/landing/heroImg_mobile.png' : 'landing/heroImg.png'}`} alt="Hero image" />
                 <div className="absolute text-white left-1/2 top-1/2 lg:top-[62%] transform -translate-x-1/2 -translate-y-1/2 max-w-[362px]-sm w-full p-2 lg:w-[550px] bg-opacity-50 text-center">
                     <p className="font-sf md:font-semibold w-full text-[32px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
                         {/* <p className='md:text-[76px] text-center bg-clip-text text-transparent md:font-bold p-2' style={{ backgroundImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%)' }}>Stringly</p> */}
@@ -294,9 +294,9 @@ const Landingpage = () => {
                             </p>
                             <div className="flex justify-between gap-2 lg:mt-6 items-center lg:w-[556px] h-[64px] lg:gap-8 ">
                                 <div className="flex flex-col items-start w-[50%]">
-                                    <div className="flex items-center gap-2 pb-2 m-0">
+                                    <div className="flex items-center gap-2 m-0">
                                         <img src="./landing/privacy .gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
-                                        <p className='text-md lg:text-[32px] font-semibold text-[#1E1F6D]'>Privacy</p>
+                                        <p className='text-md lg:text-[32px] font-sf font-semibold text-[#1E1F6D]'>Privacy</p>
                                     </div>
                                     <p className="text-[12px] lg:text-[16px] font-regular font-sf leading-[20px]">Your privacy is our top priority.</p>
                                 </div>
@@ -304,7 +304,7 @@ const Landingpage = () => {
                                 <div className="flex flex-col items-start lg:pt-4">
                                     <div className="flex items-center gap-2 m-0">
                                         <img src="./landing/connect.gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
-                                        <p className='text-md lg:text-[32px] font-semibold text-[#D454A6]'>Connection</p>
+                                        <p className='text-md lg:text-[32px] font-sf font-semibold text-[#D454A6]'>Connection</p>
                                     </div>
                                     <p className="text-[12px] lg:text-[16px] font-regular font-sf leading-[20px]">Connect with like-minded <br /> individuals securely.</p>
                                 </div>
@@ -337,14 +337,14 @@ const Landingpage = () => {
                             Let's build Stingly together.
                         </p>
                         <p className="font-roboto text-[18px] leading-[27px]">Contribute to the vibes!</p>
-                        <button className="rounded-xl border-2 border-black mt-5 px-5 py-2 text-black">
+                        <button className="rounded-xl border border-black mt-5 px-5 py-2 text-black">
                             Join Us
                         </button>
                     </div>
 
 
-                    <div className="flex justify-center items-center w-full min-h-full hidden my-10 lg:block">
-                        <img src="./landing/Lets work.png" alt="" />
+                    <div className="flex justify-center items-center w-full h-full hidden my-10 lg:block group">
+                        <img src="./landing/Lets work.png" alt="" className='group-hover:opacity-60'/>
                         {/* <div className="grid grid-cols-2 lg:grid-cols-6 gap-2 w-full lg:p-20">
                             <img
                                 src="./landing/Rectangle 3889.png"
@@ -378,8 +378,8 @@ const Landingpage = () => {
                             />
                         </div> */}
                     </div>
-                    <div className="flex items-center justify-center py-10 px-0 lg:hidden">
-                        <img src="./landing/Property 1=Default.png" alt="" />
+                    <div className="flex items-center justify-center py-10 px-0 lg:hidden group">
+                        <img src="./landing/Property 1=Default.png" alt="" className='group-hover:opacity:60'/>
                     </div>
                 </section>
             </section>

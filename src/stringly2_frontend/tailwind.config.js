@@ -32,6 +32,9 @@ export default {
       backgroundImage: {
         'dark-gradient': 'linear-gradient(to right, black, #1a1a1a, #333333, #4d4d4d, #666666)',
       },
+      boxShadow: {
+        'inset-top-black': 'inset 0 150px 100px 50px black',
+      },
     },
   },
   plugins: [],

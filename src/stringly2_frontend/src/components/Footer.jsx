@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className='w-full lg:flex items-start justify-between bg-black text-white py-6'>
       <div>
-        <div className='w-full mx-auto flex lg:flex-col pt-10 lg:gap-4 items-center justify-between lg:items-start px-10 lg:px-20'>
+        <div className='w-full mx-auto flex lg:flex-col pt-10 lg:gap-4 items-center justify-between lg:items-start px-10 lg:px-16'>
           <img src="./landing/stringly-logo.png" alt="" className='w-25 h-7 mb-5' />
           <div className='flex gap-4 text-xl'>
             <FaXTwitter />
@@ -48,9 +48,9 @@ const Footer = () => {
 
           {/* About Us Section (Visible on lg and larger screens) */}
           <ul className='leading-8 w-[100%] hidden lg:block lg:w-auto'>
-            <li className='text-sm font-semibold pb-4'>About Us</li>
-            <li className='font-extralight'>Contact Us</li>
-            <input type="text" placeholder='Your Email' className='rounded-2xl text-black bg-white px-2 my-4 p-1 w-[300px]' />
+            <li className='text-sm font-semibold pb-8'>About Us</li>
+            <li className='font-sm font-extralight'>Contact Us</li>
+            <input type="text" placeholder='Your email' className='rounded-3xl text-sm p-3 text-gray-400 bg-white my-2 w-[300px]' />
           </ul>
         </div>
       </div>
