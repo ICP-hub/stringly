@@ -343,7 +343,7 @@ const Landingpage = () => {
                     </div>
 
 
-                    <div className={`flex justify-center items-center md:pl-7 w-full h-full hidden lg:block ${hovered === 'section1' ? 'opacity-60' : 'opacity-1'}`}
+                    <div className={`flex justify-center items-center md:pl-7 md:pt-20 w-full h-full hidden lg:block ${hovered === 'section1' ? 'opacity-60' : 'opacity-1'}`}
                         onMouseEnter={() => handleHover('section1')}
                     >
                         <img src="./landing/Lets work.png" alt="" className='' />
