@@ -301,12 +301,12 @@ const Landingpage = () => {
                                     <p className="text-[12px] lg:text-[16px] font-regular font-sf leading-[20px]">Your privacy is our top priority.</p>
                                 </div>
 
-                                <div className="flex flex-col items-start lg:pt-4">
+                                <div className="flex flex-col items-start lg:pt-4 w-[50%]">
                                     <div className="flex items-center gap-2 mb-3">
                                         <img src="./landing/connect.gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
                                         <p className='text-md lg:text-[32px] font-sf font-semibold text-[#D454A6]'>Connection</p>
                                     </div>
-                                    <p className="text-[12px] lg:text-[16px] font-regular font-sf leading-[20px]">Connect with like-minded <br /> individuals securely.</p>
+                                    <p className="text-[12px] lg:text-[16px] font-regular font-sf leading-[20px]">Connect with like-minded individuals <br /> securely.</p>
                                 </div>
                             </div>
                             <div className="mt-24 lg:mt-10">
