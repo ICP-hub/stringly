@@ -244,6 +244,8 @@
 //     }
 // }
 
+
+
 /* Default (Large screens, desktops, and laptops) */
 
 @media (min-width: 1024px) {
@@ -266,14 +268,12 @@
         margin-inline: auto;
     }
 
-    /* Glow effect for the border box */
     .animated-border-box-glow {
         overflow: hidden;
         filter: blur(20px);
         transition: background-image 0.5s ease-out;
     }
 
-    /* Before pseudo-element for rotating conic gradient */
     .animated-border-box:before,
     .animated-border-box-glow:before {
         content: '';
@@ -291,7 +291,6 @@
         transition: background-image 0.5s ease-out, animation 0.5s ease-out;
     }
 
-    /* After pseudo-element for the container's background */
     .animated-border-box:after {
         content: '';
         position: absolute;
@@ -301,10 +300,8 @@
         width: calc(100% - 10px);
         height: calc(100% - 10px);
         background: #000 !important;
-        /* Ensures white background */
     }
 
-    /* Keyframes for rotation animation */
     @keyframes rotate {
         100% {
             transform: translate(-50%, -50%) rotate(1turn);
@@ -326,7 +323,6 @@
         height: 480px !important;
         min-width: 100%;
         width: 100%;
-        /* Use full width on smaller screens */
     }
 
     .mySwiper .swiper-slide {
@@ -336,7 +332,6 @@
 
     .mySwiper .swiper-slide img {
         width: auto;
-        /* Adjust image size */
         height: auto;
         image-rendering: pixelated;
         box-sizing: content-box;
@@ -485,15 +480,10 @@
         inset: 0;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.842), rgba(10, 10, 10, 0.048));
         // background-image: url('landing/darkEffect@.svg');
-        /* Replace with your image path */
         background-size: cover;
-        /* Ensures the image covers the entire area */
         background-position: center;
-        /* Centers the image */
         background-repeat: no-repeat;
-        /* Prevents tiling */
         z-index: 0;
-        /* Ensures it's above the background but below content */
         transition: opacity 0.5s ease-in-out;
         color: white !important;
         opacity: 1;
@@ -518,67 +508,6 @@
 }
 
 
-//features page css
-// @media (max-width: 1024px) {
-
-//     img {
-//         opacity: 0.7;
-//         border-radius: 10px;
-//     }
-
-//     @keyframes slideIn {
-//         from {
-//             transform: translateX(-800px);
-//             opacity: 0;
-//         }
-
-//         to {
-//             transform: translateX(0);
-//             opacity: 1;
-//         }
-//     }
-
-
-//     .carousel-image {
-//         transition: transform 0.5s ease, filter 0.5s ease;
-//         filter: blur(5px);
-//         transform: scale(0.9);
-//     }
-
-//     .center-slide {
-//         transform: scale(1);
-//         filter: blur(0);
-//     }
-
-//     .blur-slide {
-//         opacity: 0.6;
-//     }
-// }
-
-// .mySwiper {
-//     width: 100%;
-//     max-width: 1530px;
-//     height: 490px !important;
-//     margin: 0;
-//     padding: 0%;
-// }
-
-// .mySwiper .swiper-slide {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     transition: transform 0.5s ease-in-out;
-// }
-
-// .mySwiper .swiper-slide img {
-//     width: 100%;
-//     /* Default image width */
-//     height: 400px;
-//     /* Default image height */
-//     border-radius: 20px;
-//     /* Rounded corners */
-// }
-
 /* Tablets (Medium screens, 481px to 1024px) */
 @media (max-width: 1024px) {
 
@@ -596,7 +525,7 @@
     }
 
     .mySwiper {
-        height: 520px !important;
+        height: 300px !important;
         min-width: 100%;
         width: 100%;
         /* Use full width on smaller screens */
@@ -633,17 +562,11 @@
         position: absolute;
         height: 100%;
         inset: 0;
-        // background: linear-gradient(to right, rgba(0, 0, 0, 0.601), rgba(26, 26, 26, 0.048));
         background-image: url('landing/darkEffect@.svg');
-        /* Replace with your image path */
         background-size: cover;
-        /* Ensures the image covers the entire area */
         background-position: center;
-        /* Centers the image */
         background-repeat: no-repeat;
-        /* Prevents tiling */
         z-index: 99;
-        /* Ensures it's above the background but below content */
         transition: opacity 0.5s ease-in-out;
         color: #fff !important;
         opacity: 1;
@@ -699,16 +622,11 @@
 
         position: absolute;
         inset: 0;
-         // background: linear-gradient(to right, rgba(0, 0, 0, 0.601), rgba(26, 26, 26, 0.048));
          background-image: url('landing/darkEffect@.svg');
-         /* Replace with your image path */
          background-size: cover;
-         /* Ensures the image covers the entire area */
          background-position: center;
-         /* Centers the image */
          background-repeat: no-repeat;
         z-index: 99;
-        /* Ensures it's behind the text */
         transition: opacity 0.5s ease-in-out;
         opacity: 1;
     }
@@ -1052,7 +970,6 @@
     z-index: 0;
 }
 
-/* Glow effect for the border box */
 .animated-border-box-glow {
     overflow: hidden;
     // filter: blur(20px);
@@ -1076,11 +993,8 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     background-image: conic-gradient(#d83694,
-            /* Transparent start */
             #0039c7,
-            /* Blue color */
             #f7eff3 20%
-            /* Transparent end, creates a slice effect */
         );
     animation: rotate 5s linear infinite;
     /* Rotate the gradient */
@@ -1094,55 +1008,40 @@
     position: absolute;
     z-index: -1;
     left: 1.7px;
-    /* Border width */
     top: 1.7px;
-    /* Border width */
     width: calc(100% - 3px);
-    /* Adjust width for border spacing */
     height: calc(100% - 3.5px);
-    /* Adjust height for border spacing */
     background: white !important;
-    /* Box border radius */
 }
 
 /* Keyframes for rotation animation */
 @keyframes rotate {
     100% {
         transform: translate(-50%, -50%) rotate(1turn);
-        /* Full rotation */
     }
 }
 
 /* Container for centering the animated box */
 .center-box {
     height: 100vh;
-    /* Full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #1D1E22;
-    /* Dark background */
 }
 
 /* Hover effect for stopping animation and changing background gradient */
 .animated-border-box:hover:before {
     animation: none;
-    /* Stop the rotation animation */
     background-image: conic-gradient(#d83694,
-            /* Transparent start */
             #0039c7,
-            /* Blue color */
             #c04783 100%);
-    /* Apply new gradient when hovered */
     transition: all 2s ease-in;
 }
 
 .animated-border-box-glow:hover {
     background-image: conic-gradient(#d83694,
-            /* Transparent start */
             #0039c7,
-            /* Blue color */
             #d4237c 100%);
-    /* New gradient for glow on hover */
     transition: all 2s ease-in;
 }

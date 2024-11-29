@@ -48,7 +48,7 @@ const Landingpage = () => {
             {/* Hero Section */}
             <div className="relative h-[852px] lg:h-auto w-full md:w-full md:w-full rounded-none bg-dark-gradient">
                 <img className="w-full md:w-full h-[852px] lg:h-auto md:object-cover rounded-none opacity-70 " src={`${isMobile ? '/landing/heroImg_mobile.png' : 'landing/heroImg.png'}`} alt="Hero image" />
-                <div className="absolute text-white left-1/2 top-1/2 lg:top-[62%] transform -translate-x-1/2 -translate-y-1/2 max-w-[362px]-sm w-full p-2 lg:w-[550px] bg-opacity-50 text-center">
+                <div className="absolute text-white left-1/2 top-1/2 top-[57%] lg:top-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[362px]-sm w-full p-2 lg:w-[550px] bg-opacity-50 text-center">
                     <p className="font-sf md:font-semibold w-full text-[32px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
                         {/* <p className='md:text-[76px] text-center bg-clip-text text-transparent md:font-bold p-2' style={{ backgroundImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%)' }}>Stringly</p> */}
                         String your Vibe
@@ -164,7 +164,7 @@ const Landingpage = () => {
                     <div
                         className={`absolute inset-0 flex md:w-[600px] items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${isMobile ? (hovered1[0] ? 'hovered' : '') : (hovered2[0] ? 'hovered' : '')
                             }`}
-                        onMouseEnter={() => (isMobile ? handleHover1(0) :  handleHover2(0))}
+                        onMouseEnter={() => (isMobile ? handleHover1(0) : handleHover2(0))}
                     >
                         <div className={`text-white child`}>
                             <h2 className="text-[32px] leading-[38px] font-semibold leading-tight font-roboto font-bold">
@@ -192,7 +192,7 @@ const Landingpage = () => {
                         />
                         <div
                             className={`absolute inset-0 flex items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${isMobile ? (hovered1[1] ? 'hovered' : '') : (hovered2[0] ? 'hovered' : '')}`}
-                            onMouseEnter={() => (isMobile ? handleHover1(1) :  handleHover2(0))}
+                            onMouseEnter={() => (isMobile ? handleHover1(1) : handleHover2(0))}
                         >
                             <div className="text-white child">
                                 <h2 className="text-[32px] leading-[38px] font-semibold font-roboto font-bold">Your Journey Begins Here</h2>
@@ -213,7 +213,7 @@ const Landingpage = () => {
                         />
                         <div
                             className={`absolute inset-0 flex md:w-[700px] items-center p-6 md:px-28 transform translate-x-[-0%] group-hover:translate-x-0 transition-transform duration-500 ppp ${isMobile ? (hovered1[2] ? 'hovered' : '') : (hovered2[0] ? 'hovered' : '')}`}
-                            onMouseEnter={() => (isMobile ?  handleHover1(2) :  handleHover2(0))}
+                            onMouseEnter={() => (isMobile ? handleHover1(2) : handleHover2(0))}
                         >
                             <div className="text-white child">
                                 <h2 className="text-[32px] leading-[38px] font-roboto font-bold">Unmatched Privacy <br /> and Security</h2>
@@ -261,8 +261,7 @@ const Landingpage = () => {
 
             <section>
                 <section
-                    className={`bg-gradient-full relative lg:pl-20 ${hovered === 'section1' ? 'hovered opacity-90' : ''} lg:opacity-90`}
-                    onMouseEnter={() => handleHover('section1')}
+                    className={`bg-gradient-full relative lg:pl-20 py-20`}
                 // onMouseLeave={() => handleHover('')}
                 >
                     {/* <div className={`bbb h-[350px] m-2 flex flex-col items-center justify-center w-[96%] top-[20%] left-[0%] md:left-[0%] lg:left-[25%] md:w-[450px] lg:w-[700px] p-10 lg:p-20 bg-white text-black border-2 rounded-lg ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'}`}
@@ -277,36 +276,37 @@ const Landingpage = () => {
                         </button>
                     </div> */}
                     {/* Specifications */}
-                    <div className="flex h-[616px] lg:h-full lg:flex-row relative justify-center px-0 gap-20 items-start md:mx-2 lg:mx-0  mt-12">
+                    <div className={`flex h-[616px] lg:h-full lg:flex-row relative justify-center px-0 gap-20 items-start md:mx-2 lg:mx-0  mt-12 ${hovered === 'section1' ? 'hovered opacity-90' : ''}`}
+                    >
                         {/* Text Section */}
-                        <div className={`${isMobile ? 'bg-white rounded-xl' : "bg-none"} w-[88%] p-5 md:p-10 lg:p-0 !text-black mt-10 absolute lg:pl-0 lg:w-[590px] xl:w-[616px] top-[38%] lg:top-0 text-white z-10 lg:text-black md:left-2/1 lg:left-0 h-[320px] lg:h-full lg:relative flex flex-col`} style={{
+                        <div className={`${isMobile ? 'bg-white rounded-xl' : "bg-none"} w-[88%] p-5 md:p-10 lg:p-0 !text-black mt-10 absolute lg:pl-0 lg:w-[590px] xl:w-[616px] top-[20%] lg:top-0 text-white z-10 lg:text-black md:left-2/1 lg:left-0 h-[420px] lg:h-full lg:relative flex flex-col`} style={{
                             gap: '16px',
                             padding: '20px',
                         }}>
                             <h2 style={{
-                            }} className='font-sf text-[18px] lg:text-[30px] font-semibold lg:text-[48px] leading-[25px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
+                            }} className='font-sf text-[25px] lg:text-[30px] font-semibold lg:text-[48px] leading-[25px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
                                 Experience Unmatched Privacy and Elegance
                             </h2>
-                            <p className="font-sf text-[12px] lg:text-lg pb-4 lg:pb-0 lg:mt-4 lg:leading-[22px] font-light min-w-[300px]-lg " style={{
+                            <p className="font-sf text-[14px] lg:text-lg pb-4 lg:pb-0 lg:mt-4 lg:leading-[22px] font-light min-w-[300px]-lg " style={{
                                 width: '90%',
                             }}>
                                 At Stringly, we prioritize your privacy while providing a luxurious experience. Our platform is designed to ensure that every connection you make is both secure and sophisticated.
                             </p>
-                            <div className="flex justify-between gap-2 lg:mt-6 items-center lg:w-[556px] h-[64px] lg:gap-8 ">
-                                <div className="flex flex-col items-start w-[50%]">
-                                    <div className="flex items-center gap-2 mb-3">
+                            <div className="flex flex-col md:flex-row md:justify-between gap-2 lg:mt-6 items-center lg:w-[646px] md:h-[64px] lg:gap-8 ">
+                                <div className="flex flex-col items-start w-full md:w-[50%]">
+                                    <div className="flex items-center gap-4 md:gap-2 mb-3">
                                         <img src="./landing/privacy .gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
                                         <p className='text-md lg:text-[32px] font-sf font-semibold text-[#1E1F6D]'>Privacy</p>
                                     </div>
-                                    <p className="text-[12px] lg:text-[16px] font-regular font-sf leading-[20px]">Your privacy is our top priority.</p>
+                                    <p className="text-[14px] lg:text-[16px] font-regular font-sf leading-[20px]">Your privacy is our top priority.</p>
                                 </div>
 
-                                <div className="flex flex-col items-start lg:pt-4 w-[50%]">
-                                    <div className="flex items-center gap-2 mb-3">
+                                <div className="flex flex-col items-start lg:pt-4 w-full md:w-[50%]">
+                                    <div className="flex items-center gap-4 md:gap-2 mb-3">
                                         <img src="./landing/connect.gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
                                         <p className='text-md lg:text-[32px] font-sf font-semibold text-[#D454A6]'>Connection</p>
                                     </div>
-                                    <p className="text-[12px] lg:text-[16px] font-regular font-sf leading-[20px]">Connect with like-minded individuals <br /> securely.</p>
+                                    <p className="text-[14px] lg:text-[16px] font-regular font-sf leading-[20px]">Connect with like-minded individuals <br /> securely.</p>
                                 </div>
                             </div>
                             <div className="mt-24 lg:mt-10">
@@ -329,12 +329,12 @@ const Landingpage = () => {
                         </div>
                     </div>
                     <div
-                        className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[60%] lg:top-[760px] left-[5%] md:left-[8%] lg:left-[24.5%] !w-[90%] lg:w-[750px] !h-[330px] lg:h-[350px]  lg:p-20 bg-white text-black ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
+                        className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[60%] lg:top-[60%] left-[5%] md:left-[8%] lg:left-[24.5%] !w-[92%] lg:w-[750px] !h-[330px] lg:h-[350px]  lg:p-20 bg-white text-black ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
                             }`}
                     >
                         <p className='mb-5 font-sf font-regular'>Bring your spark</p>
-                        <p className="font-semibold text-[35px] leading-[44px] lg:text-[48px] lg:leading-[58px] text-center font-sf mb-5 pb-5 md:pb-0">
-                            Let's build Stingly together.
+                        <p className="font-semibold px-2 text-[32px] leading-[44px] lg:text-[48px] lg:leading-[58px] text-center font-sf mb-5 pb-2 md:pb-0">
+                            Let's build Stringly together.
                         </p>
                         <p className="font-roboto text-[16px] font-sf font-semibold leading-[27px]">Contribute to the vibes!</p>
                         <button className="rounded-xl border border-black mt-10 px-5 py-2 text-black">
@@ -343,8 +343,10 @@ const Landingpage = () => {
                     </div>
 
 
-                    <div className={`flex justify-center items-center w-full h-full hidden my-10 lg:block ${hovered === 'section1' ? 'opacity-60' : 'opacity-1'}`}>
-                        <img src="./landing/Lets work.png" alt="" className=''/>
+                    <div className={`flex justify-center items-center md:pl-7 w-full h-full hidden lg:block ${hovered === 'section1' ? 'opacity-60' : 'opacity-1'}`}
+                        onMouseEnter={() => handleHover('section1')}
+                    >
+                        <img src="./landing/Lets work.png" alt="" className='' />
                         {/* <div className="grid grid-cols-2 lg:grid-cols-6 gap-2 w-full lg:p-20">
                             <img
                                 src="./landing/Rectangle 3889.png"
@@ -378,8 +380,10 @@ const Landingpage = () => {
                             />
                         </div> */}
                     </div>
-                    <div className="flex items-center justify-center py-10 px-0 lg:hidden group">
-                        <img src="./landing/Property 1=Default.png" alt="" className='group-hover:opacity:60'/>
+                    <div className={`flex items-center justify-center py-10 px-0 lg:hidden group ${hovered === 'section1' ? 'opacity-60' : 'opacity-1'}`}
+                        onMouseEnter={() => handleHover('section1')}
+                    >
+                        <img src="./landing/Property 1=Default.png" alt="" className='group-hover:opacity:60' />
                     </div>
                 </section>
             </section>
