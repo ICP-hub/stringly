@@ -329,7 +329,7 @@ const Landingpage = () => {
                         </div>
                     </div>
                     <div
-                        className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[60%] lg:top-[62%] left-[5%] md:left-[8%] lg:left-[24.5%] !w-[92%] lg:w-[750px] !h-[330px] lg:h-[350px]  lg:p-20 bg-white text-black ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
+                        className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[60%] lg:top-[62%] left-[5%] md:left-[8%] lg:left-[25%] !w-[92%] !h-[330px] lg:h-[350px]  lg:p-20 bg-white text-black ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
                             }`}
                     >
                         <p className='mb-5 font-sf font-regular'>Bring your spark</p>
@@ -343,7 +343,7 @@ const Landingpage = () => {
                     </div>
 
 
-                    <div className={`flex justify-center items-center md:pl-7 md:pt-20 w-full h-full hidden lg:block ${hovered === 'section1' ? 'opacity-60' : 'opacity-1'}`}
+                    <div className={`flex justify-center items-center md:pl-8 md:pt-20 w-full h-full hidden lg:block ${hovered === 'section1' ? 'opacity-60' : 'opacity-1'}`}
                         onMouseEnter={() => handleHover('section1')}
                     >
                         <img src="./landing/Lets work.png" alt="" className='' />
