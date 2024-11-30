@@ -155,7 +155,7 @@ const Landingpage = () => {
             <div className="max-w-[360px]-sm-md lg:w-[90%] xl:w-full mx-auto flex flex-col items-center justify-center mt-8 gap-4 px-4 lg:px-0">
 
                 {/* Top Image with Hover Effect (Profile Image) */}
-                <div className={`relative w-full lg:w-full h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-gray-800`}>
+                <div className={`relative w-full lg:w-full h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-gray-800 md:mb-4`}>
                     <img
                         src="./landing/Firefly.png"
                         alt="Profile Image"
@@ -184,7 +184,7 @@ const Landingpage = () => {
                 <div className={`w-full lg:flex justify-between gap-4  lg:w-full`}>
 
                     {/* Left Image with Hover Effect (Hug Image) */}
-                    <div className={`relative mb-8 w-full lg:w-[680px] h-[340px] rounded-xl lg:rounded-bl-[12px] overflow-hidden bg-gradient-to-br from-black via-[#000000] to-[#1a1a1a]`}>
+                    <div className={`relative mb-8 w-full lg:w-[680px] h-[340px] rounded-xl lg:rounded-bl-[12px] overflow-hidden bg-gradient-to-br from-black via-[#000000] to-[#1a1a1a] md:mr-4`}>
                         <img
                             src="./landing/Rectangle 4.png"
                             alt="Hug Image"
