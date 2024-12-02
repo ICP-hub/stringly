@@ -59,7 +59,7 @@ export default function App() {
         centeredSlides={true}
         slidesPerView={2}
         loop={true}
-        spaceBetween={isMobile ? 20 : -10}
+        spaceBetween={isMobile ? 10 : -10}
         autoplay={{
           delay: 7000,
           disableOnInteraction: false,

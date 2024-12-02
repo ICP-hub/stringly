@@ -50,7 +50,7 @@ const Navbar = () => {
                             {!isMenu && <IoIosMenu />}
                         </button> */}
                         <div>
-                            <button className={`px-4 py-1 rounded-xl text-black bg-white`}>Join</button>
+                            <button className={`px-4 py-1 rounded-lg text-black bg-white ${scrolled ? 'block' : 'hidden'} `}>Join</button>
                         </div>
                     </div>
                 </div>
@@ -93,8 +93,8 @@ export const Menu = ({ isMenu, setIsmMenu }) => {
                     Stringly
                 </p>
                 <div className='flex items-center gap-4'>
-                    <div>
-                        <button className={`px-4 py-1 rounded-xl bg-black text-white`}>Join</button>
+                    <div className={`border-2 border-red-900`}>
+                        <button className={`px-4 py-1 rounded-xl bg-black text-white `}>Join</button>
                     </div>
                     <button className='text-xl' onClick={closeMenu}>
                         <RxCross1 />

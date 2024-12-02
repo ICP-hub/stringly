@@ -279,7 +279,7 @@ const Landingpage = () => {
                     <div className={`flex h-[616px] lg:h-full lg:flex-row relative justify-center px-0 gap-20 items-start md:mx-2 lg:mx-0  mt-12 ${hovered === 'section1' ? 'hovered opacity-90' : ''}`}
                     >
                         {/* Text Section */}
-                        <div className={`${isMobile ? 'bg-white rounded-xl' : "bg-none"} w-[88%] p-5 md:p-10 lg:p-0 !text-black mt-10 absolute lg:pl-0 lg:w-[590px] xl:w-[616px] top-[20%] lg:top-0 text-white z-10 lg:text-black md:left-2/1 lg:left-0 h-[420px] lg:h-full lg:relative flex flex-col`} style={{
+                        <div className={`${isMobile ? 'bg-white rounded-xl h-[72%]' : "bg-none"} w-[88%] p-5 md:p-10 lg:p-0 !text-black mt-10 absolute lg:pl-0 lg:w-[590px] xl:w-[616px] top-[15%] lg:top-0 text-white z-10 lg:text-black md:left-2/1 lg:left-0 h-[420px] lg:h-full lg:relative flex flex-col`} style={{
                             gap: '16px',
                             padding: '20px',
                         }}>
@@ -380,7 +380,7 @@ const Landingpage = () => {
                             />
                         </div> */}
                     </div>
-                    <div className={`flex items-center justify-center py-10 px-0 lg:hidden group ${hovered === 'section1' ? 'opacity-60' : 'opacity-1'}`}
+                    <div className={`flex items-center justify-center pt-5 px-0 lg:hidden group ${hovered === 'section1' ? 'opacity-60' : 'opacity-1'}`}
                         onMouseEnter={() => handleHover('section1')}
                     >
                         <img src="./landing/Property 1=Default.png" alt="" className='group-hover:opacity:60' />
