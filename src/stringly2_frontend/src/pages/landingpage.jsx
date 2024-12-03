@@ -60,7 +60,7 @@ const Landingpage = () => {
                     </p>
                     <div className="mt-20 md:mt-10 space-x-6">
                         <button className="bg-white text-[16px] font-sf text-black px-6 py-3 w-32 rounded-xl">
-                            Sign Up
+                            <a href='https://tally.so/r/waD9X9'>Sign Up</a>
                         </button>
                     </div>
                 </div>
@@ -173,9 +173,9 @@ const Landingpage = () => {
                             <p className="mt-2 text-white-600 font-roboto font-light leading-[24px]">
                                 Experience connections like never before with Stringly.
                             </p>
-                            <button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:bg-pink-100">
+                            <a href='https://tally.so/r/waD9X9'><button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:bg-pink-100">
                                 Join
-                            </button>
+                            </button></a>
                         </div>
                     </div>
                 </div>
@@ -197,9 +197,9 @@ const Landingpage = () => {
                             <div className="text-white child">
                                 <h2 className="text-[32px] leading-[38px] font-semibold font-roboto font-bold">Your Journey Begins Here</h2>
                                 <p className="text-lg mt-2 font-roboto font-light leading-[24px]">Experience connections like never before with Stringly.</p>
-                                <button className="bg-white text-black px-8 py-2 rounded-[8px] mt-4 hover:bg-pink-100">
+                                <a href='https://tally.so/r/waD9X9'><button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:bg-pink-100">
                                     Join
-                                </button>
+                                </button></a>
                             </div>
                         </div>
                     </div>
@@ -218,9 +218,9 @@ const Landingpage = () => {
                             <div className="text-white child">
                                 <h2 className="text-[32px] leading-[38px] font-roboto font-bold">Unmatched Privacy <br /> and Security</h2>
                                 <p className="text-lg mt-2 font-roboto font-light leading-[24px]">Experience connections like never before with Stringly.</p>
-                                <button className="bg-white text-black px-8 py-2 rounded-[8px] mt-4 hover:bg-pink-100">
+                                <a href='https://tally.so/r/waD9X9'><button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:bg-pink-100">
                                     Join
-                                </button>
+                                </button></a>
                             </div>
                         </div>
                     </div>
@@ -314,7 +314,7 @@ const Landingpage = () => {
                             Learn More
                         </button> */}
                                 <button className="hidden lg:block text-[16px] font-sf bg-black text-white w-32 text-white px-2 py-3 rounded-xl">
-                                    Sign Up
+                                    <a href='https://tally.so/r/waD9X9'>Sign Up</a>
                                 </button>
                             </div>
                         </div>
@@ -337,9 +337,10 @@ const Landingpage = () => {
                             Let's build Stringly together.
                         </p>
                         <p className="font-roboto text-[16px] font-sf font-semibold leading-[27px]">Contribute to the vibes!</p>
-                        <button className="rounded-xl border border-black mt-10 px-5 py-2 text-black">
-                            Join Us
-                        </button>
+                        <a href='https://tally.so/r/waD9X9'>
+                            <button className="rounded-xl border border-black mt-10 px-5 py-2 text-black">
+                                Join Us
+                            </button></a>
                     </div>
 
 

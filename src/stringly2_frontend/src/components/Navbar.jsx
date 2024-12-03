@@ -43,14 +43,14 @@ const Navbar = () => {
                 </div> */}
                 <div className='flex items-center gap-4'>
                     <div>
-                        <button className={`px-10 py-2 rounded-xl ${isMenu ? 'hidden' : 'hidden md:flex'} bg-white text-black`}>Join</button>
+                        <button className={`px-10 py-2 rounded-xl ${isMenu ? 'hidden' : 'hidden md:flex'} bg-white text-black`}><a href='https://tally.so/r/waD9X9'>Join</a></button>
                     </div>
                     <div className='flex md:hidden'>
                         {/* <button className='text-xl' onClick={() => setIsmMenu(true)}>
                             {!isMenu && <IoIosMenu />}
                         </button> */}
                         <div>
-                            <button className={`px-4 py-1 rounded-lg text-black bg-white ${scrolled ? 'block' : 'hidden'} `}>Join</button>
+                            <button className={`px-4 py-1 rounded-lg text-black bg-white ${scrolled ? 'block' : 'hidden'} `}><a href='https://tally.so/r/waD9X9'>Join</a></button>
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@ export const Menu = ({ isMenu, setIsmMenu }) => {
                 </p>
                 <div className='flex items-center gap-4'>
                     <div className={`border-2 border-red-900`}>
-                        <button className={`px-4 py-1 rounded-xl bg-black text-white `}>Join</button>
+                        <button className={`px-4 py-1 rounded-xl bg-black text-white `}><a href='https://tally.so/r/waD9X9'>Join</a></button>
                     </div>
                     <button className='text-xl' onClick={closeMenu}>
                         <RxCross1 />
