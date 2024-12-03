@@ -1,25 +1,6 @@
 {
   "canisters": {
-    "internet_identity": {
-      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
-      "frontend": {},
-      "remote": {
-        "id": {
-          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
-        }
-      },
-      "type": "custom",
-      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
-    },
-    "stringly2_backend": {
-      "candid": "src/stringly2_backend/stringly2_backend.did",
-      "package": "stringly2_backend",
-      "type": "rust"
-    },
     "stringly2_frontend": {
-      "dependencies": [
-        "stringly2_backend"
-      ],
       "source": [
         "src/stringly2_frontend/dist"
       ],
