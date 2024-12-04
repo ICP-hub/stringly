@@ -3,6 +3,8 @@ import { FaChevronRight } from "react-icons/fa";
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { MdPrivacyTip } from "react-icons/md";
 import CarouselCoustom from '../components/CarouselCoustom';
+import { motion } from "framer-motion";
+
 
 const Landingpage = () => {
     const [hovered, setHovered] = useState('');
@@ -46,9 +48,16 @@ const Landingpage = () => {
     return (
         <div className='w-full mx-auto flex flex-col items-center justify-center'>
             {/* Hero Section */}
-            <div className="relative h-[852px] lg:h-auto w-full md:w-full md:w-full rounded-none bg-dark-gradient">
+            <div
+                className="relative h-[852px] lg:h-auto w-full md:w-full md:w-full rounded-none bg-dark-gradient">
                 <img className="w-full md:w-full h-[852px] lg:h-auto md:object-cover rounded-none opacity-70 " src={`${isMobile ? '/landing/heroImg_mobile.png' : 'landing/heroImg.png'}`} alt="Hero image" />
-                <div className="absolute text-white left-1/2 top-1/2 top-[57%] lg:top-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[362px]-sm w-full p-2 lg:w-[550px] bg-opacity-50 text-center">
+                <motion.div
+                    initial={{ opacity: 0, x: "50%" }}
+                    animate={{ opacity: 1, x: "-50%" }}
+                    transition={{ duration: 2 }}
+                    
+                    className="absolute text-white left-1/2 top-1/2 top-[57%] lg:top-[35%] transform -translate-x-1/2 -translate-y-1/2 max-w-[362px]-sm w-full p-2 lg:w-[550px] bg-opacity-50 text-center">
+
                     <p className="font-sf md:font-semibold w-full text-[32px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
                         {/* <p className='md:text-[76px] text-center bg-clip-text text-transparent md:font-bold p-2' style={{ backgroundImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%)' }}>Stringly</p> */}
                         String your Vibe
@@ -63,7 +72,7 @@ const Landingpage = () => {
                             <a href='https://tally.so/r/waD9X9'>Sign Up</a>
                         </button>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
             {/* Connecting Section */}
@@ -276,15 +285,15 @@ const Landingpage = () => {
                         </button>
                     </div> */}
                     {/* Specifications */}
-                    <div className={`flex h-[616px] lg:h-full lg:flex-row relative justify-center px-0 gap-20 items-start md:mx-2 lg:mx-0  mt-12 ${hovered === 'section1' ? 'hovered opacity-90' : ''}`}
+                    <div className={`flex h-[616px] lg:h-full lg:flex-row relative justify-center px-0 gap-20 items-start md:mx-2 lg:mx-0  md:mt-12 ${hovered === 'section1' ? 'hovered opacity-90' : ''}`}
                     >
                         {/* Text Section */}
-                        <div className={`${isMobile ? 'bg-white rounded-xl h-[72%]' : "bg-none"} w-[88%] p-5 md:p-10 lg:p-0 !text-black mt-10 absolute lg:pl-0 lg:w-[590px] xl:w-[616px] top-[15%] lg:top-0 text-white z-10 lg:text-black md:left-2/1 lg:left-0 h-[420px] lg:h-full lg:relative flex flex-col`} style={{
+                        <div className={`${isMobile ? 'bg-white rounded-xl h-[72%]' : "bg-none"} w-[90%] p-5 md:p-10 lg:p-0 !text-black mt-10 absolute lg:pl-0 lg:w-[590px] xl:w-[616px] top-[5%] lg:top-0 text-white z-10 lg:text-black md:left-2/1 lg:left-0 h-[500px] lg:h-full lg:relative flex flex-col`} style={{
                             gap: '16px',
                             padding: '20px',
                         }}>
                             <h2 style={{
-                            }} className='font-sf text-[25px] lg:text-[30px] font-semibold lg:text-[48px] leading-[25px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
+                            }} className='font-sf text-[32px] lg:text-[30px] font-semibold lg:text-[48px] leading-[25px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
                                 Experience Unmatched Privacy and Elegance
                             </h2>
                             <p className="font-sf text-[14px] lg:text-lg pb-4 lg:pb-0 lg:mt-4 lg:leading-[22px] font-light min-w-[300px]-lg " style={{
@@ -295,16 +304,16 @@ const Landingpage = () => {
                             <div className="flex flex-col md:flex-row md:justify-between gap-2 lg:mt-6 items-center lg:w-[646px] md:h-[64px] lg:gap-8 ">
                                 <div className="flex flex-col items-start w-full md:w-[50%]">
                                     <div className="flex items-center gap-4 md:gap-2 mb-3">
-                                        <img src="./landing/privacy .gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
-                                        <p className='text-md lg:text-[32px] font-sf font-semibold text-[#1E1F6D]'>Privacy</p>
+                                        <img src="./landing/privacy .gif" alt="privacy icon" className="h-10 lg:h-10 w-auto" />
+                                        <p className='text-2xl lg:text-[32px] font-sf font-semibold text-[#1E1F6D]'>Privacy</p>
                                     </div>
                                     <p className="text-[14px] lg:text-[16px] font-regular font-sf leading-[20px]">Your privacy is our top priority.</p>
                                 </div>
 
                                 <div className="flex flex-col items-start lg:pt-4 w-full md:w-[50%]">
                                     <div className="flex items-center gap-4 md:gap-2 mb-3">
-                                        <img src="./landing/connect.gif" alt="privacy icon" className="h-5 lg:h-10 w-auto" />
-                                        <p className='text-md lg:text-[32px] font-sf font-semibold text-[#D454A6]'>Connection</p>
+                                        <img src="./landing/connect.gif" alt="privacy icon" className="h-10 lg:h-10 w-auto" />
+                                        <p className='text-2xl lg:text-[32px] font-sf font-semibold text-[#D454A6]'>Connection</p>
                                     </div>
                                     <p className="text-[14px] lg:text-[16px] font-regular font-sf leading-[20px]">Connect with like-minded individuals <br /> securely.</p>
                                 </div>

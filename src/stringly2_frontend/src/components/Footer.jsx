@@ -62,7 +62,7 @@ const Footer = () => {
 
           {/* About Us Section (Visible on lg and larger screens) */}
           <ul className='leading-8 w-[100%] hidden lg:block lg:w-auto'>
-            <li className='text-[18px] font-jakarta !font-semibold pb-14'>About Us</li>
+            <li className='text-[18px] font-jakarta !font-semibold pb-8'>About Us</li>
             <li className="pb-2 md:pb-1 cursor-pointer">
               <a href=" https://forms.gle/8eWvmfuTzch4FQY68" target="_blank" rel="noopener noreferrer">
                 Contact Us
