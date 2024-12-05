@@ -270,7 +270,7 @@ const Landingpage = () => {
 
             <section>
                 <section
-                    className={`bg-gradient-full relative lg:pl-20 py-20`}
+                    className={`bg-gradient-full relative lg:pl-20 py-15`}
                 // onMouseLeave={() => handleHover('')}
                 >
                     {/* <div className={`bbb h-[350px] m-2 flex flex-col items-center justify-center w-[96%] top-[20%] left-[0%] md:left-[0%] lg:left-[25%] md:w-[450px] lg:w-[700px] p-10 lg:p-20 bg-white text-black border-2 rounded-lg ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'}`}
@@ -285,18 +285,18 @@ const Landingpage = () => {
                         </button>
                     </div> */}
                     {/* Specifications */}
-                    <div className={`flex h-[616px] lg:h-full lg:flex-row relative justify-center px-0 gap-20 items-start md:mx-2 lg:mx-0  md:mt-12 ${hovered === 'section1' ? 'hovered opacity-90' : ''}`}
+                    <div className={`flex h-[616px] lg:h-full lg:flex-row relative justify-center px-0 gap-20 items-start mt-10 md:mx-2 lg:mx-0  md:mt-12 ${hovered === 'section1' ? 'hovered opacity-90' : ''}`}
                     >
                         {/* Text Section */}
-                        <div className={`${isMobile ? 'bg-white rounded-xl h-[72%]' : "bg-none"} w-[90%] p-5 md:p-10 lg:p-0 !text-black mt-10 absolute lg:pl-0 lg:w-[590px] xl:w-[616px] top-[5%] lg:top-0 text-white z-10 lg:text-black md:left-2/1 lg:left-0 h-[500px] lg:h-full lg:relative flex flex-col`} style={{
+                        <div className={`${isMobile ? 'bg-white rounded-xl h-[72%]' : "bg-none"} w-[90%] p-5 md:p-10 lg:p-0 !text-black mt-10 absolute lg:pl-0 lg:w-[590px] xl:w-[616px] top-[0%] lg:top-0 text-white z-10 lg:text-black md:left-2/1 lg:left-0 h-[530px] lg:h-full lg:relative flex flex-col`} style={{
                             gap: '16px',
                             padding: '20px',
                         }}>
                             <h2 style={{
-                            }} className='font-sf text-[32px] lg:text-[30px] font-semibold lg:text-[48px] leading-[25px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
+                            }} className='font-sf text-3xl lg:text-[30px] font-semibold lg:text-[48px] leading-[25px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
                                 Experience Unmatched Privacy and Elegance
                             </h2>
-                            <p className="font-sf text-[14px] lg:text-lg pb-4 lg:pb-0 lg:mt-4 lg:leading-[22px] font-light min-w-[300px]-lg " style={{
+                            <p className="font-sf text-[16px] lg:text-lg pb-4 lg:pb-0 lg:mt-4 lg:leading-[22px] font-light min-w-[300px]-lg " style={{
                                 width: '90%',
                             }}>
                                 At Stringly, we prioritize your privacy while providing a luxurious experience. Our platform is designed to ensure that every connection you make is both secure and sophisticated.
@@ -305,17 +305,17 @@ const Landingpage = () => {
                                 <div className="flex flex-col items-start w-full md:w-[50%]">
                                     <div className="flex items-center gap-4 md:gap-2 mb-3">
                                         <img src="./landing/privacy .gif" alt="privacy icon" className="h-10 lg:h-10 w-auto" />
-                                        <p className='text-2xl lg:text-[32px] font-sf font-semibold text-[#1E1F6D]'>Privacy</p>
+                                        <p className='text-3xl lg:text-[32px] font-sf font-semibold text-[#1E1F6D]'>Privacy</p>
                                     </div>
-                                    <p className="text-[14px] lg:text-[16px] font-regular font-sf leading-[20px]">Your privacy is our top priority.</p>
+                                    <p className="text-[16px] lg:text-[16px] font-regular font-sf leading-[20px]">Your privacy is our top priority.</p>
                                 </div>
 
                                 <div className="flex flex-col items-start lg:pt-4 w-full md:w-[50%]">
                                     <div className="flex items-center gap-4 md:gap-2 mb-3">
                                         <img src="./landing/connect.gif" alt="privacy icon" className="h-10 lg:h-10 w-auto" />
-                                        <p className='text-2xl lg:text-[32px] font-sf font-semibold text-[#D454A6]'>Connection</p>
+                                        <p className='text-3xl lg:text-[32px] font-sf font-semibold text-[#D454A6]'>Connection</p>
                                     </div>
-                                    <p className="text-[14px] lg:text-[16px] font-regular font-sf leading-[20px]">Connect with like-minded individuals <br /> securely.</p>
+                                    <p className="text-[16px] lg:text-[16px] font-regular font-sf leading-[20px]">Connect with like-minded individuals <br /> securely.</p>
                                 </div>
                             </div>
                             <div className="mt-24 lg:mt-10">

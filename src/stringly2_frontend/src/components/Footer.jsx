@@ -46,7 +46,10 @@ const Footer = () => {
             <li className='text-[18px] font-jaktara !font-regular pb-4 md:pb-8'>Pages</li>
             <li className='pb-4'>Whitepaper</li>
             <li className='pb-4'>Pricing</li>
-            <li className='pb-4'>Blog</li>
+            {/* <li className='pb-4'>Blog</li> */}
+            <a className='pb-4' href="https://medium.com/@stringly" target="_blank" rel="noopener noreferrer">
+            <p className='pb-4'>Blog</p>
+            </a>
             <li className='pb-4'>Demo</li>
           </ul>
 
