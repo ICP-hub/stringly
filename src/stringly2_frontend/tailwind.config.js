@@ -12,6 +12,7 @@ export default {
       xl: '1440px', // Custom large desktop breakpoint  
 
     },
+    
     fontFamily: {
       'jakarta': ['"Plus Jakarta Sans"', 'sans-serif'],
       'roboto' : ['"Roboto"', 'sans-serif'],
@@ -29,8 +30,11 @@ export default {
       'black': 900,
     },
     extend: {
+      // backgroundImage: {
+      //   'dark-gradient': 'linear-gradient(to right, black, #1a1a1a, #333333, #4d4d4d, #666666)',
+      // },
       backgroundImage: {
-        'dark-gradient': 'linear-gradient(to right, black, #1a1a1a, #333333, #4d4d4d, #666666)',
+        'hover-gradient': "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(10, 10, 10, 0.08)), url('landing/darkEffect@.svg')",
       },
       boxShadow: {
         'inset-top-black': 'inset 0 150px 100px 50px black',

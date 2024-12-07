@@ -27,15 +27,11 @@ const Footer = () => {
       </div>
       <div className='pb-8'>
         {/* Hidden on larger screens and visible on mobile and tablet */}
-        <ul className='lg:hidden leading-8 w-[100%] px-12'>
-          <li className='text-[17px] font-jakarta md:text-lg font-semibold pb-6  md:pb-4'>About Us</li>
-          <li className="pb-2 md:pb-1 cursor-pointer">
-            <a href=" https://forms.gle/8eWvmfuTzch4FQY68" target="_blank" rel="noopener noreferrer">
-              Contact Us
-            </a>
-          </li>
-
-
+        <ul className='lg:hidden flex items-center justify-between leading-8 w-[100%] px-12 pb-4'>
+          <li className='text-[17px] font-jakarta md:text-lg font-semibold md:pb-4'>About Us</li>
+          <a href=" https://forms.gle/8eWvmfuTzch4FQY68" target="_blank" rel="noopener noreferrer" className='mr-3'>
+            <li>Contact Us</li>
+          </a>
 
           {/* <input type="text" placeholder='Your email' className='rounded-3xl text-sm p-2.5 text-gray-400 bg-white my-3 w-[100%]' /> */}
         </ul>
@@ -45,10 +41,9 @@ const Footer = () => {
           <ul className='leading-8 font-extralight'>
             <li className='text-[18px] font-jaktara !font-regular pb-4 md:pb-8'>Pages</li>
             <li className='pb-4'>Whitepaper</li>
-            <li className='pb-4'>Pricing</li>
             {/* <li className='pb-4'>Blog</li> */}
             <a className='pb-4' href="https://medium.com/@stringly" target="_blank" rel="noopener noreferrer">
-            <p className='pb-4'>Blog</p>
+              <p className='pb-4'>Blog</p>
             </a>
             <li className='pb-4'>Demo</li>
           </ul>
@@ -56,11 +51,14 @@ const Footer = () => {
           {/* Company Links */}
           <ul className='leading-8 font-extralight'>
             <p className='text-[18px] font-jakarta !font-semibold pb-4 md:pb-8'>Company</p>
-            <li className='pb-4'>Pricing</li>
             <li className='pb-4'>Security</li>
             <li className='pb-4'>Privacy Policy</li>
             <li className='pb-4'>Terms of Use</li>
-            <li className='pb-4'>Careers</li>
+            <li className="pb-2 md:pb-1 cursor-pointer">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFvJ4tF7YWebqvfmpbuj30pkVAkyVOhLVPju6RjBLyNMukEw/viewform" target="_blank" rel="noopener noreferrer">
+                Careers
+              </a>
+            </li>
           </ul>
 
           {/* About Us Section (Visible on lg and larger screens) */}
