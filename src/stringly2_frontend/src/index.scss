@@ -256,12 +256,7 @@
 
     .animated-border-box,
     .animated-border-box-glow {
-        max-height: 420px;
-        height: 400px !important;
-        max-width: 660px  !important;
-        height: 100%;
         background-color: #000;
-        width: 100%;
         position: absolute;
         overflow: hidden;
         z-index: 10 !important;
@@ -295,8 +290,8 @@
         content: '';
         position: absolute;
         z-index: -10;
-        left: 10px;
-        top: 10px;
+        // left: 10px;
+        // top: 10px;
         width: calc(100% - 10px);
         height: calc(100% - 10px);
         background: #000 !important;

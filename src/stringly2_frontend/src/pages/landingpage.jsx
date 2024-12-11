@@ -199,7 +199,7 @@ const Landingpage = () => {
                     ))}
                 </div>
             ) : (
-                <div className="max-w-[360px]-sm-md lg:w-[90%] xl:w-full mx-auto flex flex-col items-center justify-center mt-8 gap-4 px-4 lg:px-0">
+                <div className="max-w-[360px]-sm-md lg:w-[90%] xl:w-full mx-auto flex flex-col items-center justify-center mt-8 gap-4 px-4 lg:px-0 xl:px-20 2xl:px-0">
 
                     {/* Top Image with Hover Effect (Profile Image) */}
                     <div className={`relative w-full lg:w-full h-[300px] rounded-xl lg:rounded-tl-[12px] lg:rounded-tr-[12px] overflow-hidden bg-gray-800 md:mb-4`}>
@@ -283,7 +283,7 @@ const Landingpage = () => {
 
             <section>
                 <section
-                    className={`bg-gradient-full relative lg:pl-20 py-15`}
+                    className={`bg-gradient-full relative py-15`}
                 >
                     {/* Specifications */}
                     <div className={`flex h-[616px] lg:h-full lg:flex-row relative justify-center px-0 gap-20 items-start mt-10 md:mx-2 lg:mx-0  md:mt-12 ${hovered === 'section1' ? 'hovered opacity-90' : ''}`}
@@ -356,8 +356,13 @@ const Landingpage = () => {
                     ) : (
 
                         <div
-                            className={`animated-border-box relative m-2 flex flex-col items-center justify-center top-[850px] lg:top-[800px] left-[15px] lg:left-[355px] !w-[92%]  lg:p-20 bg-white text-black ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
-                                }`}
+                            className={`animated-border-box m-2 flex top-[800px] left-[280px] xl:left-[410px] flex-col items-center justify-center lg:p-20 bg-white text-black ${hovered === 'section1' ? 'scale-up' : 'scale-0 opacity-0'
+                                } `} xl:style={{
+                                    position: 'absolute',
+                                    top: '61%',
+                                    left: '27%',
+                                    transform: 'translate(-50%, -50%)',
+                                }}
                         >
                             <p className='mb-5 font-sf font-regular'>Bring your spark</p>
                             <p className="font-semibold px-2 text-[32px] leading-[44px] lg:text-[48px] lg:leading-[58px] text-center font-sf mb-5 pb-2 md:pb-0">
@@ -372,13 +377,13 @@ const Landingpage = () => {
                     )}
 
 
-                    <div className={`flex justify-center items-center md:pl-8 md:pt-20 w-full h-full hidden lg:block ${hovered === 'section1' ? 'opacity-60' : 'opacity-1'}`}
-                        // onMouseEnter={() => handleHover('section1')}
+                    <div className={`mt-20 w-full h-full hidden lg:block ${hovered === 'section1' ? 'opacity-60' : 'opacity-1'}`}
+                    // onMouseEnter={() => handleHover('section1')}
                     >
-                        <img src="./landing/Lets work.png" alt="" className='' />
+                        <img src="./landing/Lets work.png" alt="" className='mx-auto w-[1227px]' />
                     </div>
                     <div className={`flex items-center justify-center border h-[900px] pt-5 px-0 lg:hidden group ${hovered === 'section1' ? 'opacity-60' : 'opacity-1'}`}
-                        // onMouseEnter={() => handleHover('section1')}
+                    // onMouseEnter={() => handleHover('section1')}
                     >
                         <img src="./landing/Property 1=Default.png" alt="" className='group-hover:opacity:60 h-full' />
                     </div>
