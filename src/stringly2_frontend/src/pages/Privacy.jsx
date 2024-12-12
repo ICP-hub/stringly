@@ -10,7 +10,7 @@ const Privacy = () => {
         <p className="text-gray-700 mb-10 text-center text-lg">
           Last Updated: <span className="font-semibold">[Insert Date]</span>
         </p>
-
+ 
         <section className="mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-6">1. Who We Are</h2>
           <p className="text-gray-700 text-base md:text-lg leading-relaxed">
