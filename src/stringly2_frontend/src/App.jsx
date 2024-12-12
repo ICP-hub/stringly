@@ -5,6 +5,7 @@ import Landingpage from './pages/landingpage';
 import FeaturesPage from './pages/FeaturesPage';
 import About from './pages/About';
 import ScrollToTop from './components/ScrollToTop';
+import Privacy from './pages/Privacy';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Landingpage />} />
             <Route path="/features" element={<FeaturesPage />} />
             <Route path="/about" element={<About />} />
+            <Route path='/privacy' element={<Privacy/>}/>
           </Routes>
           <Footer />
         </HashRouter>

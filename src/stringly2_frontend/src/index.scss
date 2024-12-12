@@ -428,7 +428,7 @@
     }
 
     .ppp.hovered .child-2 {
-        animation: slideIn2 1s forwards;
+        animation: slideIn2 2s forwards;
     }
 
     @keyframes slideIn {
@@ -491,7 +491,7 @@
         width: 100%;
         opacity: 1;
         transform: translateX(0);
-        animation: slideIn 1s forwards;
+        animation: slideIn 2s forwards;
     }
 
 
@@ -633,7 +633,7 @@
     .ppp.hovered .child {
         opacity: 1;
         transform: translateX(0);
-        animation: slideIn 1s forwards;
+        animation: slideIn 2s forwards;
     }
 
     .ppp.hovered .child-2 {

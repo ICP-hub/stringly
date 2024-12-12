@@ -3,7 +3,10 @@ import { TbBrandTelegram } from "react-icons/tb";
 import { FaXTwitter } from "react-icons/fa6";
 import { RiMediumLine } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
+import Privacy from '../pages/Privacy';
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <div className='w-full lg:flex items-start justify-between bg-black text-white md:py-6'>
       <div>
@@ -45,14 +48,14 @@ const Footer = () => {
             <a className='pb-4' href="https://medium.com/@stringly" target="_blank" rel="noopener noreferrer">
               <p className='pb-4'>Blog</p>
             </a>
-            <li className='pb-4'>Demo</li>
+            {/* <li className='pb-4'>Demo</li> */}
           </ul>
 
           {/* Company Links */}
           <ul className='leading-8 font-extralight'>
             <p className='text-[18px] font-jakarta !font-semibold pb-4 md:pb-8'>Company</p>
             <li className='pb-4'>Security</li>
-            <li className='pb-4'>Privacy Policy</li>
+            <li className='pb-4 cursor-pointer' onClick={() => navigate("/privacy")}>Privacy Policy</li>
             <li className='pb-4'>Terms of Use</li>
             <li className="pb-2 md:pb-1 cursor-pointer">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFvJ4tF7YWebqvfmpbuj30pkVAkyVOhLVPju6RjBLyNMukEw/viewform" target="_blank" rel="noopener noreferrer">
