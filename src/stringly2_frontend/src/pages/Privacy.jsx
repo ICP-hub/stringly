@@ -2,124 +2,106 @@ import React from 'react';
 
 const Privacy = () => {
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-purple-50 py-12 px-4 sm:px-6 lg:px-16 xl:px-24">
-      <div className="max-w-7xl mx-auto bg-white shadow-xl rounded-lg p-8 lg:p-12 transition-all hover:shadow-[0_12px_30px_rgba(0,0,0,0.25)]">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 text-center border-b-4 border-purple-600 pb-4">
-          Stringly Privacy Policy
+    <div style={{ padding: '16px', fontFamily: 'Arial, sans-serif' }}>
+      <div style={{ maxWidth: '800px', margin: '0 auto', borderRadius: '8px', padding: '24px' }}>
+        <h1 style={{ fontSize: '32px', fontWeight: 'bold', marginBottom: '16px', textAlign: 'center', borderBottom: '2px solid', paddingBottom: '8px' }}>
+          Privacy Policy
         </h1>
-        <p className="text-gray-700 mb-10 text-center text-lg">
-          Last Updated: <span className="font-semibold">[Insert Date]</span>
+        <p style={{ marginBottom: '16px', textAlign: 'center', fontSize: '16px' }}>
+          Last Updated: <span style={{ fontWeight: 'bold' }}>[Insert Date]</span>
         </p>
- 
-        <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-6">1. Who We Are</h2>
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+
+        <section style={{ marginBottom: '24px' }}>
+          <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '12px' }} className='text-gray-700'>1. Who We Are</h2>
+          <p className='text-gray-500' style={{ fontSize: '16px', lineHeight: '1.6' } }>
             Stringly is dedicated to creating meaningful and authentic connections through innovative technology. This Privacy Policy applies to all services provided through our mobile app and any associated websites or services.
           </p>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-6">2. Information We Collect</h2>
-          <ul className="list-disc pl-8 text-gray-700 space-y-4 text-base md:text-lg">
-            <li>
-              <strong>Personal Information:</strong> Name, email address, phone number, gender, date of birth, and preferences.
-            </li>
-            <li>
-              <strong>Profile Data:</strong> Photos, bio, and verification data.
-            </li>
-            <li>
-              <strong>Location Information:</strong> Geolocation data with your consent.
-            </li>
-            <li>
-              <strong>Activity Information:</strong> Swipes, matches, messages, and interactions.
-            </li>
-            <li>
-              <strong>Device Information:</strong> Device model, OS, IP address, and usage logs.
-            </li>
-            <li>
-              <strong>Payment Information:</strong> Subscription and purchase details.
-            </li>
+        <section style={{ marginBottom: '24px' }}>
+          <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '12px' }} className='text-gray-700'>2. Information We Collect</h2>
+          <ul style={{ paddingLeft: '20px', fontSize: '16px', lineHeight: '1.6' }}>
+            <li className='text-gray-500'><strong className='text-gray-700'>Personal Information:</strong> Name, email address, phone number, gender, date of birth, and preferences.</li>
+            <li className='text-gray-500'><strong className='text-gray-700'>Profile Data:</strong> Photos, bio, and verification data.</li>
+            <li className='text-gray-500'><strong className='text-gray-700'>Location Information:</strong> Geolocation data with your consent.</li>
+            <li className='text-gray-500'><strong className='text-gray-700'>Activity Information:</strong> Swipes, matches, messages, and interactions.</li>
+            <li className='text-gray-500'><strong className='text-gray-700'>Device Information:</strong> Device model, OS, IP address, and usage logs.</li>
+            <li className='text-gray-500'><strong className='text-gray-700'>Payment Information:</strong> Subscription and purchase details.</li>
           </ul>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-6">3. How We Use Your Information</h2>
-          <ul className="list-disc pl-8 text-gray-700 space-y-4 text-base md:text-lg">
-            <li>Matching users based on preferences, location, and interests.</li>
-            <li>Authenticating and verifying profiles to ensure trustworthy interactions.</li>
-            <li>Customizing user experiences.</li>
-            <li>Detecting and preventing fraud and unauthorized activity.</li>
-            <li>Processing payments securely.</li>
-            <li>Enhancing features and performance through analytics.</li>
+        <section style={{ marginBottom: '24px' }}>
+          <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '12px' }} className='text-gray-700'>3. How We Use Your Information</h2>
+          <ul style={{ paddingLeft: '20px', fontSize: '16px', lineHeight: '1.6' }}>
+            <li className='text-gray-500'>Matching users based on preferences, location, and interests.</li>
+            <li className='text-gray-500'>Authenticating and verifying profiles to ensure trustworthy interactions.</li>
+            <li className='text-gray-500'>Customizing user experiences.</li>
+            <li className='text-gray-500'>Detecting and preventing fraud and unauthorized activity.</li>
+            <li className='text-gray-500'>Processing payments securely.</li>
+            <li className='text-gray-500'>Enhancing features and performance through analytics.</li>
           </ul>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-6">4. Sharing Your Information</h2>
-          <ul className="list-disc pl-8 text-gray-700 space-y-4 text-base md:text-lg">
-            <li>With trusted partners for payment processing, analytics, and support.</li>
-            <li>To comply with legal obligations.</li>
-            <li>In case of a merger or acquisition.</li>
+        <section style={{ marginBottom: '24px' }}>
+          <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '12px' }} className='text-gray-700'>4. Sharing Your Information</h2>
+          <ul style={{ paddingLeft: '20px', fontSize: '16px', lineHeight: '1.6' }}>
+            <li className='text-gray-500'>With trusted partners for payment processing, analytics, and support.</li>
+            <li className='text-gray-500'>To comply with legal obligations.</li>
+            <li className='text-gray-500'>In case of a merger or acquisition.</li>
           </ul>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-6">5. Your Privacy Choices</h2>
-          <ul className="list-disc pl-8 text-gray-700 space-y-4 text-base md:text-lg">
-            <li>Update or edit your data in-app.</li>
-            <li>Request account deletion via app settings.</li>
-            <li>Manage permissions in your device settings.</li>
+        <section style={{ marginBottom: '24px' }}>
+          <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '12px' }} className='text-gray-700'>5. Your Privacy Choices</h2>
+          <ul style={{ paddingLeft: '20px', fontSize: '16px', lineHeight: '1.6' }}>
+            <li className='text-gray-500'>Update or edit your data in-app.</li>
+            <li className='text-gray-500'>Request account deletion via app settings.</li>
+            <li className='text-gray-500'>Manage permissions in your device settings.</li>
           </ul>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-6">6. Data Retention</h2>
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+        <section style={{ marginBottom: '24px' }}>
+          <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '12px' }} className='text-gray-700'>6. Data Retention</h2>
+          <p style={{ fontSize: '16px', lineHeight: '1.6' }} className='text-gray-500'>
             We retain your data as long as your account is active. Once deleted, data is removed within 30 days, except for legal compliance.
           </p>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-6">7. Cookies and Tracking Technologies</h2>
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+        <section style={{ marginBottom: '24px' }}>
+          <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '12px' }} className='text-gray-700'>7. Cookies and Tracking Technologies</h2>
+          <p style={{ fontSize: '16px', lineHeight: '1.6' }} className='text-gray-500'>
             We use cookies to enhance your experience. You can manage cookie preferences through your browser or device settings.
           </p>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-6">8. Security</h2>
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+        <section style={{ marginBottom: '24px' }}>
+          <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '12px' }} className='text-gray-700'>8. Security</h2>
+          <p style={{ fontSize: '16px', lineHeight: '1.6' }} className='text-gray-500'>
             We implement encryption and secure protocols to protect your data. While no system is foolproof, we maintain high-security standards.
           </p>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-6">9. Children’s Privacy</h2>
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+        <section style={{ marginBottom: '24px' }}>
+          <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '12px' }} className='text-gray-700'>9. Children’s Privacy</h2>
+          <p style={{ fontSize: '16px', lineHeight: '1.6' }} className='text-gray-500'>
             Stringly is intended for users aged 18 and older. We do not knowingly collect information from individuals under 18.
           </p>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-6">10. International Data Transfers</h2>
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+        <section style={{ marginBottom: '24px' }}>
+          <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '12px' }} className='text-gray-700'>10. International Data Transfers</h2>
+          <p style={{ fontSize: '16px', lineHeight: '1.6' }} className='text-gray-500'>
             If you’re using Stringly outside of [Insert Country], your data may be transferred to and processed in countries where we operate. We comply with applicable data protection laws for these transfers.
           </p>
         </section>
 
         <section>
-          <h2 className="text-2xl md:text-3xl font-bold text-purple-700 mb-6">11. Contact Us</h2>
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+          <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '12px' }} className='text-gray-700'>11. Contact Us</h2>
+          <p style={{ fontSize: '16px', lineHeight: '1.6' }} className='text-gray-500'>
             If you have questions or concerns about this Privacy Policy or your data, please contact us at:
           </p>
-          <p className="text-gray-700 text-base md:text-lg">
-            Email:{' '}
-            <a
-              href="mailto:support@stringly.com"
-              className="text-purple-600 hover:underline"
-            >
-              support@stringly.com
-            </a>
+          <p style={{ fontSize: '16px' }}>
+            Email: <a href="mailto:support@stringly.com">support@stringly.com</a>
           </p>
         </section>
       </div>

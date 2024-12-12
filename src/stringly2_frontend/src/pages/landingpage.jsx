@@ -297,7 +297,7 @@ const Landingpage = () => {
                             }} className='font-sf text-[28px] md:text-[30px] font-semibold lg:text-[48px] leading-[25px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
                                 Experience Unmatched Privacy and Elegance
                             </h2>
-                            <p className="font-sf text-[15px] md:text-lg pb-4 lg:pb-0 lg:mt-4 lg:leading-[22px] font-light min-w-[300px]-lg " style={{
+                            <p className="font-sf text-[15px] md:text-lg pb-4 lg:pb-0 lg:mt-4 lg:leading-[22px] font-light min-w-[300px]-lg xl:py-6" style={{
                                 width: '90%',
                             }}>
                                 At Stringly, we prioritize your privacy while providing a luxurious experience. Our platform is designed to ensure that every connection you make is both secure and sophisticated.
