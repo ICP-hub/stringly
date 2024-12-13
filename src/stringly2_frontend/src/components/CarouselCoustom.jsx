@@ -47,7 +47,7 @@ export default function App() {
     {
       type: "image",
       mobileSrc: "/landing/carousel2mobile.jpg",
-      desktopSrc: "/landing/carousel2.jpg",
+      desktopSrc: "/landing/carousel3 (2).jpg",
       alt: "Slide 3",
     },
   ];
@@ -66,12 +66,12 @@ export default function App() {
         }}
         pagination={{
           clickable: true,
-          renderBullet: (index, className) => {
-            if (index < 3) {
-              return `<span class="${className}"></span>`;
-            }
-            return '';
-          },
+          // renderBullet: (index, className) => {
+          //   if (index < 3) {
+          //     return `<span class="${className}"></span>`;
+          //   }
+          //   return '';
+          // },
         }}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         onInit={(swiper) => setActiveIndex(swiper.realIndex)}
