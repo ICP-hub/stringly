@@ -250,6 +250,73 @@
 
 @media (min-width: 1024px) {
 
+    // animation for button
+    .animated-border-button {
+        // height: 52px;
+    }
+
+    .animated-border-button,
+    .animated-border-button-glow {
+        background-color: #000;
+        position: absolute;
+        overflow: hidden;
+        z-index: 10 !important;
+        margin-inline: auto;
+    }
+
+    .animated-border-button-glow {
+        overflow: hidden;
+        filter: blur(20px);
+        transition: background-image 0.5s ease-out;
+    }
+
+    .animated-border-button:before,
+    .animated-border-button-glow:before {
+        content: '';
+        z-index: -2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+        width: 99999px;
+        height: 99999px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-image: conic-gradient(#d83694, #0039c7, #f7eff3 25%);
+        animation: rotate 5s linear infinite;
+        transition: background-image 0.5s ease-out, animation 0.5s ease-out;
+    }
+
+    .animated-border-button:after {
+        content: '';
+        position: absolute;
+        z-index: -10;
+        // left: 10px;
+        // top: 10px;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        background: #000 !important;
+    }
+
+    @keyframes rotate {
+        100% {
+            transform: translate(-50%, -50%) rotate(1turn);
+        }
+    }
+
+    .animated-border-button:hover:before {
+        animation: none;
+        background-image: conic-gradient(#d83694, #0039c7, #c04783 100%);
+        transition: all 2s ease-in;
+    }
+
+    .animated-border-button-glow:hover {
+        background-image: conic-gradient(#d83694, #0039c7, #d4237c 100%);
+        transition: all 2s ease-in;
+    }
+
+    // animation for box
+
     .animated-border-box {
         height: 420px;
     }
@@ -472,8 +539,8 @@
         position: absolute;
         height: 100%;
         inset: 0;
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.842), rgba(10, 10, 10, 0.048));
-        background-image: url('landing/darkEffect@.svg');
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.723), rgba(10, 10, 10, 0.048));
+        // background-image: url('landing/darkEffect@.svg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
