@@ -8,7 +8,7 @@ const Privacy = () => {
           Privacy Policy
         </h1>
         <p style={{ marginBottom: '16px', textAlign: 'center', fontSize: '16px' }}>
-          Last Updated: <span style={{ fontWeight: 'bold' }}>[Insert Date]</span>
+          Last Updated: <span style={{ fontWeight: 'bold' }}>[06-12-2024]</span>
         </p>
 
         <section style={{ marginBottom: '24px' }}>
