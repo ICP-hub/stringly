@@ -46,7 +46,7 @@ export default function App() {
     },
     {
       type: "image",
-      mobileSrc: "/landing/carousel2mobile.jpg",
+      mobileSrc: "/landing/carousel3_mobile.jpg",
       desktopSrc: "/landing/carousel3 (2).jpg",
       alt: "Slide 3",
     },
