@@ -131,7 +131,7 @@ const Landingpage = () => {
                         luxury with Internet Computer Protocol. Experience unmatched privacy and
                         security while forming meaningful connections.
                     </p>
-                    <div className="animated-border-button mt-20 md:mt-10 rounded-xl p-[2.5px] left-24 md:left-52 hover:scale-105 transition-all duration-200">
+                    <div className="animated-border-button mt-20 md:mt-10 rounded-xl p-[2.5px] left-1/3 md:left-52 hover:scale-105 transition-all duration-200">
                         <button className=" bg-white text-[16px] font-sf text-black px-6 py-3 hover:bg-purple-100 w-32 rounded-2xl">
                             <a href='https://tally.so/r/waD9X9'>Sign Up</a>
                         </button>
@@ -189,9 +189,9 @@ const Landingpage = () => {
                                         Experience connections like never before with Stringly.
                                     </p>
                                     <a href="https://tally.so/r/waD9X9">
-                                        {/* <button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:scale-105 transition-all duration-200">
+                                        <button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:scale-105 transition-all duration-200">
                                             Join
-                                        </button> */}
+                                        </button>
                                     </a>
                                 </div>
                             </div>
@@ -220,9 +220,9 @@ const Landingpage = () => {
                                 <p className="mt-2 text-white-600 font-roboto font-light leading-[24px]">
                                     Experience connections like never before with Stringly.
                                 </p>
-                                {/* <a href='https://tally.so/r/waD9X9'><button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:scale-105 transition-all duration-200 hover:bg-black hover:text-white">
+                                <a href='https://tally.so/r/waD9X9'><button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:scale-105 transition-all duration-200 hover:bg-black hover:text-white">
                                     Join
-                                </button></a> */}
+                                </button></a>
                             </div>
                         </div>
                     </div>
@@ -244,9 +244,9 @@ const Landingpage = () => {
                                 <div className="text-white child">
                                     <h2 className="text-[32px] leading-[38px] font-semibold font-roboto font-bold">Your Journey Begins Here</h2>
                                     <p className="text-lg mt-2 font-roboto font-light leading-[24px]">Experience connections like never before with Stringly.</p>
-                                    {/* <a href='https://tally.so/r/waD9X9'><button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:bg-black hover:text-white hover:scale-105 transition-all duration-200">
+                                    <a href='https://tally.so/r/waD9X9'><button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:bg-black hover:text-white hover:scale-105 transition-all duration-200">
                                         Join
-                                    </button></a> */}
+                                    </button></a>
                                 </div>
                             </div>
                         </div>
@@ -265,9 +265,9 @@ const Landingpage = () => {
                                 <div className="text-white child">
                                     <h2 className="text-[32px] leading-[38px] font-roboto font-bold">Unmatched Privacy <br /> and Security</h2>
                                     <p className="text-lg mt-2 font-roboto font-light leading-[24px]">Experience connections like never before with Stringly.</p>
-                                    {/* <a href='https://tally.so/r/waD9X9'><button className=" bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:bg-black hover:text-white hover:scale-105 transition-all duration-200">
+                                    <a href='https://tally.so/r/waD9X9'><button className=" bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:bg-black hover:text-white hover:scale-105 transition-all duration-200">
                                         Join
-                                    </button></a> */}
+                                    </button></a>
                                 </div>
                             </div>
                         </div>
