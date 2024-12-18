@@ -637,6 +637,7 @@
         background-image: conic-gradient(#d83694, #0039c7, #d4237c 100%);
         transition: all 2s ease-in;
     }
+
     .animated-border-box,
     .animated-border-box-glow {
         max-height: 300px;
@@ -683,6 +684,7 @@
     .blur-slide {
         opacity: 0.6;
     }
+
     .ppp.hovered::before {
         content: '';
         position: absolute;
@@ -697,11 +699,16 @@
         color: #fff !important;
         opacity: 1;
     }
-    
+
 }
 
 /* Mobile Devices (Small screens, max-width 480px) */
 @media (max-width: 480px) {
+
+    .hover-gradient {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(10, 10, 10, 0.08)), url('landing/darkEffect@.svg');
+    }
+
 
     .animated-border-button {
         // height: 52px;
@@ -767,6 +774,7 @@
         background-image: conic-gradient(#d83694, #0039c7, #d4237c 100%);
         transition: all 2s ease-in;
     }
+
     .ppp.hovered .child-2 {
         animation: slideIn2 1s forwards;
     }
@@ -813,10 +821,10 @@
 
         position: absolute;
         inset: 0;
-         background-image: url('landing/darkEffect@.svg');
-         background-size: cover;
-         background-position: center;
-         background-repeat: no-repeat;
+        background-image: url('landing/darkEffect@.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         z-index: 99;
         transition: opacity 0.5s ease-in-out;
         opacity: 1;
@@ -993,7 +1001,7 @@
         opacity: 1;
     }
 
-    
+
 }
 
 
@@ -1187,8 +1195,7 @@
     background-position: 0 0;
     background-image: conic-gradient(#d83694,
             #0039c7,
-            #f7eff3 20%
-        );
+            #f7eff3 20%);
     animation: rotate 5s linear infinite;
     /* Rotate the gradient */
     transition: background-image 0.5s ease-out, animation 0.5s ease-out;

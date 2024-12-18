@@ -25,17 +25,17 @@ export default {
       'regular': 400,
       'medium': 500,
       'semibold': 600,
-      'bold': 700,
+      'bold': 750,
       'extrabold': 800,
       'black': 900,
     },
     extend: {
-      // backgroundImage: {
-      //   'dark-gradient': 'linear-gradient(to right, black, #1a1a1a, #333333, #4d4d4d, #666666)',
-      // },
       backgroundImage: {
-        'hover-gradient': "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(10, 10, 10, 0.08)), url('landing/darkEffect@.svg')",
+        'dark-gradient': 'linear-gradient(to right, rgba(0, 0, 0, 0.72), rgba(10, 10, 10, 0.18))',
       },
+      // backgroundImage: {
+      //   'hover-gradient': "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(10, 10, 10, 0.08)), url('landing/darkEffect@.svg')",
+      // },
       boxShadow: {
         'inset-top-black': 'inset 0 150px 100px 50px black',
       },

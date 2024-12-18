@@ -140,8 +140,8 @@ const Landingpage = () => {
             </div>
 
             {/* Connecting Section */}
-            <div className="px-[20px] md:px-0 text-center mt-16 lg:mb-10">
-                <h2 className="text-[30px]  lg:text-[48px] font-semibold font-sf leading-[38px] mb-2 md:mb-6">Discover Our Unique Features</h2>
+            <div className="px-[20px] md:px-0 text-center w-[310px] md:w-auto mt-16 lg:mb-10">
+                <h2 className="text-[30px]  lg:text-[48px] font-bold md:font-semibold font-sf leading-[38px] mb-2 md:mb-6">Discover Our Unique Features</h2>
                 <p className="mt-2 text-[14px] md:text-[20px] font-regular leading-[24px]">
                     Experience unmatched privacy and secure connections today.
                 </p>
@@ -150,8 +150,8 @@ const Landingpage = () => {
                 <CarouselCoustom />
             </div>
             {/* Connecting Section */}
-            <div className="px-[20px] md:px-0 text-center mt-3 md:mt-16 lg:mb-10">
-                <h2 className="text-[30px]  lg:text-[48px] font-semibold font-sf leading-[38px] mb-2 md:mb-4">Connecting You With Purpose</h2>
+            <div className="px-[20px] md:px-0 text-center w-[310px] md:w-auto mt-3 md:mt-16 lg:mb-10">
+                <h2 className="text-[30px]  lg:text-[48px] font-bold md:font-semibold font-sf leading-[38px] mb-2 md:mb-4">Connecting You With Purpose</h2>
                 <p className="mt-2 text-[14px] md:text-[20px] font-regular leading-[24px]">
                     A unique blend of dating and networking experiences.
                 </p>
@@ -174,7 +174,7 @@ const Landingpage = () => {
                                 className="w-full h-full object-cover opacity-[0.6]"
                             />
                             <div
-                                className={`absolute  inset-0 flex items-center p-6 md:px-28 transform ${hovered1[index] ? "translate-x-0 bg-hover-gradient" : "translate-x-[-100%]"
+                                className={`absolute  inset-0 flex items-center p-6 md:px-28 transform ${hovered1[index] ? "translate-x-0 bg-dark-gradient" : "translate-x-[-100%]"
                                     } transition-transform duration-500`}
                             >
                                 <div className="text-white">
