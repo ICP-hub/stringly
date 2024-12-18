@@ -131,7 +131,7 @@ const Landingpage = () => {
                         luxury with Internet Computer Protocol. Experience unmatched privacy and
                         security while forming meaningful connections.
                     </p>
-                    <div className="animated-border-button mt-20 md:mt-10 rounded-xl p-[2.5px] left-52 hover:scale-105 transition-all duration-200">
+                    <div className="animated-border-button mt-20 md:mt-10 rounded-xl p-[2.5px] left-24 md:left-52 hover:scale-105 transition-all duration-200">
                         <button className=" bg-white text-[16px] font-sf text-black px-6 py-3 hover:bg-purple-100 w-32 rounded-2xl">
                             <a href='https://tally.so/r/waD9X9'>Sign Up</a>
                         </button>
