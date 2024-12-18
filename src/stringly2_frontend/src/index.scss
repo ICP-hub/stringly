@@ -250,6 +250,18 @@
 
 @media (min-width: 1024px) {
 
+    .btn1 {
+        font-size: 16px;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      
+      .btn1:hover {
+        transition: all 1s ease-out;
+      }
+      
+    
+      
     // animation for button
     .animated-border-button {
         // height: 52px;
@@ -283,7 +295,7 @@
         height: 99999px;
         background-repeat: no-repeat;
         background-position: 0 0;
-        background-image: conic-gradient(#d83694, #0039c7, #f7eff3 25%);
+        background-image: conic-gradient(#d23691e6, #113caaf1,#d23691e6, #eeeeee 35%);
         animation: rotate 5s linear infinite;
         transition: background-image 0.5s ease-out, animation 0.5s ease-out;
     }
@@ -742,7 +754,7 @@
         height: 99999px;
         background-repeat: no-repeat;
         background-position: 0 0;
-        background-image: conic-gradient(#d83694, #0039c7, #f7eff3 25%);
+        background-image: conic-gradient(#d23691e6, #113caaf1,#d23691e6, #eeeeee 35%);
         animation: rotate 5s linear infinite;
         transition: background-image 0.5s ease-out, animation 0.5s ease-out;
     }

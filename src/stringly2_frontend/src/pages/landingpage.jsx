@@ -131,11 +131,13 @@ const Landingpage = () => {
                         luxury with Internet Computer Protocol. Experience unmatched privacy and
                         security while forming meaningful connections.
                     </p>
-                    <div className="animated-border-button mt-20 md:mt-10 rounded-xl p-[2.5px] left-1/3 md:left-52 hover:scale-105 transition-all duration-200">
-                        <button className=" bg-white text-[16px] font-sf text-black px-6 py-3 hover:bg-purple-100 w-32 rounded-2xl">
-                            <a href='https://tally.so/r/waD9X9'>Sign Up</a>
+                    <div className="animated-border-button mt-20 md:mt-10 rounded-xl p-[2.5px] left-1/3 md:left-56 hover:scale-105 transition-all duration-200">
+                        <button className="relative bg-white text-[16px] font-sf text-black px-4 py-3 w-28 rounded-2xl overflow-hidden group">
+                            <a href="https://tally.so/r/waD9X9" className="relative z-10">Sign Up</a>
+                            <span className="absolute bottom-[-24px] left-1/2 w-0 h-0 bg-pink-200 transition-all duration-500 ease-out group-hover:w-[150%] group-hover:h-[100%] rounded-full transform group-hover:translate-x-[-50%] group-hover:translate-y-[-50%]"></span>
                         </button>
                     </div>
+
                 </motion.div>
             </div>
 
