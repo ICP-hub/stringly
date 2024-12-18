@@ -253,6 +253,7 @@
     // animation for button
     .animated-border-button {
         // height: 52px;
+        border-radius: 17px;
     }
 
     .animated-border-button,
@@ -540,7 +541,7 @@
         height: 100%;
         inset: 0;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.723), rgba(10, 10, 10, 0.048));
-        // background-image: url('landing/darkEffect@.svg');
+        // background-image: url('landing/darkEffegitct@.svg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -816,7 +817,6 @@
 
     .carousel-image {
         transition: transform 0.5s ease, filter 0.5s ease;
-        filter: blur(5px);
         transform: scale(0.9);
         height: auto;
     }
@@ -828,6 +828,7 @@
 
     .blur-slide {
         opacity: 0.6;
+        filter: blur(5px);
     }
 
     .swiper-pagination {

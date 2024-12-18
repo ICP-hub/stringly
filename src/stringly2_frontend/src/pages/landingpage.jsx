@@ -122,17 +122,17 @@ const Landingpage = () => {
 
                     className="absolute text-white left-1/2 top-1/2 top-[260px] md:top-1/2 lg:top-[250px] transform -translate-x-1/2 -translate-y-1/2 max-w-[362px]-sm p-2 w-full md:w-[550px] bg-opacity-50 text-center">
 
-                    <p className="font-sf md:font-semibold w-full text-[32px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
+                    <p className="font-sf font-semibold w-full text-[32px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
                         {/* <p className='md:text-[76px] text-center bg-clip-text text-transparent md:font-bold p-2' style={{ backgroundImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%)' }}>Stringly</p> */}
-                        String your Vibe
+                        String Your Vibe
                     </p>
-                    <p className="font-sfProDispaly text-[14px] lg:text-[18px] font-light leading-[21px] lg:leading-[30px] text-center mt-2">
+                    <p className="font-sfProDispaly text-[14px] px-2 lg:text-[18px] font-light leading-[21px] lg:leading-[30px] text-center mt-2">
                         Discover Stringly, the premium dating and networking app that blends
                         luxury with Internet Computer Protocol. Experience unmatched privacy and
                         security while forming meaningful connections.
                     </p>
-                    <div className="animated-border-button mt-20 md:mt-10 rounded-xl p-[4px] left-52 pt-1 hover:scale-105 transition-all duration-200">
-                        <button className=" bg-white text-[16px] font-sf text-black px-6 py-3 hover:bg-blue-100 w-32 rounded-xl">
+                    <div className="animated-border-button mt-20 md:mt-10 rounded-xl p-[2.5px] left-52 hover:scale-105 transition-all duration-200">
+                        <button className=" bg-white text-[16px] font-sf text-black px-6 py-3 hover:bg-purple-100 w-32 rounded-2xl">
                             <a href='https://tally.so/r/waD9X9'>Sign Up</a>
                         </button>
                     </div>
@@ -141,7 +141,7 @@ const Landingpage = () => {
 
             {/* Connecting Section */}
             <div className="px-[20px] md:px-0 text-center mt-16 lg:mb-10">
-                <h2 className="text-[34px]  lg:text-[48px] font-semibold font-sf leading-[38px] mb-2 md:mb-6">Discover Our Unique Features</h2>
+                <h2 className="text-[30px]  lg:text-[48px] font-semibold font-sf leading-[38px] mb-2 md:mb-6">Discover Our Unique Features</h2>
                 <p className="mt-2 text-[14px] md:text-[20px] font-regular leading-[24px]">
                     Experience unmatched privacy and secure connections today.
                 </p>
@@ -151,7 +151,7 @@ const Landingpage = () => {
             </div>
             {/* Connecting Section */}
             <div className="px-[20px] md:px-0 text-center mt-3 md:mt-16 lg:mb-10">
-                <h2 className="text-[34px]  lg:text-[48px] font-semibold font-sf leading-[38px] mb-2 md:mb-4">Connecting You With Purpose</h2>
+                <h2 className="text-[30px]  lg:text-[48px] font-semibold font-sf leading-[38px] mb-2 md:mb-4">Connecting You With Purpose</h2>
                 <p className="mt-2 text-[14px] md:text-[20px] font-regular leading-[24px]">
                     A unique blend of dating and networking experiences.
                 </p>
@@ -346,7 +346,7 @@ const Landingpage = () => {
                             <p className="font-semibold px-2 text-[32px] leading-[44px] lg:text-[48px] lg:leading-[58px] text-center font-sf pb-2 md:pb-0">
                                 Let's build Stringly together.
                             </p>
-                            <p className="font-roboto text-[16px] font-sf font-semibold leading-[27px]">Contribute to the vibes!</p>
+                            <p className="font-roboto text-[16px] font-sf font-regular leading-[27px]">Contribute to the vibes!</p>
                             <a href='https://docs.google.com/forms/d/e/1FAIpQLSfFvJ4tF7YWebqvfmpbuj30pkVAkyVOhLVPju6RjBLyNMukEw/viewform'>
                                 <button className="hover:scale-105 transition-all duration-200 rounded-xl border border-black mt-10 px-5 py-2 text-black">
                                     Join Us
