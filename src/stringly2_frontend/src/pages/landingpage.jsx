@@ -175,7 +175,7 @@ const Landingpage = () => {
                             />
                             <div
                                 className={`absolute  inset-0 flex items-center p-6 md:px-28 transform ${hovered1[index] ? "translate-x-0 bg-dark-gradient" : "translate-x-[-100%]"
-                                    } transition-transform duration-500`}
+                                    } transition-all duration-1000`}
                             >
                                 <div className="text-white">
                                     <h2 className="text-[32px] leading-[38px] font-semibold leading-tight font-roboto font-bold">
