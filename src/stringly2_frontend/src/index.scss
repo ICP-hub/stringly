@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 
 @font-face {
     font-family: 'SF Pro Display';
@@ -254,14 +256,14 @@
         font-size: 16px;
         overflow: hidden;
         cursor: pointer;
-      }
-      
-      .btn1:hover {
+    }
+
+    .btn1:hover {
         transition: all 1s ease-out;
-      }
-      
-    
-      
+    }
+
+
+
     // animation for button
     .animated-border-button {
         // height: 52px;
@@ -295,7 +297,7 @@
         height: 99999px;
         background-repeat: no-repeat;
         background-position: 0 0;
-        background-image: conic-gradient(#d23691e6, #113caaf1,#d23691e6, #eeeeee 35%);
+        background-image: conic-gradient(#d23691e6, #113caaf1, #d23691e6, #eeeeee 35%);
         animation: rotate 5s linear infinite;
         transition: background-image 0.5s ease-out, animation 0.5s ease-out;
     }
@@ -511,6 +513,10 @@
         animation: slideIn2 2s forwards;
     }
 
+    .ppp.hovered .child-3 {
+        animation: slideIn3 2s forwards;
+    }
+
     @keyframes slideIn {
         from {
             transform: translateX(-400px);
@@ -535,6 +541,18 @@
         }
     }
 
+    @keyframes slideIn3 {
+        from {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
     .child {
         opacity: 0;
         transform: translateX(500px);
@@ -545,6 +563,13 @@
         opacity: 0;
         transform: translateX(-500px);
         transition: none;
+    }
+
+    .child-3 {
+        opacity: 0;
+        transform: translateX(500px);
+        transition: none;
+        border: 3px soild red;
     }
 
     .ppp.hovered::before {
@@ -578,6 +603,23 @@
     .ppp.hovered .child-2 {
         opacity: 1;
         transform: translateX(0);
+    }
+
+    .ppp.hovered .child-3 {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    @keyframes moveBackground {
+        0% {
+            background-position: 0% 100%;
+            /* Start at the bottom */
+        }
+
+        100% {
+            background-position: 0% 0%;
+            /* Move to the top */
+        }
     }
 }
 
@@ -754,7 +796,7 @@
         height: 99999px;
         background-repeat: no-repeat;
         background-position: 0 0;
-        background-image: conic-gradient(#d23691e6, #113caaf1,#d23691e6, #eeeeee 35%);
+        background-image: conic-gradient(#d23691e6, #113caaf1, #d23691e6, #eeeeee 35%);
         animation: rotate 5s linear infinite;
         transition: background-image 0.5s ease-out, animation 0.5s ease-out;
     }
@@ -1065,6 +1107,12 @@
     background-position: center;
 }
 
+.bg-herogradient-full {
+    background-image: url("../landing/heroImgGradient.png");
+    background-size: cover;
+    background-position: center;
+}
+
 @keyframes scaleUp {
     0% {
         transform: scale(0);
@@ -1256,4 +1304,14 @@
             #0039c7,
             #d4237c 100%);
     transition: all 2s ease-in;
+}
+
+.animated-text {
+    display: inline-block;
+    font-weight: bold;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    overflow: hidden;
+    cursor: pointer;
 }

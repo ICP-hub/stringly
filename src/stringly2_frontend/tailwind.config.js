@@ -17,6 +17,7 @@ export default {
       'jakarta': ['"Plus Jakarta Sans"', 'sans-serif'],
       'roboto' : ['"Roboto"', 'sans-serif'],
       'sf': ['SF Pro Display', 'sans-serif'],
+      'anton' : ["Anton", 'serif']
     },
     fontWeight: {
       'thin': 100,
@@ -40,7 +41,7 @@ export default {
         'inset-top-black': 'inset 0 150px 100px 50px black',
       },
     },
-  },
+},
   plugins: [],
 }
 

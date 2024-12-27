@@ -4,14 +4,20 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { MdPrivacyTip } from "react-icons/md";
 import CarouselCoustom from '../components/CarouselCoustom';
 import { motion } from "framer-motion";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger);
 
 const Landingpage = () => {
     const [hovered, setHovered] = useState('');
     const [isMobile, setIsMobile] = useState(false);
     const [hovered1, setHovered1] = useState([false, false, false]);
     const imageRefs = useRef([]);
-    const [hovered2, setHovered2] = useState([false]);
+    const [hovered2, setHovered2] = useState([false, false]);
+
+    // const [scaleFactor, setScaleFactor] = useState(1);
+    // const [scrollCount, setScrollCount] = useState(0);
 
     // const handleHover1 = (index) => {
     //     if (!hovered1[index]) {
@@ -109,38 +115,223 @@ const Landingpage = () => {
         };
     }, []);
 
+    const imageRef = useRef(null);
+    const [scaleFactor, setScaleFactor] = useState(1);
+    const [isScrollAllowed, setIsScrollAllowed] = useState(false);
+    const [isParagraphVisible, setIsParagraphVisible] = useState(false);
+    const [isButtonVisible, setIsButtonVisible] = useState(false);
+
+    const maxScrollScale = 1.3; // Maximum zoom scale
+    const scaleStep = 0.1; // Zoom increment
+
+    const handleScroll = (event) => {
+        if (isScrollAllowed) return;
+
+        event.preventDefault(); // Prevent default scrolling behavior
+
+        const direction = event.deltaY > 0 ? "down" : "up";
+
+        setScaleFactor((prevScale) => {
+            const nextScale =
+                direction === "down"
+                    ? Math.min(prevScale + scaleStep, maxScrollScale)
+                    : Math.max(prevScale - scaleStep, 1);
+
+            if (nextScale >= maxScrollScale) {
+                setIsScrollAllowed(true);
+            }
+
+            if (direction === "down" && prevScale < 1.1) {
+                setIsParagraphVisible(true);
+            }
+
+            if (direction === "down" && prevScale > 1.2) {
+                setIsButtonVisible(true);
+            }
+
+            return nextScale;
+        });
+    };
+
+    const updateScaleAnimation = () => {
+        gsap.to(imageRef.current, {
+            scale: scaleFactor,
+            ease: "power1.out",
+            duration: 0.5,
+        });
+    };
+
+    useEffect(() => {
+        updateScaleAnimation(); // Update scale animation whenever scaleFactor changes
+    }, [scaleFactor]);
+
+    useEffect(() => {
+        window.addEventListener("wheel", handleScroll, { passive: false });
+
+        return () => {
+            window.removeEventListener("wheel", handleScroll);
+        };
+    }, [isScrollAllowed]);
+
+    useEffect(() => {
+        const resetScrollState = () => {
+            if (window.scrollY === 0) {
+                setScaleFactor(1);
+                setIsScrollAllowed(false);
+                setIsParagraphVisible(false);
+                setIsButtonVisible(false);
+                gsap.to(imageRef.current, { scale: 1, duration: 0.5 });
+            }
+        };
+
+        window.addEventListener("scroll", resetScrollState);
+
+        return () => {
+            window.removeEventListener("scroll", resetScrollState);
+        };
+    }, []);
+
+    const parentRef = useRef(null);
+    const text1Ref = useRef(null);
+    const text2Ref = useRef(null);
+    const blackbg = useRef(null);
+    const [isHovered, setIsHovered] = useState(false); // Track if currently hovered
+    const [animationDirection, setAnimationDirection] = useState("up"); // "up" or "down"
+
+    useEffect(() => {
+        const parentElement = parentRef.current;
+
+        const handleMouseEnter = () => {
+            const timeline = gsap.timeline();
+            const isDirectionUp = animationDirection === "up";
+
+            // Text1 animation
+            timeline.to(text1Ref.current, {
+                backgroundPosition: isDirectionUp ? "0% 0%" : "0% 100%",
+                duration: 1.5,
+                ease: "power2.out",
+                backgroundSize: "200% 200%",
+            });
+
+            // Text2 animation
+            timeline.to(
+                text2Ref.current,
+                {
+                    backgroundPosition: isDirectionUp ? "0% 0%" : "0% 100%",
+                    duration: 1.5,
+                    ease: "power2.out",
+                    backgroundSize: "200% 200%",
+                },
+                "-=1.0" // Overlap for fluidity
+            );
+
+            // Background animation
+            timeline.to(
+                blackbg.current,
+                {
+                    backgroundPosition: isDirectionUp ? "0% 0%" : "0% 200%",
+                    duration: 1.5,
+                    ease: "power2.out",
+                    backgroundSize: "200% 200%",
+                },
+                "-=1.0"
+            );
+
+            // Toggle animation direction for next hover
+            setAnimationDirection(isDirectionUp ? "down" : "up");
+        };
+
+        // Attach hover event
+        parentElement.addEventListener("mouseenter", handleMouseEnter);
+
+        return () => {
+            parentElement.removeEventListener("mouseenter", handleMouseEnter);
+        };
+    }, [animationDirection]); // Depend on animation direction to toggle
+
     return (
+
         <div className='w-full mx-auto flex flex-col items-center justify-center'>
             {/* Hero Section */}
             <div
-                className="relative lg:h-auto w-full md:w-full md:w-full rounded-none bg-gray-800">
-                <img className="w-full md:w-full lg:h-auto md:object-cover rounded-none opacity-70 " src={`${isMobile ? '/landing/heroImg_mobile.png' : 'landing/heroImg.png'}`} alt="Hero image" />
-                <motion.div
-                    initial={{ opacity: 0, x: "50%" }}
-                    animate={{ opacity: 1, x: "-50%" }}
-                    transition={{ duration: 2 }}
-
-                    className="absolute text-white left-1/2 top-1/2 top-[260px] md:top-1/2 lg:top-[250px] transform -translate-x-1/2 -translate-y-1/2 max-w-[362px]-sm p-2 w-full md:w-[550px] bg-opacity-50 text-center">
-
-                    <p className="font-sf font-semibold w-full text-[32px] md:text-[64px] leading-[46px] md:leading-[72px] text-center">
-                        {/* <p className='md:text-[76px] text-center bg-clip-text text-transparent md:font-bold p-2' style={{ backgroundImage: 'linear-gradient(90.4deg, #D83694 29.82%, #0039C7 95.61%)' }}>Stringly</p> */}
-                        String Your Vibe
-                    </p>
-                    <p className="font-sfProDispaly text-[14px] px-2 lg:text-[18px] font-light leading-[21px] lg:leading-[30px] text-center mt-2">
-                        Discover Stringly, the premium dating and networking app that blends
-                        luxury with Internet Computer Protocol. Experience unmatched privacy and
-                        security while forming meaningful connections.
-                    </p>
-                    <div className="animated-border-button mt-20 md:mt-10 rounded-xl p-[2.5px] left-1/3 md:left-56 hover:scale-105 transition-all duration-200">
-                        <button className="relative bg-white text-[16px] font-sf text-black px-4 py-3 w-28 rounded-2xl overflow-hidden group">
-                            <a href="https://tally.so/r/waD9X9" className="relative z-10">Sign Up</a>
-                            <span className="absolute bottom-[-24px] left-1/2 w-0 h-0 bg-pink-200 transition-all duration-500 ease-out group-hover:w-[150%] group-hover:h-[100%] rounded-full transform group-hover:translate-x-[-50%] group-hover:translate-y-[-50%]"></span>
-                        </button>
+                ref={blackbg}
+                className="relative lg:h-auto overflow-hidden w-full bg-gray-800"
+                style={{
+                    backgroundImage: "url('landing/blackbanner.jpg')", // Background image
+                    backgroundSize: "200% 200%", // Stretch the background to 200%
+                    backgroundPosition: "0% 100%", // Start at the bottom
+                    animation: isHovered ? "moveBackground 3s linear forwards" : "none", // Trigger animation on hover
+                }}
+                onMouseEnter={() => setIsHovered(true)} // Trigger animation on hover
+                onMouseLeave={() => setIsHovered(false)} // Reset the animation on mouse leave
+            >
+                {/* Your content here */}
+                <img
+                    ref={imageRef}
+                    src="./landing/landing_heroImg.jfif"
+                    alt="Background"
+                    className="w-full opacity-70 transform md:h-screen" // Image should not be affected by animation
+                />
+                <div
+                    ref={parentRef}
+                    className="absolute top-40 left-[380px] z-[100] text-center p-20 cursor-pointer flex flex-col"
+                >
+                    <div className="relative overflow-hidden leading-tight inline-block">
+                        <p
+                            ref={text1Ref}
+                            className="font-anton text-white text-[32px] md:text-[100px]"
+                            style={{
+                                backgroundImage:
+                                    "linear-gradient(to top, white 45%, #d83694 40%, #0039c7 70%, #d4237c 90%)", // First gradient
+                                backgroundSize: "100% 200%",
+                                backgroundPosition: "0% 100%",
+                                WebkitBackgroundClip: "text",
+                                WebkitTextFillColor: "transparent",
+                            }}
+                        >
+                            STRING YOUR VIBE
+                        </p>
                     </div>
-
-                </motion.div>
+                    <div className="relative overflow-hidden inline-block">
+                        <p
+                            ref={text2Ref}
+                            className="font-anton text-white text-[32px] md:text-[80px]"
+                            style={{
+                                backgroundImage:
+                                    "linear-gradient(to top, white 45%, #d83694 40%, #0039c7 70%, #d4237c 90%)", // First gradient
+                                backgroundSize: "100% 200%",
+                                backgroundPosition: "0% 100%",
+                                WebkitBackgroundClip: "text",
+                                WebkitTextFillColor: "transparent",
+                            }}
+                        >
+                            DATE & NETWORK
+                        </p>
+                    </div>
+                </div>
             </div>
 
+
+
+            {/* Rise Bar Section */}
+            <div className="flex items-center justify-between bg-herogradient-full w-full px-28 py-8" >
+                <div>
+                    <p className="font-anton text-[85px] leading-[110px]">
+                        Raise the Bar, <br />
+                        Your Way
+                    </p>
+                    <p className="font-sf text-[25px] leading-[35px]">
+                        This is for this kind of section just for <br />
+                        reference to tell which content is this
+                    </p>
+                </div>
+                <div
+                    className={`ppp  ${isMobile ? (hovered1[0] ? 'hovered' : '') : (hovered2[1] ? 'hovered' : '')}`}
+                    onMouseEnter={() => (isMobile ? handleHover1(0) : handleHover2(1))}
+                >
+                    <img className='child-3' src="/landing/comboImg.png" alt="" />
+                </div>
+            </div>
             {/* Connecting Section */}
             <div className="px-[20px] md:px-0 text-center w-[310px] md:w-auto mt-16 lg:mb-10">
                 <h2 className="text-[30px]  lg:text-[48px] font-bold md:font-semibold font-sf leading-[38px] mb-2 md:mb-6">Discover Our Unique Features</h2>
