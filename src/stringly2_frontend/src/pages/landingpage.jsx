@@ -195,7 +195,7 @@ const Landingpage = () => {
     const text1Ref = useRef(null);
     const text2Ref = useRef(null);
     const blackbg = useRef(null);
-    const [isHovered, setIsHovered] = useState(false); // Track if currently hovered
+    // const [isMouseHovered, setIsMouseHovered] = useState(false); // Track if currently hovered
     const [animationDirection, setAnimationDirection] = useState("up"); // "up" or "down"
 
     useEffect(() => {
@@ -207,20 +207,22 @@ const Landingpage = () => {
 
             // Text1 animation
             timeline.to(text1Ref.current, {
-                backgroundPosition: isDirectionUp ? "0% 0%" : "0% 100%",
+                backgroundPosition: isDirectionUp ? "100% 0%" : "0% 100%",
                 duration: 1.5,
-                ease: "power2.out",
+                ease: "power2.inOut",
                 backgroundSize: "200% 200%",
-            });
+                delay: isDirectionUp ? 0 : 2
+            },);
 
             // Text2 animation
             timeline.to(
                 text2Ref.current,
                 {
-                    backgroundPosition: isDirectionUp ? "0% 0%" : "0% 100%",
+                    backgroundPosition: isDirectionUp ? "100% 0%" : "0% 100%",
                     duration: 1.5,
-                    ease: "power2.out",
+                    ease: "power2.inOut",
                     backgroundSize: "200% 200%",
+                    delay: isDirectionUp ? 0 : -1
                 },
                 "-=1.0" // Overlap for fluidity
             );
@@ -229,12 +231,15 @@ const Landingpage = () => {
             timeline.to(
                 blackbg.current,
                 {
-                    backgroundPosition: isDirectionUp ? "0% 0%" : "0% 200%",
-                    duration: 1.5,
-                    ease: "power2.out",
+                    backgroundPosition: isDirectionUp ? "100% 0%" : "0% 100%",
+                    duration: 2.5,
+                    ease: "power2.in",
                     backgroundSize: "200% 200%",
+                    background: isDirectionUp ? "#494747" : "#0a0a0a",
+                    delay: isDirectionUp ? 0 : 1
+
                 },
-                "-=1.0"
+                "0.1"
             );
 
             // Toggle animation direction for next hover
@@ -255,15 +260,7 @@ const Landingpage = () => {
             {/* Hero Section */}
             <div
                 ref={blackbg}
-                className="relative lg:h-auto overflow-hidden w-full bg-gray-800"
-                style={{
-                    backgroundImage: "url('landing/blackbanner.jpg')", // Background image
-                    backgroundSize: "200% 200%", // Stretch the background to 200%
-                    backgroundPosition: "0% 100%", // Start at the bottom
-                    animation: isHovered ? "moveBackground 3s linear forwards" : "none", // Trigger animation on hover
-                }}
-                onMouseEnter={() => setIsHovered(true)} // Trigger animation on hover
-                onMouseLeave={() => setIsHovered(false)} // Reset the animation on mouse leave
+                className="relative lg:h-full overflow-hidden w-full bg-gray-700"
             >
                 {/* Your content here */}
                 <img
@@ -274,7 +271,9 @@ const Landingpage = () => {
                 />
                 <div
                     ref={parentRef}
-                    className="absolute top-40 left-[380px] z-[100] text-center p-20 cursor-pointer flex flex-col"
+                    className="absolute text-white top-24 left-[210px] z-[10] text-center p-20 cursor-pointer flex flex-col"
+                    onMouseEnter={() => animationDirection === "up"} // Trigger animation on hover
+                    onMouseLeave={() => animationDirection === "down"} // Reset the animation on mouse leave
                 >
                     <div className="relative overflow-hidden leading-tight inline-block">
                         <p
@@ -282,9 +281,9 @@ const Landingpage = () => {
                             className="font-anton text-white text-[32px] md:text-[100px]"
                             style={{
                                 backgroundImage:
-                                    "linear-gradient(to top, white 45%, #d83694 40%, #0039c7 70%, #d4237c 90%)", // First gradient
+                                    "linear-gradient(to bottom,white 45%, #0039c7 40%, #d4237c 90%)", // First gradient
                                 backgroundSize: "100% 200%",
-                                backgroundPosition: "0% 100%",
+                                backgroundPosition: "100% 0%",
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
                             }}
@@ -298,15 +297,27 @@ const Landingpage = () => {
                             className="font-anton text-white text-[32px] md:text-[80px]"
                             style={{
                                 backgroundImage:
-                                    "linear-gradient(to top, white 45%, #d83694 40%, #0039c7 70%, #d4237c 90%)", // First gradient
+                                    "linear-gradient(to bottom,white 45%, #0039c7 40%, #d4237c 90%)", // First gradient
                                 backgroundSize: "100% 200%",
-                                backgroundPosition: "0% 100%",
+                                backgroundPosition: "100% 0%",
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
                             }}
                         >
                             DATE & NETWORK
                         </p>
+                    </div>
+                    <div style={{ transform: `scale(${scaleFactor})` }}>
+                        <p
+                            className={`font-sf text-[24px] leading-[40px] transition-opacity duration-300 ${isParagraphVisible ? 'opacity-100' : 'opacity-0'}`}
+                        >
+                            Find love, spark romance, grow your career, all while meeting people who share your vibe!
+                        </p>
+                        <button
+                            className={`text-black py-2 px-4 bg-white rounded-xl mt-6 transition-opacity delay-2000ms duration-300 ${isButtonVisible ? 'opacity-100 delay-2000ms' : 'opacity-0'}`}
+                        >
+                            Sign Up
+                        </button>
                     </div>
                 </div>
             </div>
@@ -326,7 +337,7 @@ const Landingpage = () => {
                     </p>
                 </div>
                 <div
-                    className={`ppp  ${isMobile ? (hovered1[0] ? 'hovered' : '') : (hovered2[1] ? 'hovered' : '')}`}
+                    className={`heroImgSlide  ${isMobile ? (hovered1[0] ? 'hovered' : '') : (hovered2[1] ? 'hovered' : '')}`}
                     onMouseEnter={() => (isMobile ? handleHover1(0) : handleHover2(1))}
                 >
                     <img className='child-3' src="/landing/comboImg.png" alt="" />
