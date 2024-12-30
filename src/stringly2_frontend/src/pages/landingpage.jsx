@@ -260,18 +260,18 @@ const Landingpage = () => {
             {/* Hero Section */}
             <div
                 ref={blackbg}
-                className="relative lg:h-full overflow-hidden w-full bg-gray-700"
+                className="relative overflow-hidden w-full bg-gray-700 "
             >
                 {/* Your content here */}
                 <img
                     ref={imageRef}
                     src="./landing/landing_heroImg.jfif"
                     alt="Background"
-                    className="w-full opacity-70 transform md:h-screen" // Image should not be affected by animation
+                    className="w-full h-[800px] object-fit opacity-70 transform" // Image should not be affected by animation
                 />
                 <div
                     ref={parentRef}
-                    className="absolute text-white top-24 left-[210px] z-[10] text-center p-20 cursor-pointer flex flex-col"
+                    className="absolute w-[950px] text-white left-1/2 top-1/3 transform -translate-x-1/2 -translate-y-1/3 z-[10] text-center p-20 cursor-pointer flex flex-col"
                     onMouseEnter={() => animationDirection === "up"} // Trigger animation on hover
                     onMouseLeave={() => animationDirection === "down"} // Reset the animation on mouse leave
                 >
@@ -307,7 +307,7 @@ const Landingpage = () => {
                             DATE & NETWORK
                         </p>
                     </div>
-                    <div style={{ transform: `scale(${scaleFactor})` }}>
+                    <div style={{ transform: `scale(${scaleFactor})`}} className='pt-4'>
                         <p
                             className={`font-sf text-[24px] leading-[40px] transition-opacity duration-300 ${isParagraphVisible ? 'opacity-100' : 'opacity-0'}`}
                         >
