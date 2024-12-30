@@ -314,7 +314,7 @@ const Landingpage = () => {
                             Find love, spark romance, grow your career, all while meeting people who share your vibe!
                         </p>
                         <button
-                            className={`text-black py-2 px-4 bg-white rounded-xl mt-6 transition-opacity delay-2000ms duration-300 ${isButtonVisible ? 'opacity-100 delay-2000ms' : 'opacity-0'}`}
+                            className={`text-black py-2 px-4 bg-white rounded-xl mt-6 transition-opacity  duration-300 ${isButtonVisible ? 'opacity-100 ' : 'opacity-0'}`}
                         >
                             Sign Up
                         </button>
