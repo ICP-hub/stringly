@@ -325,7 +325,7 @@ const Landingpage = () => {
 
 
             {/* Rise Bar Section */}
-            <div className="flex items-center justify-between bg-herogradient-full w-full px-28 py-8" >
+            <div className="flex items-center justify-between bg-herogradient-full w-full px-24 xl:px-28 py-8" >
                 <div>
                     <p className="font-anton text-[85px] leading-[110px]">
                         Raise the Bar, <br />
@@ -340,7 +340,7 @@ const Landingpage = () => {
                     className={`heroImgSlide  ${isMobile ? (hovered1[0] ? 'hovered' : '') : (hovered2[1] ? 'hovered' : '')}`}
                     onMouseEnter={() => (isMobile ? handleHover1(0) : handleHover2(1))}
                 >
-                    <img className='child-3' src="/landing/comboImg.png" alt="" />
+                    <img className='child-3 md:h-[80vh] xl:h-full' src="/landing/comboImg.png" alt=""/>
                 </div>
             </div>
             {/* Connecting Section */}
