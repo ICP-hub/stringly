@@ -118,11 +118,11 @@ const Landingpage = () => {
     const imageRef = useRef(null);
     const [scaleFactor, setScaleFactor] = useState(1);
     const [isScrollAllowed, setIsScrollAllowed] = useState(false);
+    const [scrollCount, setScrollCount] = useState(0);
     const [isParagraphVisible, setIsParagraphVisible] = useState(false);
     const [isButtonVisible, setIsButtonVisible] = useState(false);
-
     const maxScrollScale = 1.3; // Maximum zoom scale
-    const scaleStep = 0.1; // Zoom increment
+    const scaleStep = 0.00200; // Zoom increment
 
     const handleScroll = (event) => {
         if (isScrollAllowed) return;
@@ -141,12 +141,13 @@ const Landingpage = () => {
                 setIsScrollAllowed(true);
             }
 
+            // Track scroll count for paragraph and button visibility
             if (direction === "down" && prevScale < 1.1) {
                 setIsParagraphVisible(true);
             }
 
-            if (direction === "down" && prevScale > 1.2) {
-                setIsButtonVisible(true);
+            if (direction === "down" && prevScale > 1.2 && !isButtonVisible) {
+                setIsButtonVisible(true); // Show button on second scroll
             }
 
             return nextScale;
@@ -307,14 +308,14 @@ const Landingpage = () => {
                             DATE & NETWORK
                         </p>
                     </div>
-                    <div style={{ transform: `scale(${scaleFactor})`}} className='pt-4'>
+                    <div className='pt-4'>
                         <p
                             className={`font-sf text-[24px] leading-[40px] transition-opacity duration-300 ${isParagraphVisible ? 'opacity-100' : 'opacity-0'}`}
                         >
                             Find love, spark romance, grow your career, all while meeting people who share your vibe!
                         </p>
                         <button
-                            className={`text-black py-2 px-4 bg-white rounded-xl mt-6 transition-opacity  duration-300 ${isButtonVisible ? 'opacity-100 ' : 'opacity-0'}`}
+                            className={`text-black py-2 px-4 bg-white rounded-xl mt-6 transition-opacity duration-300 ${isButtonVisible ? 'opacity-100' : 'opacity-0'}`}
                         >
                             Sign Up
                         </button>
@@ -340,7 +341,7 @@ const Landingpage = () => {
                     className={`heroImgSlide  ${isMobile ? (hovered1[0] ? 'hovered' : '') : (hovered2[1] ? 'hovered' : '')}`}
                     onMouseEnter={() => (isMobile ? handleHover1(0) : handleHover2(1))}
                 >
-                    <img className='child-3 md:h-[80vh] xl:h-full' src="/landing/comboImg.png" alt=""/>
+                    <img className='child-3 md:h-[80vh] xl:h-full' src="/landing/comboImg.png" alt="" />
                 </div>
             </div>
             {/* Connecting Section */}
