@@ -121,8 +121,8 @@ const Landingpage = () => {
     const [scrollCount, setScrollCount] = useState(0);
     const [isParagraphVisible, setIsParagraphVisible] = useState(false);
     const [isButtonVisible, setIsButtonVisible] = useState(false);
-    const maxScrollScale = 1.3; // Maximum zoom scale
-    const scaleStep = 0.00200; // Zoom increment
+    const maxScrollScale = 1.4; // Maximum zoom scale
+    const scaleStep = 0.00500; // Zoom increment
 
     const handleScroll = (event) => {
         if (isScrollAllowed) return;
@@ -146,7 +146,7 @@ const Landingpage = () => {
                 setIsParagraphVisible(true);
             }
 
-            if (direction === "down" && prevScale > 1.2 && !isButtonVisible) {
+            if (direction === "down" && prevScale > 1.3 && !isButtonVisible) {
                 setIsButtonVisible(true); // Show button on second scroll
             }
 
@@ -157,8 +157,8 @@ const Landingpage = () => {
     const updateScaleAnimation = () => {
         gsap.to(imageRef.current, {
             scale: scaleFactor,
-            ease: "power1.out",
-            duration: 0.5,
+            ease: "power2.out",
+            duration: 0.1,
         });
     };
 
@@ -181,7 +181,7 @@ const Landingpage = () => {
                 setIsScrollAllowed(false);
                 setIsParagraphVisible(false);
                 setIsButtonVisible(false);
-                gsap.to(imageRef.current, { scale: 1, duration: 0.5 });
+                gsap.to(imageRef.current, { scale: 1, duration: 0.1 });
             }
         };
 
@@ -310,12 +310,12 @@ const Landingpage = () => {
                     </div>
                     <div className='pt-4'>
                         <p
-                            className={`font-sf text-[24px] leading-[40px] transition-opacity duration-300 ${isParagraphVisible ? 'opacity-100' : 'opacity-0'}`}
+                            className={`font-sf text-[24px] leading-[40px] transition-opacity duration-100 ${isParagraphVisible ? 'opacity-100' : 'opacity-0'}`}
                         >
                             Find love, spark romance, grow your career, all while meeting people who share your vibe!
                         </p>
                         <button
-                            className={`text-black py-2 px-4 bg-white rounded-xl mt-6 transition-opacity duration-300 ${isButtonVisible ? 'opacity-100' : 'opacity-0'}`}
+                            className={`text-black py-2 px-4 bg-white rounded-xl mt-6 transition-opacity ${isButtonVisible ? 'opacity-100' : 'opacity-0'}`}
                         >
                             Sign Up
                         </button>
