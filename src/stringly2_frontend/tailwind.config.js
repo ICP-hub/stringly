@@ -10,7 +10,6 @@ export default {
       md: '768px',  // Custom tablet breakpoint
       lg: '1280px', // Custom laptop breakpoint (desktop)
       xl: '1440px', // Custom large desktop breakpoint  
-
     },
     
     fontFamily: {
