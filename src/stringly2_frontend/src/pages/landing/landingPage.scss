@@ -637,6 +637,18 @@
         opacity: 1;
     }
 
+    .heart-transition {
+        transition: opacity 0.5s ease-in;
+        opacity: .7;
+    }
+
+    .heart-transition-visible {
+        transition: opacity 0.5 ease-out;
+        opacity: 0;
+    }
+
+
+
 
     .s-logo {
         top: -253px !important;

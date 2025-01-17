@@ -2,7 +2,6 @@
     width: 100%;
     box-sizing: border-box;
     position: relative;
-    height: 700px;
     background-image: url("../public/landing/half-moon-gradient-red.png");
     background-size: cover;
     background-position: center;
@@ -11,8 +10,12 @@
     width: 100%;
     box-sizing: border-box;
     position: relative;
-    height: 700px;
     background-image: url("../public/landing/half-moon-gradient-blue.png");
     background-size: cover;
     background-position: center;
+}
+
+.blue-container{
+    box-sizing: border-box;
+    border: 6px solid red;
 }

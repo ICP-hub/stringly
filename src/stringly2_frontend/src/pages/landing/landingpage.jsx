@@ -22,6 +22,9 @@ const Landingpage = () => {
     const [imageTransition, setImageTransition] = useState(false);
     const [imageRingUp, setImageRingUp] = useState(false)
     const [circleImageRingClose, setCircleImageClose] = useState(false)
+    const [heartVisible1, setHeartVisible1] = useState(false)
+    const [heartVisible2, setHeartVisible2] = useState(false)
+    const [heartVisible3, setHeartVisible3] = useState(false)
 
     // const [scaleFactor, setScaleFactor] = useState(1);
     // const [scrollCount, setScrollCount] = useState(0);
@@ -74,19 +77,33 @@ const Landingpage = () => {
             }, 100);
         }, 4500);
 
+        const heart1 = setTimeout(() => {
+            setHeartVisible1(true);
+        }, 4900)
+        const heart2 = setTimeout(() => {
+            setHeartVisible1(false);
+            setHeartVisible2(true);
+        }, 5900)
+        const heart3 = setTimeout(() => {
+            setHeartVisible3(true);
+        }, 6500)
+
         const imageRingTimer = setTimeout(() => {
             setImageRingUp(true)
-        }, 6000);
+        }, 7400);
 
         const circleImageTimer = setTimeout(() => {
             setCircleImageClose(true);
-        }, 6900);
+        }, 8300);
 
         return () => {
             clearTimeout(timer);
             clearTimeout(colorTimer);
             clearTimeout(imageRingTimer)
             clearTimeout(circleImageTimer)
+            clearTimeout(heart1)
+            clearTimeout(heart2)
+            clearTimeout(heart3)
         };
     }, [])
 
@@ -105,19 +122,19 @@ const Landingpage = () => {
                     className="object-cover md:mt-[-40px] opacity-60  object-contain" />
                 <div
                     // className="absolute w-[950px] text-white left-1/2 top-[116px] transform -translate-x-1/3 -translate-y-1/3 z-[10] text-start p-20 cursor-pointer flex flex-col"
-                    className="absolute w-[950px] text-white md:left-[calc(70%-475px)] lg:left-[calc(57%-475px)] md:top-[calc(116px-25%)] lg:top-[calc(116px-15%)]  z-[10] text-start p-20 cursor-pointer flex flex-col leading-tight"
+                    className={`absolute w-[950px] text-white left-[calc(70%-565px)] top-[calc(116px-115px)] z-[10] text-start p-20 cursor-pointer flex flex-col leading-tight ${isConditionMet ? 'xl:top-[calc(116px-80px)] xl:left-[calc(57%-405px)]' : 'xl:top-[calc(116px-100px)] xl:left-[calc(57%-475px)]'}`}
 
                 >
                     <div className="relative overflow-hidden leading-tight inline-block">
                         <p
-                            className="font-sf font-semibold text-white text-[52px] lg:text-[70px]"
+                            className="font-sf font-semibold text-white text-[52px] lg:text-[52px] xl:-[72px]"
                         >
                             String your Vibe
                         </p>
                     </div>
                     <div className="relative overflow-hidden inline-block">
                         <p
-                            className="font-sf text-white text-[32px] lg:text-[42px]"
+                            className="font-sf text-white text-[22px] lg:text-[42px]"
                         >
                             Date & Network
                         </p>
@@ -146,11 +163,25 @@ const Landingpage = () => {
                                         onLoad={() => setImageTransition(false)} // Reset transition once image is loaded
                                     />
                                 ) : (
-                                    <img
-                                        src="./landing/s-heart-logo.png"
-                                        className={`text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-full w-full ${imageTransition ? 'image-transition' : 'image-transition-visible'}`}
-                                        onLoad={() => setImageTransition(false)} // Reset transition once image is loaded
-                                    />
+                                    <>
+                                        <img
+                                            src="./landing/s-logo-color.png"
+                                            className={`text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-full w-full ${imageTransition ? 'image-transition' : 'image-transition-visible'}`}
+                                            onLoad={() => setImageTransition(false)} // Reset transition once image is loaded
+                                        />
+                                        <img
+                                            src="./landing/heart.svg"
+                                            className={`absolute top-[-20px] left-[70px] text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-7 w-7 ${heartVisible1 ? 'heart-transition' : 'heart-transition-visible'} ${isConditionMet ? '' : 'top-[-20px] left-[60px]'}`}
+                                        />
+                                        <img
+                                            src="./landing/heart.svg"
+                                            className={`absolute top-[-20px] left-[70px] text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-7 w-7 ${heartVisible2 ? 'heart-transition' : 'heart-transition-visible'} ${isConditionMet ? '' : 'top-[-20px] left-[60px]'}`}
+                                        />
+                                        <img
+                                            src="./landing/heart.svg"
+                                            className={`absolute top-[-30px] left-[-15px] text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-7 w-7 scale-x-[-1] ${heartVisible3 ? 'heart-transition' : 'heart-transition-visible'} ${isConditionMet ? '' : 'top-[-30px] left-[-10px]'}`}
+                                        />
+                                    </>
                                 )
                             }
                         </div>
@@ -159,7 +190,7 @@ const Landingpage = () => {
 
 
                 <div className={`${circleImageRingClose ? "" : "opacity-0"}`}>
-                    <div className={` absolute lg:h-[600px] lg:top-[190px] lg:right-[758px] ${isConditionMet ? "xl:w-[950px] xl:top-[230px] xl:right-[360px]" : "xl:w-[950px] xl:top-[250px] xl:right-[425px]"
+                    <div className={` absolute lg:h-[600px] top-[200px] lg:right-[758px] ${isConditionMet ? "xl:w-[950px] xl:top-[220px] xl:right-[360px]" : "xl:w-[950px] xl:top-[240px] xl:right-[425px]"
                         } ${circleImageRingClose && 'left-circle-ring'}`}>
                         <img src="./landing/left-circle-ring.png" alt="left-circle-Ring" />
                     </div>
