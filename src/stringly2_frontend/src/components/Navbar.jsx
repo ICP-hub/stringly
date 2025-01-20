@@ -21,30 +21,33 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={`md:w-[95%]  xl:max-w-[1480px] mx-auto flex flex-col rounded-[15px] fixed md:top-[10px] left-[-20px] right-[-20px] z-50 md:px-4 navbar !z-00  ${scrolled ? ' glossy-white-scrolled' : ' glossy-white'}`}>
+        <div className={`md:w-[95%]  xl:max-w-[1480px] mx-auto flex flex-col rounded-[15px] fixed md:top-[10px] left-[-20px] right-[-20px] z-50 md:px-4 navbar !z-00  ${scrolled ? ' glossy-white' : ' glossy-white'}`}>
             <div className='flex w-full items-center justify-between px-2 md:px-8'>
-                <div className="px-4 md:p-1.5  ">
+                <div className="px-4 md:py-1  ">
                     {/* <img src="./landing/COLOURED LOGO.png" alt="logo" className="w-18 md:w-auto h-7 md:h-8" /> */}
                     <p className='font-sf text-[30px] font-semibold'>Stringly</p>
                 </div>
 
-                {/* <div className='hidden font-sfProDisplay md:flex items-center font-light justify-between gap-8'>
-                    <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
-                        <Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link>
+                <div className='hidden font-sfProDisplay md:flex items-center font-light justify-between gap-8'>
+                    <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-2 rounded-lg cursor-pointer'>
+                    Home
+                        {/* <Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link> */}
                     </p>
-                    <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
-                        <Link to="/features" onClick={() => window.scrollTo(0, 0)}>Features</Link>
+                    <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg cursor-pointer'>
+                    Features
+                        {/* <Link to="/features" onClick={() => window.scrollTo(0, 0)}>Features</Link> */}
                     </p>
-                    <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
-                        <Link to="/about" onClick={() => window.scrollTo(0, 0)}>About Us</Link>
+                    <p className='hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg cursor-pointer'>
+                    About
+                        {/* <Link to="/about" onClick={() => window.scrollTo(0, 0)}>About Us</Link> */}
                     </p>
-                    <div className='flex items-center gap-2 hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg'>
+                    <div className='flex items-center gap-2 hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg cursor-pointer'>
                         <p className='flex items-center justify-between gap-2'>Resources <IoIosArrowDown /></p>
                     </div>
-                </div> */}
+                </div>
                 <div className='flex items-center gap-4'>
                     <div>
-                        <button className={`px-10 py-2 rounded-xl ${isMenu ? 'hidden' : 'hidden md:flex'} bg-white text-black hover:scale-105 transition-all duration-200s`}><a href='https://tally.so/r/waD9X9'>Join</a></button>
+                        <button className={`px-10 py-[8px] rounded-xl ${isMenu ? 'hidden' : 'hidden md:flex'} bg-white text-black hover:scale-105 transition-all duration-200s`}><a href='https://tally.so/r/waD9X9'>Join</a></button>
                     </div>
                     <div className='flex md:hidden'>
                         {/* <button className='text-xl' onClick={() => setIsmMenu(true)}>

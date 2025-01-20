@@ -171,15 +171,15 @@ const Landingpage = () => {
                                         />
                                         <img
                                             src="./landing/heart.svg"
-                                            className={`absolute top-[-20px] left-[70px] text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-7 w-7 ${heartVisible1 ? 'heart-transition' : 'heart-transition-visible'} ${isConditionMet ? '' : 'top-[-20px] left-[60px]'}`}
+                                            className={`absolute top-[-20px] left-[60px] text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-7 w-7 ${heartVisible1 ? 'heart-transition' : 'heart-transition-visible'} ${isConditionMet ? '' : 'top-[-20px] left-[60px]'}`}
                                         />
                                         <img
                                             src="./landing/heart.svg"
-                                            className={`absolute top-[-20px] left-[70px] text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-7 w-7 ${heartVisible2 ? 'heart-transition' : 'heart-transition-visible'} ${isConditionMet ? '' : 'top-[-20px] left-[60px]'}`}
+                                            className={`absolute top-[-20px] left-[60px] text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-7 w-7 ${heartVisible2 ? 'heart-transition' : 'heart-transition-visible'} ${isConditionMet ? '' : 'top-[-20px] left-[60px]'}`}
                                         />
                                         <img
                                             src="./landing/heart.svg"
-                                            className={`absolute top-[-30px] left-[-15px] text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-7 w-7 scale-x-[-1] ${heartVisible3 ? 'heart-transition' : 'heart-transition-visible'} ${isConditionMet ? '' : 'top-[-30px] left-[-10px]'}`}
+                                            className={`absolute top-[-20px] left-[-15px] text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-7 w-7 scale-x-[-1] ${heartVisible3 ? 'heart-transition' : 'heart-transition-visible'} ${isConditionMet ? '' : 'top-[-30px] left-[-10px]'}`}
                                         />
                                     </>
                                 )
@@ -194,13 +194,13 @@ const Landingpage = () => {
                         } ${circleImageRingClose && 'left-circle-ring'}`}>
                         <img src="./landing/left-circle-ring.png" alt="left-circle-Ring" />
                     </div>
-                    <div className={` absolute lg:h-[600px] lg:top-[155px] lg:right-[70px] ${isConditionMet ? "xl:w-[890px] xl:top-[200px] xl:right-[-320px]" : "xl:w-[890px] xl:top-[210px] xl:right-[-300px]"
+                    <div className={` absolute lg:h-[600px] w-[420px] lg:top-[180px] lg:right-[90px] ${isConditionMet ? "xl:w-[890px] xl:top-[210px] xl:right-[-320px]" : "xl:w-[950px] xl:top-[230px] xl:right-[-350px]"
                         } ${circleImageRingClose && 'right-circle-ring'}`}>
                         <img src="./landing/right-circle-ring.png" alt="right-circle-Ring" />
                     </div>
-                    <div className={`absolute lg:top-[630px] lg:right-[438px] ${isConditionMet ? "xl:top-[700px] xl:right-[530px]" : "xl:top-[750px] xl:right-[580px]"
+                    <div className={`absolute lg:top-[630px] lg:right-[458px] ${isConditionMet ? "xl:top-[700px] xl:left-[580px]" : "xl:top-[775px] xl:left-[625px]"
                         } ${circleImageRingClose && 'match-text'}`}>
-                        <p className='text-[56px] font-semibold leading-[60px] text-white font-sf'>It’s a match!</p>
+                        <p className='text-[52px] font-semibold leading-[60px] text-white font-sf'>It’s a match!</p>
                     </div>
                 </div>
 
@@ -356,10 +356,10 @@ const Landingpage = () => {
                     className={`bg-gradient-full relative py-15`}
                 >
                     {/* Specifications */}
-                    <div className={`flex h-[616px] lg:h-full lg:flex-row relative justify-center px-0 gap-20 items-start mt-10 md:mx-2 lg:mx-0  md:mt-12 ${hovered === 'section1' ? 'hovered opacity-90' : ''}`}
+                    <div className={`flex h-[616px] lg:h-full lg:flex-row relative justify-center px-0 gap-20 items-start mt-10 md:mx-2 lg:mx-0  md:mt-14 ${hovered === 'section1' ? 'hovered opacity-90' : ''}`}
                     >
                         {/* Text Section */}
-                        <div className={`${isMobile ? 'bg-white rounded-xl' : "bg-none"} w-[90%] p-5 md:p-10 lg:p-0 !text-black mt-10 absolute lg:pl-0 lg:w-[590px] xl:w-[616px] top-[0%] lg:top-0 text-white z-10 lg:text-black md:left-2/1 lg:left-0 h-[530px] lg:h-full lg:relative flex flex-col`} style={{
+                        <div className={`${isMobile ? 'bg-white rounded-xl' : "bg-none"} w-[90%] p-5 md:p-10 lg:p-10 !text-black mt-10 absolute lg:pl-0 lg:w-[610px] xl:w-[626px] top-[0%] lg:top-0 text-white z-10 lg:text-black md:left-2/1 lg:left-5 h-[530px] lg:h-full lg:relative flex flex-col`} style={{
                             gap: '16px',
                             padding: '20px',
                         }}>
@@ -367,12 +367,12 @@ const Landingpage = () => {
                             }} className='font-sf text-[28px] md:text-[30px] font-semibold lg:text-[48px] leading-[25px] leading-tight lg:leading-[58px]  min-w-[300px]-lg'>
                                 Experience Unmatched Privacy and Elegance
                             </h2>
-                            <p className="font-sf text-[15px] md:text-lg pb-4 lg:pb-0 lg:mt-4 lg:leading-[22px] font-light min-w-[300px]-lg xl:py-6" style={{
+                            <p className="font-sf text-[15px] md:text-lg pb-4 lg:pb-0 lg:leading-[22px] font-light min-w-[300px]-lg xl:pt-4 lg:pb-14" style={{
                                 width: '90%',
                             }}>
                                 At Stringly, we prioritize your privacy while providing a luxurious experience. Our platform is designed to ensure that every connection you make is both secure and sophisticated.
                             </p>
-                            <div className="flex flex-col md:flex-row md:justify-between gap-2 lg:mt-6 items-center lg:w-[646px] md:h-[64px] lg:gap-8 ">
+                            <div className="flex flex-col md:flex-row md:justify-between gap-2 lg:mt-6 items-center lg:w-[646px] md:h-[64px] ">
                                 <div className="flex flex-col items-start w-full md:w-[50%]">
                                     <div className="flex items-center gap-4 md:gap-2 mb-3">
                                         <img src="./landing/privacy .gif" alt="privacy icon" className="h-8 w-auto" />
