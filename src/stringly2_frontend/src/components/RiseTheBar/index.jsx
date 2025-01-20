@@ -415,8 +415,8 @@ const RiseTheBar = () => {
                 </div>
                 <div ref={imageRef2} className="absolute w-full h-full flex justify-center transition-all items-center gap-[60px]">
                     {[
-                       { img: "property2_image1", text: ["DUAL", "DATING", "AND", "NETWORKING"] },
-                       { img: "property2_image2", text: ["Engage", "Your", "Network" ] },
+                       { img: "property2_image2", text: ["DUAL", "DATING", "AND", "NETWORKING"] },
+                       { img: "property2_image1", text: ["Engage", "Your", "Network" ] },
                        { img: "property2_image3", text: ["Uncover", "your", "network"] },
                        { img: "property2_image4", text: ["Dive into ", "your", "connections"] }
                     ]
