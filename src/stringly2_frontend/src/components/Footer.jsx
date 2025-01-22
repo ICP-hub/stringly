@@ -48,7 +48,7 @@ const Footer = () => {
             <a className='pb-4' href="https://medium.com/@stringly" target="_blank" rel="noopener noreferrer">
               <p className='pb-4'>Blog</p>
             </a>
-            <li className='pb-4 cursor-pointer' onClick={() => navigate("/guidelines/csae")}>guidelines</li>
+            <li className='pb-4 cursor-pointer' onClick={() => navigate("/guidelines/csae")}>Guidelines</li>
           </ul>
 
           {/* Company Links */}
