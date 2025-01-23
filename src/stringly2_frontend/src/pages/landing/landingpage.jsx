@@ -113,98 +113,96 @@ const Landingpage = () => {
         <div className='relative w-full mx-auto flex flex-col items-center justify-center'>
             {/* Hero Section */}
             <div
-                className="relative overflow-hidden w-full bg-black "
-            >
-                {/* Your content here */}
-                <img
-                    src="./landing/coupleHeroImg.jpg"
-                    alt="Background"
-                    className="object-cover md:mt-[-40px] opacity-60  object-contain" />
-                <div
-                    // className="absolute w-[950px] text-white left-1/2 top-[116px] transform -translate-x-1/3 -translate-y-1/3 z-[10] text-start p-20 cursor-pointer flex flex-col"
-                    className={`absolute w-[950px] text-white left-[calc(70%-565px)] top-[calc(116px-115px)] z-[10] text-start p-20 cursor-pointer flex flex-col leading-tight ${isConditionMet ? 'xl:top-[calc(116px-80px)] xl:left-[calc(57%-405px)]' : 'xl:top-[calc(116px-100px)] xl:left-[calc(57%-475px)]'}`}
+                            className="relative overflow-hidden w-full bg-black "
+                        >
+                            {/* Your content here */}
+                            <img
+                                src="./landing/heroImageBanner.png"
+                                alt="Background"
+                                className="object-cover w-full  object-contain" />
+                            <div
+                                // className="absolute w-[950px] text-white left-1/2 top-[116px] transform -translate-x-1/3 -translate-y-1/3 z-[10] text-start p-20 cursor-pointer flex flex-col"
+                                className={`absolute w-[950px] text-white  bottom-[calc(116px-115px)] z-[10] text-start p-20 cursor-pointer flex flex-col leading-tight ${isConditionMet ? 'xl:top-[calc(116px-80px)] xl:left-[calc(57%-405px)]' : 'xl:bottom-[calc(116px-100px)] xl:left-[calc(57%-905px)]'}`}
 
-                >
-                    <div className="relative overflow-hidden leading-tight inline-block">
-                        <p
-                            className="font-sf font-semibold text-white text-[52px] lg:text-[52px] xl:-[72px]"
-                        >
-                            String your Vibe
-                        </p>
-                    </div>
-                    <div className="relative overflow-hidden inline-block">
-                        <p
-                            className="font-sf text-white text-[22px] lg:text-[42px]"
-                        >
-                            Date & Network
-                        </p>
-                    </div>
-                </div>
-                <div>
-                    <img
-                        src='./landing/Rectangle_Ring.png'
-                        className={`absolute lg:h-[600px] lg:top-[170px] lg:right-[158px] ${isConditionMet ? "xl:h-[640px] xl:top-[200px] xl:right-[200px]" : "xl:h-[670px] xl:top-[220px] xl:right-[218px]"
-                            } ${imageRingUp && 'image-ring'}`}
-                    />
-                    <div className={`${imageRingUp && 'image-ring'} flex justify-between gap-40 text-white absolute top-0 lg:top-[650px] lg:right-[330px] ${isConditionMet ? " xl:top-[740px] xl:right-[395px]" : " xl:top-[785px] xl:right-[430px]"}`}>
-                        <div className=''>
-                            <h2 className='font-sf text-[24px] leading-[34px] font-semibold'>Michael Smith, 25</h2>
-                            <p className='font-sf text-[18px] leading-[28px] font-medium'>Lives in Portland, Illinois</p>
-                            <p className='font-sf text-[14px] leading-[14px] font-regular'>11 miles away</p>
+                            >
+                                <div className="relative overflow-hidden leading-tight inline-block">
+                                    <p
+                                        className="font-sf font-semibold text-white text-[52px] lg:text-[52px] xl:-[72px]"
+                                    >
+                                        String your Vibe
+                                    </p>
+                                </div>
+                                <div className="relative overflow-hidden inline-block">
+                                    <p
+                                        className="font-sf text-white text-[22px] lg:text-[42px]"
+                                    >
+                                        Date & Network
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <img
+                                    src='./landing/Rectangle_Ring.png'
+                                    className={`absolute lg:h-[640px] lg:top-[85px] w-[380px] lg:right-[188px] ${isConditionMet ? "xl:h-[640px] xl:top-[200px] xl:right-[200px]" : "xl:h-[750px] w-[430px] xl:top-[108px] xl:right-[250px]"
+                                        } ${imageRingUp && 'image-ring'}`}
+                                />
+                                <div className={`${imageRingUp && 'image-ring'} flex justify-between gap-40 text-white absolute lg:top-[620px] lg:right-[340px] ${isConditionMet ? " xl:top-[740px] xl:right-[395px]" : " xl:top-[755px] xl:right-[450px]"}`}>
+                                    <div className=''>
+                                        <h2 className='font-sf text-[24px] leading-[34px] font-semibold'>Michael Smith, 25</h2>
+                                        <p className='font-sf text-[18px] leading-[28px] font-medium'>Lives in Portland, Illinois</p>
+                                        <p className='font-sf text-[14px] leading-[14px] font-regular'>11 miles away</p>
+                                    </div>
+                                    <div
+                                        className={`${sLogoLarge ? 's-logo' : ''} rounded-full absolute h-14 w-18 lg:top-[30px] lg:right-[-120px] ${isConditionMet ? "xl:top-[13px] h-16 xl:right-[-148px]" : "xl:top-[13px] h-16 xl:right-[-170px]"}`}
+                                    >
+                                        {
+                                            !sLogoColored ? (
+                                                <img
+                                                    src="./landing/s-logo.png"
+                                                    className={`text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-full w-full ${imageTransition ? 'image-transition' : 'image-transition-visible'}`}
+                                                    onLoad={() => setImageTransition(false)} // Reset transition once image is loaded
+                                                />
+                                            ) : (
+                                                <>
+                                                    <img
+                                                        src="./landing/s-logo-color.png"
+                                                        className={`text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-full w-full ${imageTransition ? 'image-transition' : 'image-transition-visible'}`}
+                                                        onLoad={() => setImageTransition(false)} // Reset transition once image is loaded
+                                                    />
+                                                    <img
+                                                        src="./landing/heart.svg"
+                                                        className={`absolute top-[-20px] left-[60px] text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-7 w-7 ${heartVisible1 ? 'heart-transition' : 'heart-transition-visible'} ${isConditionMet ? '' : 'top-[-20px] left-[60px]'}`}
+                                                    />
+                                                    <img
+                                                        src="./landing/heart.svg"
+                                                        className={`absolute top-[-20px] left-[60px] text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-7 w-7 ${heartVisible2 ? 'heart-transition' : 'heart-transition-visible'} ${isConditionMet ? '' : 'top-[-20px] left-[60px]'}`}
+                                                    />
+                                                    <img
+                                                        src="./landing/heart.svg"
+                                                        className={`absolute top-[-20px] left-[-15px] text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-7 w-7 scale-x-[-1] ${heartVisible3 ? 'heart-transition' : 'heart-transition-visible'} ${isConditionMet ? '' : 'top-[-30px] left-[-10px]'}`}
+                                                    />
+                                                </>
+                                            )
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={`${circleImageRingClose ? "" : "opacity-0"}`}>
+                                <div className={` absolute w-[400px] top-[100px] lg:right-[708px] ${isConditionMet ? "xl:w-[950px] xl:top-[220px] xl:right-[360px]" : "xl:w-[1800px] xl:top-[150px] xl:right-[-515px]"
+                                    } ${circleImageRingClose && 'left-circle-ring'}`}>
+                                    <img src="./landing/left-circle-desktop.png" alt="left-circle-Ring" />
+                                </div>
+                                <div className={` absolute w-[380px] lg:top-[55px] lg:right-[120px] ${isConditionMet ? "xl:w-[890px] xl:top-[210px] xl:right-[-320px]" : "xl:w-[1100px] xl:top-[90px] xl:right-[-490px]"
+                                    } ${circleImageRingClose && 'right-circle-ring'}`}>
+                                    <img src="./landing/right-circle-desktop.png" alt="right-circle-Ring" />
+                                </div>
+                                <div className={`absolute lg:top-[630px] lg:right-[458px] ${isConditionMet ? "xl:top-[700px] xl:left-[580px]" : "xl:top-[775px] xl:left-[625px]"
+                                    } ${circleImageRingClose && 'match-text'}`}>
+                                    <p className='text-[52px] font-semibold leading-[60px] text-white font-sf'>It’s a match!</p>
+                                </div>
+                            </div>
+
                         </div>
-                        <div
-                            className={`${sLogoLarge ? 's-logo' : ''} rounded-full absolute h-14 w-18 lg:top-[30px] lg:right-[-120px] ${isConditionMet ? "xl:top-[13px] h-16 xl:right-[-148px]" : "xl:top-[13px] h-16 xl:right-[-170px]"}`}
-                        >
-                            {
-                                !sLogoColored ? (
-                                    <img
-                                        src="./landing/s-logo.png"
-                                        className={`text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-full w-full ${imageTransition ? 'image-transition' : 'image-transition-visible'}`}
-                                        onLoad={() => setImageTransition(false)} // Reset transition once image is loaded
-                                    />
-                                ) : (
-                                    <>
-                                        <img
-                                            src="./landing/s-logo-color.png"
-                                            className={`text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-full w-full ${imageTransition ? 'image-transition' : 'image-transition-visible'}`}
-                                            onLoad={() => setImageTransition(false)} // Reset transition once image is loaded
-                                        />
-                                        <img
-                                            src="./landing/heart.svg"
-                                            className={`absolute top-[-20px] left-[60px] text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-7 w-7 ${heartVisible1 ? 'heart-transition' : 'heart-transition-visible'} ${isConditionMet ? '' : 'top-[-20px] left-[60px]'}`}
-                                        />
-                                        <img
-                                            src="./landing/heart.svg"
-                                            className={`absolute top-[-20px] left-[60px] text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-7 w-7 ${heartVisible2 ? 'heart-transition' : 'heart-transition-visible'} ${isConditionMet ? '' : 'top-[-20px] left-[60px]'}`}
-                                        />
-                                        <img
-                                            src="./landing/heart.svg"
-                                            className={`absolute top-[-20px] left-[-15px] text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-7 w-7 scale-x-[-1] ${heartVisible3 ? 'heart-transition' : 'heart-transition-visible'} ${isConditionMet ? '' : 'top-[-30px] left-[-10px]'}`}
-                                        />
-                                    </>
-                                )
-                            }
-                        </div>
-                    </div>
-                </div>
-
-
-                <div className={`${circleImageRingClose ? "" : "opacity-0"}`}>
-                    <div className={` absolute lg:h-[600px] top-[200px] lg:right-[758px] ${isConditionMet ? "xl:w-[950px] xl:top-[220px] xl:right-[360px]" : "xl:w-[950px] xl:top-[240px] xl:right-[425px]"
-                        } ${circleImageRingClose && 'left-circle-ring'}`}>
-                        <img src="./landing/left-circle-ring.png" alt="left-circle-Ring" />
-                    </div>
-                    <div className={` absolute lg:h-[600px] w-[420px] lg:top-[180px] lg:right-[90px] ${isConditionMet ? "xl:w-[890px] xl:top-[210px] xl:right-[-320px]" : "xl:w-[950px] xl:top-[230px] xl:right-[-350px]"
-                        } ${circleImageRingClose && 'right-circle-ring'}`}>
-                        <img src="./landing/right-circle-ring.png" alt="right-circle-Ring" />
-                    </div>
-                    <div className={`absolute lg:top-[630px] lg:right-[458px] ${isConditionMet ? "xl:top-[700px] xl:left-[580px]" : "xl:top-[775px] xl:left-[625px]"
-                        } ${circleImageRingClose && 'match-text'}`}>
-                        <p className='text-[52px] font-semibold leading-[60px] text-white font-sf'>It’s a match!</p>
-                    </div>
-                </div>
-
-            </div>
 
             {/* Rise the bar component */}
             <RiseTheBar />
