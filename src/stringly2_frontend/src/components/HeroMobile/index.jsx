@@ -77,23 +77,23 @@ const HeroMobile = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="bg-gray-300">
       {/* Your content here */}
       <img
         src="./landing/heroImageMobile.png"
         alt="Background"
-        className="object-cover rounded-none object-contain"
+        className="object-cover  w-screen rounded-none object-contain"
       />
       <div
-        className={`absolute text-white left-10 top-20 z-[10] text-start  cursor-pointer flex flex-col leading-tight `}
+        className={`absolute text-white left-10  top-32 md:top-60 z-[10] text-start  cursor-pointer flex flex-col leading-tight `}
       >
-        <div className="relative  overflow-hidden leading-tight inline-block">
-          <p className="font-sf font-semibold text-white text-[32px]">
+        <div className="heading relative  overflow-hidden leading-tight inline-block">
+          <p className="font-sf font-semibold text-white  md:text-[52px] lg:text-[32px]">
             String your Vibe
           </p>
         </div>
         <div className="relative overflow-hidden inline-block">
-          <p className="font-sf text-white text-[22px] lg:text-[42px]">
+          <p className="font-sf text-white md:text-[32px] lg:text-[22px] lg:text-[42px]">
             Date & Network
           </p>
         </div>
@@ -198,6 +198,12 @@ const HeroMobile = () => {
           <p className="text-[28px] font-semibold leading-[60px] text-white font-sf">
             It’s a match!
           </p>
+
+          <div className="absolut bottom-0">
+            <button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:scale-105 transition-all duration-200">
+              Dwwnload
+            </button>
+          </div>
         </div>
       </div>
     </div>

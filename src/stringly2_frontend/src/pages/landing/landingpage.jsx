@@ -150,23 +150,23 @@ const Landingpage = () => {
               <img
                 src="./landing/heroImageBanner.png"
                 alt="Background"
-                className="object-cover w-full  object-contain"
+                className="object-cover w-screen  object-contain"
               />
               <div
                 // className="absolute w-[950px] text-white left-1/2 top-[116px] transform -translate-x-1/3 -translate-y-1/3 z-[10] text-start p-20 cursor-pointer flex flex-col"
-                className={`absolute w-[950px] text-white  bottom-[calc(116px-115px)] z-[10] text-start p-20 cursor-pointer flex flex-col leading-tight ${
+                className={`absolute text-white left-[-40px] bottom-[calc(116px-95px)] z-[10] text-start p-20 cursor-pointer flex flex-col leading-tight ${
                   isConditionMet
-                    ? "xl:bottom-[calc(116px-80px)] xl:left-[calc(57%-855px)]"
-                    : "xl:bottom-[calc(116px-100px)] xl:left-[calc(57%-905px)]"
+                    ? "xl:bottom-[calc(96px-110px)] xl:left-[calc(57%-855px)]"
+                    : "xl:bottom-[calc(96px-110px)] xl:left-[calc(57%-905px)]"
                 }`}
               >
                 <div className="relative overflow-hidden leading-tight inline-block">
-                  <p className="font-sf font-semibold text-white text-[52px] lg:text-[52px] xl:-[72px]">
+                  <p className="font-sf font-semibold text-white text-[42px] lg:text-[52px] xl:-[66px]">
                     String your Vibe
                   </p>
                 </div>
                 <div className="relative overflow-hidden inline-block">
-                  <p className="font-sf text-white text-[22px] lg:text-[42px]">
+                  <p className="font-sf text-white text-[22px] lg:text-[37px]">
                     Date & Network
                   </p>
                 </div>
@@ -287,15 +287,20 @@ const Landingpage = () => {
                   />
                 </div>
                 <div
-                  className={`absolute lg:top-[630px] lg:right-[458px] ${
+                  className={`absolute lg:top-[530px] lg:right-[458px] ${
                     isConditionMet
-                      ? "xl:top-[700px] xl:left-[580px]"
-                      : "xl:top-[775px] xl:left-[625px]"
+                      ? "xl:top-[630px] xl:left-[580px]"
+                      : "xl:top-[655px] xl:left-[625px]"
                   } ${circleImageRingClose && "match-text"}`}
                 >
                   <p className="text-[52px] font-semibold leading-[60px] text-white font-sf">
                     It’s a match!
                   </p>
+                  <div className="absolut bottom-0 flex flex-col items-center justify-center">
+                    <button className="bg-white text-black px-8 py-2 rounded-[8px] lg:mr-10 xl:mr-40 mt-4 text-[25px] hover:scale-105 transition-all duration-200">
+                      Dwwnload
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

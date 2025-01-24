@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-[93%] md:w-[95%]  xl:max-w-[1480px] mx-auto flex flex-col rounded-[15px] fixed md:top-[10px] left-[-20px] right-[-20px] z-50 md:px-4 navbar !z-00  ${
+      className={`w-[93%] md:w-[95%]  xl:max-w-[1480px] mx-auto flex flex-col rounded-[15px] fixed md:top-[10px] left-[-20px] right-[-20px] z-50 md:px-4 navbar !z-00  sm:bg-transparent lg:${
         scrolled ? " glossy-white-scrolled" : " glossy-white"
       }`}
     >
