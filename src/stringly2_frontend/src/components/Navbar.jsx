@@ -38,7 +38,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-[93%] md:w-[95%]  xl:max-w-[1480px] mx-auto flex flex-col  sm:p-4 md:p-0 rounded-[15px] fixed md:top-[10px] left-[-20px] right-[-20px] z-50 md:px-4 navbar !z-00  ${
+      className={`w-[93%] md:w-[95%]  xl:max-w-[1480px] mx-auto flex flex-col   py-3 md:py-0 rounded-[15px] fixed md:top-[10px] left-[-20px] right-[-20px]  z-50 md:px-4 navbar !z-00  ${
         scrolled && !isMobile
           ? "glossy-white-scrolled"
           : !isMobile && " glossy-white"
