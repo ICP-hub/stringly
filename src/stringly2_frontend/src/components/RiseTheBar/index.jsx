@@ -340,6 +340,7 @@ const RiseTheBar = () => {
   const imageRef2 = useRef(null);
 
   useEffect(() => {
+    console.log("indesktop");
     if (
       !containerRef.current ||
       !imageContainerRef1.current ||
@@ -492,7 +493,7 @@ const RiseTheBar = () => {
   return (
     <div
       ref={containerRef}
-      className="relative flex flex-col mx-auto justify-center items-center w-full h-screen"
+      className="relative bg-red flex flex-col mx-auto justify-center items-center w-full h-screen"
     >
       {/* Image section 1 */}
       <div
