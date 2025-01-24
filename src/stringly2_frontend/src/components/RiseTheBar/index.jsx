@@ -461,7 +461,7 @@ const RiseTheBar = () => {
     return () => {
       ScrollTrigger.killAll(); // Clean-up ScrollTrigger instances
     };
-  }, []);
+  }, [containerRef]);
 
   useEffect(() => {
     if (!imageRef2.current) return;

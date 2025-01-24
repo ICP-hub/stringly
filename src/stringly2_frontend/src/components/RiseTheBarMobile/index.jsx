@@ -72,7 +72,7 @@ const RiseTheBarMobile = () => {
       >
         <div
           ref={headerRef1}
-          className="absolute border-4 border-red-700 top-10 left-10 flex items-center justify-center text-center font-sf text-[70px] font-semibold text-black"
+          className="absolute top-10 left-10 flex items-center justify-center text-center font-sf text-[70px] font-semibold text-black"
         >
           Raise the Bar,{" "}
           <span className="ml-4">

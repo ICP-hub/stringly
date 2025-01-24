@@ -302,10 +302,10 @@ const Landingpage = () => {
         )}
       </div>
       {/* Rise the bar component */}
-      <div key={isDesktop ? "desktop1" : "mobile1"}>
+      {/* <div key={isDesktop ? "desktop1" : "mobile1"}>
         {isDesktop ? <RiseTheBar /> : <RiseTheBarMobile />}
-      </div>
-
+      </div> */}
+      {isDesktop ? <RiseTheBar /> : <RiseTheBarMobile />}
       <div className="px-[20px] md:px-0 text-center w-[310px] md:w-auto mt-16 lg:mb-10">
         <h2 className="text-[30px]  lg:text-[48px] font-bold md:font-semibold font-sf leading-[38px] mb-2 md:mb-6">
           Discover Our Unique Features
