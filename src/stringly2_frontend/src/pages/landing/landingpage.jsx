@@ -602,11 +602,11 @@ const Landingpage = () => {
           </div>
           {isMobile ? (
             <div
-              className={`animated-border-box relative flex flex-col items-center justify-center top-[880px] lg:top-[800px] left-[15px] md:left-[55px] lg:left-[355px] !w-[92%] lg:p-20 bg-white text-black ${
+              className={`animated-border-box relative mx-auto flex flex-col items-center justify-center top-[580px] lg:top-[800px] p-10 lg:left-[355px] !w-[92%] lg:p-20 bg-white text-black ${
                 hovered === "section1" ? "scale-up" : "scale-0 opacity-0"
               }`}
             >
-              <p className="mb-5 font-sf font-regular">Bring your spark</p>
+              <p className="mb-5 font-sf  font-regular">Bring your spark</p>
               <p className="font-semibold px-2 text-[32px] leading-[44px] lg:text-[48px] lg:leading-[58px] text-center font-sf pb-2 md:pb-0">
                 Let's build Stringly together.
               </p>
