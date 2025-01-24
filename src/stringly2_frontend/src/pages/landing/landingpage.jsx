@@ -9,6 +9,7 @@ import "../../pages/landing/landingPage.scss";
 import RiseTheBar from "../../components/RiseTheBar";
 import HeroMobile from "../../components/HeroMobile";
 import RiseTheBarMobile from "../../components/RiseTheBarMobile";
+import RefreshOnMount from "../../components/RefereshOnMount";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -302,10 +303,12 @@ const Landingpage = () => {
         )}
       </div>
       {/* Rise the bar component */}
-      {/* <div key={isDesktop ? "desktop1" : "mobile1"}>
+      {/* <div>
         {isDesktop ? <RiseTheBar /> : <RiseTheBarMobile />}
+        <RefreshOnMount condition={isMobile} />
       </div> */}
       {isDesktop ? <RiseTheBar /> : <RiseTheBarMobile />}
+
       <div className="px-[20px] md:px-0 text-center w-[310px] md:w-auto mt-16 lg:mb-10">
         <h2 className="text-[30px]  lg:text-[48px] font-bold md:font-semibold font-sf leading-[38px] mb-2 md:mb-6">
           Discover Our Unique Features
