@@ -20,19 +20,38 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      setIsMobile(width <= 968);
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Cleanup
+    };
+  }, []);
+
   return (
     <div
-      className={`w-[93%] md:w-[95%]  xl:max-w-[1480px] mx-auto flex flex-col rounded-[15px] fixed md:top-[10px] left-[-20px] right-[-20px] z-50 md:px-4 navbar !z-00  sm:bg-transparent lg:${
-        scrolled ? " glossy-white-scrolled" : " glossy-white"
+      className={`w-[93%] md:w-[95%]  xl:max-w-[1480px] mx-auto flex flex-col  sm:p-4 md:p-0 rounded-[15px] fixed md:top-[10px] left-[-20px] right-[-20px] z-50 md:px-4 navbar !z-00  ${
+        scrolled && !isMobile
+          ? "glossy-white-scrolled"
+          : !isMobile && " glossy-white"
       }`}
     >
       <div className="flex w-full items-center justify-between px-2 md:px-8">
         <div className="px-4 md:py-1  ">
-          {/* <img src="./landing/COLOURED LOGO.png" alt="logo" className="w-18 md:w-auto h-7 md:h-8" /> */}
           {scrolled ? (
             <img className="w-31 h-[45px] py-2" src="Stringly.png" />
           ) : (
-            <p className="font-sf text-[28px] font-semibold">Stringly</p>
+            <p className="font-sf text-[28px] text-white font-semibold">
+              Stringly
+            </p>
           )}
         </div>
 

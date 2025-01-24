@@ -88,11 +88,11 @@ const HeroMobile = () => {
         className={`absolute text-white left-10  top-32 md:top-60 z-[10] text-start  cursor-pointer flex flex-col leading-tight `}
       >
         <div className="heading relative  overflow-hidden leading-tight inline-block">
-          <p className="font-sf font-semibold text-white  md:text-[52px] lg:text-[32px]">
+          <p className="font-sf font-semibold text-white text-[34px] md:text-[52px] lg:text-[32px]">
             String your Vibe
           </p>
         </div>
-        <div className="relative overflow-hidden inline-block">
+        <div className="relative text-[26px] overflow-hidden inline-block">
           <p className="font-sf text-white md:text-[32px] lg:text-[22px] lg:text-[42px]">
             Date & Network
           </p>
