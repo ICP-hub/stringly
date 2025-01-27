@@ -10,7 +10,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const imgHeight = 1;
+      const imgHeight = 1000;
       setScrolled(window.scrollY > imgHeight);
     };
 
@@ -89,13 +89,20 @@ const Navbar = () => {
                             {!isMenu && <IoIosMenu />}
                         </button> */}
             <div>
-              <button
+              {/* <button
                 className={`hover:scale-105 transition-all duration-200 px-4 py-1 rounded-lg text-black bg-white ${
                   scrolled ? "block" : "hidden"
                 } `}
               >
                 <a href="https://tally.so/r/waD9X9">Join</a>
-              </button>
+              </button> */}
+              {scrolled && (
+                <div className="animated-border-button right-[-1px] top-2 rounded-xl p-[3.5px] hover:scale-105 transition-all duration-200">
+                  <button className=" bg-black text-white text-[16px] font-sf text-black px-3 py-[10px] hover:bg-purple-100 w-38 rounded-xl">
+                    Download Now
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>

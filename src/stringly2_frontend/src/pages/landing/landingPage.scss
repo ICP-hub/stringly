@@ -248,6 +248,76 @@
   cursor: pointer;
 }
 
+// animation for button
+.animated-border-button {
+  // height: 52px;
+  border-radius: 17px;
+}
+
+.animated-border-button,
+.animated-border-button-glow {
+  background-color: #000;
+  position: absolute;
+  overflow: hidden;
+  z-index: 10 !important;
+  margin-inline: auto;
+}
+
+.animated-border-button-glow {
+  overflow: hidden;
+  filter: blur(20px);
+  transition: background-image 0.5s ease-out;
+}
+
+.animated-border-button:before,
+.animated-border-button-glow:before {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 99999px;
+  height: 99999px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: conic-gradient(
+    #d23691e6,
+    #113caaf1,
+    #d23691e6,
+    #eeeeee 35%
+  );
+  animation: rotate 5s linear infinite;
+  transition: background-image 0.5s ease-out, animation 0.5s ease-out;
+}
+
+.animated-border-button:after {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  // left: 10px;
+  // top: 10px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background: #000 !important;
+}
+
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+.animated-border-button:hover:before {
+  animation: none;
+  background-image: conic-gradient(#d83694, #0039c7, #c04783 100%);
+  transition: all 2s ease-in;
+}
+
+.animated-border-button-glow:hover {
+  background-image: conic-gradient(#d83694, #0039c7, #d4237c 100%);
+  transition: all 2s ease-in;
+}
+
 /* Default (Large screens, desktops, and laptops) */
 
 @media (min-width: 1024px) {
@@ -1039,11 +1109,6 @@
     border-radius: 10px;
     width: fit-content;
     object-fit: cover;
-  }
-
-  img {
-    opacity: 0.7;
-    border-radius: 10px;
   }
 
   @keyframes slideIn {

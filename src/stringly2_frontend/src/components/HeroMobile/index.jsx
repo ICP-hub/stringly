@@ -199,9 +199,9 @@ const HeroMobile = () => {
             It’s a match!
           </p>
 
-          <div className="absolut bottom-0">
-            <button className="bg-white text-black px-8 py-2 rounded-[8px] mr-4 mt-4 hover:scale-105 transition-all duration-200">
-              Dwwnload
+          <div className="animated-border-button mt-8 rounded-xl p-[2.5px] hover:scale-105 transition-all duration-200">
+            <button className=" bg-white text-[16px] font-sf text-black px-6 py-3 hover:bg-purple-100 w-38 rounded-xl">
+              Download Now
             </button>
           </div>
         </div>
