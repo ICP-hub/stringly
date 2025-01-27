@@ -45,7 +45,7 @@ const Navbar = () => {
       }`}
     >
       <div className="flex w-full items-center justify-between px-2 md:px-8">
-        <div className="px-4 md:py-1  ">
+        <div className="px-4 md:py-[3px]  ">
           {scrolled ? (
             <img className="w-31 h-[45px] py-2" src="Stringly.png" />
           ) : (
@@ -75,15 +75,13 @@ const Navbar = () => {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <div>
-            <button
-              className={`px-10 py-[8px] rounded-xl ${
-                isMenu ? "hidden" : "hidden md:flex"
-              } bg-white text-black hover:scale-105 transition-all duration-200s`}
-            >
-              <a href="https://tally.so/r/waD9X9">Join</a>
-            </button>
-          </div>
+          {!isMobile && (
+            <div className="animated-border-button right-[10px] rounded-xl p-[3.5px] hover:scale-105 transition-all duration-200">
+              <button className=" bg-white text-black text-[16px] font-sf text-black px-3 py-[6px] hover:bg-purple-100 w-38 rounded-xl">
+                Download Now
+              </button>
+            </div>
+          )}
           <div className="flex md:hidden">
             {/* <button className='text-xl' onClick={() => setIsmMenu(true)}>
                             {!isMenu && <IoIosMenu />}
@@ -98,7 +96,7 @@ const Navbar = () => {
               </button> */}
               {scrolled && (
                 <div className="animated-border-button right-[-1px] top-2 rounded-xl p-[3.5px] hover:scale-105 transition-all duration-200">
-                  <button className=" bg-black text-white text-[16px] font-sf text-black px-3 py-[10px] hover:bg-purple-100 w-38 rounded-xl">
+                  <button className=" bg-white text-black text-[16px] font-sf text-black px-3 py-[10px] hover:bg-purple-100 w-38 rounded-xl">
                     Download Now
                   </button>
                 </div>
@@ -155,6 +153,7 @@ export const Menu = ({ isMenu, setIsmMenu }) => {
               <a href="https://tally.so/r/waD9X9">Join</a>
             </button>
           </div>
+
           <button
             className="hover:scale-105 transition-all duration-200 text-xl"
             onClick={closeMenu}
