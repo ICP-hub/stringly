@@ -721,41 +721,44 @@ const RiseTheBarMobile = () => {
     ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top",
-      end: "bottom+=400%",
+      end: "bottom+=2000%",
       pin: true,
       pinSpacing: true,
+      scrub: 2,
     });
 
     imageContainerRefs.forEach((imageContainerRef, idx) => {
       const images = gsap.utils.toArray(imageRefs[idx].current.children);
-      console.log("images", imageContainerRef.current);
+
       // Horizontal scrolling effect for each image
       gsap.to(images, {
-        xPercent: -100 * (images.length - 1),
+        xPercent: -100 * (images.length * 2),
         ease: "none",
         scrollTrigger: {
           trigger: imageContainerRef.current,
-          start: "top+=100%", // Start scrolling when the image container is at the top of the viewport
-          end: "+=3000", // Adjust this based on image height and animation needs
+          start: "top=100%", // Start scrolling when the image container is at the top of the viewport
+          end: "bottom+=2200%", // Adjust this based on image height and animation needs
+          pinSpacing: images.length,
           scrub: true,
         },
       });
 
       // Adjust visibility of the first image container
       if (idx === 0) {
-        gsap.fromTo(
+        gsap.to(
           imageContainerRef.current,
           { opacity: 1 }, // Start fully visible
           {
             scrollTrigger: {
               trigger: imageContainerRef.current,
-              start: "top bottom", // Start fading out when the top of the container is at the bottom of the viewport
-              end: "+=3000", // Complete fading out after the images scroll out. Adjust accordingly
-              scrub: true,
+              start: "top-=100%", // Start fading out when the top of the container is at the bottom of the viewport
+              end: "top+=600%", // Complete fading out after the images scroll out. Adjust accordingly
+              scrub: 2,
             },
           }
         );
-      } else {
+      }
+      if (idx != 0 && idx === 1) {
         gsap.fromTo(
           imageContainerRef.current,
           { opacity: 0 }, // Start invisible
@@ -763,9 +766,9 @@ const RiseTheBarMobile = () => {
             opacity: 1,
             scrollTrigger: {
               trigger: imageContainerRef.current,
-              start: "top+=200px bottom", // Start appearing a bit earlier
-              end: "+=500", // Control the end point based on your layout
-              scrub: true,
+              start: "bottom+=550%", // Start appearing a bit earlier
+              end: "bottom+=200%", // Control the end point based on your layout
+              scrub: 2,
             },
           }
         );
@@ -787,8 +790,8 @@ const RiseTheBarMobile = () => {
         gsap.fromTo(
           image,
           {
-            y: 1000,
-            scale: 0.8,
+            y: 50,
+            scale: 0.9,
             rotation: 10 * (imageIdx % 2 === 0 ? 1 : -1),
           },
           {
@@ -798,9 +801,9 @@ const RiseTheBarMobile = () => {
             rotation: 10 * (imageIdx % 2 === 0 ? 1 : -1),
             scrollTrigger: {
               trigger: imageContainerRef.current,
-              start: "top bottom",
-              end: "center center",
-              scrub: true,
+              // start: "top-=100%",
+              // end: "bottom+=100%",
+              scrub: 2,
             },
           }
         );
@@ -828,13 +831,6 @@ const RiseTheBarMobile = () => {
           img: "property1_image4",
           text: ["PULL THE", "STRINGS", "OF", "YOUR", "VIBE!"],
         },
-      ],
-    },
-    {
-      header: "Raise the Bar, Your Way",
-      toggleImage: "button-toggle-blue.svg",
-      bgClass: "bg-half-moon-gradient-blue",
-      images: [
         { img: "property2_image1", text: ["Engage", "Your", "Network"] },
         {
           img: "property2_image2",
@@ -844,12 +840,18 @@ const RiseTheBarMobile = () => {
         { img: "property2_image4", text: ["Dive into", "Your", "Connections"] },
       ],
     },
+    {
+      header: "Raise the Bar, Your Way",
+      toggleImage: "button-toggle-blue.svg",
+      bgClass: "bg-half-moon-gradient-blue",
+      images: [],
+    },
   ];
 
   return (
     <div
       ref={containerRef}
-      className="relative flex flex-col mx-auto justify-center items-center w-full h-screen overflow-hidden"
+      className="relative flex flex-col mx-auto justify-start items-start w-full h-screen overflow-hidden"
     >
       {imageSections.map(
         (section, idx) => (
@@ -858,7 +860,7 @@ const RiseTheBarMobile = () => {
             <div
               key={idx}
               ref={imageContainerRefs[idx]}
-              className={`absolute inset-0 flex flex-col items-center justify-start ${section.bgClass} whitespace-nowrap`}
+              className={`absolute inset-0  flex flex-col items-start justify-start ${section.bgClass} whitespace-nowrap`}
             >
               <div
                 ref={headerRefs[idx]}
