@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import "../RiseTheBarMobile/style.scss"; // Ensure the styles are properly defined
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "../RiseTheBarMobile/style.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,8 +9,6 @@ const RiseTheBarMobile = () => {
   const containerRef = useRef(null);
   const imageContainerRef1 = useRef(null);
   const imageContainerRef2 = useRef(null);
-  const headerRef1 = useRef(null);
-  const headerRef2 = useRef(null);
   const imageRef1 = useRef(null);
   const imageRef2 = useRef(null);
 

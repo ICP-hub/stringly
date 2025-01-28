@@ -255,7 +255,7 @@ const RiseTheBar = () => {
       >
         <div
           ref={headerRef2}
-          className="flex items-center justify-between text-center font-sf text-[70px] font-semibold text-black"
+          className="flex items-center mt-40 justify-between text-center font-sf text-[70px] font-semibold text-black"
         >
           Raise the Bar,{" "}
           <span>
