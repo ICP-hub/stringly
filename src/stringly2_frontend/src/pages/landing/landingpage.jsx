@@ -157,7 +157,12 @@ const Landingpage = () => {
                 className={`absolute text-white left-[-40px] bottom-[calc(116px-95px)] lg:bottom-[40px] xl:bottom-[120px] z-[10] text-start p-20 cursor-pointer flex flex-col leading-tight vibe-text`}
               >
                 <div className="relative overflow-hidden leading-tight inline-block">
-                  <p className="font-sf font-semibold text-white text-[42px] lg:text-[52px] xl:text-[72px]">
+                  <p
+                    className={`font-sf font-semibold text-white text-[42px] lg:text-[52px] xl:text-[72px] ${
+                      isConditionMet ? "!text-[52px]" : ""
+                    } `}
+                    div
+                  >
                     String your Vibe
                   </p>
                 </div>
@@ -180,13 +185,21 @@ const Landingpage = () => {
                   } flex justify-between text-white absolute ring-text-container`}
                 >
                   <div className="">
-                    <h2 className="font-sf text-[24px] leading-[34px] font-semibold">
+                    <h2
+                      className={`font-sf text-[24px] xl:text-[34px] leading-[34px] font-semibold ${
+                        isConditionMet ? "text-[10px]" : ""
+                      }`}
+                    >
                       Michael Smith, 25
                     </h2>
-                    <p className="font-sf text-[18px] leading-[28px] font-medium">
+                    <p
+                      className={`font-sf text-[18px] xl:text-[28px] leading-[28px] font-medium ${
+                        isConditionMet ? "text-[22px]" : ""
+                      }`}
+                    >
                       Lives in Portland, Illinois
                     </p>
-                    <p className="font-sf text-[14px] leading-[14px] font-regular">
+                    <p className="font-sf text-[14px] xl:text-[30px] leading-[14px] font-regular">
                       11 miles away
                     </p>
                   </div>
