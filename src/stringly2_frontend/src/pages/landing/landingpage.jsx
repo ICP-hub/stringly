@@ -28,6 +28,7 @@ const Landingpage = () => {
   const [heartVisible1, setHeartVisible1] = useState(false);
   const [heartVisible2, setHeartVisible2] = useState(false);
   const [heartVisible3, setHeartVisible3] = useState(false);
+  const [downladBtnApper, setDownladBtnApper] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const [isDesktop, setIsDesktop] = useState(width > 1024);
 
@@ -99,7 +100,11 @@ const Landingpage = () => {
 
     const circleImageTimer = setTimeout(() => {
       setCircleImageClose(true);
-    }, 8300);
+    }, 8000);
+
+    const downloadBtn = setTimeout(() => {
+      setDownladBtnApper(true);
+    }, 9500);
 
     return () => {
       clearTimeout(timer);
@@ -109,6 +114,7 @@ const Landingpage = () => {
       clearTimeout(heart1);
       clearTimeout(heart2);
       clearTimeout(heart3);
+      clearInterval(downloadBtn);
     };
   }, []);
 
@@ -288,7 +294,11 @@ const Landingpage = () => {
                     It’s a match!
                   </p>
                 </div>
-                <div className="absolute animated-button animated-border-button rounded-xl p-1 hover:scale-105 transition-all duration-200">
+                <div
+                  className={`absolute animated-button animated-border-button rounded-xl p-1 hover:scale-105 transition-all duration-20 ${
+                    downladBtnApper ? "downloadBtn" : ""
+                  }`}
+                >
                   <button className=" bg-white text-[16px] lg:text-[24px] xl:text-[32px] font-sf text-black px-6 py-3 hover:bg-purple-100 w-38 rounded-xl">
                     Download Now
                   </button>

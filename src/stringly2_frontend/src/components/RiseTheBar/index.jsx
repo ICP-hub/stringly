@@ -181,14 +181,14 @@ const RiseTheBar = () => {
           ref={headerRef1}
           className="flex items-center jusify-center text-center font-sf text-[70px] font-semibold text-black"
         >
-          Raise the Bar,{" "}
+          Raise the Bar,Y
           <span>
             <img
               src="./landing/RiseComponent/button-toggle-red.svg"
               alt="Red toggle"
             />
           </span>
-          Your Way
+          ur Way
         </div>
         <div
           ref={imageRef1}
@@ -257,14 +257,14 @@ const RiseTheBar = () => {
           ref={headerRef2}
           className="flex items-center mt-40 justify-between text-center font-sf text-[70px] font-semibold text-black"
         >
-          Raise the Bar,{" "}
+          Raise the Bar, Y
           <span>
             <img
               src="./landing/RiseComponent/button-toggle-blue.svg"
               alt="Blue toggle"
             />
           </span>
-          Your Way
+          ur Way
         </div>
         <div
           ref={imageRef2}

@@ -332,23 +332,25 @@
   }
 
   // animation for button
-  .animated-border-button {
-    // height: 52px;
-    border-radius: 17px;
-  }
 
-  .animated-border-button,
-  .animated-border-button-glow {
-    background-color: #000;
-    position: absolute;
+  .animated-border-button {
+    border-radius: 17px;
+    position: relative;
     overflow: hidden;
-    z-index: 10 !important;
+    z-index: 10;
+    background-color: #000;
     margin-inline: auto;
   }
 
   .animated-border-button-glow {
-    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 17px;
     filter: blur(20px);
+    z-index: -1;
     transition: background-image 0.5s ease-out;
   }
 
@@ -378,11 +380,12 @@
     content: "";
     position: absolute;
     z-index: -10;
-    // left: 10px;
-    // top: 10px;
     width: calc(100% - 10px);
     height: calc(100% - 10px);
     background: #000 !important;
+    border-radius: 15px; /* Slightly smaller radius to fit inside the border */
+    top: 5px;
+    left: 5px;
   }
 
   @keyframes rotate {
@@ -399,6 +402,26 @@
 
   .animated-border-button-glow:hover {
     background-image: conic-gradient(#d83694, #0039c7, #d4237c 100%);
+    transition: all 2s ease-in;
+  }
+
+  /* Add this for the gradient shadow effect */
+  .animated-border-button-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 17px;
+    z-index: -2;
+    box-shadow: 0 0 20px 10px rgba(210, 54, 145, 0.5),
+      0 0 40px 20px rgba(17, 60, 170, 0.5);
+    transition: box-shadow 0.5s ease-out;
+  }
+
+  .animated-border-button:hover .animated-border-button-shadow {
+    box-shadow: 0 0 30px 15px rgba(216, 54, 148, 0.7),
+      0 0 50px 25px rgba(0, 57, 199, 0.7);
     transition: all 2s ease-in;
   }
 
@@ -739,6 +762,10 @@
   }
 
   .match-text {
+    transition: transform 1.5s ease, opacity 0.3s ease-in;
+    transition-delay: 0s, 5s;
+  }
+  .downloadBtn {
     transition: transform 1.5s ease, opacity 0.3s ease-in;
     transition-delay: 0s, 5s;
   }
@@ -1195,7 +1222,7 @@
     left: 178px !important;
   }
   .match {
-    top: 570px !important;
+    top: 470px !important;
     right: 408px !important;
   }
   .s-logo {
@@ -1236,7 +1263,7 @@
     left: 200px !important;
   }
   .match {
-    top: 590px !important;
+    top: 490px !important;
     right: 428px !important;
   }
   .s-logo {
@@ -1277,7 +1304,7 @@
     left: 238px !important;
   }
   .match {
-    top: 650px !important;
+    top: 550px !important;
     right: 478px !important;
   }
   .s-logo {
@@ -1331,7 +1358,7 @@
   }
 
   .match {
-    top: 800px !important;
+    top: 700px !important;
     right: 718px !important;
   }
   .s-logo {
@@ -1385,7 +1412,7 @@
   }
 
   .match {
-    top: 870px !important;
+    top: 700px !important;
     right: 738px !important;
   }
   .s-logo {
@@ -1416,7 +1443,7 @@
   }
   .ring-text-container {
     top: 1190px !important;
-    right: 750px !important;
+    right: 630px !important;
   }
   .right-ring {
     width: 720px !important;
@@ -1436,7 +1463,7 @@
   }
 
   .match {
-    top: 1170px !important;
+    top: 1070px !important;
     right: 1038px !important;
   }
   .s-logo {

@@ -44,7 +44,7 @@ const Navbar = () => {
           : !isMobile && " glossy-white"
       }`}
     >
-      <div className="flex w-full items-center justify-between px-2 md:px-8">
+      <div className="flex w-full items-center justify-between px-2 md:px-8 py-1">
         <div className="px-4 md:py-[3px]  ">
           {scrolled ? (
             <img className="w-31 h-[45px] py-2" src="Stringly.png" />
