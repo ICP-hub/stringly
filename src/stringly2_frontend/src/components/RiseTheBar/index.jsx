@@ -211,11 +211,11 @@ const RiseTheBar = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className={`group relative h-[550px] w-[260px] transition-transform ${
-                index === 0 && "md:left-[45px] xl:left-[75px]"
-              } ${index === 1 && "left-[20px] xl:left-[50px] z-20"} ${
-                index === 2 && "left-[-10px] z-10"
-              } ${index === 3 && "md:left-[-40px] xl:left-[-85px]"}`}
+              className={`group relative h-[480px] xl:h-[550px] md:w-[270px] xl:w-[300px] transition-transform ${
+                index === 0 && "md:left-[135px] xl:left-[150px]"
+              } ${index === 1 && "left-[50px] xl:left-[70px] z-20"} ${
+                index === 2 && "left-[-30px] z-10"
+              } ${index === 3 && "md:left-[-120px] xl:left-[-85px]"}`}
               style={{
                 backgroundImage: `url('./landing/RiseComponent/black-phone.png')`,
                 backgroundSize: "cover",
@@ -228,7 +228,7 @@ const RiseTheBar = () => {
                 src={`./landing/RiseComponent/${item.img}.png`}
                 alt={`Image ${index + 1}`}
                 loading="lazy"
-                className="absolute inset-0 transition-transform px-[8px] py-4 w-full h-full transition-opacity flex items-center justify-center duration-700 ase-in-out opacity-100 group-hover:opacity-0 group-hover:translate-y-10"
+                className="absolute inset-0 transition-transform w-full h-full transition-opacity flex items-center justify-center duration-700 ase-in-out opacity-100 group-hover:opacity-0 group-hover:translate-y-10"
               />
 
               {/* Text to Show on Hover */}
@@ -279,16 +279,16 @@ const RiseTheBar = () => {
             { img: "property2_image3", text: ["Uncover", "your", "network"] },
             {
               img: "property2_image4",
-              text: ["Dive into ", "your", "connections"],
+              text: ["Dive", "into ", "your", "connections"],
             },
           ].map((item, index) => (
             <div
               key={index}
-              className={`group relative h-[550px] w-[260px] transition-transform ${
-                index === 0 && "md:left-[45px] xl:left-[75px]"
-              } ${index === 1 && "left-[20px] xl:left-[50px] z-20"} ${
-                index === 2 && "left-[-10px] z-10"
-              } ${index === 3 && "md:left-[-40px] xl:left-[-85px]"}`}
+              className={`group relative h-[480px] xl:h-[550px] md:w-[270px] xl:w-[300px] transition-transform ${
+                index === 0 && "md:left-[135px] xl:left-[150px]"
+              } ${index === 1 && "left-[50px] xl:left-[70px] z-20"} ${
+                index === 2 && "left-[-30px] z-10"
+              } ${index === 3 && "md:left-[-120px] xl:left-[-85px]"}`}
               style={{
                 backgroundImage: `url('./landing/RiseComponent/black-phone.png')`,
                 backgroundSize: "cover",
@@ -301,7 +301,7 @@ const RiseTheBar = () => {
                 src={`./landing/RiseComponent/${item.img}.png`}
                 alt={`Image ${index + 1}`}
                 loading="lazy"
-                className="absolute inset-0 transition-transform transition-opacity px-[8px] py-3 w-full h-full duration-700 ase-in-out opacity-100 group-hover:opacity-0 group-hover:translate-y-10"
+                className="absolute inset-0 transition-transform transition-opacity w-full h-full duration-700 ase-in-out opacity-100 group-hover:opacity-0 group-hover:translate-y-10"
               />
 
               {/* Text to Show on Hover */}

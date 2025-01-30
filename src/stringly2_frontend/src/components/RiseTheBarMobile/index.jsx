@@ -159,10 +159,7 @@ const RiseTheBarMobile = () => {
             ur Way
           </span>
         </div>
-        <div
-          ref={imageRef1}
-          className="flex h-[1200px] items-center gap-[60px]"
-        >
+        <div ref={imageRef1} className="flex h-[1200px] items-center ">
           {[
             {
               img: "property1_image1",
@@ -180,7 +177,7 @@ const RiseTheBarMobile = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className={`group relative h-[550px] w-[260px] transition-transform`}
+              className={`group relative h-[550px] w-[300px] transition-transform`}
               style={{
                 backgroundImage: `url('./landing/RiseComponent/black-phone.png')`,
                 backgroundSize: "cover",
@@ -191,7 +188,7 @@ const RiseTheBarMobile = () => {
                 src={`./landing/RiseComponent/${item.img}.png`}
                 alt={`Image ${index + 1}`}
                 loading="lazy"
-                className="absolute inset-0 w-full h-full opacity-100  p-2 transition-transform transition-opacity duration-500 group-hover:opacity-0 group-hover:translate-y-10"
+                className="absolute inset-0 w-full h-full opacity-100 transition-transform transition-opacity duration-500 group-hover:opacity-0 group-hover:translate-y-10"
               />
               <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <p className="font-sf text-white leading-[42px] flex flex-col items-left justify-center font-semibold text-[32px] scale-x-[-1] transition-transform duration-500 group-hover:scale-x-[1]">
@@ -226,7 +223,7 @@ const RiseTheBarMobile = () => {
             ur Way
           </span>
         </div>
-        <div ref={imageRef2} className="flex h-full items-center gap-[60px]">
+        <div ref={imageRef2} className="flex h-full items-center ">
           {[
             {
               img: "property2_image2",
@@ -241,7 +238,7 @@ const RiseTheBarMobile = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className={`group relative h-[550px] w-[260px] transition-transform`}
+              className={`group relative h-[550px] w-[300px] transition-transform`}
               style={{
                 backgroundImage: `url('./landing/RiseComponent/black-phone.png')`,
                 backgroundSize: "cover",
@@ -252,7 +249,7 @@ const RiseTheBarMobile = () => {
                 src={`./landing/RiseComponent/${item.img}.png`}
                 alt={`Image ${index + 1}`}
                 loading="lazy"
-                className="absolute inset-0 w-full p-2 h-full opacity-100 transition-opacity duration-500 group-hover:opacity-0 group-hover:translate-y-10"
+                className="absolute inset-0 w-full h-full opacity-100 transition-opacity duration-500 group-hover:opacity-0 group-hover:translate-y-10"
               />
               <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <p className="font-sf text-white leading-[42px] flex flex-col items-left justify-center font-semibold text-[32px] scale-x-[-1] transition-transform duration-500 group-hover:scale-x-[1]">
