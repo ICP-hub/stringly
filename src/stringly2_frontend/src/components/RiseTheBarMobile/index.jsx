@@ -143,7 +143,13 @@ const RiseTheBarMobile = () => {
       {/* Image section 1 */}
       <div
         ref={imageContainerRef1}
-        className="absolute inset-0 flex items-center flex-col justify-start bg-half-moon-gradient-red whitespace-nowrap"
+        className="absolute inset-0 flex items-center flex-col justify-start whitespace-nowrap"
+        style={{
+          backgroundImage: `url('./landing/half-moon-gradient-red.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          boxSizing: "border-box",
+        }}
       >
         <div className="flex items-center justify-center flex-col pt-20 text-center font-sf text-[42px] leading-tight font-semibold text-black">
           <span> Raise the Bar,</span>
@@ -207,7 +213,13 @@ const RiseTheBarMobile = () => {
       {/* Image section 2 */}
       <div
         ref={imageContainerRef2}
-        className="absolute inset-0 flex items-center flex-col justify-start w-full bg-half-moon-gradient-blue whitespace-nowrap"
+        className="absolute inset-0 flex items-center flex-col justify-start w-full whitespace-nowrap"
+        style={{
+          backgroundImage: `url('./landing/half-moon-gradient-blue.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          boxSizing: "border-box",
+        }}
       >
         <div className="flex items-center justify-center flex-col pt-20 text-center font-sf text-[42px] leading-tight font-semibold text-black">
           <span> Raise the Bar,</span>

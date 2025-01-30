@@ -178,7 +178,7 @@ const Landingpage = () => {
                   </p>
                 </div>
               </div>
-              <div>
+              <div className="">
                 <img
                   src="./landing/Rectangle_Ring.png"
                   className={`rectangle-ring-image absolute ${
@@ -212,12 +212,12 @@ const Landingpage = () => {
                   <div
                     className={`${
                       sLogoLarge ? "s-logo" : ""
-                    } rounded-full absolute h-14 w-18 sLarge `}
+                    } rounded-full absolute h-16 w-18 sLarge `}
                   >
                     {!sLogoColored ? (
                       <img
                         src="./landing/s-logo.png"
-                        className={`text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-full w-full ${
+                        className={`text-[36px] font-bold italic text-center flex justify-center items-center h-full w-full ${
                           imageTransition
                             ? "image-transition"
                             : "image-transition-visible"
@@ -228,7 +228,7 @@ const Landingpage = () => {
                       <>
                         <img
                           src="./landing/s-logo-color.png"
-                          className={`text-[36px] pl-2 font-bold italic text-center flex justify-center items-center h-full w-full ${
+                          className={`text-[36px] font-bold italic text-center flex justify-center items-center h-full w-full ${
                             imageTransition
                               ? "image-transition"
                               : "image-transition-visible"
@@ -514,7 +514,15 @@ const Landingpage = () => {
         </div>
       )}
       <section>
-        <section className={`bg-gradient-full relative py-15`}>
+        <section
+          className={`relative py-15`}
+          style={{
+            backgroundImage: `url('./bg-gradient.png')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            boxSizing: "border-box",
+          }}
+        >
           {/* Specifications */}
           <div
             className={`flex h-[616px] lg:h-full lg:flex-row relative justify-center px-0 gap-20 items-start mt-10 md:mx-2 lg:mx-0  md:mt-14 ${

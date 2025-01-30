@@ -1311,7 +1311,7 @@
     top: 400px !important;
     right: -100px !important;
     transition: all 2s;
-    transform: scale(350%);
+    transform: scale(300%) !important;
   }
   .sLarge {
     top: 30px !important;
@@ -1443,8 +1443,19 @@
   }
   .ring-text-container {
     top: 1190px !important;
-    right: 630px !important;
+    right: 600px !important;
+    line-height: 20px;
   }
+  .ring-text-container div h2 {
+    font-size: 54px;
+    line-height: 70px;
+  }
+
+  .ring-text-container div p {
+    font-size: 34px;
+    line-height: 30px;
+  }
+
   .right-ring {
     width: 720px !important;
     top: 135px !important;
@@ -1468,13 +1479,13 @@
   }
   .s-logo {
     top: 400px !important;
-    right: 70px !important;
+    right: 190px !important;
     transition: all 2s;
-    transform: scale(350%);
+    transform: scale(550%) !important;
   }
   .sLarge {
-    top: 30px !important;
-    right: -120px !important;
+    top: 50px !important;
+    right: -160px !important;
   }
   .animated-button {
     bottom: 140px;

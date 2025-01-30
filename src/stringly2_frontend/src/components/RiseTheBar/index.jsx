@@ -170,12 +170,18 @@ const RiseTheBar = () => {
   return (
     <div
       ref={containerRef}
-      className="relative bg-red flex flex-col mx-auto justify-center items-center w-full h-screen"
+      className="relative bg-red flex flex-col mx-auto justify-center items-center w-screen h-screen"
     >
       {/* Image section 1 */}
       <div
         ref={imageContainerRef1}
-        className="absolute inset-0 flex items-center justify-center bg-half-moon-gradient-red"
+        className="absolute inset-0 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('./landing/half-moon-gradient-red.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          boxSizing: "border-box",
+        }}
       >
         <div
           ref={headerRef1}
@@ -251,7 +257,13 @@ const RiseTheBar = () => {
       {/* Image section 2 */}
       <div
         ref={imageContainerRef2}
-        className="absolute inset-0 flex items-start justify-center bg-half-moon-gradient-blue"
+        className="absolute inset-0 flex items-start justify-center"
+        style={{
+          backgroundImage: `url('./landing/half-moon-gradient-blue.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          boxSizing: "border-box",
+        }}
       >
         <div
           ref={headerRef2}
