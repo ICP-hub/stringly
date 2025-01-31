@@ -60,7 +60,7 @@ const RiseTheBarMobile = () => {
       gsap.fromTo(
         image,
         {
-          x: +1500,
+          x: 1500,
           opacity: 0,
           scale: 0.8,
           rotation: 10 * (index % 2 === 0 ? 1 : -1),
@@ -128,7 +128,6 @@ const RiseTheBarMobile = () => {
         }
       );
     });
-    console.log("current", containerRef.current);
 
     return () => {
       ScrollTrigger.killAll(); // Clean-up ScrollTrigger instances
@@ -165,7 +164,7 @@ const RiseTheBarMobile = () => {
             ur Way
           </span>
         </div>
-        <div ref={imageRef1} className="flex h-[1200px] items-center ">
+        <div ref={imageRef1} className="flex h-[1200px] items-center">
           {[
             {
               img: "property1_image1",

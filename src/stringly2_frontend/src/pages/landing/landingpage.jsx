@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { MdPrivacyTip } from "react-icons/md";
@@ -10,6 +10,7 @@ import RiseTheBar from "../../components/RiseTheBar";
 import HeroMobile from "../../components/HeroMobile";
 import RiseTheBarMobile from "../../components/RiseTheBarMobile";
 import RefreshOnMount from "../../components/RefereshOnMount";
+import { useInView } from "react-intersection-observer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,7 +18,6 @@ const Landingpage = () => {
   const [hovered, setHovered] = useState("");
   const [isMobile, setIsMobile] = useState(false);
   const [hovered1, setHovered1] = useState([false, false, false]);
-  const imageRefs = useRef([]);
   const [hovered2, setHovered2] = useState([false, false]);
   const [isConditionMet, setIsConditionMet] = useState(false);
   const [sLogoLarge, setSLogoLarge] = useState(false);
@@ -31,6 +31,16 @@ const Landingpage = () => {
   const [downladBtnApper, setDownladBtnApper] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const [isDesktop, setIsDesktop] = useState(width > 1024);
+
+  const { ref: inViewRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
+  const { ref: inViewRef1, inView: inView1 } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
 
   // const [scaleFactor, setScaleFactor] = useState(1);
   // const [scrollCount, setScrollCount] = useState(0);
@@ -337,7 +347,10 @@ const Landingpage = () => {
       </div>
       {/* Group for All Images */}
       {isMobile ? (
-        <div className="max-w-[360px]-sm-md lg:w-[90%] xl:w-full mx-auto flex flex-col items-center justify-center mt-8 gap-4 px-4 lg:px-0">
+        <div
+          ref={inViewRef}
+          className="max-w-[360px]-sm-md lg:w-[90%] xl:w-full mx-auto flex flex-col items-center justify-center mt-8 gap-4 px-4 lg:px-0"
+        >
           {/* Images */}
           {["Firefly.png", "Rectangle 4.png", "kiss.png"].map((src, index) => (
             <div
@@ -350,12 +363,12 @@ const Landingpage = () => {
                 className="w-full h-full object-cover opacity-[0.6]"
               />
               <div
-                ref={(el) => (imageRefs.current[index] = el)}
-                className={`absolute inset-0 flex items-center p-6 md:px-28 transform ${
-                  imageRefs.current[index]
+                className={`absolute                 ref={inViewRef}
+inset-0 flex items-center p-6 md:px-28 transform ${
+                  inView
                     ? "translate-x-0 bg-dark-gradient"
                     : "translate-x-[-100%]"
-                } transition-all duration-1000`}
+                } transition-all duration-1000 delay-${index * 200}`}
               >
                 <div className="text-white">
                   <h2 className="text-[32px] leading-[38px] font-semibold leading-tight font-roboto font-bold">
@@ -607,10 +620,35 @@ const Landingpage = () => {
               />
             </div>
           </div>
+          <div
+            className={`mt-20 w-full h-full hidden lg:block ${
+              hovered === "section1" ? "opacity-60" : "opacity-1"
+            }`}
+            onMouseEnter={() => handleHover("section1")}
+          >
+            <img
+              src="./landing/Lets work.png"
+              alt=""
+              className="mx-auto w-[1227px]"
+            />
+          </div>
+          <div
+            ref={inViewRef1}
+            className={`my-10 flex items-center justify-center pt-5 px-0 lg:hidden group ${
+              inView1 ? "opacity-60" : "opacity-1"
+            }`}
+            onMouseEnter={() => handleHover("section1")}
+          >
+            <img
+              src="./landing/Property 1=Default.png"
+              alt=""
+              className="group-hover:opacity:60 h-full w-full"
+            />
+          </div>
           {isMobile ? (
             <div
               className={`animated-border-box absolute  flex py-4 flex-col items-center justify-center top-[64%] left-[4%] !w-[92%] md:left-[8%] bg-white text-black ${
-                hovered === "section1" ? "scale-up" : "scale-0 opacity-0"
+                inView1 ? "scale-up" : "scale-0 opacity-0"
               }`}
             >
               <p className="mb-5 font-sf  font-regular">Bring your spark</p>
@@ -652,31 +690,6 @@ const Landingpage = () => {
               </a>
             </div>
           )}
-
-          <div
-            className={`mt-20 w-full h-full hidden lg:block ${
-              hovered === "section1" ? "opacity-60" : "opacity-1"
-            }`}
-            onMouseEnter={() => handleHover("section1")}
-          >
-            <img
-              src="./landing/Lets work.png"
-              alt=""
-              className="mx-auto w-[1227px]"
-            />
-          </div>
-          <div
-            className={`my-10 flex items-center justify-center pt-5 px-0 lg:hidden group ${
-              hovered === "section1" ? "opacity-60" : "opacity-1"
-            }`}
-            onMouseEnter={() => handleHover("section1")}
-          >
-            <img
-              src="./landing/Property 1=Default.png"
-              alt=""
-              className="group-hover:opacity:60 h-full w-full"
-            />
-          </div>
         </section>
       </section>
     </div>
