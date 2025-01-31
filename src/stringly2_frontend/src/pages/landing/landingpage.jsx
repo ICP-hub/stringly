@@ -342,10 +342,7 @@ const Landingpage = () => {
           {["Firefly.png", "Rectangle 4.png", "kiss.png"].map((src, index) => (
             <div
               key={index}
-              ref={(el) => (imageRefs.current[index] = el)}
-              className={`relative w-full lg:w-full h-[300px] rounded-xl overflow-hidden bg-gray-800 ${
-                hovered1[index] ? "animate-fadeIn " : ""
-              }`}
+              className={`relative w-full lg:w-full h-[300px] rounded-xl overflow-hidden bg-gray-800 `}
             >
               <img
                 src={`./landing/${src}`}
@@ -353,8 +350,9 @@ const Landingpage = () => {
                 className="w-full h-full object-cover opacity-[0.6]"
               />
               <div
-                className={`absolute  inset-0 flex items-center p-6 md:px-28 transform ${
-                  hovered1[index]
+                ref={(el) => (imageRefs.current[index] = el)}
+                className={`absolute inset-0 flex items-center p-6 md:px-28 transform ${
+                  imageRefs.current[index]
                     ? "translate-x-0 bg-dark-gradient"
                     : "translate-x-[-100%]"
                 } transition-all duration-1000`}
@@ -513,7 +511,7 @@ const Landingpage = () => {
           </div>
         </div>
       )}
-      <section>
+      <section className="relative">
         <section
           className={`relative py-15`}
           style={{
@@ -611,7 +609,7 @@ const Landingpage = () => {
           </div>
           {isMobile ? (
             <div
-              className={`animated-border-box relative mx-auto flex flex-col items-center justify-center top-[580px] lg:top-[800px] p-10 lg:left-[355px] !w-[92%] lg:p-20 bg-white text-black ${
+              className={`animated-border-box absolute  flex py-4 flex-col items-center justify-center top-[64%] left-[4%] !w-[92%] md:left-[8%] bg-white text-black ${
                 hovered === "section1" ? "scale-up" : "scale-0 opacity-0"
               }`}
             >
@@ -668,7 +666,7 @@ const Landingpage = () => {
             />
           </div>
           <div
-            className={`flex items-center justify-center border h-[900px] pt-5 px-0 lg:hidden group ${
+            className={`my-10 flex items-center justify-center pt-5 px-0 lg:hidden group ${
               hovered === "section1" ? "opacity-60" : "opacity-1"
             }`}
             onMouseEnter={() => handleHover("section1")}
@@ -676,7 +674,7 @@ const Landingpage = () => {
             <img
               src="./landing/Property 1=Default.png"
               alt=""
-              className="group-hover:opacity:60 h-full"
+              className="group-hover:opacity:60 h-full w-full"
             />
           </div>
         </section>

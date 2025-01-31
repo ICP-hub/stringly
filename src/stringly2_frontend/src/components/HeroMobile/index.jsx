@@ -121,7 +121,7 @@ const HeroMobile = () => {
         <div
           className={`${
             sLogoLarge ? "s-logo" : ""
-          } rounded-full absolute  h-7 w-9 sLarge ${
+          } rounded-full absolute  h-7 w-9 md:h-10 md:w-12 sLarge ${
             imageRingUp && "image-ring"
           }`}
         >
@@ -199,7 +199,7 @@ const HeroMobile = () => {
             It’s a match!
           </p>
 
-          <div className="animated-border-button mt-8 rounded-xl p-[2.5px] hover:scale-105 transition-all duration-200">
+          <div className="animated-border-button mt-8 animated-button rounded-xl p-[2.5px] hover:scale-105 transition-all duration-200">
             <button className=" bg-white text-[16px] font-sf text-black px-6 py-3 hover:bg-purple-100 w-38 rounded-xl">
               Download Now
             </button>
