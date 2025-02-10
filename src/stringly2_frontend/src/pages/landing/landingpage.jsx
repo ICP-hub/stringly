@@ -9,7 +9,6 @@ import "../../pages/landing/landingPage.scss";
 import RiseTheBar from "../../components/RiseTheBar";
 import HeroMobile from "../../components/HeroMobile";
 import RiseTheBarMobile from "../../components/RiseTheBarMobile";
-import RefreshOnMount from "../../components/RefereshOnMount";
 import { useInView } from "react-intersection-observer";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -82,6 +81,7 @@ const Landingpage = () => {
     };
   }, []);
 
+  // useEffect for match section in hero page
   useEffect(() => {
     const timer = setTimeout(() => {
       setSLogoLarge(true);
@@ -128,6 +128,7 @@ const Landingpage = () => {
     };
   }, []);
 
+  //useEffect for checking screen size large screen
   useEffect(() => {
     let timeoutId = null;
 
@@ -162,7 +163,6 @@ const Landingpage = () => {
         ) : (
           <>
             <div className="relative overflow-hidden w-screen ">
-              {/* Your content here */}
               <img
                 src="./landing/heroImageBanner.png"
                 alt="Background"
@@ -363,8 +363,7 @@ const Landingpage = () => {
                 className="w-full h-full object-cover opacity-[0.6]"
               />
               <div
-                className={`absolute                 ref={inViewRef}
-inset-0 flex items-center p-6 md:px-28 transform ${
+                className={`absolute ref={inViewRef} inset-0 flex items-center p-6 md:px-28 transform ${
                   inView
                     ? "translate-x-0 bg-dark-gradient"
                     : "translate-x-[-100%]"
@@ -666,7 +665,7 @@ inset-0 flex items-center p-6 md:px-28 transform ${
             </div>
           ) : (
             <div
-              className={`animated-border-box m-2 flex top-[800px] left-[280px] xl:left-[410px] flex-col items-center justify-center lg:p-20 bg-white text-black ${
+              className={`animated-border-box m-2 flex top-[800px] lg:left-[23%] xl:left-[30%] flex-col items-center justify-center lg:p-20 bg-white text-black ${
                 hovered === "section1" ? "scale-up" : "scale-0 opacity-0"
               } `}
               xl:style={{

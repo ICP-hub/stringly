@@ -901,308 +901,433 @@
   }
 }
 
-/* Mobile Devices (Small screens, max-width 480px) */
-@media (max-width: 480px) {
-  .hover-gradient {
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0),
-        rgba(10, 10, 10, 0.08)
-      ),
-      url("landing/darkEffect@.svg");
+@media screen and (min-width: 760px) {
+  .rectangle-ring-image {
+    top: 620px !important;
+    right: 15px !important;
+    height: 630px !important;
+    width: 330px !important;
   }
 
-  .animated-border-button {
-    // height: 52px;
-    border-radius: 17px;
+  .match {
+    top: 1130px !important;
+    right: 220px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  .animated-border-button,
-  .animated-border-button-glow {
-    background-color: #000;
-    position: absolute;
-    overflow: hidden;
-    z-index: 10 !important;
-    margin-inline: auto;
+  .match button {
+    padding: 10px 20px !important;
+    font-size: 28px;
   }
 
-  .animated-border-button-glow {
-    overflow: hidden;
-    filter: blur(20px);
-    transition: background-image 0.5s ease-out;
+  .match p {
+    font-size: 55px !important;
   }
 
-  .animated-border-button:before,
-  .animated-border-button-glow:before {
-    content: "";
-    z-index: -2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    width: 99999px;
-    height: 99999px;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-image: conic-gradient(
-      #d23691e6,
-      #113caaf1,
-      #d23691e6,
-      #eeeeee 35%
-    );
-    animation: rotate 5s linear infinite;
-    transition: background-image 0.5s ease-out, animation 0.5s ease-out;
+  .right-ring {
+    width: 360px !important;
+    top: 611px !important;
+    right: -80px;
   }
 
-  .animated-border-button:after {
-    content: "";
-    position: absolute;
-    z-index: -10;
-    // left: 10px;
-    // top: 10px;
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
-    background: #000 !important;
+  .left-ring {
+    width: 398px !important;
+    top: 630px !important;
+    left: -100px !important;
+  }
+  .s-logo {
+    top: 100px !important;
+    right: 85px !important;
+    transition: all 2s;
+    transform: scale(350%);
   }
 
-  @keyframes rotate {
-    100% {
-      transform: translate(-50%, -50%) rotate(1turn);
-    }
+  .sLarge {
+    top: 950px !important;
+    right: 35px !important;
   }
 
-  .animated-border-button:hover:before {
-    animation: none;
-    background-image: conic-gradient(#d83694, #0039c7, #c04783 100%);
-    transition: all 2s ease-in;
+  .ring-text-container {
+    top: 1150px !important;
+    right: 110px !important;
   }
-
-  .animated-border-button-glow:hover {
-    background-image: conic-gradient(#d83694, #0039c7, #d4237c 100%);
-    transition: all 2s ease-in;
+  .ring-text-container p {
+    font-size: 20px !important;
   }
-
-  .ppp.hovered .child-2 {
-    animation: slideIn2 2s forwards;
+  .animated-button {
+    bottom: -190px !important;
   }
-
-  @keyframes slideIn {
-    from {
-      transform: translateX(-400px);
-      opacity: 0;
-    }
-
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes slideIn2 {
-    from {
-      transform: translateX(-400px);
-      opacity: 0;
-    }
-
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  .child {
-    opacity: 0;
-    transform: translateX(500px);
-    transition: none;
-  }
-
-  .child-2 {
-    opacity: 0;
-    transform: translateX(-500px);
-    transition: none;
-  }
-
-  .ppp.hovered::before {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-    background-image: url("landing/darkEffect@.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 99;
-    transition: opacity 0.5s ease-in-out;
-    opacity: 1;
-  }
-
-  .ppp:not(.hovered)::before {
-    opacity: 0;
-  }
-
-  .ppp.hovered .child {
-    opacity: 1;
-    transform: translateX(0);
-    animation: slideIn 2s forwards;
-  }
-
-  .ppp.hovered .child-2 {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .animated-border-box,
-  .animated-border-box-glow {
-    max-height: 300px;
-    max-width: 650px;
-    height: 100%;
-    background-color: #000;
-    width: 100%;
-    position: absolute;
-    overflow: hidden;
-    z-index: 10 !important;
-    margin-inline: auto;
-  }
-
-  /* Glow effect for the border box */
-  .animated-border-box-glow {
-    overflow: hidden;
-    filter: blur(20px);
-    transition: background-image 0.5s ease-out;
-  }
-
-  /* Before pseudo-element for rotating conic gradient */
-  .animated-border-box:before,
-  .animated-border-box-glow:before {
-    content: "";
-    z-index: -2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    width: 99999px;
-    height: 99999px;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-image: conic-gradient(#d83694, #0039c7, #f7eff3 25%);
-    animation: rotate 5s linear infinite;
-    transition: background-image 0.5s ease-out, animation 0.5s ease-out;
-  }
-
-  /* After pseudo-element for the container's background */
-  .animated-border-box:after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 1.7px;
-    top: 1.7px;
-    width: calc(100% - 3px);
-    height: calc(100% - 3.5px);
-    background: white !important;
-  }
-
-  /* Keyframes for rotation animation */
-  @keyframes rotate {
-    100% {
-      transform: translate(-50%, -50%) rotate(1turn);
-    }
-  }
-
-  .animated-border-box:hover:before {
-    animation: none;
-    background-image: conic-gradient(#d83694, #0039c7, #c04783 100%);
-    transition: all 2s ease-in;
-  }
-
-  .animated-border-box-glow:hover {
-    background-image: conic-gradient(#d83694, #0039c7, #d4237c 100%);
-    transition: all 2s ease-in;
-  }
-
-  /* Ensure proper mobile swiper settings */
-  .mySwiper {
-    max-height: 350px !important;
-    width: 100%;
-    padding: 0;
-  }
-
-  .mySwiper .swiper-slide {
-    max-height: 90%;
-    object-fit: cover;
-  }
-
-  .mySwiper .swiper-slide img {
-    image-rendering: pixelated;
-    border-radius: 10px;
-    width: fit-content;
-    object-fit: cover;
-  }
-
-  @keyframes slideIn {
-    from {
-      transform: translateX(-800px);
-      opacity: 0;
-    }
-
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  .carousel-image {
-    transition: transform 0.5s ease, filter 0.5s ease;
-    transform: scale(0.9);
-    height: auto;
-  }
-
-  .center-slide {
-    transform: scale(1);
-    filter: blur(0) !important;
-  }
-
-  .blur-slide {
-    opacity: 0.6;
-    filter: blur(5px);
-  }
-
-  .swiper-pagination {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 10;
-  }
-
-  .swiper-pagination-bullet {
-    background-color: #000;
-    width: 8px !important;
-    height: 8px !important;
-    margin: 0 10px;
-    border-radius: 50%;
-    opacity: 0.6;
-    transition: opacity 0.3s, transform 0.3s;
-  }
-
-  .swiper-pagination-bullet-active {
-    background-color: #000;
-    height: 8px !important;
-    opacity: 1;
-    transform: scale(1.3);
-    border-radius: 40px;
-    width: 19px !important;
-  }
-
-  .swiper-pagination-clickable .swiper-pagination-bullet:hover {
-    background-color: #000;
-    opacity: 1;
-  }
-  // .animate-fadeIn {
-  //   transform: translateX(100);
-  //   background-color: red;
-  // }
 }
+
+@media screen and (min-width: 800px) {
+  .rectangle-ring-image {
+    top: 660px !important;
+  }
+  .right-ring {
+    top: 651px !important;
+  }
+
+  .left-ring {
+    top: 680px !important;
+  }
+  .ring-text-container {
+    top: 1200px !important;
+    right: 110px !important;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .rectangle-ring-image {
+    top: 740px !important;
+    right: 15px !important;
+    height: 720px !important;
+    width: 390px !important;
+  }
+  .right-ring {
+    width: 400px !important;
+    top: 725px !important;
+  }
+
+  .left-ring {
+    left: -80px !important;
+
+    width: 440px !important;
+    top: 765px !important;
+  }
+  .ring-text-container {
+    top: 1350px !important;
+    right: 150px !important;
+  }
+  .match {
+    top: 1300px !important;
+    right: 270px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .match button {
+    padding: 10px 20px !important;
+    font-size: 28px;
+  }
+  .s-logo {
+    top: 990px !important;
+    right: 80px !important;
+    transition: all 2s;
+    transform: scale(350%);
+  }
+  .sLarge {
+    top: 1400px !important;
+    right: 50px !important;
+  }
+}
+
+/* Mobile Devices (Small screens, max-width 480px) */
+// @media (max-width: 480px) {
+//   .hover-gradient {
+//     background-image: linear-gradient(
+//         to right,
+//         rgba(0, 0, 0, 0),
+//         rgba(10, 10, 10, 0.08)
+//       ),
+//       url("landing/darkEffect@.svg");
+//   }
+
+//   .animated-border-button {
+//     // height: 52px;
+//     border-radius: 17px;
+//   }
+
+//   .animated-border-button,
+//   .animated-border-button-glow {
+//     background-color: #000;
+//     position: absolute;
+//     overflow: hidden;
+//     z-index: 10 !important;
+//     margin-inline: auto;
+//   }
+
+//   .animated-border-button-glow {
+//     overflow: hidden;
+//     filter: blur(20px);
+//     transition: background-image 0.5s ease-out;
+//   }
+
+//   .animated-border-button:before,
+//   .animated-border-button-glow:before {
+//     content: "";
+//     z-index: -2;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%) rotate(0deg);
+//     width: 99999px;
+//     height: 99999px;
+//     background-repeat: no-repeat;
+//     background-position: 0 0;
+//     background-image: conic-gradient(
+//       #d23691e6,
+//       #113caaf1,
+//       #d23691e6,
+//       #eeeeee 35%
+//     );
+//     animation: rotate 5s linear infinite;
+//     transition: background-image 0.5s ease-out, animation 0.5s ease-out;
+//   }
+
+//   .animated-border-button:after {
+//     content: "";
+//     position: absolute;
+//     z-index: -10;
+//     // left: 10px;
+//     // top: 10px;
+//     width: calc(100% - 10px);
+//     height: calc(100% - 10px);
+//     background: #000 !important;
+//   }
+
+//   @keyframes rotate {
+//     100% {
+//       transform: translate(-50%, -50%) rotate(1turn);
+//     }
+//   }
+
+//   .animated-border-button:hover:before {
+//     animation: none;
+//     background-image: conic-gradient(#d83694, #0039c7, #c04783 100%);
+//     transition: all 2s ease-in;
+//   }
+
+//   .animated-border-button-glow:hover {
+//     background-image: conic-gradient(#d83694, #0039c7, #d4237c 100%);
+//     transition: all 2s ease-in;
+//   }
+
+//   .ppp.hovered .child-2 {
+//     animation: slideIn2 2s forwards;
+//   }
+
+//   @keyframes slideIn {
+//     from {
+//       transform: translateX(-400px);
+//       opacity: 0;
+//     }
+
+//     to {
+//       transform: translateX(0);
+//       opacity: 1;
+//     }
+//   }
+
+//   @keyframes slideIn2 {
+//     from {
+//       transform: translateX(-400px);
+//       opacity: 0;
+//     }
+
+//     to {
+//       transform: translateX(0);
+//       opacity: 1;
+//     }
+//   }
+
+//   .child {
+//     opacity: 0;
+//     transform: translateX(500px);
+//     transition: none;
+//   }
+
+//   .child-2 {
+//     opacity: 0;
+//     transform: translateX(-500px);
+//     transition: none;
+//   }
+
+//   .ppp.hovered::before {
+//     content: "";
+
+//     position: absolute;
+//     inset: 0;
+//     background-image: url("landing/darkEffect@.svg");
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     z-index: 99;
+//     transition: opacity 0.5s ease-in-out;
+//     opacity: 1;
+//   }
+
+//   .ppp:not(.hovered)::before {
+//     opacity: 0;
+//   }
+
+//   .ppp.hovered .child {
+//     opacity: 1;
+//     transform: translateX(0);
+//     animation: slideIn 2s forwards;
+//   }
+
+//   .ppp.hovered .child-2 {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+
+//   .animated-border-box,
+//   .animated-border-box-glow {
+//     max-height: 300px;
+//     max-width: 650px;
+//     height: 100%;
+//     background-color: #000;
+//     width: 100%;
+//     position: absolute;
+//     overflow: hidden;
+//     z-index: 10 !important;
+//     margin-inline: auto;
+//   }
+
+//   /* Glow effect for the border box */
+//   .animated-border-box-glow {
+//     overflow: hidden;
+//     filter: blur(20px);
+//     transition: background-image 0.5s ease-out;
+//   }
+
+//   /* Before pseudo-element for rotating conic gradient */
+//   .animated-border-box:before,
+//   .animated-border-box-glow:before {
+//     content: "";
+//     z-index: -2;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%) rotate(0deg);
+//     width: 99999px;
+//     height: 99999px;
+//     background-repeat: no-repeat;
+//     background-position: 0 0;
+//     background-image: conic-gradient(#d83694, #0039c7, #f7eff3 25%);
+//     animation: rotate 5s linear infinite;
+//     transition: background-image 0.5s ease-out, animation 0.5s ease-out;
+//   }
+
+//   /* After pseudo-element for the container's background */
+//   .animated-border-box:after {
+//     content: "";
+//     position: absolute;
+//     z-index: -1;
+//     left: 1.7px;
+//     top: 1.7px;
+//     width: calc(100% - 3px);
+//     height: calc(100% - 3.5px);
+//     background: white !important;
+//   }
+
+//   /* Keyframes for rotation animation */
+//   @keyframes rotate {
+//     100% {
+//       transform: translate(-50%, -50%) rotate(1turn);
+//     }
+//   }
+
+//   .animated-border-box:hover:before {
+//     animation: none;
+//     background-image: conic-gradient(#d83694, #0039c7, #c04783 100%);
+//     transition: all 2s ease-in;
+//   }
+
+//   .animated-border-box-glow:hover {
+//     background-image: conic-gradient(#d83694, #0039c7, #d4237c 100%);
+//     transition: all 2s ease-in;
+//   }
+
+//   /* Ensure proper mobile swiper settings */
+//   .mySwiper {
+//     max-height: 350px !important;
+//     width: 100%;
+//     padding: 0;
+//   }
+
+//   .mySwiper .swiper-slide {
+//     max-height: 90%;
+//     object-fit: cover;
+//   }
+
+//   .mySwiper .swiper-slide img {
+//     image-rendering: pixelated;
+//     border-radius: 10px;
+//     width: fit-content;
+//     object-fit: cover;
+//   }
+
+//   @keyframes slideIn {
+//     from {
+//       transform: translateX(-800px);
+//       opacity: 0;
+//     }
+
+//     to {
+//       transform: translateX(0);
+//       opacity: 1;
+//     }
+//   }
+
+//   .carousel-image {
+//     transition: transform 0.5s ease, filter 0.5s ease;
+//     transform: scale(0.9);
+//     height: auto;
+//   }
+
+//   .center-slide {
+//     transform: scale(1);
+//     filter: blur(0) !important;
+//   }
+
+//   .blur-slide {
+//     opacity: 0.6;
+//     filter: blur(5px);
+//   }
+
+//   .swiper-pagination {
+//     position: absolute;
+//     bottom: 10px;
+//     left: 0;
+//     right: 0;
+//     text-align: center;
+//     z-index: 10;
+//   }
+
+//   .swiper-pagination-bullet {
+//     background-color: #000;
+//     width: 8px !important;
+//     height: 8px !important;
+//     margin: 0 10px;
+//     border-radius: 50%;
+//     opacity: 0.6;
+//     transition: opacity 0.3s, transform 0.3s;
+//   }
+
+//   .swiper-pagination-bullet-active {
+//     background-color: #000;
+//     height: 8px !important;
+//     opacity: 1;
+//     transform: scale(1.3);
+//     border-radius: 40px;
+//     width: 19px !important;
+//   }
+
+//   .swiper-pagination-clickable .swiper-pagination-bullet:hover {
+//     background-color: #000;
+//     opacity: 1;
+//   }
+//   // .animate-fadeIn {
+//   //   transform: translateX(100);
+//   //   background-color: red;
+//   // }
+// }
 
 @media screen and (min-width: 1200px) {
   .rectangle-ring-image {
@@ -1240,7 +1365,7 @@
     right: -110px !important;
   }
   .animated-button {
-    bottom: 60px;
+    bottom: 60px !important;
     left: 600px !important;
   }
 }
@@ -1281,7 +1406,7 @@
     right: -120px !important;
   }
   .animated-button {
-    bottom: 60px;
+    bottom: 60px !important;
     left: 650px !important;
   }
 }
