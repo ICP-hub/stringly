@@ -132,7 +132,7 @@ const RiseTheBarMobile = () => {
     return () => {
       ScrollTrigger.killAll(); // Clean-up ScrollTrigger instances
     };
-  }, []);
+  }, [containerRef, imageContainerRef1, imageContainerRef2]);
 
   return (
     <div

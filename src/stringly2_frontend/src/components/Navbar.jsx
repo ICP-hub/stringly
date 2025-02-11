@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isMenu, setIsmMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +21,9 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-
       setIsMobile(width <= 968);
     };
 
@@ -34,22 +33,24 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("resize", handleResize); // Cleanup
     };
-  }, []);
+  }, [scrolled, isMobile]);
 
   return (
     <div
-      className={`w-[93%] md:w-[95%] lg:w-[95%]  mx-auto flex flex-col   py-3 md:py-0 rounded-[15px] fixed md:top-[10px] left-[-20px] right-[-20px]  z-50 md:px-4 navbar !z-00  ${
+      className={`w-[90%] md:w-[95%] lg:w-[95%]  mx-auto flex flex-col   py-3 md:py-0 rounded-[15px] fixed md:top-[10px] left-[-20px] right-[-20px]  z-50 md:px-4 navbar !z-00  ${
         scrolled && !isMobile
           ? "glossy-white-scrolled"
           : !isMobile && " glossy-white"
       }`}
     >
       <div className="flex w-full items-center justify-between px-2 md:px-8 py-1">
-        <div className="px-4 md:py-[3px]  ">
+        <div className="px-2 md:py-[3px]  ">
           {scrolled ? (
-            <img className="w-31 h-[45px] py-2" src="Stringly.png" />
+            <Link to={"/"} onClick={() => window.scrollTo(0.0)}>
+              <img className="w-31 h-[45px] py-2" src="Stringly.png" />
+            </Link>
           ) : (
-            <p className="font-sf text-[28px] text-white font-semibold">
+            <p className="font-sf text-[28px] text-white font-semibold text-gray-300">
               <Link to="/" onClick={() => window.scrollTo(0, 0)}>
                 Stringly
               </Link>
