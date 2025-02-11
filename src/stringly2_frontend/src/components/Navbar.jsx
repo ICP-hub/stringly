@@ -50,30 +50,32 @@ const Navbar = () => {
             <img className="w-31 h-[45px] py-2" src="Stringly.png" />
           ) : (
             <p className="font-sf text-[28px] text-white font-semibold">
-              Stringly
+              <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+                Stringly
+              </Link>
             </p>
           )}
         </div>
 
-        <div className="hidden font-sfProDisplay md:flex items-center font-light justify-between gap-8">
+        {/* <div className="hidden font-sfProDisplay md:flex items-center font-light justify-between gap-8">
           <p className="hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-2 rounded-lg cursor-pointer">
             Home
-            {/* <Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link> */}
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link>
           </p>
           <p className="hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg cursor-pointer">
             Features
-            {/* <Link to="/features" onClick={() => window.scrollTo(0, 0)}>Features</Link> */}
+            <Link to="/features" onClick={() => window.scrollTo(0, 0)}>Features</Link>
           </p>
           <p className="hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg cursor-pointer">
             About
-            {/* <Link to="/about" onClick={() => window.scrollTo(0, 0)}>About Us</Link> */}
+            <Link to="/about" onClick={() => window.scrollTo(0, 0)}>About Us</Link>
           </p>
           <div className="flex items-center gap-2 hover:bg-white/20 hover:backdrop-blur-lg hover:bg-opacity-30 rounded-lg px-3 py-1 rounded-lg cursor-pointer">
             <p className="flex items-center justify-between gap-2">
               Resources <IoIosArrowDown />
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="flex items-center gap-4">
           {!isMobile && (
             <div className="animated-border-button right-[10px] rounded-xl p-[3.5px] hover:scale-105 transition-all duration-200">
