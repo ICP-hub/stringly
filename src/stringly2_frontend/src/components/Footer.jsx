@@ -104,8 +104,13 @@ const Footer = () => {
             >
               Privacy Policy
             </li>
-            <li className="pb-4">Terms of Use</li>
-            <li className="pb-2 md:pb-1 cursor-pointer">
+            <li
+              className="pb-4 cursor-pointer"
+              onClick={() => navigate("/guidelines/termsofuse")}
+            >
+              Terms of Use
+            </li>
+              <li className="pb-2 md:pb-1 cursor-pointer">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfFvJ4tF7YWebqvfmpbuj30pkVAkyVOhLVPju6RjBLyNMukEw/viewform"
                 target="_blank"
