@@ -57,7 +57,7 @@ const Footer = () => {
             About Us
           </li>
           <a
-            href=" https://forms.gle/8eWvmfuTzch4FQY68"
+            href="https://forms.gle/2pkDhwSLvkLnYXM57"
             target="_blank"
             rel="noopener noreferrer"
             className="mr-3"
@@ -128,7 +128,7 @@ const Footer = () => {
             </li>
             <li className="pb-2 md:pb-1 cursor-pointer">
               <a
-                href=" https://forms.gle/8eWvmfuTzch4FQY68"
+                href="https://forms.gle/2pkDhwSLvkLnYXM57"
                 target="_blank"
                 rel="noopener noreferrer"
               >

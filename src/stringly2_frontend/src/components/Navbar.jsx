@@ -37,25 +37,32 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-[90%] md:w-[95%] lg:w-[95%]  mx-auto flex flex-col   py-3 md:py-0 rounded-[15px] fixed md:top-[10px] left-[-20px] right-[-20px]  z-50 md:px-4 navbar !z-00  ${
+      className={`w-[90%] md:w-[95%] lg:w-[95%]  mx-auto flex flex-col   py-3 md:py-0 rounded-[15px] fixed md:top-[10px] left-[-20px] right-[-20px]  z-50 md:px-4 navbar !z-00  
+        bg-[#101010]
+      `}>
+
+      {/* ${
         scrolled && !isMobile
           ? "glossy-white-scrolled"
           : !isMobile && " glossy-white"
-      }`}
-    >
+      }` */}
+      
       <div className="flex w-full items-center justify-between px-2 md:px-8 py-1">
         <div className="px-2 md:py-[3px]  ">
-          {scrolled ? (
-            <Link to={"/"} onClick={() => window.scrollTo(0.0)}>
+        <Link to={"/"} onClick={() => window.scrollTo(0.0)}>
               <img className="w-31 h-[45px] py-2" src="Stringly.png" />
             </Link>
+          {/* {scrolled ? (
+            <Link to={"/"} onClick={() => window.scrollTo(0.0)}>
+            <img className="w-31 h-[45px] py-2" src="Stringly.png" />
+          </Link>
           ) : (
             <p className="font-sf text-[28px] text-white font-semibold text-gray-300">
               <Link to="/" onClick={() => window.scrollTo(0, 0)}>
                 Stringly
               </Link>
             </p>
-          )}
+          )} */}
         </div>
 
         {/* <div className="hidden font-sfProDisplay md:flex items-center font-light justify-between gap-8">
@@ -80,9 +87,11 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           {!isMobile && (
             <div className="animated-border-button right-[10px] rounded-xl p-[3.5px] hover:scale-105 transition-all duration-200">
+              <a href="https://play.google.com/store/search?q=stringly&c=apps" target="_blank">
               <button className=" bg-white text-black text-[16px] font-sf text-black px-3 py-[6px] hover:bg-purple-100 w-38 rounded-xl">
                 Download Now
               </button>
+              </a>
             </div>
           )}
           <div className="flex md:hidden">
@@ -99,9 +108,11 @@ const Navbar = () => {
               </button> */}
               {scrolled && (
                 <div className="animated-border-button right-[-1px] top-2 rounded-xl p-[3.5px] hover:scale-105 transition-all duration-200">
+                 <a href="https://play.google.com/store/search?q=stringly&c=apps" target="_blank">
                   <button className=" bg-white text-black text-[16px] font-sf text-black px-3 py-[10px] hover:bg-purple-100 w-38 rounded-xl">
                     Download Now
                   </button>
+                  </a>
                 </div>
               )}
             </div>

@@ -309,9 +309,11 @@ const Landingpage = () => {
                     downladBtnApper ? "downloadBtn" : ""
                   }`}
                 >
+                  <a href="https://play.google.com/store/search?q=stringly&c=apps" target="_blank">
                   <button className=" bg-white text-[16px] lg:text-[24px] xl:text-[32px] font-sf text-black px-6 py-3 hover:bg-purple-100 w-38 rounded-xl">
                     Download Now
                   </button>
+                  </a>
                 </div>
               </div>
             </div>
