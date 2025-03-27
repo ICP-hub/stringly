@@ -200,9 +200,11 @@ const HeroMobile = () => {
           </p>
 
           <div className="animated-border-button mt-8 animated-button rounded-xl p-[2.5px] hover:scale-105 transition-all duration-200">
+          <a href="https://play.google.com/store/search?q=stringly&c=apps" target="_blank">
             <button className=" bg-white text-[16px] font-sf text-black px-6 py-3 hover:bg-purple-100 w-38 rounded-xl">
               Download Now
             </button>
+            </a>
           </div>
         </div>
       </div>

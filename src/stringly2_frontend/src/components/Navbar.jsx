@@ -107,7 +107,7 @@ const Navbar = () => {
                 <a href="https://tally.so/r/waD9X9">Join</a>
               </button> */}
               {scrolled && (
-                <div className="animated-border-button right-[-1px] top-2 rounded-xl p-[3.5px] hover:scale-105 transition-all duration-200">
+                <div className="animated-border-button right-[-1px] top-3 rounded-xl p-[3.5px] hover:scale-105 transition-all duration-200" style={{ marginRight: "18px", }}>
                  <a href="https://play.google.com/store/search?q=stringly&c=apps" target="_blank">
                   <button className=" bg-white text-black text-[16px] font-sf text-black px-3 py-[10px] hover:bg-purple-100 w-38 rounded-xl">
                     Download Now
